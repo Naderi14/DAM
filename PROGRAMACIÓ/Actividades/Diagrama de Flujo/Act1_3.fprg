@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Fran"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-18 05:14:44 "/>
+        <attribute name="created" value="RnJhbjtERVNLVE9QLTg5SlVBVVE7MjAyNC0wOS0xODsiMDU6MTI6NTMgIjsyNjc0"/>
+        <attribute name="edited" value="RnJhbjtERVNLVE9QLTg5SlVBVVE7MjAyNC0wOS0xODsiMDU6MTQ6NDQgIjsxOzI3ODQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ladoCuadrado, areaCuadrado" type="Integer" array="False" size=""/>
+            <output expression="&quot;Introduzca el valor del lado de un cuadrado&quot;" newline="True"/>
+            <input variable="ladoCuadrado"/>
+            <assign variable="areaCuadrado" expression="ladoCuadrado * 2"/>
+            <output expression="&quot;&#193;rea del cuadrado = &quot; &amp; areaCuadrado" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
