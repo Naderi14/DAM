@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca>
+    <autores>
+        <autor>
+            <nom context="nombre_autor">nom autor</nom>
+            <libros>
+                <libro>
+                    <title></title>
+                    <subtitle></subtitle>
+                    <any_publicacio></any_publicacio>
+                    <editorial>
+                        <nom context="nombre_editorial"></nom>
+                        <nom_colección></nom_colección>
+                    </editorial>
+                </libro>
+                <libro>
+                    <title></title>
+                    <subtitle></subtitle>
+                    <any_publicacio></any_publicacio>
+                    <editorial>
+                        <nom context="nombre_editorial"></nom>
+                        <nom_colección></nom_colección>
+                    </editorial>
+                </libro>
+                <libro>
+                    <title></title>
+                    <subtitle></subtitle>
+                    <any_publicacio></any_publicacio>
+                    <editorial>
+                        <nom context="nombre_editorial"></nom>
+                        <nom_colección></nom_colección>
+                    </editorial>
+                </libro>
+            </libros>
+        </autor>
+        <autor>
+            <nom context="nombre_autor">nom autor</nom>
+            <libros>
+                <libro>
+                    <title></title>
+                    <subtitle></subtitle>
+                    <any_publicacio></any_publicacio>
+                    <editorial>
+                        <nom context="nombre_editorial"></nom>
+                        <nom_colección></nom_colección>
+                    </editorial>
+                </libro>
+                <libro>
+                    <title></title>
+                    <subtitle></subtitle>
+                    <any_publicacio></any_publicacio>
+                    <editorial>
+                        <nom context="nombre_editorial"></nom>
+                        <nom_colección></nom_colección>
+                    </editorial>
+                </libro>
+                <libro>
+                    <title></title>
+                    <subtitle></subtitle>
+                    <any_publicacio></any_publicacio>
+                    <editorial>
+                        <nom context="nombre_editorial"></nom>
+                        <nom_colección></nom_colección>
+                    </editorial>
+                </libro>
+            </libros>
+        </autor>
+    </autores>
+</biblioteca>

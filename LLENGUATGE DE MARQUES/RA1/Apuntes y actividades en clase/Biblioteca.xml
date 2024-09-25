@@ -4,3 +4,56 @@ Autors	Nom
 Llibres	Títol, Subtítol, Autor, Any de publicació, Editorial i Idioma
 Editorials	Nom de la editorial i Nom de la col·lecció
 -->
+<biblioteca>
+    <libro>
+        <títol>título1</títol>
+        <subtítol>subtítulo1</subtítol>
+        <autors>
+            <autor>autor1</autor>
+            <autor>autor2</autor>
+        </autors>
+        <any_publicació>1968</any_publicació>
+        <editorial>
+            <nom_editorial>nom1</nom_editorial>
+            <nom_colecció>nom_colecció1</nom_colecció>    
+        </editorial>
+        <idioma>idioma1</idioma>
+    </libro>
+    
+    <libro>
+        <títol>título2</títol>
+        <subtítol>subtítulo2</subtítol>
+        <autors>
+            <autor>autor1</autor>
+            <autor>autor2</autor>
+        </autors>
+        <any_publicació>1992</any_publicació>
+        <nom_editorial>nom2</nom_editorial>
+        <nom_colecció>nom_colecció2</nom_colecció>  
+        <idioma>idioma2</idioma>    
+    </libro>
+    <libro>
+        <títol>título3</títol>
+        <subtítol>subtítulo3</subtítol>
+        <autors>
+            <autor>autor1</autor>
+            <autor>autor2</autor>
+        </autors>
+        <any_publicació>1975</any_publicació>
+        <nom_editorial>nom3</nom_editorial>
+        <nom_colecció>nom_colecció3</nom_colecció>  
+        <idioma>idioma3</idioma>
+    </libro>
+    <libro>
+        <títol>título4</títol>
+        <subtítol>subtítulo4</subtítol>
+        <autors>
+            <autor>autor1</autor>
+            <autor>autor2</autor>
+        </autors>
+        <any_publicació>2005</any_publicació>
+        <nom_editorial>nom4</nom_editorial>
+        <nom_colecció>nom_colecció4</nom_colecció>  
+        <idioma>idioma4</idioma>
+    </libro>
+</biblioteca>
