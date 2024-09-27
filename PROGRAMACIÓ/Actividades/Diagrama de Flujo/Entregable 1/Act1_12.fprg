@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Fran"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-18 06:52:55 "/>
+        <attribute name="created" value="RnJhbjtERVNLVE9QLTg5SlVBVVE7MjAyNC0wOS0xODsiMDU6MTU6MDkgIjsyNjc4"/>
+        <attribute name="edited" value="RnJhbjtERVNLVE9QLTg5SlVBVVE7MjAyNC0wOS0xODsiMDY6NTI6NTUgIjs5OzI3OTc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero1, numero2, numero3" type="Integer" array="False" size=""/>
+            <output expression="&quot;Introduce n&#250;mero 1, n&#250;mero 2 y n&#250;mero 3&quot;" newline="True"/>
+            <input variable="numero1"/>
+            <input variable="numero2"/>
+            <input variable="numero3"/>
+            <if expression="numero1 &gt; numero2">
+                <then>
+                    <if expression="numero1 &gt; numero3">
+                        <then>
+                            <output expression="&quot;El n&#250;mero 1 es mayor&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;El n&#250;mero 3 es mayor&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="numero2 &gt; numero3">
+                        <then>
+                            <output expression="&quot;El n&#250;mero 2 es mayor&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;El n&#250;mero 3 es mayor&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

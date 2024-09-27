@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Fran"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-18 06:48:17 "/>
+        <attribute name="created" value="RnJhbjtERVNLVE9QLTg5SlVBVVE7MjAyNC0wOS0xODsiMDU6MTU6MDkgIjsyNjc4"/>
+        <attribute name="edited" value="RnJhbjtERVNLVE9QLTg5SlVBVVE7MjAyNC0wOS0xODsiMDY6NDg6MTcgIjs3OzI3OTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero" type="Integer" array="False" size=""/>
+            <output expression="&quot;Introduce un n&#250;mero&quot;" newline="True"/>
+            <input variable="numero"/>
+            <if expression="numero &lt; 0">
+                <then>
+                    <output expression="&quot;Es negativo&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Es positivo&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

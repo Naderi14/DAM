@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Act2_3"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-27 09:56:26 "/>
+        <attribute name="created" value="VXN1YXJpbztQQ0RFTEFZT1JEQTsyMDI0LTA5LTI3OyIwOTo1Mjo0NiAiOzI3NTk="/>
+        <attribute name="edited" value="VXN1YXJpbztQQ0RFTEFZT1JEQTsyMDI0LTA5LTI3OyIwOTo1NjoyNiAiOzM7Mjg3MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Leer 2 n&#250;meros distintos y mostrar la divisi&#243;n del mayor entre el menor."/>
+            <declare name="numero1, numero2, division" type="Integer" array="False" size=""/>
+            <output expression="&quot;Introduce el n&#250;mero 1 y posterior el n&#250;mero 2&quot;" newline="True"/>
+            <input variable="numero1"/>
+            <input variable="numero2"/>
+            <if expression="numero1 &gt; numero2">
+                <then>
+                    <assign variable="division" expression="numero1 / numero2"/>
+                </then>
+                <else>
+                    <assign variable="division" expression="numero2 / numero1"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
