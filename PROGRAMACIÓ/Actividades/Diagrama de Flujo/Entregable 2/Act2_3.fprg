@@ -4,9 +4,9 @@
         <attribute name="name" value="Act2_3"/>
         <attribute name="authors" value="Usuario"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-09-27 09:56:26 "/>
+        <attribute name="saved" value="2024-09-27 01:38:02 "/>
         <attribute name="created" value="VXN1YXJpbztQQ0RFTEFZT1JEQTsyMDI0LTA5LTI3OyIwOTo1Mjo0NiAiOzI3NTk="/>
-        <attribute name="edited" value="VXN1YXJpbztQQ0RFTEFZT1JEQTsyMDI0LTA5LTI3OyIwOTo1NjoyNiAiOzM7Mjg3MQ=="/>
+        <attribute name="edited" value="VXN1YXJpbztQQ0RFTEFZT1JEQTsyMDI0LTA5LTI3OyIwMTozODowMiAiOzU7Mjg1OQ=="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -18,10 +18,28 @@
             <input variable="numero2"/>
             <if expression="numero1 &gt; numero2">
                 <then>
-                    <assign variable="division" expression="numero1 / numero2"/>
+                    <output expression="numero1 &amp; &quot; es mayor que &quot; &amp; numero2" newline="True"/>
+                    <if expression="numero2 == 0">
+                        <then>
+                            <output expression="&quot;Infinito al dividir entre 0&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <assign variable="division" expression="numero1 / numero2"/>
+                            <output expression="numero1 &amp; &quot; / &quot; &amp; numero2 &amp; &quot; = &quot; &amp; division" newline="True"/>
+                        </else>
+                    </if>
                 </then>
                 <else>
-                    <assign variable="division" expression="numero2 / numero1"/>
+                    <output expression="numero2 &amp; &quot; es mayor que &quot; &amp; numero1" newline="True"/>
+                    <if expression="numero1 == 0">
+                        <then>
+                            <output expression="&quot;Infinito al dividir entre 0&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <assign variable="division" expression="numero2 / numero1"/>
+                            <output expression="numero2 &amp; &quot; / &quot; &amp; numero1 &amp; &quot; = &quot; &amp; division" newline="True"/>
+                        </else>
+                    </if>
                 </else>
             </if>
         </body>
