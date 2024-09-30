@@ -1,18 +1,19 @@
 <?xml version="1.0"?>
-<flowgorithm fileversion="4.2">
+<flowgorithm fileversion="4.0">
     <attributes>
         <attribute name="name" value="Act2_4"/>
         <attribute name="authors" value="Usuario"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-09-27 01:43:25 "/>
+        <attribute name="saved" value="2024-09-28 09:22:19 "/>
         <attribute name="created" value="VXN1YXJpbztQQ0RFTEFZT1JEQTsyMDI0LTA5LTI3OyIwMTozOToxMyAiOzI3NTA="/>
         <attribute name="edited" value="VXN1YXJpbztQQ0RFTEFZT1JEQTsyMDI0LTA5LTI3OyIwMTo0MzoyNSAiOzE7Mjg1Ng=="/>
+        <attribute name="edited" value="RnJhbjtERVNLVE9QLTg5SlVBVVE7MjAyNC0wOS0yODsiMDk6MjI6MTkgIjsxOzI3OTA="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <declare name="numero, i" type="Integer" array="False" size=""/>
-            <output expression="&quot;Introduce el numero&quot;" newline="True"/>
+            <output expression="&quot;Introduce un numero para multiplicar&quot;" newline="True"/>
             <input variable="numero"/>
             <for variable="i" start="1" end="10" direction="inc" step="1">
                 <output expression="numero &amp; &quot; x &quot; &amp; i &amp; &quot; = &quot; &amp; numero*i" newline="True"/>
