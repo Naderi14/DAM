@@ -1,0 +1,114 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang3082{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\b\f0\fs36\lang10 Consultas B\'e1sicas:\b0\fs22\par
+1. Selecciona todos los productos que tienen m\'e1s de 100 unidades en stock.\par
+2. Muestra el nombre y precio de todos los productos cuyo precio de compra (buyPrice) sea mayor a 50.\par
+3. Obt\'e9n los nombres de los empleados que tienen como t\'edtulo de trabajo "Sales Rep".\par
+4. Muestra todos los pedidos que han sido enviados, ordenados por fecha de env\'edo.\par
+5. Lista los nombres y tel\'e9fonos de las oficinas en la ciudad de "San Francisco".\par
+6. Obt\'e9n los nombres y l\'edmites de cr\'e9dito de todos los clientes cuyo l\'edmite de cr\'e9dito sea superior a 50,000.\par
+7. Muestra los nombres de los clientes y sus empleados de ventas correspondientes (usando la tabla employees y customers).\par
+8. Selecciona todos los detalles de pedidos para los productos cuyo c\'f3digo empieza con 'S'.\par
+9. Muestra el n\'famero de pedido, fecha y nombre del cliente para todos los pedidos realizados despu\'e9s del 1 de enero de 2023.\par
+10. Lista todos los empleados que trabajan en la oficina con c\'f3digo '1'.\par
+\b\fs36 Consultas con Filtrado y Ordenaci\'f3n:\b0\fs22\par
+1. Muestra el nombre de los productos cuyo precio de lista (MSRP) est\'e9 entre 50 y 100.\par
+2. Selecciona los pedidos con una cantidad total superior a 1000 unidades ordenadas.\par
+3. Obt\'e9n los nombres de los clientes que no tienen l\'edmite de cr\'e9dito.\par
+4. Muestra los productos ordenados alfab\'e9ticamente por nombre.\par
+5. Lista todos los pedidos que no han sido enviados a\'fan (status = 'In Process').\par
+6. Muestra los clientes ubicados en el pa\'eds "Spain".\par
+7. Obt\'e9n los pedidos que fueron requeridos antes de la fecha de env\'edo.\par
+8. Selecciona todos los productos que tienen menos de 50 unidades en stock, y ord\'e9nalos por nombre de producto.\par
+9. Muestra los empleados que trabajan en las oficinas ubicadas en los Estados Unidos.\par
+10. Muestra los clientes cuyo nombre contiene la palabra "Motor" (usando LIKE).\par
+\b\fs36 Consultas con Agrupaciones:\b0\fs22\par
+1. Obt\'e9n el n\'famero total de productos en cada l\'ednea de productos (productlines).\par
+2. Muestra el total de ventas (cantidad ordenada por precio) por cada cliente.\par
+3. Calcula el promedio de la cantidad de stock por cada l\'ednea de productos.\par
+4. Muestra el total de pagos recibidos por cada cliente.\par
+5. Obt\'e9n el n\'famero de empleados por cada oficina.\par
+6. Muestra el n\'famero de pedidos por cada cliente.\par
+7. Obt\'e9n el total de ventas realizadas por cada empleado de ventas.\par
+8. Muestra la cantidad total de productos vendidos por cada pedido.\par
+9. Lista el n\'famero de clientes por cada pa\'eds.\par
+10. Calcula el total de productos en stock para cada proveedor (productVendor).\par
+\b\fs36 Consultas con JOIN:\b0\fs22\par
+1. Muestra el nombre del cliente, n\'famero de pedido y fecha de env\'edo para todos los pedidos.\par
+2. Selecciona los nombres de los empleados y los nombres de las oficinas donde trabajan.\par
+3. Obt\'e9n el nombre de los productos y la cantidad ordenada en cada detalle de pedido.\par
+4. Muestra el nombre del cliente y el nombre de su empleado de ventas asignado.\par
+5. Selecciona los nombres de los productos, cantidades ordenadas y precios de cada pedido.\par
+6. Muestra los nombres de los clientes y la ciudad de la oficina de su empleado de ventas.\par
+7. Obt\'e9n los detalles de pedidos y la informaci\'f3n de los productos correspondientes.\par
+8. Muestra el nombre del cliente, el total pagado y la fecha del pago.\par
+9. Lista los nombres de los empleados que supervisan a otros empleados (usando reportsTo).\par
+10. Muestra el nombre de los productos y el nombre de la l\'ednea de productos a la que pertenecen.\par
+\b\fs36 Consultas con Funciones de Agregaci\'f3n:\b0\fs22\par
+1. Calcula el total de unidades vendidas para cada producto.\par
+2. Muestra el n\'famero total de pedidos realizados por cada cliente.\par
+3. Obt\'e9n el promedio del precio de compra de todos los productos.\par
+4. Muestra el n\'famero de productos diferentes en cada pedido.\par
+5. Calcula el monto total pagado por cada cliente en la tabla payments.\par
+6. Muestra el precio promedio de los productos en cada l\'ednea de productos.\par
+7. Calcula el total de empleados que trabajan bajo cada gerente (usando reportsTo).\par
+8. Muestra la cantidad total de unidades en stock para cada proveedor.\par
+9. Calcula el promedio de ventas por cada oficina.\par
+10. Muestra la cantidad total de pagos recibidos por cada mes.\par
+\b\fs36 Subconsultas:\b0\fs22\par
+1. Muestra el nombre y precio de los productos cuyo precio es mayor que el promedio de todos los productos.\par
+2. Selecciona los clientes que han realizado m\'e1s de 5 pedidos.\par
+3. Muestra los empleados que trabajan en la misma oficina que el empleado con n\'famero '1370'.\par
+4. Obt\'e9n el nombre de los clientes que no han realizado ning\'fan pedido.\par
+5. Muestra el producto m\'e1s caro de cada l\'ednea de productos.\par
+6. Selecciona los nombres de los empleados que no supervisan a nadie.\par
+7. Muestra los productos que han sido ordenados m\'e1s de 100 veces.\par
+8. Obt\'e9n el cliente que ha realizado el pedido con mayor cantidad de productos.\par
+9. Muestra el nombre del empleado que ha recibido el pago m\'e1s grande.\par
+10. Selecciona el nombre de los productos que tienen m\'e1s unidades en stock que el producto con c\'f3digo 'S10_4757'.\par
+\b\fs36 Consultas Avanzadas:\b0\fs22\par
+1. Muestra el top 5 de clientes que han hecho m\'e1s pagos.\par
+2. Obt\'e9n los empleados que reportan directamente al gerente cuyo employeeNumber es 1143.\par
+3. Selecciona los productos que no han sido ordenados por ning\'fan cliente.\par
+4. Muestra el segundo producto m\'e1s caro de cada l\'ednea de productos.\par
+5. Lista los pedidos cuyo monto total sea superior al promedio de todos los pedidos.\par
+6. Muestra los clientes que han realizado pedidos que no han sido enviados a\'fan.\par
+7. Selecciona los empleados que tienen el mismo trabajo que el empleado con n\'famero '1504'.\par
+8. Muestra los detalles de los productos que tienen un precio mayor al promedio dentro de su l\'ednea de productos.\par
+9. Obt\'e9n el total de pagos realizados por clientes que tienen un l\'edmite de cr\'e9dito superior a 100,000.\par
+10. Selecciona los empleados que trabajan en oficinas fuera de los Estados Unidos y tienen m\'e1s de 5 pedidos asociados.\par
+\b\fs36 Consultas de Actualizaci\'f3n:\b0\fs22\par
+1. Actualiza el l\'edmite de cr\'e9dito de todos los clientes en Espa\'f1a a 50,000.\par
+2. Cambia el estado de todos los pedidos que no han sido enviados a 'Canceled'.\par
+3. Incrementa en un 10% el precio de compra de todos los productos cuyo proveedor sea 'Min Lin Diecast'.\par
+4. Actualiza el tel\'e9fono de la oficina en "Paris" a '123-456-789'.\par
+5. Cambia el t\'edtulo de trabajo de todos los empleados que reportan al gerente con n\'famero 1143 a 'Senior Sales Rep'.\par
+6. Disminuye en 20 unidades el stock de todos los productos con m\'e1s de 500 unidades en inventario.\par
+7. Actualiza la direcci\'f3n de env\'edo para todos los pedidos de clientes en 'Madrid' a una nueva direcci\'f3n.\par
+8. Cambia el estado de los pedidos con fecha requerida anterior a la actual a 'Late'.\par
+9. Incrementa en un 5% el l\'edmite de cr\'e9dito de los clientes con m\'e1s de 5 pedidos.\par
+10. Actualiza el correo electr\'f3nico de los empleados que trabajan en la oficina '1' con un nuevo dominio.\par
+\b\fs36 Consultas de Eliminaci\'f3n:\b0\fs22\par
+1. Elimina todos los productos que no han sido ordenados en ning\'fan pedido.\par
+2. Borra los clientes que no han realizado ning\'fan pago.\par
+3. Elimina los detalles de pedido de los productos que tienen un stock de 0.\par
+4. Borra los empleados que no tienen ning\'fan subordinado (usando reportsTo).\par
+5. Elimina los pedidos que han sido cancelados.\par
+6. Borra todos los pagos que se realizaron antes del 1 de enero de 2022.\par
+7. Elimina todos los productos cuyo proveedor sea 'Autoart Studio Design'.\par
+8. Borra las oficinas que no tienen empleados asignados.\par
+9. Elimina los clientes cuyo l\'edmite de cr\'e9dito sea inferior a 10,000.\par
+10. Borra los detalles de pedidos donde la cantidad ordenada sea menor a 5.\par
+\b\fs36 Consultas de Creaci\'f3n:\b0\fs22\par
+1. Inserta un nuevo cliente con nombre "Nuevo Cliente S.A.", ubicado en "Madrid", con un l\'edmite de cr\'e9dito de 60,000.\par
+2. A\'f1ade un nuevo empleado con el t\'edtulo "Sales Rep" que trabaje en la oficina '1'.\par
+3. Inserta un nuevo producto en la categor\'eda "Motorcycles" con un precio de 150.\par
+4. Crea un nuevo pedido para el cliente con n\'famero '103' con la fecha actual como orderDate.\par
+5. Inserta un pago para el cliente '103' por la cantidad de 10,000 el 1 de julio de 2023.\par
+6. A\'f1ade una nueva l\'ednea de productos llamada "Collectibles".\par
+7. Inserta un detalle de pedido para el pedido '104' con el producto 'S10_4757' y una cantidad de 50.\par
+8. A\'f1ade un nuevo detalle de pedido a un pedido existente con el precio actual de un producto espec\'edfico.\par
+9. Crea una nueva oficina en "Berlin" con todos los datos correspondientes.\par
+10. Inserta un nuevo pedido que incluya tres productos diferentes para un cliente existente.\par
+}
+ 
