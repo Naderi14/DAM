@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agenda>
+    <entrada>
+        <nom>Pepe</nom>
+        <teléfon>456789321</teléfon>
+    </entrada>
+    <entrada>
+        <nom>Anna</nom>
+        <teléfon>789654321</teléfon>
+    </entrada>
+</agenda>

@@ -66,4 +66,7 @@
             </libros>
         </autor>
     </autores>
+    <segon_element pos="2">
+        element 2
+    </segon_element>
 </biblioteca>

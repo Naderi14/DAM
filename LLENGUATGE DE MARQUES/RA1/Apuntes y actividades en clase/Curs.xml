@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<curs data_inici="" data_fi="" xmlns:curs="http://www.website/curs">
+    <lloc/>
+    <participants>
+        <participant dni="">
+            <nom/>
+            <cognom/>
+            <matricula/>
+            <email/>
+            <data/>
+            <vehicle xmlns:vehicle="http://www.website/vehicle" num_chasis="1298fh198205j">
+                <vehicle:data/>
+                <vehicle:matricula/>
+                <marca/>
+                <model/>
+            </vehicle>
+        </participant>
+    </participants>
+</curs>
