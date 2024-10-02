@@ -17,6 +17,27 @@ Algoritmo NumeroMayor
 	FinSi;
 FinAlgoritmo
 
+Algoritmo NumeroMayor
+	Definir numero1, numero2, numero3, mayor tipo enteros;
+	Escribir "Introduce el número 1";
+	Leer numero1;
+	Escribir "Introduce el número 2";
+	Leer numero2;
+	Escribir "Introduce el número 3";
+	Leer numero3;
+
+	mayor = numero1;
+
+	Si numero2 > mayor entonces;
+		mayor = numero2;
+	FinSi;
+	Si numero3 > mayor entonces;
+		mayor = numero3;
+	FinSi;
+	
+	Escribir "El mayor es: ",mayor;
+FinAlgoritmo
+
 Algoritmo OperarNumeros
 	Definir numero1, numero2, suma, resta, producto tipo entero;
 	Definir division tipo real;
