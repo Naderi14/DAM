@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<curs data_inici="" data_fi="" xmlns:curs="http://www.website/curs">
+<curs data_inici="" data_fi="" xmlns:curs="http://www.website/curs"
+	  xmlns:vehicle="http://www.website/vehicle">
     <lloc/>
     <participants>
         <participant dni="">
@@ -8,7 +9,7 @@
             <matricula/>
             <email/>
             <data/>
-            <vehicle xmlns:vehicle="http://www.website/vehicle" num_chasis="1298fh198205j">
+            <vehicle num_chasis="1298fh198205j">
                 <vehicle:data/>
                 <vehicle:matricula/>
                 <marca/>
