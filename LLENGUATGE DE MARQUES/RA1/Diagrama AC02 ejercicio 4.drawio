@@ -1,0 +1,31 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="24.7.16">
+  <diagram name="Página-1" id="BwyvmdqjcdfnjLDLSRpH">
+    <mxGraphModel dx="1684" dy="822" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="SM932kIX6GgoQ4ExuH_k-5" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="SM932kIX6GgoQ4ExuH_k-1" target="SM932kIX6GgoQ4ExuH_k-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SM932kIX6GgoQ4ExuH_k-1" value="lloguer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="112" y="33" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SM932kIX6GgoQ4ExuH_k-4" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="SM932kIX6GgoQ4ExuH_k-2" target="SM932kIX6GgoQ4ExuH_k-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SM932kIX6GgoQ4ExuH_k-2" value="xmlns:lloguer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" vertex="1" parent="1">
+          <mxGeometry x="-76" y="33" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SM932kIX6GgoQ4ExuH_k-3" value="http://www.website/lloguer&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2bff1;strokeColor=#0e8088;" vertex="1" parent="1">
+          <mxGeometry x="-285" y="33" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SM932kIX6GgoQ4ExuH_k-6" value="adreça" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad7ac;strokeColor=#b46504;" vertex="1" parent="1">
+          <mxGeometry x="112" y="159" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SM932kIX6GgoQ4ExuH_k-7" value="ciutat" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad7ac;strokeColor=#b46504;" vertex="1" parent="1">
+          <mxGeometry x="278" y="159" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

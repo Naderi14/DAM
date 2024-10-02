@@ -9,7 +9,7 @@ Algoritmo NumeroMayor
 	Si numero1 > numero2 Y numero1 > numero3 entonces;
 			Escribir numero1, "es el mayor";
 	Sino;
-		Si numero2 > numero3 entonces;
+		Si numero2 > numero1 Y numero2 > numero3 entonces;
 			Escribir numero2, "es el mayor";
 		Sino;
 			Escribir numero3, "es el mayor";
