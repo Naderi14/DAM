@@ -8,13 +8,14 @@
 * See http://www.gnu.org/licenses/gpl.html for more information.
 */
 package enseñanzaEntorno;
-import java.util.Scanner;
 public class ClasePrincipal 
 {
 	public static void main(String[] args) 
 	{
 		Ejercicios ejercicios = new Ejercicios();
 		
-		ejercicios.condicionales();
+		//ejercicios.condicionales2N();
+		//ejercicios.condicionales3N();
+		ejercicios.calificarNota();
 	}
 }
