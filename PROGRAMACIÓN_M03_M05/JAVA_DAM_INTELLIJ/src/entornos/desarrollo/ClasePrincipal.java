@@ -7,15 +7,13 @@
 * This is free software, licensed under the GNU General Public License v3.
 * See http://www.gnu.org/licenses/gpl.html for more information.
 */
-package enseñanzaEntorno;
+package entornos.desarrollo;
 public class ClasePrincipal 
 {
 	public static void main(String[] args) 
 	{
-		Ejercicios ejercicios = new Ejercicios();
-		
-		//ejercicios.condicionales2N();
-		//ejercicios.condicionales3N();
-		ejercicios.calificarNota();
+		//Ejercicios.condicionales2N();
+		//Ejercicios.condicionales3N();
+		Ejercicios.calificarNota();
 	}
 }

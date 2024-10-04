@@ -1,17 +1,16 @@
-package enseñanzaEntorno;
+package entornos.desarrollo;
 
 import java.util.Scanner;
 
-public class Ejercicios 
+public class Ejercicios
 {
-	Scanner leer = new Scanner(System.in);
+	private final static Scanner leer = new Scanner(System.in);
 	
-	public void condicionales2N()
+	public static void condicionales2N()
 	{
-		
 		int n1, n2;
 		
-		System.out.println("Estas el 'Condicionales', introduce 2 numeros a continuacion para mirar si son mayores");
+		System.out.println("Estas en 'Condicionales 2N', introduce 2 numeros a continuacion para mirar si son mayores");
 		
 		n1 = leer.nextInt();
 		n2 = leer.nextInt();
@@ -26,12 +25,12 @@ public class Ejercicios
 		}
 	}
 	
-	public void condicionales3N()
+	public static void condicionales3N()
 	{
 		// Declarar variables
 		int n1, n2, n3, mayor;
 		
-		System.out.println("Estas el 'Condicionales', introduce 3 numeros a continuacion para mirar si son mayores");
+		System.out.println("Estas el 'Condicionales 3N', introduce 3 numeros a continuacion para mirar si son mayores");
 		
 		n1 = leer.nextInt();
 		n2 = leer.nextInt();
@@ -54,7 +53,7 @@ public class Ejercicios
 		System.out.println("El número: " + mayor + " es el mayor de los tres");
 	}
 	
-	public void calificarNota()
+	public static void calificarNota()
 	{
 		int nota = 0;
 		boolean isNotaValida = false;
@@ -63,11 +62,18 @@ public class Ejercicios
 		
 		// NO TENGAIS ESTO EN CUENTA OK? 
 		do {
-			nota = leer.nextInt();
-			if (nota <= 10 && nota >= 0) 
+			try
 			{
-				isNotaValida = true;
-				continue;
+				nota = leer.nextInt();
+				if (nota <= 10 && nota >= 0)
+				{
+					isNotaValida = true;
+					continue;
+				}
+			}
+			catch (Exception e)
+			{
+				leer.nextLine();
 			}
 			System.out.println("Nota no válida, introduzca de nuevo");
 		} while(!isNotaValida);	
