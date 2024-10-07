@@ -1,0 +1,23 @@
+package enseñanzaEntorno;
+
+import java.util.Scanner;
+
+public class Ejercicios 
+{
+	Scanner leer = new Scanner(System.in);
+	
+	public void condicionales()
+	{
+		
+		int n1, n2;
+		
+		
+		n1 = leer.nextInt();
+		n2 = leer.nextInt();
+
+		if (n1 < n2) 
+		{
+			System.out.println("El número: " + n2 + " es mayor");
+		}
+	}
+}
