@@ -15,12 +15,22 @@ Algoritmo NumMayorIgual
 	Leer numero1;
 	Escribir "Introduce el numero2";
 	Leer numero2;
+
+	Si numero1 > numero2 entonces;
+		Escribir "El ",numero1," es mayor que ",numero2;
+	Sino;
+		Si numero1 == numero2 entonces;
+			Escribir "Ambos números son iguales";
+		Sino;
+			Escribir "El ",numero2," es mayor que ",numero1;
+		FinSi;
+	FinSi;
 FinAlgoritmo
 
 //3. Leer 2 números distintos y mostrar la división del mayor entre el menor.
 Algoritmo OperarNumeros
 	Definir numero1, numero2, menor, mayor tipo Entero;
-	Definir division tipo real;
+	Definir division tipo Real;
 	Escribir "Introduce numero1";
 	Leer numero1;
 	Escribir "Introduce numero2";
@@ -55,19 +65,19 @@ Algoritmo CalificarNota
 	Si nota < 0 OR nota > 10 entonces;
 		Escribir "La nota no entra en el rango";
 	Sino;
-		Si nota >= 0 AND nota < 3 entonces;
+		Si nota < 3 entonces;
 			Escribir "Muy deficiente";
 		FinSi;
-		Si nota >= 3 AND nota < 5 entonces;
+		Si nota < 5 entonces;
 			Escribir "Insuficiente";
 		FinSi;
-		Si nota >= 5 AND nota < 6 entonces;
+		Si nota < 6 entonces;
 			Escribir "Bien";
 		FinSi;
-		Si nota >= 6 AND nota < 9 entonces;
+		Si nota < 9 entonces;
 			Escribir "Notable";
 		FinSi;
-		Si nota >= 9 entonces;
+		Si nota > 9 entonces;
 			Escribir "Sobresaliente";
 		FinSi;
 	FinSi;
