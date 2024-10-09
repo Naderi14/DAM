@@ -1,0 +1,4 @@
+<!ELEMENT classe (professor, alumnes)>
+<!ELEMENT professor (#PCDATA)>
+<!ELEMENT alumnes (alumne*)>
+<!ELEMENT alumne (#PCDATA)>

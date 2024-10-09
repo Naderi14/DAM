@@ -1,0 +1,9 @@
+<!ELEMENT students (student+)>
+<!ELEMENT student (name, birthdate, phone+, sex?, NSS?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT birthdate (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT sex (#PCDATA)>
+<!ELEMENT NSS (#PCDATA)>
+<!ATTLIST student nationality CDATA #REQUIRED>
+<!ATTLIST birthdate format CDATA #FIXED "DD/MM/YYYY">

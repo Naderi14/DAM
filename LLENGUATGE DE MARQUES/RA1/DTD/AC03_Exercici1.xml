@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca SYSTEM "AC03_Exercici1.dtd">
+<biblioteca>
+    <llibre cod="A0001">
+        <autor>
+            <nom>Jonh Palmer</nom>
+            <cognom>Brian</cognom>
+        </autor>
+        <titol>XML en 24 horas</titol>
+        <estat prestado=""/>
+    </llibre>
+    <llibre cod="A0002">
+        <autor>
+            <nom>Juan Ramón</nom>
+            <cognom>López</cognom>
+            <cognom>Prats</cognom>
+        </autor>
+        <titol>XML en 48 horas</titol>
+        <isbn>8-12345-09</isbn>
+        <estat prestado="Si"/>
+    </llibre>
+</biblioteca>

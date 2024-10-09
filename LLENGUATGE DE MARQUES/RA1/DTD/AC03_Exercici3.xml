@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE contacts SYSTEM "AC03_Exercici3.dtd">
+
+<contacts>
+    <person>
+        <name>Joan Prat</name>
+        <address>C/Pep Ventura</address>
+        <city>Martorell</city>
+        <country>Spain</country>
+        <postalcode>08760</postalcode>
+        <phone>
+            <mobile>+34 456987321</mobile>
+        </phone>
+    </person>
+    <person>
+        <name>Jordi Hernandez</name>
+        <address>C/Harmonia</address>
+        <city>Barcelona</city>
+        <country>Spain</country>
+        <postalcode>08032</postalcode>
+        <phone>
+            <home>+34 933345678</home>
+        </phone>
+    </person>
+    <person>
+        <name>Enric Ventosa</name>
+        <address>C/Pintor Fortuny</address>
+        <city>Cerbera</city>
+        <country>Spain</country>
+        <phone>
+            <mobile>+34 569874123</mobile>
+        </phone>
+    </person>
+</contacts>

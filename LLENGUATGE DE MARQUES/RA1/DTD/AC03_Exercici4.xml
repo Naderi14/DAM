@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE students SYSTEM "AC03_Exercici4.dtd">
+
+<students>
+    <student nationality="Española">
+        <name>Joan Llopart</name>
+        <birthdate format="DD/MM/YYYY">25/06/1997</birthdate>
+        <phone>+34 555654987</phone>
+        <sex>H</sex>
+        <NSS>12345879</NSS>
+    </student>
+    <student nationality="">
+        <name>Sergi Maragall</name>
+        <birthdate format="DD/MM/YYYY">14/02/1987</birthdate>
+        <phone>+34 456789321</phone>
+    </student>
+    <student nationality="">
+        <name>Antoni Masip</name>
+        <birthdate format="DD/MM/YYYY">19/04/1965</birthdate>
+        <phone>+34 845612347</phone>
+        <sex>H</sex>
+    </student>
+</students >

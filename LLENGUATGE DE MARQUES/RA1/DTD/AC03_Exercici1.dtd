@@ -1,0 +1,10 @@
+<!ELEMENT biblioteca (llibre*)>
+<!ELEMENT llibre (autor+, titol, isbn?,estat)>
+<!ELEMENT autor (nom, cognom+)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT cognom (#PCDATA)>
+<!ELEMENT titol (#PCDATA)>
+<!ELEMENT estat EMPTY>
+<!ELEMENT isbn (#PCDATA)>
+<!ATTLIST llibre cod ID #REQUIRED>
+<!ATTLIST estat prestado CDATA "No">

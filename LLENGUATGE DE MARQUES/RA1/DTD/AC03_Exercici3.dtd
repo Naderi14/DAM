@@ -1,0 +1,10 @@
+<!ELEMENT contacts (person+)>
+<!ELEMENT person (name, address, city, country, postalcode?, phone+)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT postalcode (#PCDATA)>
+<!ELEMENT mobile (#PCDATA)>
+<!ELEMENT home (#PCDATA)>
+<!ELEMENT phone (mobile|home)>
