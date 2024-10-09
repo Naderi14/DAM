@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE team SYSTEM "AC01_Exercici5.dtd">
+
+<team>
+    <player code="P1">
+        <name>Homer</name>
+        <lastname>Simpson</lastname>
+        <height>1.85</height>
+        <position>Goal Kepper</position>
+        <position>Defender</position>
+    </player>
+    <player code="P2">
+        <name>Bart</name>
+        <lastname>Simpson</lastname>
+        <height>1.55</height>
+        <position>Forward</position>
+    </player>
+    <player code="P3">
+        <name>Lisa</name>
+        <lastname>Simpson</lastname>
+        <height>1.45</height>
+        <position>Goal Kepper</position>
+        <position>Defender</position>
+    </player>
+    <player code="P4">
+        <name>Maggie</name>
+        <lastname>Simpson</lastname>
+        <position>Midfielder</position>
+        <position>Defender</position>
+    </player>
+    <trainer name="Trainer1" players="P1 P2"/>
+    <trainer name="Trainer2" players="P1 P3 P4"/>
+</team>
