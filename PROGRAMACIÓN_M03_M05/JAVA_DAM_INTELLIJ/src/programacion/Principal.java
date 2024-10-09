@@ -1,9 +1,9 @@
 package programacion;
 
-public class ClasePrincipal
+public class Principal
 {
     public static void main(String[] args)
     {
-
+        ClasesProgramacion.Bucles();
     }
 }
