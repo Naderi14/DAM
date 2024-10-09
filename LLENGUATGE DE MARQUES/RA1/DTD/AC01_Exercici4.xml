@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE students SYSTEM "AC03_Exercici4.dtd">
+<!DOCTYPE students SYSTEM "AC01_Exercici4.dtd">
 
 <students>
     <student nationality="Española">

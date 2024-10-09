@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE temps SYSTEM "AC03_Exercici2.dtd">
+<!DOCTYPE temps SYSTEM "AC01_Exercici2.dtd">
 <temps>
     <entitat id="AZ000000A">
         <nom>Agencia Santbolana de meteorologia</nom>
