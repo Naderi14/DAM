@@ -15,4 +15,13 @@ public class ClasesProgramacion
         else
             System.out.println("Eres menor de edad");
     }
+
+    public static void BucleFor()
+    {
+        System.out.println("Los números pares son los siguientes: ");
+        for (int i = 0; i < 100; i += 2)
+        {
+            System.out.print(i + " ,");
+        }
+    }
 }

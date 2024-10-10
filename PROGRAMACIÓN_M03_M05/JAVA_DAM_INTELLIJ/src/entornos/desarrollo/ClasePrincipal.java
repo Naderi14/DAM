@@ -14,7 +14,8 @@ public class ClasePrincipal
 	{
 		//Ejercicios.condicionales2N();
 		//Ejercicios.condicionales3N();
-		Ejercicios.calificarNota();
+		//Ejercicios.calificarNota();
+		//Ejercicios.BucleHastaSalir();
+		Ejercicios.MostrarNumerosPrimos();
 	}
-
 }

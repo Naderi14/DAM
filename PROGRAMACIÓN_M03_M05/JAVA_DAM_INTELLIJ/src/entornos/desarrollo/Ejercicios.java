@@ -1,5 +1,8 @@
 package entornos.desarrollo;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejercicios
@@ -93,5 +96,56 @@ public class Ejercicios
 		
 		else 
 			System.out.println("Sobresaliente");
+	}
+
+	public static void BucleHastaSalir()
+	{
+		System.out.println("Introduce un número");
+		int numero = leer.nextInt();
+		int contador = 0;
+		int [] historial = new int[100];
+
+		while(numero != 0)
+		{
+			System.out.println("Dame otro número, estas atrapado aun");
+			numero = leer.nextInt();
+			historial[contador] = numero;
+			contador++;
+		}
+
+		System.out.println("Has salido!! Felicidades crack\nEstos son los números que has introducido");
+
+		for(contador = 0; contador < historial.length; contador++)
+		{
+			if (historial[contador] != 0)
+				System.out.print(historial[contador] + ", ");
+		}
+	}
+
+	public static void MostrarNumerosPrimos()
+	{
+		System.out.println("Introduce un numero máximo y te mostraré los numeros primos");
+		int numMax = leer.nextInt();
+
+		for (int i = 0; i < numMax; i++)
+		{
+			if (isPrimo(i) == true)
+				System.out.print(i + " ,");
+		}
+	}
+
+	public static boolean isPrimo(int numero)
+	{
+		if (numero % 2 != 0 && numero % 3 != 0 && numero % 5 != 0 && numero != 1)
+		{
+			return true;
+		}
+
+		if (numero == 2 || numero == 3 || numero == 5)
+		{
+			return true;
+		}
+
+		return false;
 	}
 }
