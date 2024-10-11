@@ -4,6 +4,7 @@ public class Principal
 {
     public static void main(String[] args)
     {
-        ClasesProgramacion.cashTotal();
+        //ClasesProgramacion.cashTotal();
+        Ejercicios.checkDateTime();
     }
 }
