@@ -20,7 +20,7 @@ public class Ejercicios
 {
     private static Scanner leer = new Scanner(System.in);
 
-    public static void checkDateTime()
+    public static void checkDateTime()  // EJERCICIO 1
     {
         int day, month, year;
         boolean bisiesto = false, isFebrero = false, mesLargo = false;
