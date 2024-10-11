@@ -127,25 +127,24 @@ public class Ejercicios
 		System.out.println("Introduce un numero máximo y te mostraré los numeros primos");
 		int numMax = leer.nextInt();
 
-		for (int i = 0; i < numMax; i++)
+		for (int i = 2; i <= numMax; i++)
 		{
-			if (isPrimo(i) == true)
+			if (isPrimo(i))
 				System.out.print(i + " ,");
 		}
 	}
 
 	public static boolean isPrimo(int numero)
 	{
-		if (numero % 2 != 0 && numero % 3 != 0 && numero % 5 != 0 && numero != 1)
+		if (numero < 2)
+			return false;
+
+		for (int i = 2; i <= numero / 2; i++)
 		{
-			return true;
+			if (numero % i == 0)
+				return false;
 		}
 
-		if (numero == 2 || numero == 3 || numero == 5)
-		{
-			return true;
-		}
-
-		return false;
+		return true;
 	}
 }
