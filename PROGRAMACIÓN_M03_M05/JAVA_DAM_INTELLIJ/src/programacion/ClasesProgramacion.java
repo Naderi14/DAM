@@ -30,7 +30,7 @@ public class ClasesProgramacion
         int efectivoTotal = 0;
 
         System.out.println("Introduce la cantidad de dinero");
-        int dinero = leer.nextInt();
+        double dinero = leer.nextDouble();
 
         while (dinero > 0)
         {
@@ -55,9 +55,33 @@ public class ClasesProgramacion
             } else if (dinero >= 2) {
                 efectivoTotal++;
                 dinero -= 2;
-            } else {
+            } else if (dinero >= 1) {
                 efectivoTotal++;
                 dinero -= 1;
+            } else if (dinero >= 0.5) {
+                efectivoTotal++;
+                dinero -= 0.5;
+                dinero = Math.round(dinero * 100.0) / 100.0;
+            } else if (dinero >= 0.2) {
+                efectivoTotal++;
+                dinero -= 0.2;
+                dinero = Math.round(dinero * 100.0) / 100.0;
+            } else if (dinero >= 0.1) {
+                efectivoTotal++;
+                dinero -= 0.1;
+                dinero = Math.round(dinero * 100.0) / 100.0;
+            } else if (dinero >= 0.05) {
+                efectivoTotal++;
+                dinero -= 0.05;
+                dinero = Math.round(dinero * 100.0) / 100.0;
+            } else if (dinero >= 0.02) {
+                efectivoTotal++;
+                dinero -= 0.02;
+                dinero = Math.round(dinero * 100.0) / 100.0;
+            } else {
+                efectivoTotal++;
+                dinero -= 0.01;
+                dinero = Math.round(dinero * 100.0) / 100.0;
             }
         }
 
