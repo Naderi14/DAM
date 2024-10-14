@@ -5,35 +5,28 @@ public class Ejercicio3 {
     static Scanner leer = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int promedio = 0, sumaTotal = 0;
-        int[] listaNumeros = new int[10];
-        ArrayList<Integer> listaImpares = new ArrayList<>();
+        int promedio = 0, sumaTotal = 0, numero, contadorImpares = 0, contadorPares = 0;
 
         System.out.println("Introduzca 10 números a continuación");
 
-        for (int i = 0; i < listaNumeros.length; i++) {
+        for (int i = 0; i < 10; i++) {
             System.out.println("Numero " + (i+1));
-            listaNumeros[i] = leer.nextInt();
-            sumaTotal += listaNumeros[i];
-        }
+            numero = leer.nextInt();
+            sumaTotal += numero;
 
-        System.out.println("\nNúmeros Pares: ");
-
-        for (int numero : listaNumeros)
-        {
             if (numero % 2 == 0)
-                System.out.print(numero + " ,");
+                contadorPares++;
+
             else
-                listaImpares.add(numero);
+            {
+                contadorImpares++;
+                promedio += numero;
+            }
         }
+        promedio /= contadorImpares;
 
-        for (int numero : listaImpares)
-        {
-            promedio += numero;
-        }
-        promedio /= listaImpares.size();
-
-        System.out.println("\nSuma Total de todos los números: " + sumaTotal);
+        System.out.println("\nCantidad números Pares: " + contadorPares );
+        System.out.println("Suma Total de todos los números: " + sumaTotal);
         System.out.println("Promedio de todos los impares: " + promedio);
     }
 }

@@ -31,11 +31,12 @@
 			<item value=""/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="E:\DESENVOLUPAMENT APLICACIONS MULTIPLATAFORMA\PROGRAMACIÓN_M03_M05\PROGRAMACIÓ\Actividades\Java\Entregable 1\DAX_ED_Act7_SanchezCastelblanqueJuanFrancisco_JavaProject.zip"/>
 			<item value="C:\Users\Usuario\Downloads\MoneyEjercicio.zip"/>
 		</list>
 		<section name="ExternalProjectImportWizard.dialogBounds">
-			<item key="DIALOG_X_ORIGIN" value="247"/>
-			<item key="DIALOG_Y_ORIGIN" value="279"/>
+			<item key="DIALOG_X_ORIGIN" value="262"/>
+			<item key="DIALOG_Y_ORIGIN" value="322"/>
 			<item key="DIALOG_WIDTH" value="525"/>
 			<item key="DIALOG_HEIGHT" value="710"/>
 			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>

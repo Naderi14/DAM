@@ -6,7 +6,6 @@ public class Ejercicio1 {
     public static void main(String[] args) {
         int day, month, year;
         boolean bisiesto = false, isFebrero = false, mesLargo = false;
-        String [] listaMeses = new String[]{"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
 
         while (true){
             System.out.println("Introduce el AÑO");
@@ -73,6 +72,46 @@ public class Ejercicio1 {
         else
             System.out.println("Fecha Validada: " + day + "/" + month + "/" + year);
 
-        System.out.println(day + " de " + listaMeses[month - 1] + " del " + year);
+        switch (month)
+        {
+            case 1:
+                System.out.println(day + " de Enero del " + year);
+                break;
+            case 2:
+                System.out.println(day + " de Febrero del " + year);
+                break;
+            case 3:
+                System.out.println(day + " de Marzo del " + year);
+                break;
+            case 4:
+                System.out.println(day + " de Abril del " + year);
+                break;
+            case 5:
+                System.out.println(day + " de Mayo del " + year);
+                break;
+            case 6:
+                System.out.println(day + " de Junio del " + year);
+                break;
+            case 7:
+                System.out.println(day + " de Julio del " + year);
+                break;
+            case 8:
+                System.out.println(day + " de Agosto del " + year);
+                break;
+            case 9:
+                System.out.println(day + " de Septiembre del " + year);
+                break;
+            case 10:
+                System.out.println(day + " de Octubre del " + year);
+                break;
+            case 11:
+                System.out.println(day + " de Noviembre del " + year);
+                break;
+            case 12:
+                System.out.println(day + " de Diciembre del " + year);
+                break;
+            default:
+                break;
+        }
     }
 }
