@@ -10,5 +10,35 @@ número decimal entre dos y anotar en una columna a la derecha el resto
 
 La lista de ceros y unos leídos de abajo a arriba es el resultado.*/
 
+import java.util.Scanner;
+
 public class Ejercicio10 {
+    public static void convertidorBinario()
+    {
+        Scanner leer = new Scanner(System.in);
+
+        System.out.println("Dame un número en Decimal para convertir a Binario");
+        int decimal = leer.nextInt();
+
+        System.out.println("El número binario de " + decimal + " es " + decimalToBinario(decimal));
+    }
+
+    private static String decimalToBinario(int numero)
+    {
+        String binarioEnteroInverso = "";
+        String numeroBinario = "";
+
+        while (numero != 0)
+        {
+            binarioEnteroInverso += numero & 1; // Si es impar o (expresion binaria XX001) acabado en 1, me devolverá 1 o 0 en caso de par
+            numero >>>= 1; // Mover los bits hacia la derecha 1 posición y los 3 >>> cambia el comportamiento cuando el numero es negativo
+        }
+
+        for (int i = binarioEnteroInverso.length() - 1; i >= 0; i--)
+        {
+            numeroBinario += binarioEnteroInverso.charAt(i);
+        }
+
+        return numeroBinario;
+    }
 }
