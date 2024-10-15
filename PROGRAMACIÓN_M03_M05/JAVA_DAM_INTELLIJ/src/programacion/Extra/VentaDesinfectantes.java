@@ -11,6 +11,8 @@ productos con precios:
 1- 0,6 €/litro, 2- 3 €/litro y 3- 1,25 €/litro.
 */
 
+import javax.swing.*;
+import java.awt.im.spi.InputMethod;
 import java.util.*;
 
 public class VentaDesinfectantes
@@ -73,6 +75,7 @@ public class VentaDesinfectantes
             facturacionTotal = dictionaryArticles.get(codigoArticulo) * cantidadLitrosVendidos;
 
             Hashtable<String, Double> factura = new Hashtable<>();
+
             factura.put("codigo", (double)codigoArticulo);
             factura.put("cantidad", (double)cantidadLitrosVendidos);
             factura.put("totalFactura", facturacionTotal);
@@ -93,5 +96,7 @@ public class VentaDesinfectantes
         }
 
         System.out.println("Se han contabilizado " + contador + " facturas de mas de 600€");
+
+        InputMap inputMap = new InputMap();
     }
 }
