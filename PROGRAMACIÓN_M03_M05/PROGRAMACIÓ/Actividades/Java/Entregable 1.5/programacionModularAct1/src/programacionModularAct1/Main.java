@@ -1,8 +1,8 @@
-package programacion.RA1.programacionModularEjercicios;
+package programacionModularAct1;
 
 /*
-* Juan Francisco Sanchez Castelblanque DAM 1r
-* */
+ * Juan Francisco Sanchez Castelblanque DAM 1r
+ */
 
 public class Main {
     public static void main(String[] args)
