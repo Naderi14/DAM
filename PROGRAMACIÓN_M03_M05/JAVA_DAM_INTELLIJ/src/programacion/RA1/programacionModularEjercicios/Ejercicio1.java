@@ -6,38 +6,26 @@ un número que el usuario introduzca por pantalla.*/
 import java.util.Scanner;
 
 public class Ejercicio1 {
-    public void sumarDigitosDeNumero()
+    public static void sumarDigitosDeNumero()
     {
         Scanner leer = new Scanner(System.in);
 
-        int sumaDigitos;
-
-        System.out.println("Introduce un número para sumar sus digitos");
+        System.out.println("EX1: Introduce un número para sumar sus digitos");
         int numero = leer.nextInt();
 
-        if (isInto(numero))
-        {
-            if (numero < 10)
-            {
-                sumaDigitos = numero;
-            }
-            else if (numero < 100)
-            {
-                
-            }
-            else
-            {
-
-            }
-        }
+        System.out.println("La suma total de los digitos del número " + numero + " es: " + sumaDigitos(numero));
     }
 
-    public boolean isInto(int numero)
+    private static int sumaDigitos(int numero)
     {
-        if (numero > 0 && numero < 1000)
+        int sumaTotal = 0;
+
+        while (numero > 0)
         {
-            return true;
+            sumaTotal += numero % 10;
+            numero /= 10;
         }
-        return false;
+
+        return sumaTotal;
     }
 }
