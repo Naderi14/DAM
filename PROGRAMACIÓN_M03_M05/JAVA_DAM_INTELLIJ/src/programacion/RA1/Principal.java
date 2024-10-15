@@ -1,4 +1,4 @@
-package programacion;
+package programacion.RA1;
 
 public class Principal
 {

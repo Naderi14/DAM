@@ -7,7 +7,7 @@
 * This is free software, licensed under the GNU General Public License v3.
 * See http://www.gnu.org/licenses/gpl.html for more information.
 */
-package entornos.desarrollo;
+package entornosDesarrollo.RA1;
 public class ClasePrincipal 
 {
 	public static void main(String[] args) 

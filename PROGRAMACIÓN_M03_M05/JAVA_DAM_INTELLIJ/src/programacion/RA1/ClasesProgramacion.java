@@ -1,4 +1,4 @@
-package programacion;
+package programacion.RA1;
 
 import java.util.Scanner;
 
