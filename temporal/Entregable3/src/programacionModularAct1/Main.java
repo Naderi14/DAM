@@ -1,24 +1,58 @@
 package programacionModularAct1;
 
+import java.util.Scanner;
+
 /*
  * Juan Francisco Sanchez Castelblanque DAM 1r
  */
 
 public class Main {
-    public static void main(String[] args)
+	public static void main(String[] args)
     {
-        Ejercicio1.sumarDigitosDeNumero();
-        Ejercicio2.numeroFactorial();
-        Ejercicio3.expCubo();
-        Ejercicio4.menorDeDos();
-        Ejercicio5.positiveNegativeZero();
-        Ejercicio6.porAhoraNoHayNadaAqui();
-        Ejercicio7.digitCounter();
-        Ejercicio8.cambioDeDivisa();
-        Ejercicio9.numeroPrimoOno();
-        Ejercicio10.convertidorBinario();
-        Ejercicio11.chekPalabraPalindroma();
-        Ejercicio12.areaDeTresFiguras();
+        Scanner leer = new Scanner(System.in);
+
+        System.out.println("Introduce el número de Ejercicio");
+        int opcion = leer.nextInt();
+
+        switch (opcion)
+        {
+            case 1:
+                Ejercicio1.sumarDigitosDeNumero();
+                break;
+            case 2:
+                Ejercicio2.numeroFactorial();
+                break;
+            case 3:
+                Ejercicio3.expCubo();
+                break;
+            case 4:
+                Ejercicio4.menorDeDos();
+                break;
+            case 5:
+                Ejercicio5.positiveNegativeZero();
+                break;
+            case 6:
+                Ejercicio6.sumarDigitosConFuncion();
+                break;
+            case 7:
+                Ejercicio7.digitCounter();
+                break;
+            case 8:
+                Ejercicio8.cambioDeDivisa();
+                break;
+            case 9:
+                Ejercicio9.numeroPrimoOno();
+                break;
+            case 10:
+                Ejercicio10.convertidorBinario();
+                break;
+            case 11:
+                Ejercicio11.chekPalabraPalindroma();
+                break;
+            case 12:
+                Ejercicio12.areaDeTresFiguras();
+                break;
+        }
     }
 }
 

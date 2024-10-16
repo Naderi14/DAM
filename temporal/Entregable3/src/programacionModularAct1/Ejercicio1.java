@@ -10,14 +10,17 @@ un número que el usuario introduzca por pantalla.*/
 import java.util.Scanner;
 
 public class Ejercicio1 {
-    public static void sumarDigitosDeNumero()
+	public static void sumarDigitosDeNumero()
+    {
+        System.out.println("EX1: Introduce un número para sumar sus digitos");
+
+        System.out.println("La suma total de los digitos del número es: " + sumaDigitos(pedirNumero()));
+    }
+
+    private static int pedirNumero()
     {
         Scanner leer = new Scanner(System.in);
-
-        System.out.println("EX1: Introduce un número para sumar sus digitos");
-        int numero = leer.nextInt();
-
-        System.out.println("La suma total de los digitos del número " + numero + " es: " + sumaDigitos(numero));
+        return leer.nextInt();
     }
 
     private static int sumaDigitos(int numero)
