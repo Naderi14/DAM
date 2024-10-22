@@ -11,7 +11,7 @@ controla las entregas avisar si el inventario baja de 200 unidades. Desarrollar 
 diagrama de flujo.*/
     public static void main(String[] args)
     {
-        int vacunas = 1000, dia = 1, gastoDiario;
+        int vacunas = 1000, dia = 1, gastoDiario, vacunasRestantes = 0;
         while (vacunas > 0)
         {
             System.out.println("\nDia: " + dia + "   |  Vacunas Restantes: " + vacunas);
@@ -20,16 +20,25 @@ diagrama de flujo.*/
 
             dia++;
 
+            vacunasRestantes = vacunas;
             vacunas -= gastoDiario;
+
             if (vacunas < 200)
             {
+                if (vacunas < gastoDiario)
+                {
+                    System.out.println("\n<!-- [ALERTA] Se han agotado las últimas " + vacunas + "  vacunas restantes --!>");
+                    vacunas = 0;
+                }
                 if (vacunas <= 0)
                     break;
 
                 System.out.println("\n<!-- [ALERTA] Las vacunas están por debajo de 200 unidades --!>\n");
+                vacunas -= gastoDiario;
             }
+
         }
 
-        System.out.println("\n<!-- [ALERTA] Se han agotado las vacunas --!>");
+
     }
 }

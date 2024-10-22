@@ -21,7 +21,7 @@ es un 0.*/
 
             if (nota > 0 && nota <= 10)
             {
-                mediaNotas += (double) nota;
+                mediaNotas += nota;
                 contadorNotas++;
             }
             else

@@ -20,17 +20,6 @@ Por ejemplo: Dados 366 días, la solución es 1 año y 1 día.*/
         months = days / 30;
         days %= 30;
 
-        for (int i = 0; i < years; i++)
-        {
-            days--;
-
-            if (days <= 0)
-            {
-                months--;
-                days = 29;
-            }
-        }
-
         System.out.println("Años: " + years + " | Meses: " + months + " | Dias: " + days);
     }
 }

@@ -25,7 +25,11 @@ public class Ejercicio5 {
             }
             else
             {
-                System.out.println("\n\n $$ CACHING! $$\nTotal Factura: " + totalCompra + "€");
+                if (totalCompra <= 0)
+                    System.out.println("\n\nNo hay productos con los que facturar, no hay CACHING tampoco.\n");
+                else
+                    System.out.println("\n\n $$ CACHING! $$\nTotal Factura: " + totalCompra + "€");
+
                 break;
             }
         }
