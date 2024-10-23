@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE library SYSTEM "juanFrancisco_Examen.dtd">
+
+<library>
+    <book id="A123">
+        <title>Harry Potter and the Philosopher's Stone</title>
+        <available time="24" units="days"/>
+        <authors>
+            <author>J. K. Rowling</author>
+        </authors>
+        <format type="Hardcover"/>
+        <publication>1998</publication>
+        <price quantity="16.99" currency="€"/>
+        <discount quantity="0.12" unit="FACTOR"/>
+        <link href="/exec/ISBN/978-0-7475-3269-9"/>
+    </book>
+
+    <book id="A124">
+        <title>Harry Potter and the Chamber of Secrets</title>
+        <available time="24" units="days"/>
+        <authors>
+            <author>J. K. Rowling</author>
+        </authors>
+        <format />
+        <publication>1997</publication>
+        <price quantity="15.99" currency="€"/>
+        <discount quantity="5" />
+        <link href="/exec/ISBN/0-7475-3849-2"/>
+    </book>
+
+    <book id="A125">
+        <title>Sleeping Beauties</title>
+        <available time="48" units="days"/>
+        <authors>
+            <author>Stephen King</author>
+        <author>Owen King</author>
+        </authors>
+        <format type="Paperback"/>
+        <publication>1997</publication>
+        <price quantity="15.99" currency="€"/>
+        <link href="/exec/ISBN/0-7475-3849-2"/>
+    </book>
+</library>

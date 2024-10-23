@@ -1,5 +1,5 @@
-<!ELEMENT team (player+, trainer+)>
-<!ELEMENT player (name, lastname, height?, position+)>
+<!ELEMENT team ((player+, trainer+)*)>
+<!ELEMENT player (name, lastname, height?, position*)>
 <!ELEMENT name (#PCDATA)>
 <!ELEMENT lastname (#PCDATA)>
 <!ELEMENT height (#PCDATA)>
@@ -7,4 +7,4 @@
 <!ELEMENT trainer EMPTY>
 <!ATTLIST player code ID #REQUIRED>
 <!ATTLIST trainer name CDATA #REQUIRED>
-<!ATTLIST trainer players NMTOKENS #REQUIRED>
+<!ATTLIST trainer players IDREFS #IMPLIED>

@@ -1,0 +1,20 @@
+<!ELEMENT library (book*)>
+<!ELEMENT book (title, available, authors, format, publication, price, discount?, link)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT available EMPTY>
+<!ELEMENT authors (author+)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT format EMPTY>
+<!ELEMENT publication (#PCDATA)>
+<!ELEMENT price EMPTY>
+<!ELEMENT discount EMPTY>
+<!ELEMENT link EMPTY>
+<!ATTLIST book id ID #REQUIRED>
+<!ATTLIST available time NMTOKEN #REQUIRED>
+<!ATTLIST available units (days | weeks) #REQUIRED>
+<!ATTLIST format type (Paperback | Hardcover) #IMPLIED>
+<!ATTLIST price quantity NMTOKEN #REQUIRED>
+<!ATTLIST price currency CDATA #REQUIRED>
+<!ATTLIST discount quantity NMTOKEN #REQUIRED>
+<!ATTLIST discount unit (PERCENT | FACTOR) "PERCENT">
+<!ATTLIST link href CDATA #REQUIRED>
