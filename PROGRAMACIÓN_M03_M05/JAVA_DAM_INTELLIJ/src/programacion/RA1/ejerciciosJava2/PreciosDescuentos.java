@@ -11,6 +11,7 @@ public class PreciosDescuentos {
         int opcion = leer.nextInt();
 
         double precioTotal;
+        double descuento;
 
         switch (opcion)
         {
@@ -28,7 +29,8 @@ public class PreciosDescuentos {
 
                 for (int i = 5; i <= 100; i += 5)
                 {
-                    System.out.println("");
+                    descuento = precioTotal * ((double)i / 100);
+                    System.out.println("<- Descuento " + i + "% = " + (precioTotal - descuento));
                 }
                 break;
             case 2:
