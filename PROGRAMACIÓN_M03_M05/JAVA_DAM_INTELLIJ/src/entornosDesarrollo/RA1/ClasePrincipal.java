@@ -16,6 +16,6 @@ public class ClasePrincipal
 		//Ejercicios.condicionales3N();
 		//Ejercicios.calificarNota();
 		//Ejercicios.BucleHastaSalir();
-		Ejercicios.MostrarNumerosPrimos();
+		//Ejercicios.MostrarNumerosPrimos();
 	}
 }

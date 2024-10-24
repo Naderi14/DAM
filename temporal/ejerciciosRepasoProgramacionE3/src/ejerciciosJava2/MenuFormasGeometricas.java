@@ -1,4 +1,4 @@
-package programacion.RA1.ejerciciosJava2;
+package ejerciciosJava2;
 
 import java.util.Scanner;
 

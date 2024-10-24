@@ -1,4 +1,4 @@
-package programacion.RA1.ejerciciosJava2;
+package ejerciciosJava2;
 
 import java.util.Scanner;
 
@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args)
     {
-        System.out.println("<- Introduce el nombre de ejercicio ->");
+        System.out.println("<- Introduce el ejercicio que desea ver ->\n1. Imprenta\n2. Calcular circulo\n3. Menu Formas Geometricas\n4. Descuento precio");
         int opcion = leer.nextInt();
 
         switch (opcion)
