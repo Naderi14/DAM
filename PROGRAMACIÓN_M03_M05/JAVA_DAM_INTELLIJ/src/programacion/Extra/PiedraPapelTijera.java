@@ -14,7 +14,7 @@ public class PiedraPapelTijera {
         loopPrincipal();
     }
 
-    public static void loopPrincipal()
+    private static void loopPrincipal()
     {
         while (vidasJugador > 0 && vidasOponente > 0)
         {
@@ -31,7 +31,7 @@ public class PiedraPapelTijera {
         finalJuego();
     }
 
-    public static void menuSeleccionMano()
+    private static void menuSeleccionMano()
     {
         System.out.println("Vidas: " + vidasJugador + " | Vidas Oponente: " + vidasOponente);
         System.out.println("Elije --> 1. Piedra | 2. Papel | 3. Tijeras");
@@ -39,7 +39,7 @@ public class PiedraPapelTijera {
         manoJugador = leer.nextInt() - 1;
     }
 
-    public static void enfrentamiento()
+    private static void enfrentamiento()
     {
         if (manoJugador == manoOponente)
             System.out.println("Ha sido un empate, el oponente usó " + armas.get(manoOponente));
@@ -55,7 +55,7 @@ public class PiedraPapelTijera {
         }
     }
 
-    public static void finalJuego()
+    private static void finalJuego()
     {
         if (vidasJugador > 0)
             System.out.println("Ganaste la partida!");
