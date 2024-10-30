@@ -1,0 +1,55 @@
+.main-block
+{
+    background-color: cadetblue;
+}
+
+div.block1 
+{
+    background-color: rgb(132, 160, 95);
+    padding: 10px;
+    color: brown;
+    margin: 20px;
+}
+
+div.block2
+{
+    background-color: aliceblue;
+    padding: 10px;
+    color: blueviolet;
+    margin: 50px;
+}
+
+span.format
+{
+    font-weight: 400;
+    color: yellowgreen;
+}
+
+span.cursiva
+{
+    font-style: italic;
+}
+
+a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none
+}
+
+a:visited {
+    color: dodgerblue;
+    background-color: transparent;
+    text-decoration: none
+}
+
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline
+}
+
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline
+}
