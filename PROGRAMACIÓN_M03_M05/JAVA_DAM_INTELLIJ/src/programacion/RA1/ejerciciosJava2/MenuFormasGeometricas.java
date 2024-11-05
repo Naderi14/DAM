@@ -62,6 +62,7 @@ Elige una de las siguientes opciones:
                 }
                 break;
             default:
+                System.out.println("Figura geométrica no existente");
                 break;
         }
     }

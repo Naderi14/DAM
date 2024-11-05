@@ -33,6 +33,9 @@ public class Ejercicio7 {
     {
         int contador = 0;
 
+        if (numero == 0)
+            contador++;
+
         while (numero > 0)
         {
             numero /= 10;

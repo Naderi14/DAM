@@ -1,6 +1,6 @@
 package programacion.Extra.rpgBattleWare;
 
-public class Guerrero extends Personaje
+/*public class Guerrero extends Personaje
 {
 
 
@@ -8,4 +8,4 @@ public class Guerrero extends Personaje
     {
 
     }
-}
+}*/
