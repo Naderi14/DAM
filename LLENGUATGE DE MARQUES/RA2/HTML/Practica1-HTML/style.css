@@ -2,6 +2,7 @@ div.div-left {
     float: left;
     margin-left: 25px;
     margin-right: 25px;
+    padding: 10px;
 }
 
 div.div-clear-pos {
@@ -24,11 +25,12 @@ h2, h3{
 
 a {
     text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: transparent;
 }
 
 a:visited {
-    color: rgb(0, 0, 0);
-    background-color: transparent;
+    
     text-decoration: none
 }
 
@@ -40,6 +42,12 @@ a:visited {
 }
 
 .font-3 { /*Textos generales*/
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+p {
     font-family: "Kanit", sans-serif;
     font-weight: 300;
     font-style: normal;
