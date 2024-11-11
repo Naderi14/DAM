@@ -27,7 +27,7 @@ EJERCICIO 901
 
 ==============================================================================================================================
 EJERCICIO 902
-	Agregue un comentario a la definición de la tabla DEPARTAMENTOS que describa la tabla.
+	"Agregue un comentario a la definición de la tabla DEPARTAMENTOS que describa la tabla."
 
 	COMMENT ON TABLE departamentos IS 'Esta tabla alojará los distintos departamentos';
 
@@ -64,7 +64,7 @@ EJERCICIO 904
 
 ==============================================================================================================================
 EJERCICIO 905
-	Modifique la tabla EMPLEADOS_DEP para permitir un apellido de empleado de 50 caracteres.
+	"Modifique la tabla EMPLEADOS_DEP para permitir un apellido de empleado de 50 caracteres."
 
 	ALTER TABLE empleados_dep
 	MODIFY apellido VARCHAR2(50);
@@ -94,40 +94,42 @@ EJERCICIO 906
 
 ==============================================================================================================================
 EJERCICIO 907
-	Agregue una columna DEPARTAMENTO_ID a la tabla EMPLEADOS2 (será clave ajena a la tabla DEPARTAMENTOS en la siguiente pregunta). El tipo de datos es number(7).
+	"Agregue una columna DEPARTAMENTO_ID a la tabla EMPLEADOS2 (será clave ajena a la tabla DEPARTAMENTOS en la siguiente pregunta). 
+	El tipo de datos es number(7)."
 
 	ALTER TABLE empleados2 ADD (departamento_id NUMBER(7));
 
 ==============================================================================================================================
 EJERCICIO 908
-	Agregue una referencia de clave ajena en la tabla EMPLEADOS2 que asegure que no se asigna el empleado a un departamento no existente. Llame a la restricción my_emp_dept_id_fk
+	"Agregue una referencia de clave ajena en la tabla EMPLEADOS2 que asegure que no se asigna 
+	el empleado a un departamento no existente. Llame a la restricción my_emp_dept_id_fk"
 
 	ALTER TABLE empleados2 MODIFY (departamento_id NOT NULL)
 	ADD CONSTRAINT my_emp_dept_id_fk FOREIGN KEY (departamento_id) REFERENCES departamentos(departamento_id);
 
 ==============================================================================================================================
 EJERCICIO 909
-	Agregue una columna COMISION del tipo de datos NUMBER, precisión 2, escala 2 en la taba EMPLEADOS2 con una restricción
-	a la columna COMISION que asegure que el valor de la comisión sea mayor o igual que cero.
+	"Agregue una columna COMISION del tipo de datos NUMBER, precisión 2, escala 2 en la taba EMPLEADOS2 con una restricción
+	a la columna COMISION que asegure que el valor de la comisión sea mayor o igual que cero."
 
 	ALTER TABLE empleados2
 	ADD (comision NUMBER(2,2) CHECK (comision >= 0));
 
 ==============================================================================================================================
 EJERCICIO 910
-	Borre la columna SUELDO de la tabla EMPLEADOS2
+	"Borre la columna SUELDO de la tabla EMPLEADOS2"
 
 	ALTER TABLE empleados2
 	DROP COLUMN sueldo;
 	
 ==============================================================================================================================
 EJERCICIO 911
-	Cambie el nombre de la tabla EMPLEADOS2 a EMPLEADOS_EMP
+	"Cambie el nombre de la tabla EMPLEADOS2 a EMPLEADOS_EMP"
 
 	ALTER TABLE empleados2 RENAME TO empleados_emp;
 
 ==============================================================================================================================
 EJERCICIO 912
-	Borre la tabla EMPLEADOS_EMP.
+	"Borre la tabla EMPLEADOS_EMP."
 
 	DROP TABLE empleados_emp;
