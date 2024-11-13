@@ -30,8 +30,8 @@ public class Ejercicio10 {
 
         while (numero != 0)
         {
-            binarioEnteroInverso += numero & 1; // Si es impar o (expresion binaria XX001) acabado en 1, me devolverá 1 o 0 en caso de par
-            numero >>>= 1; // Mover los bits hacia la derecha 1 posición y los 3 >>> cambia el comportamiento cuando el numero es negativo
+            binarioEnteroInverso += numero & 1;
+            numero >>>= 1;
         }
 
         for (int i = binarioEnteroInverso.length() - 1; i >= 0; i--)

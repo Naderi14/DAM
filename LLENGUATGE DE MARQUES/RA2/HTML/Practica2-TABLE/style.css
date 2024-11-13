@@ -1,0 +1,58 @@
+h1 {
+    font-style: italic;
+}
+
+.font-1 { /*Titulares*/
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    text-align: left;
+    color: rgb(39, 79, 102);
+}
+
+.font-2 { /*Subtitulos*/
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.font-3 { /*Textos generales*/
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse; 
+}
+
+thead {
+    background-color: rgb(104, 159, 241);
+}
+
+tbody {
+    background-color: rgb(155, 199, 226);
+}
+
+th, td {
+    padding: 15px;
+    border: 2px solid black;   
+}
+
+tr:nth-child(even){
+    background-color: rgb(255, 255, 255);
+}
+
+tr:hover {
+    background-color: rgb(57, 230, 178);
+}
+
+ul {
+    list-style-type: circle;
+    text-align: left;
+}

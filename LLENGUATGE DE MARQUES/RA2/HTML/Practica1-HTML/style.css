@@ -9,12 +9,6 @@ div.div-clear-pos {
     clear: both;
 }
 
-.font-1 { /*Titulares*/
-    font-family: "Itim", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
-
 h1 {
     color: rgb(0, 87, 162);
 }
@@ -32,6 +26,12 @@ a {
 a:visited {
     
     text-decoration: none
+}
+
+.font-1 { /*Titulares*/
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .font-2 { /*Subtitulos*/
@@ -57,8 +57,7 @@ p {
     width: 30%;
     text-align: left;
     border: 1px solid black;
-    border-collapse: collapse;
-    
+    border-collapse: collapse; 
 }
 
 thead {
