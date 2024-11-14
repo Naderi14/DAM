@@ -19,12 +19,16 @@ public class MainCadenas {
                 DesmenuzarString.main(args);
                 break;
             case 3:
+                InvertirTexto.main(args);
                 break;
             case 4:
+                EliminarEspacios.main(args);
                 break;
             case 5:
+                ContarLetras.main(args);
                 break;
             case 6:
+                DividirCadenaTexto.main(args);
                 break;
             case 7:
                 break;
