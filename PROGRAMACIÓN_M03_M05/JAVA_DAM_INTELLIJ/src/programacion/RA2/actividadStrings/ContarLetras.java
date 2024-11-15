@@ -1,4 +1,4 @@
-package programacion.RA2;
+package programacion.RA2.actividadStrings;
 
 /*5. Cuenta las vocales y las consonantes del String: “JAVA JAVA JAVA”. Cuidado con los
 espacios.*/

@@ -1,4 +1,4 @@
-package programacion.RA2;
+package programacion.RA2.actividadStrings;
 
 /*3. Invertir el texto: “Tratamiento de cadenas con JAVA”*/
 

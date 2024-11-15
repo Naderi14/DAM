@@ -1,4 +1,4 @@
-package programacion.RA2;
+package programacion.RA2.actividadStrings;
 
 /*4. Elimina los espacios del texto: “Tratamiento de cadenas con JAVA”*/
 

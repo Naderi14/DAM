@@ -1,4 +1,4 @@
-package programacion.RA2;
+package programacion.RA2.actividadStrings;
 
 public class LongitudTexto {
     public static void main(String[] args)

@@ -1,4 +1,4 @@
-package programacion.RA2;
+package programacion.RA2.actividadStrings;
 
 /*6. Divide la cadena de texto “Este es el módulo, de programación” en dos partes: “Este
                 es el módulo” y “de programación”.*/

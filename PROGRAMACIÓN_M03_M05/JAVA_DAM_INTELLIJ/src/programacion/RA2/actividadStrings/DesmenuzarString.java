@@ -1,4 +1,4 @@
-package programacion.RA2;
+package programacion.RA2.actividadStrings;
 
 /*2. Desmenuza el String “JAVA” mostrándolo por pantalla carácter a carácter.
 La consola debe mostrar:

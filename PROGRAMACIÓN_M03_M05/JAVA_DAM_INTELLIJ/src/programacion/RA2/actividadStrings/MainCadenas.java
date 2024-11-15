@@ -1,4 +1,4 @@
-package programacion.RA2;
+package programacion.RA2.actividadStrings;
 
 import java.util.Scanner;
 
@@ -31,18 +31,25 @@ public class MainCadenas {
                 DividirCadenaTexto.main(args);
                 break;
             case 7:
+                MinusMayusMinus.main(args);
                 break;
             case 8:
+                CompareStrings.main(args);
                 break;
             case 9:
+                ReemplazarLetra.main(args);
                 break;
             case 10:
+                String2ASCII.main(args);
                 break;
             case 11:
+                BuscadorPalabraLarga.main(args);
                 break;
             case 12:
+                ContadorPalabras.main(args);
                 break;
             case 13:
+
                 break;
             case 14:
                 break;
