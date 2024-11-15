@@ -49,7 +49,7 @@ public class MainCadenas {
                 ContadorPalabras.main(args);
                 break;
             case 13:
-
+                NumeroTelefono.main(args);
                 break;
             case 14:
                 break;

@@ -34,10 +34,21 @@ public class NumeroTelefono {
             }
         }
 
-        System.out.println("Prefijo: " + prefijo + " | Número: " + numeroNoPrefijo);
+        System.out.print("(+" + prefijo + ") ");
 
-        System.out.println("+" + prefijo);
+        int contador = 0;
 
-        //Falta terminar el ejercicio
+        for (int i = 0; i < numeroNoPrefijo.length() / 3; i++)
+        {
+            String trioNums = "";
+
+            for (int j = 0; j < 3; j++)
+            {
+                trioNums += numeroNoPrefijo.charAt(contador);
+                contador++;
+            }
+            System.out.print(trioNums + " ");
+            trioNums = "";
+        }
     }
 }
