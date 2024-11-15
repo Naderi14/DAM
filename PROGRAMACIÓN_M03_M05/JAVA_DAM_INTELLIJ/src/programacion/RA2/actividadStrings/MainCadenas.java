@@ -52,8 +52,11 @@ public class MainCadenas {
                 NumeroTelefono.main(args);
                 break;
             case 14:
+                MezclarCadenas.main(args);
                 break;
             case 15:
+                break;
+            case 16:
                 break;
         }
     }
