@@ -16,21 +16,29 @@ public class PalabrasDe5Chars {
     public static void main(String[] args)
     {
         boolean isWord = false;
+        int contadorPalabras = 0;
 
         System.out.println("<- Introduce un texto para contar sus palabras de menos de 5 letras ->");
         String texto = leer.nextLine();
+        String palabraTemp = "";
 
         for (int i = 0; i < texto.length(); i++)
         {
-            if (texto.charAt(i) != ' ' && !isWord)
+            if (texto.charAt(i) != ' ')
             {
-                isWord = true;
-                contadorPalabras++;
+                palabraTemp += texto.charAt(i);
             }
-            else if (texto.charAt(i) == ' ')
+
+            if (texto.charAt(i) == ' ' || i == texto.length() - 1)
             {
-                isWord = false;
+                if (palabraTemp.length() < 5)
+                {
+                    contadorPalabras++;
+                }
+                palabraTemp = "";
             }
         }
+
+        System.out.println("<- Palabras de menos de 5 letras: " + contadorPalabras + " palabras ->");
     }
 }

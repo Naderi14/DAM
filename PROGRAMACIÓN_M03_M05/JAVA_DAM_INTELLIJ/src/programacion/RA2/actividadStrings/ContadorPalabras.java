@@ -17,12 +17,13 @@ public class ContadorPalabras {
 
         for (int i = 0; i < texto.length(); i++)
         {
-            if (texto.charAt(i) != ' ' && !isWord)
+            if (!isWord)
             {
                 isWord = true;
                 contadorPalabras++;
             }
-            else if (texto.charAt(i) == ' ')
+
+            if (texto.charAt(i) == ' ')
             {
                 isWord = false;
             }
