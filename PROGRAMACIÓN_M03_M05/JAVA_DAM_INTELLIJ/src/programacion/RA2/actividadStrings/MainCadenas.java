@@ -7,7 +7,23 @@ public class MainCadenas {
 
     public static void main(String[] args)
     {
-        System.out.println("<- Introduce el número de ejercicio ->");
+        System.out.println("<- Introduce el número de ejercicio ->\n" +
+                "1.  -  LongitudTexto.main(args);\n" +
+                "2.  -  DesmenuzarString.main(args);\n" +
+                "3.  -  InvertirTexto.main(args);\n" +
+                "4.  -  EliminarEspacios.main(args);\n" +
+                "5.  -  ContarLetras.main(args);\n" +
+                "6.  -  DividirCadenaTexto.main(args);\n" +
+                "7.  -  MinusMayusMinus.main(args);\n" +
+                "8.  -  CompareStrings.main(args);\n" +
+                "9.  -  ReemplazarLetra.main(args);\n" +
+                "10. -  String2ASCII.main(args);\n" +
+                "11. -  BuscadorPalabraLarga.main(args);\n" +
+                "12. -  ContadorPalabras.main(args);\n" +
+                "13. -  NumeroTelefono.main(args);\n" +
+                "14. -  MezclarCadenas.main(args);\n" +
+                "15. -  PalabrasDe5Chars.main(args);\n" +
+                "16. -  PalabrasPalindromas.main(args);\n");
         int opcion = leer.nextInt();
 
         switch (opcion)
@@ -55,8 +71,10 @@ public class MainCadenas {
                 MezclarCadenas.main(args);
                 break;
             case 15:
+                PalabrasDe5Chars.main(args);
                 break;
             case 16:
+                PalabrasPalindromas.main(args);
                 break;
         }
     }
