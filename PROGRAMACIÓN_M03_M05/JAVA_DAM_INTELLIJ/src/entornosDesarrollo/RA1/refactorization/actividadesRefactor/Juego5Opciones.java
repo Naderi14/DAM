@@ -3,6 +3,8 @@ package entornosDesarrollo.RA1.refactorization.actividadesRefactor;
 import java.util.Random;
 import java.util.Scanner;
 
+// ACTIVIDAD 1 ENTORNOS
+
 public class Juego5Opciones {
     private static final Scanner leer = new Scanner(System.in);
     private static Random random = new Random();

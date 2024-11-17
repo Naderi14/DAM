@@ -2,6 +2,8 @@ package entornosDesarrollo.RA1.refactorization.actividadesRefactor;
 
 import java.util.Scanner;
 
+// ACTIVIDAD 2 ENTORNOS
+
 public class CurrencyConversion {
     private static final Scanner leer = new Scanner(System.in);
     private static float amount;
