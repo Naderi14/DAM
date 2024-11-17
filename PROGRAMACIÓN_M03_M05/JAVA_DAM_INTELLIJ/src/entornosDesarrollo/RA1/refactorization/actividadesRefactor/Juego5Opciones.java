@@ -43,20 +43,20 @@ public class Juego5Opciones {
     private static void init()
     {
         System.out.println("**********************************************************************\n" +
-                "* ROCK PAPER SCISSORS LIZARD SPOCK                    © Joan Sèculi  *\n" +
-                "*                                                                    *\n" +
-                "* An extension of the children's game of rock paper scissors,        *\n" +
-                "* with two additional handshapes: lizard and Spock.                  *\n" +
-                "* Rules: Scissors cuts paper                                         *\n" +
-                "*        Paper covers rock                                           *\n" +
-                "*        Rock crushes lizard                                         *\n" +
-                "*        Lizard poisons Spock                                        *\n" +
-                "*        Spock smashes scissors                                      *\n" +
-                "*        Scissors decapitates lizard                                 *\n" +
-                "*        Lizard eats paper                                           *\n" +
-                "*        Paper disproves Spock                                       *\n" +
-                "*        Spock vaporizes rock                                        *\n" +
-                "*        and as it always has, rock crushes scissors.                *\n" +
+                "* ROCK PAPER SCISSORS LIZARD SPOCK                    © Juan Francisco  *\n" +
+                "*                                                                       *\n" +
+                "* An extension of the children's game of rock paper scissors,           *\n" +
+                "* with two additional handshapes: lizard and Spock.                     *\n" +
+                "* Rules: Scissors cuts paper                                            *\n" +
+                "*        Paper covers rock                                              *\n" +
+                "*        Rock crushes lizard                                            *\n" +
+                "*        Lizard poisons Spock                                           *\n" +
+                "*        Spock smashes scissors                                         *\n" +
+                "*        Scissors decapitates lizard                                    *\n" +
+                "*        Lizard eats paper                                              *\n" +
+                "*        Paper disproves Spock                                          *\n" +
+                "*        Spock vaporizes rock                                           *\n" +
+                "*        and as it always has, rock crushes scissors.                   *\n" +
                 "**********************************************************************");
     }
 
