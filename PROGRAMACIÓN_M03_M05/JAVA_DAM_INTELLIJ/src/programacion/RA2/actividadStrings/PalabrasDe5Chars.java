@@ -15,7 +15,6 @@ public class PalabrasDe5Chars {
 
     public static void main(String[] args)
     {
-        boolean isWord = false;
         int contadorPalabras = 0;
 
         System.out.println("<- Introduce un texto para contar sus palabras de menos de 5 letras ->");
