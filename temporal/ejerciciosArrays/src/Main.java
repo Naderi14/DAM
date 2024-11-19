@@ -1,7 +1,3 @@
-package RA2.arrays;
-
-import RA2.actividadStrings.*;
-
 import java.util.Scanner;
 
 public class Main {
