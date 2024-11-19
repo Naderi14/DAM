@@ -133,3 +133,54 @@ EJERCICIO 912
 	"Borre la tabla EMPLEADOS_EMP."
 
 	DROP TABLE empleados_emp;
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/																														  /
+/									Ejercicios 701 - 704 | 720 - 721 | 740 - 743										  /
+/																														  /
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+==============================================================================================================================
+EJERCICIO 701
+
+"Dar de alta a un empleado con los siguientes datos:
+EMPLEADO_ID:    108
+NOMBRE:     	Daenerys
+APELLIDO:       Targaryen
+EMAIL:      	daenerys.targaryen@example.com
+TELEFONO:       5.171.278.181
+FECHA_CONTRATO: 10/12/2021
+JEFE_ID:        1
+PUESTO_TRABAJO: Princess
+SUELDO:     	23900"
+
+INSERT INTO empleados
+VALUES (108, 'Daenerys', 'Targaryen', 'daenerys.targaryen@example.com', '5.171.278.181', '10/12/2021', 1, 'Princess', 23900);
+
+==============================================================================================================================
+EJERCICIO 702
+
+"Dar de alta a un producto con los siguientes datos:
+PRODUCTO_ID:    	289
+NOMBRE_PRODUCTO:    Asus
+DESCRIPCION:    	ASUS Laptop
+PRECIO_ESTANDAR:    899
+PRECIO_LISTADO: 	799
+CATEGORIA_ID:   	5"
+
+INSERT INTO productos
+VALUES (289, 'Asus', 'ASUS Laptop', 899, 799, 5);
+
+==============================================================================================================================
+EJERCICIO 703
+"Crear un pedido con datos al empleado (VENDEDOR_ID) Daenerys"
+
+INSERT INTO pedidos
+VALUES (106, 47, 'Pending', 108, '18/11/24');
+
+==============================================================================================================================
+EJERCICIO 704
+"Crea una línea de pedido con el pedido y el producto creado anteriormente, la única condición es que el total del pedido sean 150 euros."
+
+INSERT INTO pedido_articulos
+VALUES (106, 14, 289, 1, 150);
