@@ -8,13 +8,8 @@ public class DividirCadenaTexto {
     {
         String texto = "Este es el módulo, de programación";
 
-        String parte2 = texto.substring(texto.indexOf(','));
-        String parte1 = "";
-
-        for (int i = 0; i < texto.length() - parte2.length(); i++)
-        {
-            parte1 += texto.charAt(i);
-        }
+        String parte1 = texto.substring(0, texto.indexOf(','));
+        String parte2 = texto.substring(texto.indexOf(',') + 2);
 
         System.out.println("Parte 1: \"" + parte1 + "\" | Parte 2: \"" + parte2 + "\"");
     }

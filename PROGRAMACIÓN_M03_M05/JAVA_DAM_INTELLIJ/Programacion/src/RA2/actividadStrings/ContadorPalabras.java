@@ -9,23 +9,26 @@ public class ContadorPalabras {
 
     public static void main(String[] args)
     {
-        boolean isWord = false;
-        int contadorPalabras = 0;
+        int contadorPalabras = 0, contadorLetras = 0;
 
         System.out.println("<- Introduce una frase para analizar la cantidad de palabras ->");
         String texto = leer.nextLine();
 
+        if (texto.charAt(0) != ' ')
+            contadorPalabras++;
+
         for (int i = 0; i < texto.length(); i++)
         {
-            if (!isWord)
+            if (texto.charAt(i) != ' ')
             {
-                isWord = true;
-                contadorPalabras++;
+                contadorLetras++;
             }
-
-            if (texto.charAt(i) == ' ')
+            else
             {
-                isWord = false;
+                if (contadorLetras > 0)
+                    contadorPalabras++;
+
+                contadorLetras = 0;
             }
         }
 
