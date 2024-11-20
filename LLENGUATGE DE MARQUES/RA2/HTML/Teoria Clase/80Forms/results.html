@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link rel="stylesheet" href="style.css"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0">
+        <title>Result</title>
+    </head>
+    <body>
+        <div id="result">
+            This is the destination page GET.<br />
+            </div>
+            <script>
+                const text = document.getElementById('result');
+                new URLSearchParams(window.location.search).forEach(
+                    (value, name) => {
+                        text.append(name);
+                        text.append(': ');
+                        text.append(value);
+                        text.append(document.createElement('br'));
+                });
+            </script>
+    </body>
+</html>

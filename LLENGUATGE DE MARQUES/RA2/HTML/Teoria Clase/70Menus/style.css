@@ -1,0 +1,116 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+li a {
+    display:block;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+li {
+    float: left;
+}
+
+/*Change the link color on hover*/
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+/* menu */
+
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* items del menu */
+
+#menu ul li {
+    background-color: #2e518b;
+}
+
+/* enllaç del menu */
+
+#menu ul a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 10px;
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* items del menu */
+
+#menu ul li {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+/* efecte hover */
+
+#menu ul li:hover {
+    background: #5b78a7;
+}
+
+/* menu desplegable */
+
+#menu ul ul {
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background:#eee;
+    padding:0;
+   }
+
+   /* items del menu desplegable */
+
+   #menu ul ul li {
+    float:none;
+    width:150px
+   }
+
+   /* enllaços dels items del menu desplegable */
+
+   #menu ul ul a {
+    line-height:120%;
+    padding:10px 15px;
+   }
+
+   /* items del menu desplegable en fer hover */
+
+   #menu ul li:hover > ul {
+    display:block;
+   }
+
+
+   /* Indicador de submenú (fletxa cap a baix) */
+#menu ul li > ul {
+    margin-top: 0; /* Asegura que el submenú no es desplaci */
+}
+
+#menu ul li:has(ul) > a::after {
+    content: "▼"; /* Símbol de fletxa cap a baix */
+    font-size: 10px;
+    color: #fff;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+/* Canviem el color en pasar el mouse per sobre */
+#menu ul li:hover > a::after {
+    color: #eee; /* Cambia el color del indicador al hacer hover */
+}
