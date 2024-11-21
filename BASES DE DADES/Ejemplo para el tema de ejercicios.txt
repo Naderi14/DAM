@@ -192,3 +192,50 @@ EJERCICIO 720
 
 UPDATE empleados SET sueldo = sueldo + (sueldo * 0.10)
 WHERE sueldo < 3000;
+
+==============================================================================================================================
+EJERCICIO 721
+
+"A la empleada Daenerys aumentarle el sueldo en 50 euros."
+
+UPDATE empleados
+SET sueldo = 23950
+WHERE nombre = 'Daenerys';
+
+"A mi me gusta mas este"
+UPDATE empleados
+SET sueldo = sueldo + 50
+WHERE nombre = 'Daenerys';
+
+==============================================================================================================================
+EJERCICIO 740
+
+"Elimina a todos los empleados con identificadores mayores a 107, revisa los datos del pedido antes 
+y después de realizar el ejercicio, que pasa con el campo VENDEDOR_ID."
+
+DELETE empleados
+WHERE empleado_id > 107;
+
+==============================================================================================================================
+EJERCICIO 741
+
+"Elimina la línea del pedido creado en el ejercicio 704  utilizando únicamente los campos CANTIDAD y PRECIO_UNIDAD."
+
+DELETE pedido_articulos
+WHERE cantidad = 1 AND precio_unidad = 150;
+
+==============================================================================================================================
+EJERCICIO 742
+
+"Elimina el pedido creado en el ejercicio 703."
+
+DELETE pedidos
+WHERE pedido_id = 106;
+
+==============================================================================================================================
+EJERCICIO 743
+
+"Elimina el producto creado en el ejercicio 702."
+
+DELETE productos
+WHERE producto_id = 289;
