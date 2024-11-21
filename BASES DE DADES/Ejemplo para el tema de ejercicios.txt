@@ -184,3 +184,11 @@ EJERCICIO 704
 
 INSERT INTO pedido_articulos
 VALUES (106, 14, 289, 1, 150);
+
+==============================================================================================================================
+EJERCICIO 720
+
+'A los empleados que ganan menos de 3000 euros, aumentarles el sueldo en un 10%.'
+
+UPDATE empleados SET sueldo = sueldo + (sueldo * 0.10)
+WHERE sueldo < 3000;

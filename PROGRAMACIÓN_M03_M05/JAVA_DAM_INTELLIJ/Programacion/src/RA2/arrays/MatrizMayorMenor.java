@@ -11,9 +11,9 @@ public class MatrizMayorMenor {
     public static void main(String[] args)
     {
         System.out.println("<- Introduce el tamaño que tendrá la matriz ->");
-        int tamaño = Main.scanner.nextInt();
+        int size = Main.scanner.nextInt();
 
-        int[][] matriz = new int[tamaño][tamaño];
+        int[][] matriz = new int[size][size];
 
         for (int i = 0; i < matriz.length; i++)
         {

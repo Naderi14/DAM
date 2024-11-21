@@ -7,12 +7,12 @@ matrices originales y el resultado.*/
 public class SumaDeMatrices {
     public static void main(String[] args)
     {
-        System.out.println("<- Introduce el tamaño que tendrán las matrices ->");
-        int tamaño = Main.scanner.nextInt();
+        System.out.println("<- Introduce el size que tendrán las matrices ->");
+        int size = Main.scanner.nextInt();
 
-        int[][] matriz1 = new int[tamaño][tamaño];
-        int[][] matriz2 = new int[tamaño][tamaño];
-        int[][] matrizResultado = new int[tamaño][tamaño];
+        int[][] matriz1 = new int[size][size];
+        int[][] matriz2 = new int[size][size];
+        int[][] matrizResultado = new int[size][size];
 
         for (int i = 1; i < 3; i++)
         {
