@@ -13,3 +13,7 @@
 2024-11-12 08:20:22,390 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2024-11-14 08:19:44,794 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2024-11-17 10:53:58,511 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-11-22 08:10:47,403 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-11-22 08:12:02,757 [Worker-25: Auto share git projects] WARN  org.eclipse.jgit.util.FS_Win32 - Exception caught during execution of command '[bash, --login, -c, which git]' in 'C:\Users\Usuario', return code '1', error message '<3>WSL (9) ERROR: CreateProcessEntryCommon:505: execvpe /bin/bash failed 2
+<3>WSL (9) ERROR: CreateProcessEntryCommon:508: Create process not expected to return
+'
