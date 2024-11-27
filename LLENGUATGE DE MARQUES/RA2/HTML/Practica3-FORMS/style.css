@@ -1,0 +1,21 @@
+h1 {
+    text-align: center;
+    font-style: italic;
+}
+
+div.box1 {
+    background-color: rgb(187, 255, 255);
+    
+}
+
+div.box2 {
+    background-color: rgb(139, 218, 255);
+}
+
+div.box3 {
+    background-color: rgb(83, 148, 179);
+}
+
+legend {
+    border: 1px solid black;
+}

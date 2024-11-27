@@ -9,19 +9,41 @@
 </head>
 <body>
     <form name="form" id="form1" action="results.html" target="_self" method="GET" >
-        <div>
-            <label for="fname">First name:</label>
-            <input type="text" name="fname" id="fname" placeholder="Enter first name" />
-        </div>
-        <div>
-            <label for="lname">Surname:</label>
-            <input type="text" name="lname" id="lname" placeholder="Enter last name" />
-        </div>
-        <div>
-            <label for="age">Age:</label>
-            <input type="text" name="age" id="age" placeholder="Enter your age" />
-        </div>
-        <input type="submit" name="submit" value="Send"/>
+        <fieldset>
+            <legend>User Data</legend>
+            <div>
+                <label for="fname">First name:</label>
+                <input type="text" name="fname" id="fname" placeholder="Enter first name" />
+            </div>
+            <div>
+                <label for="lname">Surname:</label>
+                <input type="text" name="lname" id="lname" placeholder="Enter last name" />
+            </div>
+            <div>
+                <label for="age">Age:</label>
+                <input type="text" name="age" id="age" placeholder="Enter your age" />
+            </div>
+            <input type="submit" name="submit" value="Send"/>
+        </fieldset>
+
+        <fieldset>
+            <legend>Other Data</legend>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required minlength="4" maxlength="6" />
+            </div>
+            <div>
+                <label for="description">Description</label>
+                <textarea cols="50" rows="20"></textarea>
+            </div>
+            <div>
+                <label for="gender">Gender: </label>
+                <input type="radio" name="gender" value="Male" checked />
+                <label for="gender">Male</label>
+                <input type="radio" name="gender" value="Female" />
+                <label for="gender">Female</label>
+            </div>
+        </fieldset>
     </form>
 </body>
 </html>

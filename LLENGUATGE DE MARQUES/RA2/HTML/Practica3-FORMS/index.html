@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Forms</title>
+</head>
+<body>
+    <h1>INSCRIPCIÓ GRAU SUPERIOR</h1>
+    <form>
+        <div class="box1">
+            <fieldset>
+                <legend>Dades personals</legend>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><label for="nom">Nom:</label></td>
+                            <td><label for="cognom">Cognom:</label></td>
+                            <td><label for="dni">DNI:</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="nom" id="nom" placeholder="Introdueix el teu nom" required/></td>
+                            <td><input type="text" name="cognom" id="cognom" placeholder="Introdueix el teu cognom" required></td>
+                            <td><input type="text" name="dni" id="dni" placeholder="Introdueix DNI" required pattern="[0-9]{8}[A-HJ-NP-TV-Za-hj-np-tv-z]{1}"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="localitat">Localitat de Naixement:</label></td>
+                            <td><label for="provincia">Provincia:</label></td>
+                            <td><label for="dni">Data de Naixement</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="localitat" id="localitat" placeholder="Introdueix localitat"/></td>
+                            <td>
+                                <select name="provincia" id="provincia">
+                                    <option value="">-- select an option --</option>
+                                    <option value="opt1">Barcelona</option>
+                                    <option value="opt2">Girona</option>
+                                    <option value="opt3">Lleida</option>
+                                    <option value="opt4">Tarragona</option>
+                                </select>
+                            </td>
+                            <td><input type="text" name="dni" id="dni" placeholder="Introdueix DNI"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+        </div>
+        
+        <div class="box2">
+            <fieldset>
+                <legend>Forma d'Accés</legend>
+                ssssssss
+            </fieldset>
+        </div>
+        <div class="box3">
+            <fieldset>
+                <legend>Documents Adjunts</legend>
+                ssssssss
+            </fieldset>
+        </div>
+        <input type="submit" name="submit" value="ENVIAR SOLICITUD">
+    </form>
+</body>
+</html>
