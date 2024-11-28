@@ -9,8 +9,8 @@
 <body>
     <h1>INSCRIPCIÓ GRAU SUPERIOR</h1>
     <form>
-        <div class="box1">
-            <fieldset>
+        <div class="box">
+            <fieldset class="color1">
                 <legend>Dades personals</legend>
                 <table>
                     <tbody>
@@ -32,34 +32,133 @@
                         <tr>
                             <td><input type="text" name="localitat" id="localitat" placeholder="Introdueix localitat"/></td>
                             <td>
-                                <select name="provincia" id="provincia">
+                                <select name="provincia" id="provincia" required>
                                     <option value="">-- select an option --</option>
-                                    <option value="opt1">Barcelona</option>
-                                    <option value="opt2">Girona</option>
-                                    <option value="opt3">Lleida</option>
-                                    <option value="opt4">Tarragona</option>
+                                    <option value="opt1">Álava</option>
+                                    <option value="opt2">Albacete</option>
+                                    <option value="opt3">Alicante</option>
+                                    <option value="opt4">Almería</option>
+                                    <option value="opt5">Asturias</option>
+                                    <option value="opt6">Ávila</option>
+                                    <option value="opt7">Badajoz</option>
+                                    <option value="opt8">Barcelona</option>
+                                    <option value="opt9">Burgos</option>
+                                    <option value="opt10">Cáceres</option>
+                                    <option value="opt11">Cádiz</option>
+                                    <option value="opt12">Cantabria</option>
+                                    <option value="opt13">Castellón</option>
+                                    <option value="opt14">Ciudad Real</option>
+                                    <option value="opt15">Córdoba</option>
+                                    <option value="opt16">Cuenca</option>
+                                    <option value="opt17">Gerona</option>
+                                    <option value="opt18">Granada</option>
+                                    <option value="opt19">Guadalajara</option>
+                                    <option value="opt20">Gipuzkoa</option>
+                                    <option value="opt21">Huelva</option>
+                                    <option value="opt22">Huesca</option>
+                                    <option value="opt23">Islas Baleares</option>
+                                    <option value="opt24">Jaén</option>
+                                    <option value="opt25">La Rioja</option>
+                                    <option value="opt26">Las Palmas</option>
+                                    <option value="opt27">León</option>
+                                    <option value="opt28">Lérida</option>
+                                    <option value="opt29">Lugo</option>
+                                    <option value="opt30">Madrid</option>
+                                    <option value="opt31">Málaga</option>
+                                    <option value="opt32">Murcia</option>
+                                    <option value="opt33">Navarra</option>
+                                    <option value="opt34">Ourense</option>
+                                    <option value="opt35">Palencia</option>
+                                    <option value="opt36">Pontevedra</option>
+                                    <option value="opt37">Salamanca</option>
+                                    <option value="opt38">Santa Cruz de Tenerife</option>
+                                    <option value="opt39">Segovia</option>
+                                    <option value="opt40">Sevilla</option>
+                                    <option value="opt41">Soria</option>
+                                    <option value="opt42">Tarragona</option>
+                                    <option value="opt43">Teruel</option>
+                                    <option value="opt44">Toledo</option>
+                                    <option value="opt45">Valencia</option>
+                                    <option value="opt46">Valladolid</option>
+                                    <option value="opt47">Vizcaya</option>
+                                    <option value="opt48">Zamora</option>
+                                    <option value="opt49">Zaragoza</option>
                                 </select>
                             </td>
-                            <td><input type="text" name="dni" id="dni" placeholder="Introdueix DNI"></td>
+                            <td><input type="date" name="data_naixement" id="data_naixement" min="1900-01-01" max="01-01-2023" required></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><label for="direccio">Direcció:</label></td>
+                            <td><label for="cod_postal">Codi Postal:</label></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="text" name="direccio" id="direccio" placeholder="Introdueix la teva direcció" required/></td>
+                            <td><input type="text" name="cod_postal" id="cod_postal" placeholder="Introdueix codi postal" required pattern="[0-9]{5}"></td>
                         </tr>
                     </tbody>
                 </table>
             </fieldset>
         </div>
         
-        <div class="box2">
-            <fieldset>
+        <div class="box">
+            <fieldset class="color2">
                 <legend>Forma d'Accés</legend>
-                ssssssss
+                <div>
+                    <ul>
+                        <li>
+                            <input type="radio" name="forma_acces" value="batxillerat" checked required />
+                            <label for="gender">Batxillerat Modalitat: </label>
+                            <input type="text" name="nom" id="nom"/>
+                        </li>
+                        <li>
+                            <input type="radio" name="forma_acces" value="cou" required/>
+                            <label for="gender">COU Opció: </label>
+                            <input type="text" name="nom" id="nom" />
+                        </li>
+                        <li>
+                            <input type="radio" name="forma_acces" value="pfcgm" required/>
+                            <label for="gender">FP Grau Mitj Cicle: </label>
+                            <input type="text" name="nom" id="nom" />
+                        </li>
+                        <li>
+                            <input type="radio" name="forma_acces" value="pfcgs" required/>
+                            <label for="gender">FP Grau Superior Cicle: </label>
+                            <input type="text" name="nom" id="nom" />
+                        </li>
+                        <li>
+                            <input type="radio" name="forma_acces" value="others" required/>
+                            <label for="gender">Altres (especificar): </label>
+                            <input type="text" name="nom" id="nom" />
+                        </li>
+                    </ul>
+                </div>
             </fieldset>
         </div>
-        <div class="box3">
-            <fieldset>
+
+        <div class="box">
+            <fieldset class="color3">
                 <legend>Documents Adjunts</legend>
-                ssssssss
+                <div class="space">
+                    <input type="checkbox" name="fotocopia_dni" id="fotocopia_dni" required>
+                    <label for="fotocopia_dni">Fotocopia DNI</label>
+                </div>
+                <div class="space">
+                    <input type="checkbox" name="certificat_academic" id="certificat_academic" required>
+                    <label for="certificat_academic">Certificat Acadèmic Selecciona document</label>
+                    <input class=""  type="file" name="certificat_academic" id="certificat_academic" required>
+                </div>
+                <div class="space">
+                    <input type="checkbox" name="altres_documents" id="altres_documents" required>
+                    <label for="altres_documents">Altres documents (especificar)</label>
+                    <input type="text" name="altres_documents" id="altres_documents" required/>
+                    <label for="altres_documents">Selecciona document: </label>
+                    <input class="" type="file" name="altres_documents" id="altres_documents" multiple required>
+                </div>
             </fieldset>
         </div>
-        <input type="submit" name="submit" value="ENVIAR SOLICITUD">
+        <div class="box space-2">
+            <input class="button-submit" type="submit" name="submit" value="ENVIAR SOLICITUD">
+        </div>
     </form>
 </body>
 </html>
