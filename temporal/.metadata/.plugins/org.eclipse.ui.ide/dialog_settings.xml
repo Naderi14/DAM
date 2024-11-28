@@ -6,6 +6,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\Usuario\Desktop\DAM 1\PROGRAMACIÓN_M03_M05\ENTORNS DE DESENVOLUPAMENT\RA1\Entregable - Ejercicios Web A4 - A5\ejercicios_A4_A5"/>
 			<item value="C:\Users\Usuario\Desktop\DAM 1\ENTORNS DE DESENVOLUPAMENT\RA1\example_Project\src\introduccion"/>
 		</list>
 		<section name="SmartImportWizard.dialogBounds">

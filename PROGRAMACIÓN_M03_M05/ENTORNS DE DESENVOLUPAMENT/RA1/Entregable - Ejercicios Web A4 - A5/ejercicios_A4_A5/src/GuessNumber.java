@@ -24,6 +24,32 @@
 import java.util.Random;
 import java.util.Scanner;
 //Amb dataEntry
+/*
+ * RandomNumbers.java 18 Nov 2023
+ *
+ *
+ * ©Copyright 2023 Joan Sèculi <jseculi@escoladeltreball.org>
+ *
+ * This is free software, licensed under the GNU General Public License v3.
+ * See http://www.gnu.org/licenses/gpl.html for more information.
+ */
+
+// ACTIVIDAD 5
+
+/*
+ * Errores:
+ *   1. El rango de attempts no parece estar correctamente configurado (CORREGIDO)
+ *   2. Falta de salto de linea entre la configuración del juego y el mismimo juego (CORREGIDO)
+ *   3. No se gestiona bien la condición de si el número es mayor o menor (CORREGIDO)
+ *   4. Si aciertas antes de agotar los intentos, no sales del bucle (CORREGIDO)
+ *   5. El bucle es infinito (CORREGIDO)
+ *   6. La variable end no se tiene en cuenta en el While, cuando ganas no acaba el bucle (CORREGIDO)
+ *   7. El mensaje de perder la partida aparece aun cuando has acertado el número (CORREGIDO)
+ *   8. El condicional del mensaje de perder la partida, debe invertirse en cuanto al booleano (CORREGIDO)
+ * */
+import java.util.Random;
+import java.util.Scanner;
+//Amb dataEntry
 public class GuessNumber {
     public static Scanner scanner = new Scanner(System.in);
     public static final byte MAX = 100;
@@ -141,3 +167,5 @@ public class GuessNumber {
 
     }
 }
+
+
