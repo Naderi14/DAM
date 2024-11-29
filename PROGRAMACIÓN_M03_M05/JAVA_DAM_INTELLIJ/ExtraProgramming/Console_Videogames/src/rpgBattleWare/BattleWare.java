@@ -1,4 +1,4 @@
-package Extra.rpgBattleWare;
+package rpgBattleWare;
 
 import java.util.Scanner;
 

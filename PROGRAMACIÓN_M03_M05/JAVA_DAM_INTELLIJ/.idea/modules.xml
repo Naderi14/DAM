@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ExtraProgramming/Console_Videogames/Console_Videogames.iml" filepath="$PROJECT_DIR$/ExtraProgramming/Console_Videogames/Console_Videogames.iml" />
       <module fileurl="file://$PROJECT_DIR$/DesenvolupamentAplicacionsMultiplataforma.iml" filepath="$PROJECT_DIR$/DesenvolupamentAplicacionsMultiplataforma.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ExtraProgramming/EjerciciosMios/EjerciciosMios.iml" filepath="$PROJECT_DIR$/ExtraProgramming/EjerciciosMios/EjerciciosMios.iml" />
       <module fileurl="file://$PROJECT_DIR$/Entornos_Desarrollo/Entornos_Desarrollo.iml" filepath="$PROJECT_DIR$/Entornos_Desarrollo/Entornos_Desarrollo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ExtraProgramming/ExtraProgramming.iml" filepath="$PROJECT_DIR$/ExtraProgramming/ExtraProgramming.iml" />
       <module fileurl="file://$PROJECT_DIR$/Programacion/Programacion.iml" filepath="$PROJECT_DIR$/Programacion/Programacion.iml" />
       <module fileurl="file://$PROJECT_DIR$/Programacion/programacion_en_clase/programacion_en_clase.iml" filepath="$PROJECT_DIR$/Programacion/programacion_en_clase/programacion_en_clase.iml" />
     </modules>

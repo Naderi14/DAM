@@ -1,5 +1,3 @@
-package Extra;
-
 public class Prueba {
     static Lector lector1 = new Lector("Daniel Pinto");
     static Lector lector2 = new Lector("Juan Francisco");

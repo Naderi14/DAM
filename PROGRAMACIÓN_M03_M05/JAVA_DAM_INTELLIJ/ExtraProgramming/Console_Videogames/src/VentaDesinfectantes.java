@@ -1,5 +1,3 @@
-package Extra;
-
 /*. Una empresa que se dedica a la venta de desinfectantes necesita un programa para gestionar las
 facturas. En cada factura figura: el código del artículo, la cantidad vendida en litros y el
 precio por litro.
@@ -12,7 +10,6 @@ productos con precios:
 */
 
 import javax.swing.*;
-import java.awt.im.spi.InputMethod;
 import java.util.*;
 
 public class VentaDesinfectantes
