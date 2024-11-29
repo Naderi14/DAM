@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ejerciciosCadenas.iml" filepath="$PROJECT_DIR$/ejerciciosCadenas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ejerciciosArrays.iml" filepath="$PROJECT_DIR$/ejerciciosArrays.iml" />
     </modules>
   </component>
 </project>

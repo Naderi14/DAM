@@ -9,13 +9,15 @@ public class ContadorPalabras {
 
     public static void main(String[] args)
     {
-        boolean isWord = false;
-        int contadorPalabras = 0;
+        // boolean isWord = false;
 
         System.out.println("<- Introduce una frase para analizar la cantidad de palabras ->");
         String texto = leer.nextLine();
 
-        for (int i = 0; i < texto.length(); i++)
+        String[] textoSpliteado = texto.split(" ");
+        int contadorPalabras = textoSpliteado.length;
+
+        /*for (int i = 0; i < texto.length(); i++)
         {
             if (!isWord)
             {
@@ -27,7 +29,7 @@ public class ContadorPalabras {
             {
                 isWord = false;
             }
-        }
+        }*/
 
         System.out.println("La frase tiene: " + contadorPalabras + " palabras");
     }

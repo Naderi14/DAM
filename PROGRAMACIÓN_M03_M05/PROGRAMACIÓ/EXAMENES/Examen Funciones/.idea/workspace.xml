@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f171e8e4-06b0-4220-a6b1-402435cc6ef4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Actividades/Java/RA2/Entregable 2 - Arrays/ejerciciosArrays/ejerciciosArrays.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejerciciosCadenas.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Actividades/Java/RA2/Entregable 1 - Tratamiento de cadenas/ejerciciosCadenas/src/ejerciciosCadenas/ContadorPalabras.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Actividades/Java/RA2/Entregable 1 - Tratamiento de cadenas/ejerciciosCadenas/src/ejerciciosCadenas/ContadorPalabras.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Actividades/Java/RA2/Entregable 1 - Tratamiento de cadenas/ejerciciosCadenas/src/ejerciciosCadenas/MainCadenas.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Actividades/Java/RA2/Entregable 1 - Tratamiento de cadenas/ejerciciosCadenas/src/ejerciciosCadenas/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Actividades/Java/RA2/Entregable 1 - Tratamiento de cadenas/ejerciciosCadenas/src/ejerciciosCadenas/PalabrasDe5Chars.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Actividades/Java/RA2/Entregable 1 - Tratamiento de cadenas/ejerciciosCadenas/src/ejerciciosCadenas/PalabrasDe5Chars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2pVyWQVpO42NUa0uZW4SgBQWFlg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ContadorPalabras.executor": "Run",
+    "Application.PalabrasDe5Chars.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Usuario/Desktop/DAM 1/PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/Actividades/Java/RA2/Entregable 2 - Arrays/ejerciciosArrays"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f171e8e4-06b0-4220-a6b1-402435cc6ef4" name="Changes" comment="" />
+      <created>1732865570423</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732865570423</updated>
+    </task>
+    <servers />
+  </component>
+</project>

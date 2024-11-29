@@ -2,7 +2,7 @@ package ejerciciosCadenas;
 
 import java.util.Scanner;
 
-public class MainCadenas {
+public class Main {
     private static Scanner leer = new Scanner(System.in);
 
     public static void main(String[] args)
