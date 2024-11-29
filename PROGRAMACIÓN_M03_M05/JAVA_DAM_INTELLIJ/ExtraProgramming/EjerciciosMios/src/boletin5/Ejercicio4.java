@@ -1,5 +1,7 @@
 package boletin5;
 
+/*4. Crear y cargar una tabla de tamaño 3x3, trasponerla y mostrarla.*/
+
 public class Ejercicio4 {
     public static void main(String[] args) {
         int[][] tabla = new int[3][3];
