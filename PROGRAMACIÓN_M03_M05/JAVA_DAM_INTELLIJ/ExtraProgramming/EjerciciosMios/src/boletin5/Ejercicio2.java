@@ -33,6 +33,5 @@ public class Ejercicio2 {
             System.out.println("<- La tabla es simétrica ->");
         else
             System.out.println("<- La tabla es asimétrica ->");
-
     }
 }
