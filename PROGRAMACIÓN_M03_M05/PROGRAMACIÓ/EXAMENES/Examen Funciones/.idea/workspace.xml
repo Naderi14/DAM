@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f171e8e4-06b0-4220-a6b1-402435cc6ef4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Actividades/Java/RA2/Entregable 2 - Arrays/ejerciciosArrays/ejerciciosArrays.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ejerciciosCadenas.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Actividades/Java/RA2/Entregable 1 - Tratamiento de cadenas/ejerciciosCadenas/src/ejerciciosCadenas/ContadorPalabras.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Actividades/Java/RA2/Entregable 1 - Tratamiento de cadenas/ejerciciosCadenas/src/ejerciciosCadenas/ContadorPalabras.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Actividades/Java/RA2/Entregable 1 - Tratamiento de cadenas/ejerciciosCadenas/src/ejerciciosCadenas/MainCadenas.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Actividades/Java/RA2/Entregable 1 - Tratamiento de cadenas/ejerciciosCadenas/src/ejerciciosCadenas/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Actividades/Java/RA2/Entregable 1 - Tratamiento de cadenas/ejerciciosCadenas/src/ejerciciosCadenas/PalabrasDe5Chars.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Actividades/Java/RA2/Entregable 1 - Tratamiento de cadenas/ejerciciosCadenas/src/ejerciciosCadenas/PalabrasDe5Chars.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividades/Java/RA2/Entregable 1 - Tratamiento de cadenas/ejercicio12y15/src/Ejercicio12.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Actividades/Java/RA2/Entregable 1 - Tratamiento de cadenas/ejercicio12y15/src/Ejercicio15.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
