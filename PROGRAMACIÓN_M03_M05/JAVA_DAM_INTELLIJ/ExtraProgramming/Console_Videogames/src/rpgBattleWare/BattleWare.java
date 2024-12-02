@@ -2,6 +2,10 @@ package rpgBattleWare;
 
 import java.util.Scanner;
 
+/*
+* El juego tendra que poder empezar una nueva partida y elegir crear personaje de una clase
+* */
+
 public class BattleWare {
     static Scanner leer = new Scanner(System.in);
 

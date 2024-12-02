@@ -239,3 +239,9 @@ EJERCICIO 743
 
 DELETE productos
 WHERE producto_id = 289;
+
+
+
+
+SELECT CONCAT(c.contactFirstName, ' ', c.contactLastName) AS fullNameCustomer, CONCAT(e.firstName, ' ', e.lastName) AS fullNameEmployee 
+FROM customers c, employees e
