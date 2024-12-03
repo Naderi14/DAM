@@ -26,42 +26,37 @@ public class Monster {
     {
         Random random = new Random();
         int x = 0, y = 0;
-        boolean isAvailableToMove = false;
+        int vectorDirection = random.nextInt(4) + 1;
 
-        while(!isAvailableToMove)
+        switch (vectorDirection)
         {
-            int vectorDirection = random.nextInt(4) + 1;
+            case 1: // Arriba
+                y = -1;
+                break;
+            case 2: // Izquierda
+                x = -1;
+                break;
+            case 3: // Abajo
+                y = 1;
+                break;
+            case 4: // Derecha
+                x = 1;
+                break;
+        }
 
-            switch (vectorDirection)
+        int newX = posX + x;
+        int newY = posY + y;
+
+        if (newX >= 0 && newX < mapa[0].length && newY >= 0 && newY < mapa.length)
+        {
+            if (mapa[newY][newX] == ' ' || mapa[newY][newX] == 'S')
             {
-                case 1: // Arriba
-                    y = -1;
-                    break;
-                case 2: // Izquierda
-                    x = -1;
-                    break;
-                case 3: // Abajo
-                    y = 1;
-                    break;
-                case 4: // Derecha
-                    x = 1;
-                    break;
-            }
-
-            int newX = posX + x;
-            int newY = posY + y;
-
-            if (newX >= 0 && newX < mapa[0].length && newY >= 0 && newY < mapa.length)
-            {
-                if (mapa[newY][newX] == '.' || mapa[newY][newX] == 'S')
-                {
-                    isAvailableToMove = true;
-                    mapa[posY][posX] = '.';
-                    posX = newX;
-                    posY = newY;
-                    mapa[posY][posX] = symbol;
-                }
+                mapa[posY][posX] = ' ';
+                posX = newX;
+                posY = newY;
+                mapa[posY][posX] = symbol;
             }
         }
+
     }
 }
