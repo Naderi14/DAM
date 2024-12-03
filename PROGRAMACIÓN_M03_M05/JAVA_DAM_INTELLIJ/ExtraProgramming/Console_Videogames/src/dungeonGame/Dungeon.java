@@ -7,13 +7,14 @@ import java.util.Scanner;
 
 public class Dungeon {
     private static final Scanner scanner = new Scanner(System.in);
+    private static final Random random = new Random();
 
     private static List<Monster> monsterList = new ArrayList<>();
+    private static List<Treasure> treasureList = new ArrayList<>();
 
     private static int posJugadorX, posJugadorY;
-    private static int posMonsterX, posMonsterY;
     private static int posEscapeX, posEscapeY;
-    private static int posTreasureX, posTreasureY;
+    private static int scoreTotal = 0;
 
     private static boolean isEnd = false;
     private static boolean isMapLoaded = false;
@@ -25,13 +26,13 @@ public class Dungeon {
     };*/
 
     private static char[][] mapa = {            // Un mapa un poco mas grande
-            {'S', '.', '.', '.', '.', '.', 'T', '.', '.', '.'},
+            {'S', '.', 'T', '.', '.', '.', 'T', '.', '.', '.'},
             {'.', '.', '.', '.', 'M', '.', '.', '.', 'T', '.'},
-            {'.', '.', '.', '.', '.', '.', '.', '.', '.', '.'},
+            {'.', '.', 'T', '.', '.', '.', '.', '.', '.', '.'},
             {'M', '.', '.', '.', '.', '.', '.', '.', '.', 'T'},
-            {'.', '.', '.', '.', '.', '.', '.', 'M', '.', '.'},
+            {'.', '.', '.', 'T', '.', 'M', '.', 'M', '.', '.'},
             {'.', '.', 'T', '.', '.', '.', '.', '.', '.', 'E'},
-            {'.', '.', '.', '.', '.', '.', '.', '.', '.', '.'}
+            {'.', '.', '.', '.', '.', '.', 'M', '.', '.', '.'}
     };
 
     public static void main(String[] args)
@@ -41,6 +42,10 @@ public class Dungeon {
             actualizarMapa();
             menuJuego();
             moverEnemigos();
+            verifyCollisionPlayerMonster();
+            verifyFoundedTreasure();
+            verifyFindEscapeDungeon();
+            mapa[posJugadorY][posJugadorX] = 'S';
         }
     }
 
@@ -48,7 +53,7 @@ public class Dungeon {
     {
         boolean isAvailableMove = false;
         char letra;
-        System.out.println("(----- Mover personaje -----)\n (W) arriba | (A) izquierda | (S) abajo | (D) derecha");
+        System.out.println("S - Jugador / T - Tesoro / M - Monstruo / E - Escape\n(W) arriba | (A) izquierda | (S) abajo | (D) derecha            Score: " + scoreTotal);
 
         while (!isAvailableMove)
         {
@@ -154,8 +159,7 @@ public class Dungeon {
                     }
                     else if (mapa[i][j] == 'T')
                     {
-                        posTreasureX = j;
-                        posTreasureY = i;
+                        treasureList.add(new Treasure(j, i, random.nextInt(10) + 1));
                     }
                     else if (mapa[i][j] == 'E')
                     {
@@ -167,10 +171,39 @@ public class Dungeon {
             }
             isMapLoaded = true;
         }
-        // DEBUG mostrar las ubicaciones
-        System.out.println("Posicion jugador: (" + posJugadorX + "," + posJugadorY + ")");
-        /*System.out.println("Posicion monstruo: (" + posMonsterX + "," + posMonsterY + ")");
-        System.out.println("Posicion tesoro: (" + posTreasureX + "," + posTreasureY + ")");
-        System.out.println("Posicion escape: (" + posEscapeX + "," + posEscapeY + ")");*/
+    }
+
+    private static void verifyCollisionPlayerMonster()
+    {
+        for (Monster monster : monsterList)
+        {
+            if (monster.getPosY() == posJugadorY && monster.getPosX() == posJugadorX)
+            {
+                System.out.println("<!- HAS DERROTADO POR UN MONSTRUO -!>");
+                isEnd = true;
+                break;
+            }
+        }
+    }
+
+    private static void verifyFoundedTreasure()
+    {
+        for (Treasure treasure : treasureList)
+        {
+            if (treasure.getPosY() == posJugadorY && treasure.getPosX() == posJugadorX)
+            {
+                System.out.println("<- Tesoro encontrado de " + treasure.getValue() + " score ->");
+                scoreTotal += treasure.getValue();
+            }
+        }
+    }
+
+    private static void verifyFindEscapeDungeon()
+    {
+        if (posJugadorY == posEscapeY && posJugadorX == posEscapeX)
+        {
+            System.out.println("<!- Has escapado de la mazmorra con " + scoreTotal + " score -!>\n <------- FELICIDADES MI BUBU ------->");
+            isEnd = true;
+        }
     }
 }
