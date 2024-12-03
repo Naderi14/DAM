@@ -25,15 +25,16 @@ public class BuscadorPalabraLarga {
         }
         compareSet();
 
-        System.out.println("La palabra mas larga es: \"" + palabraLarga + "\" y su longitud es de " + palabraLarga.length());
+        System.out.println("La palabra mas larga es: \"" + palabraLarga + "\" y su longitud es de " + palabraLarga.length() + " letras");
     }
 
-    private static String compareSet()
+    private static void compareSet()
     {
         if (checkingPalabra.length() > palabraLarga.length())
         {
             palabraLarga = checkingPalabra;
         }
-        return checkingPalabra = "";
+
+        checkingPalabra = "";
     }
 }
