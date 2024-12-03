@@ -12,6 +12,6 @@ public class EliminarEspacios {
         System.out.println("<- Introduce un texto para retirarlo los espacios ->");
         String texto = leer.nextLine();
 
-        System.out.println(texto.replace(" ", ""));
+        System.out.println(texto.replace("o", "0"));
     }
 }
