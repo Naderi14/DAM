@@ -1,6 +1,6 @@
 package rpgBattleWare;
 
-public class Personaje
+public abstract class Personaje
 {
     public int vida, maxVida, energia, maxEnergia, mana, maxMana, fuerza, agilidad;
     public String nombrePnj;
@@ -17,5 +17,10 @@ public class Personaje
         this.fuerza = fuerza;
         this.agilidad = agilidad;
         this.nombrePnj = nombrePnj;
+    }
+
+    public void showStats()
+    {
+        System.out.println("Se imprimiran los estados basicos");
     }
 }

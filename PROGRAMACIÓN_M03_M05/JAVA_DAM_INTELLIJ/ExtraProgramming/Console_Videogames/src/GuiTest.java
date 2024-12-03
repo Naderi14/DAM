@@ -17,7 +17,7 @@ public class GuiTest {
 
         // Crear un panel para organizar los componentes
         JPanel panel = new JPanel();
-        panel.setLayout(new GridLayout(4, 2, 10, 10)); // 4 filas, 2 columnas, espaciado
+        panel.setLayout(new GridLayout(4, 2, 5, 10)); // 4 filas, 2 columnas, espaciado
 
         // Crear componentes del formulario
         JLabel etiquetaNombre = new JLabel("Nombre:");

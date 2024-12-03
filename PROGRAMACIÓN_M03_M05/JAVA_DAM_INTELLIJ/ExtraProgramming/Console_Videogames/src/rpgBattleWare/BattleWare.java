@@ -7,12 +7,21 @@ import java.util.Scanner;
 * */
 
 public class BattleWare {
-    static Scanner leer = new Scanner(System.in);
+    private static Scanner leer = new Scanner(System.in);
+    private Personaje pj;
 
     public static void main(String[] args)
     {
         System.out.println("####\t  Bienvenido a BATTLEWARE\t\t####\n");
+        String opcion;
 
+        do
+        {
+            opcion = mainMenu();
+        } while (!opcion.equals("3"));
+    }
+
+    private static String mainMenu() {
         System.out.println(
                 "1. Nueva partida\n" +
                 "2. Cargar partida\n" +
@@ -21,7 +30,7 @@ public class BattleWare {
 
         String opcion = leer.next();
 
-        if (isNumeric(opcion))
+        if (Utilities.isStringNumeric(opcion))
         {
             switch (opcion)
             {
@@ -30,7 +39,7 @@ public class BattleWare {
                     break;
                 case "2":
                 case "3":
-                    System.out.println("<#-- Aun no esta hecha esta opción del menú --#>");
+                    System.out.println("<#-- HASTA LA PRÓXIMA --#>");
                     break;
                 default:
                     System.out.println("<!!-- No es una opción de menú válida --!!>");
@@ -41,19 +50,12 @@ public class BattleWare {
         {
             System.out.println("<!!-- Has introducido un valor incorrecto --!!>");
         }
+
+        return opcion;
     }
 
     public static void elegirNuevoPersonaje()
     {
 
-    }
-
-    public static boolean isNumeric(String str) {
-        try {
-            double d = Double.parseDouble(str);
-        } catch (NumberFormatException nfe) {
-            return false;
-        }
-        return true;
     }
 }
