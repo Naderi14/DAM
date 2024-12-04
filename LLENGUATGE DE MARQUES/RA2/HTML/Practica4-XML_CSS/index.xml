@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="menu.css"?>
+<breakfast_menu>
+    <header>
+        <company>The Waffle Place</company>
+        <title>Menu</title>
+        <time>From 7:00 to 10:30</time>
+        <days>Monday to Friday</days>
+    </header>
+    <food>
+        <name>Belgian Waffles</name>
+        <price>5.95</price>
+        <description>Belgian Waffles with maple syrup</description>
+        <calories>650</calories>
+    </food>
+    <food>
+        <name>Strawberry Belgian Waffles</name>
+        <price>7.95</price>
+        <description>Light Belgian waffles with strawberryss</description>
+        <calories>900</calories>
+    </food>
+    <food>
+        <name>Berry-Berry Belgian Waffles</name>
+        <price>8.95</price>
+        <description>Belgian waffles with fresh berries</description>
+        <calories>900</calories>
+    </food>
+    <food>
+        <name>French Toast</name>
+        <price>4.50</price>
+        <description>Thick slices made from sourdough bread</description>
+        <calories>600</calories>
+    </food>
+    <footer>
+        <address>First Avenu, 15, New York</address>
+        <tel>001 345 432 111</tel>
+        <website>www.wafflesny.com</website>
+    </footer>
+</breakfast_menu>
