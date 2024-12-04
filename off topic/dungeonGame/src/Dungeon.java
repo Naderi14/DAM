@@ -4,6 +4,16 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Dungeon {
+    public static final String BLACK = "\u001B[30m";
+    public static final String RED = "\u001B[31m";
+    public static final String GREEN = "\u001B[32m";
+    public static final String YELLOW = "\u001B[33m";
+    public static final String BLUE = "\u001B[34m";
+    public static final String PURPLE = "\u001B[35m";
+    public static final String CYAN = "\u001B[36m";
+    public static final String WHITE = "\u001B[37m";
+    public static final String RESET = "\u001B[0m";
+
     private static final Scanner scanner = new Scanner(System.in);
     private static final Random random = new Random();
 
@@ -101,7 +111,7 @@ public class Dungeon {
     {
         boolean isAvailableMove = false;
         char letra;
-        System.out.println("S - Jugador / T - Tesoro / M - Monstruo / E - Escape\n(W) arriba | (A) izquierda | (S) abajo | (D) derecha            Score: " + scoreTotal);
+        System.out.println("S - Jugador / T - Tesoro / M - Monstruo / E - Escape / X - Muro\n(W) arriba | (A) izquierda | (S) abajo | (D) derecha            Score: " + scoreTotal);
 
         while (!isAvailableMove)
         {
@@ -119,7 +129,7 @@ public class Dungeon {
                         updatePlayerPos('y', -1);
                         isAvailableMove = true;
                     }
-                        break;
+                    break;
                 case 'A':
                     if (posJugadorX - 1 < 0)
                         break;
@@ -197,14 +207,25 @@ public class Dungeon {
     private static void imprimirMapaConMarco() {
         imprimirMarcoHorizontal();
         for (int i = 0; i < mapa.length; i++) {
-            System.out.print("# ");
+            System.out.print(PURPLE + "# " + RESET);
             for (int j = 0; j < mapa[i].length; j++) {
-                System.out.print(mapa[i][j] + "  ");
+                if (mapa[i][j] == 'S')
+                    System.out.print(GREEN + mapa[i][j] + "  " + RESET);
+                else if (mapa[i][j] == 'T')
+                    System.out.print(YELLOW + mapa[i][j] + "  " + RESET);
+                else if (mapa[i][j] == 'M')
+                    System.out.print(RED + mapa[i][j] + "  " + RESET);
+                else if (mapa[i][j] == 'E')
+                    System.out.print(BLUE + mapa[i][j] + "  " + RESET);
+                else if (mapa[i][j] == 'X')
+                    System.out.print(WHITE + mapa[i][j] + "  " + RESET);
+                else
+                    System.out.print(mapa[i][j] + "  ");
                 if (!isMapLoaded) {
                     inicializarElementos(j, i);
                 }
             }
-            System.out.println("#");
+            System.out.println(PURPLE + "#" + RESET);
         }
         imprimirMarcoHorizontal();
     }
@@ -225,12 +246,12 @@ public class Dungeon {
 
     private static void imprimirMarcoHorizontal()
     {
-        System.out.print("#");
+        System.out.print(PURPLE + "#" + RESET);
         for (int i = 0; i < mapa[0].length * 3 + 1; i++)
         {
-            System.out.print("#");
+            System.out.print(PURPLE + "#" + RESET);
         }
-        System.out.println("#");
+        System.out.println(PURPLE + "#" + RESET);
     }
 
     private static void verifyCollisionPlayerMonster()

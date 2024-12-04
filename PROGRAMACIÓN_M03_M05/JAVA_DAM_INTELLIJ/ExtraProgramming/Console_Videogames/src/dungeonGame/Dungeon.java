@@ -66,16 +66,16 @@ public class Dungeon {
         }));
 
         levelList.add(new Level (new char[][] {     // LVL 3
-                {'S', 'X', 'E', ' ', 'T'},
+                {'S', 'X', 'E', 'M', 'T'},
                 {' ', 'X', 'X', ' ', ' '},
-                {' ', ' ', 'M', 'X', ' '},
+                {' ', ' ', ' ', 'X', ' '},
                 {'T', ' ', ' ', ' ', ' '}
         }));
 
         levelList.add(new Level (new char[][] {     // LVL 4
                 {'S', ' ', 'X', 'X', 'X', 'E'},
+                {' ', 'X', ' ', 'M', 'X', ' '},
                 {' ', 'X', ' ', ' ', 'X', ' '},
-                {' ', 'X', 'M', ' ', 'X', ' '},
                 {' ', ' ', ' ', 'X', 'X', ' '},
                 {'T', 'X', ' ', ' ', ' ', ' '}
         }));
@@ -83,7 +83,7 @@ public class Dungeon {
         levelList.add(new Level (new char[][] {     // LVL 5
                 {'S', ' ', ' ', 'X', 'X', ' ', ' ', ' ', 'T'},
                 {'X', 'X', ' ', 'X', ' ', ' ', 'X', 'M', ' '},
-                {' ', ' ', ' ', ' ', 'X', ' ', ' ', ' ', ' '},
+                {' ', ' ', ' ', 'X', ' ', ' ', ' ', ' ', ' '},
                 {' ', 'X', 'M', ' ', ' ', ' ', 'X', ' ', 'T'},
                 {' ', ' ', ' ', 'X', ' ', ' ', ' ', 'X', 'E'}
         }));
@@ -114,7 +114,7 @@ public class Dungeon {
         boolean isAvailableMove = false;
         char letra;
         System.out.println("S - Jugador / T - Tesoro / M - Monstruo / E - Escape\n(W) arriba | (A) izquierda | (S) abajo | (D) derecha            Score: " + scoreTotal);
-
+        System.out.println("Posicion Jugador: (" + posJugadorY + "," + posJugadorX + ")");
         while (!isAvailableMove)
         {
             letra = scanner.next().toUpperCase().charAt(0);
