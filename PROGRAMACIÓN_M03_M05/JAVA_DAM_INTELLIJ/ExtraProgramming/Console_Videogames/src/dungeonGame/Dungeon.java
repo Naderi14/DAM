@@ -5,6 +5,17 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
+/*
+* Hacer lógica de objetos usables instantaneos random al recoger tesoros:
+*   - Hacer desaparecer un monstruo aleatorio
+*   - Poder atravesar un muro 1 vez
+*   - Evitar que te mate el monstruo porque lo "esquivas" 1 vez
+*   - El score del jugador va bajando por cada paso y se define el score por el tamaño del nivel
+*
+* Hacer lógica de maldiciones aleatorias al cargar el nivel:
+*   - Maldición de lentitud: el usuario en vez de dar 1 paso por frame, es 1 paso cada 2 frames
+* */
+
 public class Dungeon {
     public static final String BLACK = "\u001B[30m";
     public static final String RED = "\u001B[31m";
@@ -54,48 +65,69 @@ public class Dungeon {
     private static void inicializarNiveles()
     {
         levelList.add(new Level (new char[][] {     // LVL 1
+                {'S', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'},
+                {' ', ' ', ' ', ' ', ' ', ' ', ' ', '#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'T', '#'},
+                {'#', '#', '#', '#', '#', '#', ' ', '#', ' ', '#', '#', '#', '#', '#', '#', '#', '#', '#'},
+                {'#', 'T', ' ', ' ', ' ', '#', ' ', '#', 'T', '#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#'},
+                {'#', '#', '#', '#', ' ', '#', ' ', '#', '#', '#', ' ', '#', '#', '#', '#', '#', ' ', '#'},
+                {'#', 'T', ' ', '#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#', ' ', ' ', ' ', '#', ' ', '#'},
+                {'#', '#', ' ', '#', '#', '#', '#', '#', '#', '#', '#', '#', ' ', 'M', ' ', '#', ' ', '#'},
+                {'#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#', ' ', '#'},
+                {'#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', ' ', 'M', ' ', '#', ' ', '#'},
+                {'#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#', ' ', '#'},
+                {'#', ' ', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', ' ', '#'},
+                {'#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#'},
+                {'#', ' ', 'M', ' ', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'},
+                {'#', ' ', ' ', ' ', '#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#'},
+                {'#', ' ', 'M', ' ', '#', ' ', '#', '#', '#', '#', ' ', ' ', '#', '#', '#', '#', ' ', '#'},
+                {'#', ' ', ' ', ' ', '#', ' ', '#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#', ' ', '#'},
+                {'#', 'T', 'M', ' ', ' ', ' ', '#', 'T', '#', '#', '#', '#', '#', '#', 'T', '#', ' ', ' '},
+                {'#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', 'E'}
+        }));
+
+        levelList.add(new Level (new char[][] {     // LVL 1
                 {'S', ' ', 'E'},
-                {' ', 'X', ' '},
+                {' ', '#', ' '},
                 {'T', ' ', 'M'}
         }));
 
         levelList.add(new Level (new char[][] {     // LVL 2
-                {'S', 'X', ' ', 'M'},
-                {' ', 'X', ' ', 'E'},
+                {'S', '#', ' ', 'M'},
+                {' ', '#', ' ', 'E'},
                 {' ', 'T', ' ', ' '}
         }));
 
         levelList.add(new Level (new char[][] {     // LVL 3
-                {'S', 'X', 'E', 'M', 'T'},
-                {' ', 'X', 'X', ' ', ' '},
-                {' ', ' ', ' ', 'X', ' '},
+                {'S', '#', 'E', 'M', 'T'},
+                {' ', '#', '#', ' ', ' '},
+                {' ', ' ', ' ', '#', ' '},
                 {'T', ' ', ' ', ' ', ' '}
         }));
 
         levelList.add(new Level (new char[][] {     // LVL 4
-                {'S', ' ', 'X', 'X', 'X', 'E'},
-                {' ', 'X', ' ', 'M', 'X', ' '},
-                {' ', 'X', ' ', ' ', 'X', ' '},
-                {' ', ' ', ' ', 'X', 'X', ' '},
-                {'T', 'X', ' ', ' ', ' ', ' '}
+                {'S', ' ', '#', '#', '#', 'E'},
+                {' ', '#', ' ', 'M', '#', ' '},
+                {' ', '#', ' ', ' ', '#', ' '},
+                {' ', ' ', ' ', '#', '#', ' '},
+                {'T', '#', ' ', ' ', ' ', ' '}
         }));
 
         levelList.add(new Level (new char[][] {     // LVL 5
-                {'S', ' ', ' ', 'X', 'X', ' ', ' ', ' ', 'T'},
-                {'X', 'X', ' ', 'X', ' ', ' ', 'X', 'M', ' '},
-                {' ', ' ', ' ', 'X', ' ', ' ', ' ', ' ', ' '},
-                {' ', 'X', 'M', ' ', ' ', ' ', 'X', ' ', 'T'},
-                {' ', ' ', ' ', 'X', ' ', ' ', ' ', 'X', 'E'}
+                {'S', ' ', ' ', '#', '#', ' ', ' ', ' ', 'T'},
+                {'#', '#', ' ', '#', ' ', ' ', '#', 'M', ' '},
+                {' ', ' ', ' ', '#', ' ', ' ', ' ', ' ', ' '},
+                {' ', '#', 'M', ' ', ' ', ' ', '#', ' ', 'T'},
+                {' ', ' ', ' ', '#', ' ', ' ', ' ', '#', 'E'}
         }));
 
         levelList.add(new Level (new char[][]{      // LVL 6
-                {'S', 'X', 'T', 'X', ' ', ' ', 'T', ' ', ' ', ' '},
-                {' ', 'X', ' ', 'X', 'M', ' ', ' ', ' ', 'T', ' '},
-                {' ', 'X', 'T', 'X', ' ', ' ', 'X', 'X', 'X', ' '},
-                {' ', 'X', ' ', 'X', ' ', ' ', ' ', ' ', 'X', ' '},
-                {' ', ' ', ' ', 'T', ' ', 'M', ' ', ' ', 'X', ' '},
-                {' ', ' ', 'T', ' ', ' ', ' ', ' ', ' ', 'X', ' '},
-                {' ', ' ', ' ', ' ', ' ', ' ', 'M', 'T', 'X', 'E'}}
+                {'S', '#', 'T', '#', ' ', ' ', 'T', ' ', ' ', ' '},
+                {' ', '#', ' ', '#', 'M', ' ', ' ', ' ', 'T', ' '},
+                {' ', '#', 'T', '#', ' ', ' ', '#', '#', '#', ' '},
+                {' ', '#', ' ', '#', ' ', ' ', ' ', ' ', '#', ' '},
+                {' ', ' ', ' ', 'T', ' ', 'M', ' ', ' ', '#', ' '},
+                {' ', ' ', 'T', ' ', ' ', ' ', ' ', ' ', '#', ' '},
+                {' ', ' ', ' ', ' ', ' ', ' ', 'M', 'T', '#', 'E'}}
         ));
     }
 
@@ -124,7 +156,7 @@ public class Dungeon {
                 case 'W':
                     if (posJugadorY - 1 < 0)
                         break;
-                    else if (mapa[posJugadorY - 1][posJugadorX] == 'X')
+                    else if (mapa[posJugadorY - 1][posJugadorX] == '#')
                         break;
                     else
                     {
@@ -135,7 +167,7 @@ public class Dungeon {
                 case 'A':
                     if (posJugadorX - 1 < 0)
                         break;
-                    else if (mapa[posJugadorY][posJugadorX - 1] == 'X')
+                    else if (mapa[posJugadorY][posJugadorX - 1] == '#')
                         break;
                     else
                     {
@@ -146,7 +178,7 @@ public class Dungeon {
                 case 'S':
                     if (posJugadorY + 1 >= mapa.length)
                         break;
-                    else if (mapa[posJugadorY + 1][posJugadorX] == 'X')
+                    else if (mapa[posJugadorY + 1][posJugadorX] == '#')
                         break;
                     else
                     {
@@ -157,7 +189,7 @@ public class Dungeon {
                 case 'D':
                     if (posJugadorX + 1 >= mapa[0].length)
                         break;
-                    else if (mapa[posJugadorY][posJugadorX + 1] == 'X')
+                    else if (mapa[posJugadorY][posJugadorX + 1] == '#')
                         break;
                     else
                     {
@@ -219,8 +251,8 @@ public class Dungeon {
                     System.out.print(RED + mapa[i][j] + "  " + RESET);
                 else if (mapa[i][j] == 'E')
                     System.out.print(BLUE + mapa[i][j] + "  " + RESET);
-                else if (mapa[i][j] == 'X')
-                    System.out.print(WHITE + mapa[i][j] + "  " + RESET);
+                else if (mapa[i][j] == '#')
+                    System.out.print(PURPLE + mapa[i][j] + "  " + RESET);
                 else
                     System.out.print(mapa[i][j] + "  ");
                 if (!isMapLoaded) {
