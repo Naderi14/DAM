@@ -1,15 +1,19 @@
 package dungeonGame;
 
+import java.util.List;
 import java.util.Random;
 
 public class Monster {
     private int posX, posY;
+    private int planX, planY;   // Las variables estas se usarán para evitar errores futuros con los conflictos entre monstruos
     private char symbol = 'M';
 
     public Monster(int x, int y)
     {
         this.posX = x;
         this.posY = y;
+        this.planX = x;
+        this.planY = y;
     }
 
     public int getPosX()
@@ -22,7 +26,7 @@ public class Monster {
         return posY;
     }
 
-    public void move(char[][] mapa)
+    public void planearMove(char[][] mapa)
     {
         Random random = new Random();
         boolean isAvailableMove = false;
@@ -55,13 +59,47 @@ public class Monster {
             {
                 if (mapa[newY][newX] == ' ' || mapa[newY][newX] == 'S')
                 {
-                    mapa[posY][posX] = ' ';
-                    posX = newX;
-                    posY = newY;
-                    mapa[posY][posX] = symbol;
+                    planX = newX;
+                    planY = newY;
                     isAvailableMove = true;
+                }
+
+                else if (mapa[newY][newX] == 'M')
+                {
+
+                    isAvailableMove = true;
+                    planearMove(mapa);
                 }
             }
         }
     }
+
+    public boolean checkConflicts(List<Monster> monsterList)
+    {
+        for (Monster other : monsterList)
+        {
+            if (other != this && other.planX == this.planX && other.planY == this.planY)
+            {
+                planX = posX;
+                planY = posY;
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public void applyMove(char[][] mapa)
+    {
+        mapa[posY][posX] = ' ';
+        posX = planX;
+        posY = planY;
+        mapa[posY][posX] = symbol;
+    }
+
+    public void killMonster(List<Monster> monsterList, char[][] mapa)
+    {
+        mapa[posY][posX] = ' ';
+        monsterList.remove(this);
+    }
 }
+

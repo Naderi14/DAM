@@ -17,18 +17,18 @@ import java.util.Scanner;
 * */
 
 public class Dungeon {
-    public static final String BLACK = "\u001B[30m";
-    public static final String RED = "\u001B[31m";
-    public static final String GREEN = "\u001B[32m";
-    public static final String YELLOW = "\u001B[33m";
-    public static final String BLUE = "\u001B[34m";
-    public static final String PURPLE = "\u001B[35m";
-    public static final String CYAN = "\u001B[36m";
-    public static final String WHITE = "\u001B[37m";
-    public static final String RESET = "\u001B[0m";
+    private final String BLACK = "\u001B[30m";
+    private final String RED = "\u001B[31m";
+    private final String GREEN = "\u001B[32m";
+    private final String YELLOW = "\u001B[33m";
+    private final String BLUE = "\u001B[34m";
+    private final String PURPLE = "\u001B[35m";
+    private final String CYAN = "\u001B[36m";
+    private final String WHITE = "\u001B[37m";
+    private final String RESET = "\u001B[0m";
 
-    private static final Scanner scanner = new Scanner(System.in);
-    private static final Random random = new Random();
+    private final Scanner scanner = new Scanner(System.in);
+    private final Random random = new Random();
 
     private static List<Monster> monsterList = new ArrayList<>();
     private static List<Treasure> treasureList = new ArrayList<>();
@@ -44,14 +44,14 @@ public class Dungeon {
 
     private static char[][] mapa;
 
-    public static void main(String[] args)
+    public void mainDungeon()
     {
         inicializarNiveles();
         cargarNivel(levelList.get(nivelActual));
         while (!isEnd)
         {
             actualizarMapa();
-            menuJuego();
+            //menuJuego();
             moverEnemigos();
             verifyCollisionPlayerMonster();
             verifyFoundedTreasure();
@@ -62,27 +62,27 @@ public class Dungeon {
         actualizarMapa();
     }
 
-    private static void inicializarNiveles()
+    private void inicializarNiveles()
     {
         levelList.add(new Level (new char[][] {     // LVL 1
-                {'S', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'},
-                {' ', ' ', ' ', ' ', ' ', ' ', ' ', '#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'T', '#'},
-                {'#', '#', '#', '#', '#', '#', ' ', '#', ' ', '#', '#', '#', '#', '#', '#', '#', '#', '#'},
-                {'#', 'T', ' ', ' ', ' ', '#', ' ', '#', 'T', '#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#'},
-                {'#', '#', '#', '#', ' ', '#', ' ', '#', '#', '#', ' ', '#', '#', '#', '#', '#', ' ', '#'},
-                {'#', 'T', ' ', '#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#', ' ', ' ', ' ', '#', ' ', '#'},
-                {'#', '#', ' ', '#', '#', '#', '#', '#', '#', '#', '#', '#', ' ', 'M', ' ', '#', ' ', '#'},
-                {'#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#', ' ', '#'},
-                {'#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', ' ', 'M', ' ', '#', ' ', '#'},
-                {'#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#', ' ', '#'},
-                {'#', ' ', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', ' ', '#'},
-                {'#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#'},
-                {'#', ' ', 'M', ' ', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'},
-                {'#', ' ', ' ', ' ', '#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#'},
-                {'#', ' ', 'M', ' ', '#', ' ', '#', '#', '#', '#', ' ', ' ', '#', '#', '#', '#', ' ', '#'},
-                {'#', ' ', ' ', ' ', '#', ' ', '#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#', ' ', '#'},
-                {'#', 'T', 'M', ' ', ' ', ' ', '#', 'T', '#', '#', '#', '#', '#', '#', 'T', '#', ' ', ' '},
-                {'#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', 'E'}
+                {'S', ' ', ' ', ' ', ' ', ' ', ' ', '#', ' ', ' ', ' ', ' ', ' ', ' ', 'M', ' ', ' ', ' '},
+                {'#', '#', '#', '#', '#', '#', ' ', '#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'T'},
+                {' ', ' ', ' ', ' ', ' ', '#', ' ', '#', ' ', '#', '#', '#', '#', ' ', '#', '#', '#', '#'},
+                {' ', '#', '#', '#', ' ', '#', ' ', '#', 'T', '#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+                {' ', ' ', 'T', '#', ' ', '#', ' ', '#', '#', '#', ' ', '#', '#', '#', '#', '#', ' ', ' '},
+                {' ', ' ', ' ', '#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#', ' ', ' ', ' ', '#', ' ', ' '},
+                {' ', 'M', ' ', '#', '#', '#', '#', '#', '#', '#', '#', '#', ' ', 'M', ' ', '#', ' ', ' '},
+                {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'T', ' ', 'T', '#', ' ', ' '},
+                {'#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', ' ', 'M', ' ', '#', 'M', ' '},
+                {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#', ' ', ' '},
+                {' ', ' ', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', ' ', ' '},
+                {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+                {' ', ' ', 'M', ' ', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'},
+                {' ', ' ', ' ', ' ', '#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+                {' ', ' ', 'M', ' ', '#', ' ', '#', '#', '#', '#', ' ', ' ', '#', '#', '#', '#', ' ', ' '},
+                {' ', ' ', ' ', ' ', '#', ' ', '#', 'T', ' ', ' ', ' ', 'M', '#', 'M', 'T', '#', ' ', ' '},
+                {' ', ' ', 'M', ' ', ' ', ' ', '#', '#', '#', '#', '#', '#', '#', ' ', ' ', '#', 'T', ' '},
+                {'T', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#', '#', 'E'}
         }));
 
         levelList.add(new Level (new char[][] {     // LVL 1
@@ -131,7 +131,7 @@ public class Dungeon {
         ));
     }
 
-    private static void cargarNivel(Level level)
+    private void cargarNivel(Level level)
     {
         monsterList.clear();
         treasureList.clear();
@@ -141,7 +141,7 @@ public class Dungeon {
         isMapLoaded = false;
     }
 
-    private static void menuJuego()
+    private void menuJuego()
     {
         boolean isAvailableMove = false;
         char letra;
@@ -204,7 +204,7 @@ public class Dungeon {
         }
     }
 
-    private static void updatePlayerPos(char coordenada, int move)
+    private void updatePlayerPos(char coordenada, int move)
     {
         if (coordenada == 'x')
         {
@@ -220,15 +220,25 @@ public class Dungeon {
         }
     }
 
-    private static void moverEnemigos()
+    private void moverEnemigos()
     {
         for (Monster monster : monsterList)
         {
-            monster.move(mapa);
+            monster.planearMove(mapa);
+        }
+
+        for (Monster monster : monsterList)
+        {
+            monster.checkConflicts(monsterList);
+        }
+
+        for (Monster monster : monsterList)
+        {
+            monster.applyMove(mapa);
         }
     }
 
-    private static void actualizarMapa()
+    private void actualizarMapa()
     {
         if (isMapLoaded) {
             imprimirMapaConMarco();
@@ -238,7 +248,7 @@ public class Dungeon {
         }
     }
 
-    private static void imprimirMapaConMarco() {
+    private void imprimirMapaConMarco() {
         imprimirMarcoHorizontal();
         for (int i = 0; i < mapa.length; i++) {
             System.out.print(PURPLE + "# " + RESET);
@@ -264,7 +274,7 @@ public class Dungeon {
         imprimirMarcoHorizontal();
     }
 
-    private static void inicializarElementos(int j, int i) {
+    private void inicializarElementos(int j, int i) {
         if (mapa[i][j] == 'S') {
             posJugadorX = j;
             posJugadorY = i;
@@ -278,7 +288,7 @@ public class Dungeon {
         }
     }
 
-    private static void imprimirMarcoHorizontal()
+    private void imprimirMarcoHorizontal()
     {
         System.out.print(PURPLE + "#" + RESET);
         for (int i = 0; i < mapa[0].length * 3 + 1; i++)
@@ -288,7 +298,7 @@ public class Dungeon {
         System.out.println(PURPLE + "#" + RESET);
     }
 
-    private static void verifyCollisionPlayerMonster()
+    private void verifyCollisionPlayerMonster()
     {
         for (Monster monster : monsterList)
         {
@@ -301,7 +311,7 @@ public class Dungeon {
         }
     }
 
-    private static void verifyFoundedTreasure()
+    private void verifyFoundedTreasure()       // TODO: Habrá que hacer aqui la mecánica de la obtención o ejecución del Effect
     {
         for (Treasure treasure : treasureList)
         {
@@ -313,7 +323,7 @@ public class Dungeon {
         }
     }
 
-    private static void verifyFindEscapeDungeon()
+    private void verifyFindEscapeDungeon()
     {
         if (posJugadorY == posEscapeY && posJugadorX == posEscapeX)
         {
