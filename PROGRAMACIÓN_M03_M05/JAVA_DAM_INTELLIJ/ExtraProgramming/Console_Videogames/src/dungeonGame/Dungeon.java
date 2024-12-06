@@ -1,5 +1,8 @@
 package dungeonGame;
 
+import dungeonGame.effects.DisappearMonsterEffect;
+import dungeonGame.effects.IEffect;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -7,7 +10,6 @@ import java.util.Scanner;
 
 /*
 * Hacer lógica de objetos usables instantaneos random al recoger tesoros:
-*   - Hacer desaparecer un monstruo aleatorio
 *   - Poder atravesar un muro 1 vez
 *   - Evitar que te mate el monstruo porque lo "esquivas" 1 vez
 *   - El score del jugador va bajando por cada paso y se define el score por el tamaño del nivel
@@ -51,7 +53,7 @@ public class Dungeon {
         while (!isEnd)
         {
             actualizarMapa();
-            //menuJuego();
+            menuJuego();
             moverEnemigos();
             verifyCollisionPlayerMonster();
             verifyFoundedTreasure();
@@ -65,7 +67,7 @@ public class Dungeon {
     private void inicializarNiveles()
     {
         levelList.add(new Level (new char[][] {     // LVL 1
-                {'S', ' ', ' ', ' ', ' ', ' ', ' ', '#', ' ', ' ', ' ', ' ', ' ', ' ', 'M', ' ', ' ', ' '},
+                {'S', 'T', 'T', 'T', 'T', 'T', ' ', '#', ' ', ' ', ' ', ' ', ' ', ' ', 'M', ' ', ' ', ' '},
                 {'#', '#', '#', '#', '#', '#', ' ', '#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'T'},
                 {' ', ' ', ' ', ' ', ' ', '#', ' ', '#', ' ', '#', '#', '#', '#', ' ', '#', '#', '#', '#'},
                 {' ', '#', '#', '#', ' ', '#', ' ', '#', 'T', '#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
@@ -281,7 +283,8 @@ public class Dungeon {
         } else if (mapa[i][j] == 'M') {
             monsterList.add(new Monster(j, i));
         } else if (mapa[i][j] == 'T') {
-            treasureList.add(new Treasure(j, i, random.nextInt(10) + 1));
+            IEffect effect = getRandomEffect();
+            treasureList.add(new Treasure(j, i, random.nextInt(10) + 1, effect));
         } else if (mapa[i][j] == 'E') {
             posEscapeX = j;
             posEscapeY = i;
@@ -319,6 +322,9 @@ public class Dungeon {
             {
                 System.out.println("<- Tesoro encontrado de " + treasure.getValue() + " score ->");
                 scoreTotal += treasure.getValue();
+                treasure.aplicarEfecto(this);
+                treasureList.remove(treasure);
+                break;
             }
         }
     }
@@ -337,5 +343,25 @@ public class Dungeon {
                 isEnd = true;
             }
         }
+    }
+
+    private IEffect getRandomEffect()
+    {
+        int randomEffect = random.nextInt(1);
+        switch (randomEffect)
+        {
+            case 0: return new DisappearMonsterEffect();
+            default: return null;
+        }
+    }
+
+    public static List<Monster> getMonsters()
+    {
+        return monsterList;
+    }
+
+    public static char[][] getMapa()
+    {
+        return mapa;
     }
 }
