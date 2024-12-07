@@ -29,17 +29,19 @@ public class Dungeon {
     private final String WHITE = "\u001B[37m";
     private final String RESET = "\u001B[0m";
 
-    private final Scanner scanner = new Scanner(System.in);
     private final Random random = new Random();
 
     private static List<Monster> monsterList = new ArrayList<>();
     private static List<Treasure> treasureList = new ArrayList<>();
     private static List<Level> levelList = new ArrayList<>();
 
-    private static int posJugadorX, posJugadorY;
-    private static int posEscapeX, posEscapeY;
-    private static int scoreTotal = 0;
+    private Player player;
+
+    private static int scoreSaved = 0;
     private static int nivelActual = 0;
+
+    public int posEscapeX;
+    public int posEscapeY;
 
     private static boolean isEnd = false;
     private static boolean isMapLoaded = false;
@@ -50,53 +52,34 @@ public class Dungeon {
     {
         inicializarNiveles();
         cargarNivel(levelList.get(nivelActual));
+        boolean isEndRound = false;
+
         while (!isEnd)
         {
             actualizarMapa();
-            menuJuego();
+            player.menuJugador();
             moverEnemigos();
             verifyCollisionPlayerMonster();
             verifyFoundedTreasure();
-            verifyFindEscapeDungeon();
-            if (!isEnd)
-                mapa[posJugadorY][posJugadorX] = 'S';   // Cerciorarse que el player no desaparezca
+            isEndRound = verifyFindEscapeDungeon();
+            if (!isEnd && !isEndRound)
+                mapa[player.getPosY()][player.getPosX()] = 'S';   // Cerciorarse que el player no desaparezca
         }
         actualizarMapa();
     }
 
-    private void inicializarNiveles()
+    private void inicializarNiveles()   // Sirve para crear los niveles disponibles en la lista de niveles
     {
-        levelList.add(new Level (new char[][] {     // LVL 1
-                {'S', 'T', 'T', 'T', 'T', 'T', ' ', '#', ' ', ' ', ' ', ' ', ' ', ' ', 'M', ' ', ' ', ' '},
-                {'#', '#', '#', '#', '#', '#', ' ', '#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'T'},
-                {' ', ' ', ' ', ' ', ' ', '#', ' ', '#', ' ', '#', '#', '#', '#', ' ', '#', '#', '#', '#'},
-                {' ', '#', '#', '#', ' ', '#', ' ', '#', 'T', '#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-                {' ', ' ', 'T', '#', ' ', '#', ' ', '#', '#', '#', ' ', '#', '#', '#', '#', '#', ' ', ' '},
-                {' ', ' ', ' ', '#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#', ' ', ' ', ' ', '#', ' ', ' '},
-                {' ', 'M', ' ', '#', '#', '#', '#', '#', '#', '#', '#', '#', ' ', 'M', ' ', '#', ' ', ' '},
-                {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'T', ' ', 'T', '#', ' ', ' '},
-                {'#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', ' ', 'M', ' ', '#', 'M', ' '},
-                {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#', ' ', ' '},
-                {' ', ' ', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', ' ', ' '},
-                {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-                {' ', ' ', 'M', ' ', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'},
-                {' ', ' ', ' ', ' ', '#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-                {' ', ' ', 'M', ' ', '#', ' ', '#', '#', '#', '#', ' ', ' ', '#', '#', '#', '#', ' ', ' '},
-                {' ', ' ', ' ', ' ', '#', ' ', '#', 'T', ' ', ' ', ' ', 'M', '#', 'M', 'T', '#', ' ', ' '},
-                {' ', ' ', 'M', ' ', ' ', ' ', '#', '#', '#', '#', '#', '#', '#', ' ', ' ', '#', 'T', ' '},
-                {'T', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#', '#', 'E'}
+        levelList.add(new Level (new char[][] {     // LVL 2
+                {'S', '#', ' ', 'M'},
+                {' ', '#', ' ', 'E'},
+                {' ', 'T', ' ', ' '}
         }));
 
         levelList.add(new Level (new char[][] {     // LVL 1
                 {'S', ' ', 'E'},
                 {' ', '#', ' '},
                 {'T', ' ', 'M'}
-        }));
-
-        levelList.add(new Level (new char[][] {     // LVL 2
-                {'S', '#', ' ', 'M'},
-                {' ', '#', ' ', 'E'},
-                {' ', 'T', ' ', ' '}
         }));
 
         levelList.add(new Level (new char[][] {     // LVL 3
@@ -131,95 +114,35 @@ public class Dungeon {
                 {' ', ' ', 'T', ' ', ' ', ' ', ' ', ' ', '#', ' '},
                 {' ', ' ', ' ', ' ', ' ', ' ', 'M', 'T', '#', 'E'}}
         ));
+
+        levelList.add(new Level (new char[][] {     // LVL 1
+                {'S', 'T', 'T', 'T', 'T', 'T', ' ', '#', ' ', ' ', ' ', ' ', ' ', ' ', 'M', ' ', ' ', ' '},
+                {'#', '#', '#', '#', '#', '#', ' ', '#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'T'},
+                {' ', ' ', ' ', ' ', ' ', '#', ' ', '#', ' ', '#', '#', '#', '#', ' ', '#', '#', '#', '#'},
+                {' ', '#', '#', '#', ' ', '#', ' ', '#', 'T', '#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+                {' ', ' ', 'T', '#', ' ', '#', ' ', '#', '#', '#', ' ', '#', '#', '#', '#', '#', ' ', ' '},
+                {' ', ' ', ' ', '#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#', ' ', ' ', ' ', '#', ' ', ' '},
+                {' ', 'M', ' ', '#', '#', '#', '#', '#', '#', '#', '#', '#', ' ', 'M', ' ', '#', ' ', ' '},
+                {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'T', ' ', 'T', '#', ' ', ' '},
+                {'#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', ' ', 'M', ' ', '#', 'M', ' '},
+                {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#', ' ', ' '},
+                {' ', ' ', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', ' ', ' '},
+                {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+                {' ', ' ', 'M', ' ', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'},
+                {' ', ' ', ' ', ' ', '#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+                {' ', ' ', 'M', ' ', '#', ' ', '#', '#', '#', '#', ' ', ' ', '#', '#', '#', '#', ' ', ' '},
+                {' ', ' ', ' ', ' ', '#', ' ', '#', 'T', ' ', ' ', ' ', 'M', '#', 'M', 'T', '#', ' ', ' '},
+                {' ', ' ', 'M', ' ', ' ', ' ', '#', '#', '#', '#', '#', '#', '#', ' ', ' ', '#', 'T', ' '},
+                {'T', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#', '#', 'E'}
+        }));
     }
 
-    private void cargarNivel(Level level)
+    private void cargarNivel(Level level)   // Cargar el nivel actual limpiando el historial del anterior en cuanto a tesoros y monstruos
     {
         monsterList.clear();
         treasureList.clear();
-        posJugadorY = 0;
-        posJugadorX = 0;
         mapa = level.getMapa();
         isMapLoaded = false;
-    }
-
-    private void menuJuego()
-    {
-        boolean isAvailableMove = false;
-        char letra;
-        System.out.println("S - Jugador / T - Tesoro / M - Monstruo / E - Escape\n(W) arriba | (A) izquierda | (S) abajo | (D) derecha            Score: " + scoreTotal);
-        System.out.println("Posicion Jugador: (" + posJugadorY + "," + posJugadorX + ")");
-        while (!isAvailableMove)
-        {
-            letra = scanner.next().toUpperCase().charAt(0);
-
-            switch (letra)
-            {
-                case 'W':
-                    if (posJugadorY - 1 < 0)
-                        break;
-                    else if (mapa[posJugadorY - 1][posJugadorX] == '#')
-                        break;
-                    else
-                    {
-                        updatePlayerPos('y', -1);
-                        isAvailableMove = true;
-                    }
-                        break;
-                case 'A':
-                    if (posJugadorX - 1 < 0)
-                        break;
-                    else if (mapa[posJugadorY][posJugadorX - 1] == '#')
-                        break;
-                    else
-                    {
-                        updatePlayerPos('x', -1);
-                        isAvailableMove = true;
-                    }
-                    break;
-                case 'S':
-                    if (posJugadorY + 1 >= mapa.length)
-                        break;
-                    else if (mapa[posJugadorY + 1][posJugadorX] == '#')
-                        break;
-                    else
-                    {
-                        updatePlayerPos('y', 1);
-                        isAvailableMove = true;
-                    }
-                    break;
-                case 'D':
-                    if (posJugadorX + 1 >= mapa[0].length)
-                        break;
-                    else if (mapa[posJugadorY][posJugadorX + 1] == '#')
-                        break;
-                    else
-                    {
-                        updatePlayerPos('x', 1);
-                        isAvailableMove = true;
-                    }
-                    break;
-                default:
-                    System.out.println("<- No se corresponde con ningún movimiento ->");
-                    break;
-            }
-        }
-    }
-
-    private void updatePlayerPos(char coordenada, int move)
-    {
-        if (coordenada == 'x')
-        {
-            mapa[posJugadorY][posJugadorX] = ' ';
-            posJugadorX += move;
-            mapa[posJugadorY][posJugadorX] = 'S';
-        }
-        else
-        {
-            mapa[posJugadorY][posJugadorX] = ' ';
-            posJugadorY += move;
-            mapa[posJugadorY][posJugadorX] = 'S';
-        }
     }
 
     private void moverEnemigos()
@@ -278,8 +201,9 @@ public class Dungeon {
 
     private void inicializarElementos(int j, int i) {
         if (mapa[i][j] == 'S') {
-            posJugadorX = j;
-            posJugadorY = i;
+            scoreSaved = Player.scoreTotal;
+            player = new Player(i, j);
+            Player.scoreTotal = scoreSaved;
         } else if (mapa[i][j] == 'M') {
             monsterList.add(new Monster(j, i));
         } else if (mapa[i][j] == 'T') {
@@ -305,7 +229,7 @@ public class Dungeon {
     {
         for (Monster monster : monsterList)
         {
-            if (monster.getPosY() == posJugadorY && monster.getPosX() == posJugadorX)
+            if (monster.getPosY() == player.getPosY() && monster.getPosX() == player.getPosX())
             {
                 System.out.println("<!========= HAS SIDO DERROTADO POR UN MONSTRUO =========!>");
                 isEnd = true;
@@ -314,14 +238,14 @@ public class Dungeon {
         }
     }
 
-    private void verifyFoundedTreasure()       // TODO: Habrá que hacer aqui la mecánica de la obtención o ejecución del Effect
+    private void verifyFoundedTreasure()
     {
         for (Treasure treasure : treasureList)
         {
-            if (treasure.getPosY() == posJugadorY && treasure.getPosX() == posJugadorX)
+            if (treasure.getPosY() == player.getPosY() && treasure.getPosX() == player.getPosX())
             {
                 System.out.println("<- Tesoro encontrado de " + treasure.getValue() + " score ->");
-                scoreTotal += treasure.getValue();
+                scoreSaved += treasure.getValue();
                 treasure.aplicarEfecto(this);
                 treasureList.remove(treasure);
                 break;
@@ -329,11 +253,11 @@ public class Dungeon {
         }
     }
 
-    private void verifyFindEscapeDungeon()
+    private boolean verifyFindEscapeDungeon()
     {
-        if (posJugadorY == posEscapeY && posJugadorX == posEscapeX)
+        if (player.getPosY() == posEscapeY && player.getPosX() == posEscapeX)
         {
-            System.out.println("<!- Has escapado de la mazmorra con " + scoreTotal + " score -!>\n");
+            System.out.println("<!- Has escapado de la mazmorra con " + scoreSaved + " score -!>\n");
             nivelActual++;
             if (nivelActual < levelList.size())
                 cargarNivel(levelList.get(nivelActual));
@@ -342,7 +266,9 @@ public class Dungeon {
                 System.out.println("<!- HAS COMPLETADO TODOS LOS NIVELES, FELICIDADES -!> \nby Ditarex\n");
                 isEnd = true;
             }
+            return true;
         }
+        return false;
     }
 
     private IEffect getRandomEffect()
