@@ -1,5 +1,3 @@
-package dungeonGame;
-
 import java.util.Scanner;
 
 public class Player {

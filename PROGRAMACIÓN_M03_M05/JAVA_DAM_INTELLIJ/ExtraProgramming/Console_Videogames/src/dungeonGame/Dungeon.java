@@ -1,5 +1,6 @@
 package dungeonGame;
 
+import dungeonGame.effects.AddShieldEffect;
 import dungeonGame.effects.DisappearMonsterEffect;
 import dungeonGame.effects.IEffect;
 
@@ -245,7 +246,7 @@ public class Dungeon {
             if (treasure.getPosY() == player.getPosY() && treasure.getPosX() == player.getPosX())
             {
                 System.out.println("<- Tesoro encontrado de " + treasure.getValue() + " score ->");
-                scoreSaved += treasure.getValue();
+                Player.scoreTotal += treasure.getValue();
                 treasure.aplicarEfecto(this);
                 treasureList.remove(treasure);
                 break;
@@ -273,10 +274,11 @@ public class Dungeon {
 
     private IEffect getRandomEffect()
     {
-        int randomEffect = random.nextInt(1);
+        int randomEffect = random.nextInt(2);
         switch (randomEffect)
         {
             case 0: return new DisappearMonsterEffect();
+            case 1: return new AddShieldEffect();
             default: return null;
         }
     }
