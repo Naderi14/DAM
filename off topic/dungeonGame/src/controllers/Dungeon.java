@@ -237,7 +237,8 @@ public class Dungeon {
             if (monster.getPosY() == player.getPosY() && monster.getPosX() == player.getPosX() && Player.getEscudos() == 0)
             {
                 Scanner sc = new Scanner(System.in);
-                System.out.println("\n\n\n\n<- Un monstruo te ha cazado y te propone una adivinanza para tu salvación ->");
+                System.out.println("\n\n\n\n<- Un monstruo te ha cazado y te propone una adivinanza para tu salvación ->\n");
+
                 int numAdivinanza = random.nextInt(RiddleController.adivinanzas.size());
                 RiddleData adivinanza = RiddleController.adivinanzas.get(numAdivinanza);
                 System.out.println("|| " + adivinanza.getAdivinanza() + " ||\n" +
@@ -247,26 +248,29 @@ public class Dungeon {
 
                 int numRespuesta;
                 do{
+                    System.out.println("\n<- Opcion: ");
                     numRespuesta = sc.nextInt();
-                } while (numRespuesta > 0 && numRespuesta < 4);
+                    if (numRespuesta <= 0 || numRespuesta > 3)
+                        System.out.println("<!- Opción no válida -!>");
+                } while (numRespuesta <= 0 || numRespuesta > 3);
 
                 if (adivinanza.isRespuestaCorrecta(adivinanza.getOpciones(numRespuesta)))
                 {
-                    System.out.println("<- TE HAS SALVADO DE LA MUERTE ->");
+                    System.out.println("<- CORRECTO! TE HAS SALVADO DE LA MUERTE ->\n");
                     monster.retrocederPosicion(mapa);
                 }
                 else
                 {
-                    System.out.println("<!========= HAS SIDO DERROTADO POR UN MONSTRUO =========!>");
+                    System.out.println("<!========= INCORRECTO! HAS SIDO DERROTADO POR UN MONSTRUO =========!>");
                     isEnd = true;
                 }
                 break;
             }
             else if (monster.getPosY() == player.getPosY() && monster.getPosX() == player.getPosX() && Player.getEscudos() > 0)
             {
-                System.out.println("<!- El monstruo te ha quitado 1 escudo, te quedan " + Player.getEscudos() + " escudos -!>");
-                monster.retrocederPosicion(mapa);
                 Player.restarEscudo();
+                monster.retrocederPosicion(mapa);
+                System.out.println("<!- El monstruo te ha quitado 1 escudo, te quedan " + Player.getEscudos() + " escudos -!>");
             }
         }
     }
