@@ -19,6 +19,7 @@ public class Matriz3P3 {
         }
 
         System.out.println("\nSegundo: ");
+
         // Propuesta Ejercicio
         for (int i = 0; i < matriz.length; i++)
         {
