@@ -1,11 +1,14 @@
 package controllers;
 
+import effects.IEffect;
+
 import java.util.Random;
 
 public class Level {
     private char[][] mapa;
+    private IEffect curse;
 
-    public Level(char[][] mapa)
+    public Level(char[][] mapa, IEffect curse)
     {
         this.mapa = mapa;
     }
@@ -15,7 +18,15 @@ public class Level {
         return mapa;
     }
 
-    public static Level mapGenerate(int width, int height, int cantMonsters, int cantTreasures, int cantRooms)
+    public void aplicarEfecto(Dungeon dungeon)
+    {
+        Random random = new Random();
+
+        if (random.nextInt(101) > curse.getProbabilidad())
+            curse.aplicarEfecto(dungeon);
+    }
+
+    public static char[][] mapGenerate(int width, int height, int cantMonsters, int cantTreasures, int cantRooms)
     {
         Random random = new Random();
         char[][] mapa = new char[height][width];
@@ -29,6 +40,6 @@ public class Level {
             }
         }
 
-        return new Level(mapa);
+        return mapa;
     }
 }

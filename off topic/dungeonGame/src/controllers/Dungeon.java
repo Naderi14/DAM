@@ -3,6 +3,7 @@ package controllers;
 import effects.AddShieldEffect;
 import effects.DisappearMonsterEffect;
 import effects.IEffect;
+import effects.SlowEffectCurse;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +42,7 @@ public class Dungeon {
     private Player player;
 
     private static int scoreSaved = 0;
-    private static int nivelActual = 0;
+    private static int numNivelActual = 0;
 
     public int posEscapeX;
     public int posEscapeY;
@@ -55,7 +56,7 @@ public class Dungeon {
     {
         inicializarNiveles();
         RiddleController.crearAdivinanzas();
-        cargarNivel(levelList.get(nivelActual));
+        cargarNivel(levelList.get(numNivelActual));
         boolean isEndRound = false;
 
         while (!isEnd)
@@ -78,20 +79,20 @@ public class Dungeon {
                 {'S', '#', 'M', 'M'},
                 {' ', '#', ' ', 'E'},
                 {' ', 'T', 'M', ' '}
-        }));
+        }, getRandomCurse()));
 
         levelList.add(new Level (new char[][] {     // LVL 2
                 {'S', ' ', 'E'},
                 {' ', '#', ' '},
                 {'T', 'M', 'M'}
-        }));
+        }, getRandomCurse()));
 
         levelList.add(new Level (new char[][] {     // LVL 3
                 {'S', '#', 'E', 'M', 'T'},
                 {' ', '#', '#', ' ', ' '},
                 {' ', ' ', 'M', '#', ' '},
                 {'T', 'M', ' ', ' ', ' '}
-        }));
+        }, getRandomCurse()));
 
         levelList.add(new Level (new char[][] {     // LVL 4
                 {'S', ' ', '#', '#', '#', 'E'},
@@ -99,7 +100,7 @@ public class Dungeon {
                 {' ', '#', ' ', ' ', '#', ' '},
                 {' ', ' ', ' ', '#', '#', ' '},
                 {'T', '#', 'M', ' ', ' ', 'M'}
-        }));
+        }, getRandomCurse()));
 
         levelList.add(new Level (new char[][] {     // LVL 5
                 {'S', ' ', ' ', '#', '#', ' ', ' ', ' ', 'T'},
@@ -107,7 +108,7 @@ public class Dungeon {
                 {' ', ' ', ' ', '#', ' ', ' ', ' ', ' ', ' '},
                 {' ', '#', 'M', ' ', ' ', ' ', '#', 'M', 'T'},
                 {'M', ' ', ' ', '#', ' ', 'M', ' ', '#', 'E'}
-        }));
+        }, getRandomCurse()));
 
         levelList.add(new Level (new char[][]{      // LVL 6
                 {'S', '#', 'T', '#', ' ', ' ', 'T', ' ', ' ', ' '},
@@ -116,8 +117,8 @@ public class Dungeon {
                 {' ', '#', ' ', '#', ' ', ' ', ' ', 'M', '#', ' '},
                 {' ', ' ', ' ', ' ', ' ', 'M', ' ', ' ', '#', ' '},
                 {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#', 'M'},
-                {'M', ' ', ' ', 'M', ' ', ' ', 'M', 'T', '#', 'E'}}
-        ));
+                {'M', ' ', ' ', 'M', ' ', ' ', 'M', 'T', '#', 'E'}
+        }, getRandomCurse()));
 
         levelList.add(new Level (new char[][] {     // LVL 7
                 {'S', '#', ' ', 'M', ' ', 'E'},
@@ -125,7 +126,7 @@ public class Dungeon {
                 {' ', '#', 'T', '#', ' ', 'M'},
                 {' ', '#', ' ', '#', 'M', 'T'},
                 {'M', ' ', 'M', '#', 'T', 'M'}
-        }));
+        }, getRandomCurse()));
 
         levelList.add(new Level (new char[][] {     // LVL 8
                 {'S', ' ', 'T', ' ', ' ', ' ', ' ', '#', ' ', ' ', ' ', ' ', ' ', ' ', 'M', ' ', ' ', ' '},
@@ -146,7 +147,7 @@ public class Dungeon {
                 {'M', ' ', ' ', ' ', '#', ' ', '#', 'T', ' ', ' ', 'M', 'M', '#', 'M', 'T', '#', ' ', ' '},
                 {' ', ' ', 'M', ' ', ' ', ' ', '#', '#', '#', '#', '#', '#', '#', ' ', ' ', '#', 'T', ' '},
                 {'T', ' ', ' ', ' ', 'M', ' ', ' ', ' ', ' ', 'M', ' ', ' ', ' ', 'M', 'M', '#', '#', 'E'}
-        }));
+        }, getRandomCurse()));
     }
 
     private void cargarNivel(Level level)   // Cargar el nivel actual limpiando el historial del anterior en cuanto a tesoros y monstruos
@@ -155,6 +156,7 @@ public class Dungeon {
         treasureList.clear();
         mapa = level.getMapa();
         isMapLoaded = false;
+        level.aplicarEfecto(this);
     }
 
     private void moverEnemigos()
@@ -302,9 +304,9 @@ public class Dungeon {
         if (player.getPosY() == posEscapeY && player.getPosX() == posEscapeX)
         {
             System.out.println("<!- Has escapado de la mazmorra con " + scoreSaved + " score -!>\n");
-            nivelActual++;
-            if (nivelActual < levelList.size())
-                cargarNivel(levelList.get(nivelActual));
+            numNivelActual++;
+            if (numNivelActual < levelList.size())
+                cargarNivel(levelList.get(numNivelActual));
             else
             {
                 System.out.println("<!- HAS COMPLETADO TODOS LOS NIVELES, FELICIDADES -!> \nby Ditarex\n");
@@ -322,6 +324,16 @@ public class Dungeon {
         {
             case 0: return new DisappearMonsterEffect(66);
             case 1: return new AddShieldEffect(66);
+            default: return null;
+        }
+    }
+
+    private IEffect getRandomCurse()
+    {
+        int randomEffect = random.nextInt(1);
+        switch (randomEffect)
+        {
+            case 0: return new SlowEffectCurse(66);
             default: return null;
         }
     }
