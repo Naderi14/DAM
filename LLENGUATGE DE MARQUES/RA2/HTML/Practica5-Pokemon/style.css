@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    font-size: 16px;
+}
+
+h2 {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 2.0rem;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+h4::first-letter{
+    font-size: 2.0rem;
+}
+
+h4{
+    text-transform: capitalize;
+    font-style: italic;
+    font-weight: bold;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-size: 1.4rem;
+}
+
+#pokeNumber::before {
+    content: "Code: ";
+    font-weight: bold;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-size: 1rem;
+}
+
+#pokeNumber {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-size: 1rem;
+}
+
+#pokeHeight, #pokeWeight {
+    display: inline-block;
+    width: 48%;
+    vertical-align: middle;
+}
+
+#pokeHeight {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-size: 1rem;
+    text-align: left;
+}
+
+#pokeHeight::before {
+    content: "Height: ";
+    font-weight: bold;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-size: 1rem;
+}
+
+#pokeHeight::after {
+    content: "m";
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-size: 1rem;
+}
+
+#pokeWeight {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-size: 1rem;
+    text-align: right;
+}
+
+#pokeWeight::before {
+    content: "Weight: ";
+    font-weight: bold;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-size: 1rem;
+}
+
+#pokeWeight::after {
+    content: "kg";
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-size: 1rem;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    padding: 0px;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-size: 1rem;
+}
+
+ul::before {
+    content: "Type: ";
+    margin-right: 10px;
+    font-weight: bold;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-size: 1rem;
+}
+
+li:not(:last-child)::after {
+    content: ",";
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-size: 1rem;
+}
+
+li {
+    margin-right: 7px;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-size: 1rem;
+}
+
+#pokemon {
+    border: 12px solid rgb(72, 72, 72);
+    border-radius: 25px;
+    padding: 0px;
+}
+
+#pokeContent {
+    border: 12px solid rgb(72, 72, 72);
+    border-radius: 25px;
+    margin-top: -10px;
+    margin: -10px -20px -20px -20px;
+    padding: 0px 15px 5px 15px;
+    background: rgb(131,131,131);
+    background: linear-gradient(90deg, rgba(131,131,131,1) 0%, rgba(209,209,209,1) 52%, rgba(131,131,131,1) 100%);
+}
+
+#pokeImage {
+    border: 12px solid rgb(72, 72, 72);
+    border-radius: 25px;
+    margin: -20px -20px -10px -20px;
+    background: rgb(157,151,68);
+    background: linear-gradient(90deg, rgba(157,151,68,1) 0%, rgba(255,248,132,1) 52%, rgba(157,151,68,1) 100%);
+}
+
+#poke-container {
+    display:grid;
+    gap: 10px;
+}
+
+@media only screen and (max-width: 600px){
+    #poke-container>div{
+        background-color: beige;
+        margin: 0px;
+        padding: 10px;
+        font-size: 16px;
+    }
+    
+    #poke-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (min-width: 601px){
+    #poke-container>div{
+        background-color: beige;
+        margin: 0px;
+        padding: 10px;
+        font-size: 16px;
+    }
+    
+    #poke-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (min-width: 800px){
+    #poke-container>div{
+        background-color: beige;
+        margin: 0px;
+        padding: 10px;
+        font-size: 16px;
+    }
+    
+    #poke-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    #poke-container>div{
+        background-color: beige;
+        margin: 0px;
+        padding: 10px;
+        font-size: 16px;
+    }
+    
+    #poke-container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
