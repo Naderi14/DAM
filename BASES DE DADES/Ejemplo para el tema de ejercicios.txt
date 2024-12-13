@@ -386,3 +386,169 @@ SELECT apellido, jefe_id, puesto_trabajo
 FROM empleados
 WHERE (puesto_trabajo = 'Stock Clerk' OR puesto_trabajo = 'Sales Manager')
     AND (jefe_id NOT BETWEEN 21 AND 23);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/																														  /
+/													Ejercicios 201 - 307												  /
+/																														  /
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+==============================================================================================================================
+EJERCICIO 201
+
+"Escriba una consulta para mostrar la fecha actual. Etiquete la columna Date"
+
+SELECT SYSDATE AS "Date" FROM dual;
+
+==============================================================================================================================
+EJERCICIO 202
+
+"Para cada empleado, muestre el número de empleado, el apellido, el salario y el sueldo con un aumento del 15% y expresado 
+como número entero redondeado, etiquétela como "Nuevo sueldo"."
+
+==============================================================================================================================
+EJERCICIO 203
+
+"Modifique la consulta anterior para agregar una columna que reste el salario nuevo al antiguo . 
+Etiquete la columna como "Incremento". "
+
+==============================================================================================================================
+EJERCICIO 204
+
+"Escriba una consulta que muestre el apellido del empleado con la primera letra en mayúsculas y todas las 
+demás en minúsculas así como la longitud del apellido de todos los empleados cuyos apellidos comiencen por J, A o M. 
+Ordene los resultados por apellidos de empleado. Etiquete la columna como "Apellido" y "Longitud". "
+
+==============================================================================================================================
+EJERCICIO 205
+
+"Para cada empleado, muestre su apellido y calcule el número de meses entre el dia de hoy y la fecha de contratación. 
+Etiquete la columna como "Meses trabajados", ordene los resultados según el número de meses trabajados (de menos a más). 
+Redondee el número de meses al número entero más próximo."
+
+==============================================================================================================================
+EJERCICIO 206
+
+"Cree una consulta para mostrar el apellido y el sueldo de todos los empleados. 
+Formatee el sueldo para que tenga 15 caracteres de longitud, rellenado a la izquierda con €. 
+Etiquete la columna como "Sueldo"."
+
+==============================================================================================================================
+EJERCICIO 207
+
+"Escriba una consulta que produzca lo siguiente para cada empleado: 
+<Apellido> gana <salario>€ pero le gustaría ganar <salario*3>€. Llame a la columna Salario soñado. 
+(Ej: "Foster gana 3300€ pero le gustaría ganar 9900€.")"
+
+==============================================================================================================================
+EJERCICIO 208
+
+"Muestre el apellido, la fecha de contratación y el día de la semana en el que comenzó el empleado a trabajar 
+(LUNES, MARTES,...)(Mayúsculas). Etiquete la columna como "Día". 
+Ordene los resultados por dia de la semana, comenzando por el lunes"
+
+==============================================================================================================================
+EJERCICIO 209
+
+"Muestre el apellido de cada empleado, así como la primera fecha de revisión de salario,
+que es el primer lunes después de cada seis meses empezando a contar desde la fecha de contratación. 
+Etiquete la columna "Revisión". Formatea las fecha para que aparezca en un formato similar a 
+“Lunes 10 de Octubre de 2016”."
+
+==============================================================================================================================
+EJERCICIO 210
+
+"Cree una consulta que muestre el identificador del pedido, el estado y identificador del vendedor. 
+Si un pedido no tiene vendedor, ponga "No vendedor". Etiquete la columna como "Vendedor"."
+
+==============================================================================================================================
+EJERCICIO 211
+
+"Cree una consulta que muestre el apellido de los empleados y que indique las cantidades de sus salarios 
+anuales con asteriscos en una sola columna. Cada asterisco significa mil dólares. Ordenado por el sueldo de mayor a menor. 
+Etiqueta la columna como "sueldos". Es decir, Si Simmons cobra 2100, se pondrán 2 **. Ejemplo:
+Mills ****
+Alexander **
+Simmons **"
+
+==============================================================================================================================
+EJERCICIO 212
+
+"Utilizando la función CASE, escriba una consulta que muestre el apellido, puesto de trabajo y el grado de 
+todos los empleados basándose en el valor del puesto de trabajo, según los siguientes datos (etiqueta la columna como "Grado"):
+Grados
+President A
+Administration Vice President B
+Stock Manager C
+Sales Representative D
+Shipping Clerk E
+Otros 0"
+
+==============================================================================================================================
+EJERCICIO 213
+
+"Vuelva a escribir la sentencia de la pregunta anterior utilizando el DECODE."
+
+==============================================================================================================================
+EJERCICIO 214
+
+"Cree una consulta que muestre el contacto_id, apellido y teléfono de aquellos contactos los cuales
+el segundo conjunto de números del teléfono sea 49 o bien estar entre el 70 y 90. 
+Ordenar el resultado en orden ascendente por el identificador del contacto (Dedicado a Alejandro y Nacho)."
+
+==============================================================================================================================
+EJERCICIO 301
+
+"Enumere los apellidos de los empleados para aquellos empleados que no tienen el puesto de trabajo 
+'Sales Representative', utilizando operadores de conjuntos."
+
+==============================================================================================================================
+EJERCICIO 302
+
+"Muestre el identificador de país donde no haya almacenes UBICADOS en ellos, 
+utilizando operadores de conjuntos. Se da por hecho que todas las ubicaciones tienen un almacén, 
+aunque no exista en tu tabla ALMACEN."
+
+==============================================================================================================================
+EJERCICIO 303
+
+"Cree una lista de cargos para los puestos de trabajo 'Programmer', 'Accountant', 'Stock Manager', en ese orden. 
+Muestre el apellido y el puesto de trabajo, operadores de conjuntos. Además, crea una tercera columna 
+con los valores 'x' para 'Programmer','y' para los 'Accountant' y 'z' para los 'Stock Manager' y 
+ordena el resultado por esta última columna."
+
+==============================================================================================================================
+EJERCICIO 304
+
+"Enumere los identificadores de empleado y el puesto de trabajo de los empleados que 
+trabajan como 'Sales Representative' y su apellido empiece por 'B', operadores de conjuntos."
+
+==============================================================================================================================
+EJERCICIO 305
+
+"Escriba una consulta compuesta que enumere lo siguiente:
+- Nombre y pagina web de los clientes cuyo nombre empiece por 'B'.
+- El nombre y el teléfono de los contactos donde el teléfono acabe en 0.
+El resultado contendrá las siguientes tres columnas; nombre, web y teléfono, en el caso de no tener datos poner NULL."
+
+==============================================================================================================================
+EJERCICIO 306
+
+"Encuentre los puestos de trabajo que se han contratado durante el período '01-01-2016'-'29-02-2016' y 
+también se hayan contratado durante el período '01-03-2016'-'25-08-2016', operadores de conjuntos."
+
+==============================================================================================================================
+EJERCICIO 307
+
+"Escriba una consulta compuesta para producir una lista de empleados que muestre 
+los porcentajes de aumento, los identificadores de empleado y el salario antiguo y el nuevo aumento.
+
+A los empleados de los departamentos 'Sales Representative', 'Shipping Clerk' y 'Stock Clerk' se les concede un aumento del 5%.
+A los empleados del departamento 'Programmer' un aumento del 10%.
+A los empleados de los departamentos 'Administration Vice President' y 'Sales Manager' se les concede un aumento del 15%.
+Al resto no se les concede ningún aumento (0%).
+
+Ejemplos de salida:
+0%  1   24000   0
+5%  26  3200    160
+10% 8   4200    420
+15% 2   17000   2550"
