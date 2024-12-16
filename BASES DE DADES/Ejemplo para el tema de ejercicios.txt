@@ -503,13 +503,7 @@ Mills ****
 Alexander **
 Simmons **"
 
-/*Mi primera forma de hacerlo*/
-SELECT apellido, REPLACE(RPAD(TO_CHAR(sueldo), sueldo / 1000 + LENGTH(sueldo), '*'), TO_CHAR(sueldo)) AS "sueldos"
-FROM empleados
-ORDER BY sueldo DESC; 
-
-/*La que considero más óptima*/
-SELECT apellido, RPAD('*', TRUNC(sueldo / 1000), '*') AS "sueldos"
+SELECT apellido || ' ' || RPAD('*', TRUNC(sueldo / 1000), '*') AS "sueldos"
 FROM empleados
 ORDER BY sueldo DESC;
 
@@ -526,10 +520,32 @@ Sales Representative D
 Shipping Clerk E
 Otros 0"
 
+SELECT apellido, puesto_trabajo, 
+    CASE puesto_trabajo
+        WHEN 'President' THEN 'A'
+        WHEN 'Administration Vice President' THEN 'B'
+        WHEN 'Stock Manager' THEN 'C'
+        WHEN 'Sales Representative' THEN 'D'
+        WHEN 'Shipping Clerk' THEN 'E'
+        ELSE '0'
+    END
+    AS "Grado"
+FROM empleados;
+
 ==============================================================================================================================
 EJERCICIO 213
 
 "Vuelva a escribir la sentencia de la pregunta anterior utilizando el DECODE."
+
+SELECT apellido, puesto_trabajo,
+	DECODE(
+		puesto_trabajo, 'President', 'A',
+		puesto_trabajo, 'President', 'A',
+		puesto_trabajo, 'President', 'A',
+		puesto_trabajo, 'President', 'A',
+		puesto_trabajo, 'President', 'A',
+		puesto_trabajo, 'President', '0',
+		)
 
 ==============================================================================================================================
 EJERCICIO 214

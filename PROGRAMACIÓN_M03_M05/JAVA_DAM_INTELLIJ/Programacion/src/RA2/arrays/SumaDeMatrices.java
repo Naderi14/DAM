@@ -46,11 +46,11 @@ public class SumaDeMatrices {
                 for (int k = 0; k < matriz1[j].length; k++)
                 {
                     if (i == 1)
-                        System.out.print(matriz1[j][k] + "  ");
+                        System.out.print(matriz1[j][k] + "\t");
                     else if (i == 2)
-                        System.out.print(matriz2[j][k] + "  ");
+                        System.out.print(matriz2[j][k] + "\t");
                     else
-                        System.out.print(matrizResultado[j][k] + "  ");
+                        System.out.print(matrizResultado[j][k] + "\t");
                 }
                 System.out.println();
             }

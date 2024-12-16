@@ -16,7 +16,8 @@ public class MatrizRandomValues {
         {
             for (int j = 0; j < matriz[i].length; j++)
             {
-                matriz[i][j] = random.nextInt(11);
+                //matriz[i][j] = random.nextInt(11);
+                matriz[i][j] = (int) (Math.random() * 10) + 1;
             }
         }
 
