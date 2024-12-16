@@ -539,13 +539,15 @@ EJERCICIO 213
 
 SELECT apellido, puesto_trabajo,
 	DECODE(
-		puesto_trabajo, 'President', 'A',
-		puesto_trabajo, 'President', 'A',
-		puesto_trabajo, 'President', 'A',
-		puesto_trabajo, 'President', 'A',
-		puesto_trabajo, 'President', 'A',
-		puesto_trabajo, 'President', '0',
-		)
+		puesto_trabajo, 
+        'President', 'A',
+		'Administration Vice President', 'B',
+        'Stock Manager', 'C',
+		'Sales Representative', 'D',
+		'Shipping Clerk', 'E',
+		puesto_trabajo, '0')
+        AS "Grado"
+FROM empleados;
 
 ==============================================================================================================================
 EJERCICIO 214
@@ -553,6 +555,13 @@ EJERCICIO 214
 "Cree una consulta que muestre el contacto_id, apellido y teléfono de aquellos contactos los cuales
 el segundo conjunto de números del teléfono sea 49 o bien estar entre el 70 y 90. 
 Ordenar el resultado en orden ascendente por el identificador del contacto (Dedicado a Alejandro y Nacho)."
+
+SELECT contacto_id, apellido, telefono
+FROM contactos
+WHERE LENGTH(RTRIM(SUBSTR(telefono, 5, 3))) = 2 AND 
+    SUBSTR(telefono, 5, 2) BETWEEN 70 AND 90 OR 
+    SUBSTR(telefono, 5, 2) = 49
+ORDER BY contacto_id;
 
 ==============================================================================================================================
 EJERCICIO 301
