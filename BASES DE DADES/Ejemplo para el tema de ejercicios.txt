@@ -405,11 +405,19 @@ EJERCICIO 202
 "Para cada empleado, muestre el número de empleado, el apellido, el salario y el sueldo con un aumento del 15% y expresado 
 como número entero redondeado, etiquétela como "Nuevo sueldo"."
 
+SELECT empleado_id, apellido, sueldo, ROUND(sueldo + sueldo * 0.15) AS "Nuevo Sueldo"
+FROM empleados;
+
 ==============================================================================================================================
 EJERCICIO 203
 
 "Modifique la consulta anterior para agregar una columna que reste el salario nuevo al antiguo . 
 Etiquete la columna como "Incremento". "
+
+SELECT empleado_id, apellido, sueldo, 
+	ROUND(sueldo + sueldo * 0.15) AS "Nuevo Sueldo", 
+	ROUND(sueldo + sueldo * 0.15) - sueldo AS "Incremento"
+FROM empleados;
 
 ==============================================================================================================================
 EJERCICIO 204
@@ -418,12 +426,21 @@ EJERCICIO 204
 demás en minúsculas así como la longitud del apellido de todos los empleados cuyos apellidos comiencen por J, A o M. 
 Ordene los resultados por apellidos de empleado. Etiquete la columna como "Apellido" y "Longitud". "
 
+SELECT INITCAP(apellido) AS "Apellido", LENGTH(apellido) AS "Longitud"
+FROM empleados
+WHERE SUBSTR(UPPER(apellido),1,1) IN ('J', 'A', 'M')
+ORDER BY apellido;
+
 ==============================================================================================================================
 EJERCICIO 205
 
 "Para cada empleado, muestre su apellido y calcule el número de meses entre el dia de hoy y la fecha de contratación. 
 Etiquete la columna como "Meses trabajados", ordene los resultados según el número de meses trabajados (de menos a más). 
 Redondee el número de meses al número entero más próximo."
+
+SELECT apellido, ROUND(MONTHS_BETWEEN(SYSDATE, fecha_contrato)) AS "Meses trabajados" 
+FROM empleados
+ORDER BY "Meses trabajados";
 
 ==============================================================================================================================
 EJERCICIO 206
@@ -432,6 +449,9 @@ EJERCICIO 206
 Formatee el sueldo para que tenga 15 caracteres de longitud, rellenado a la izquierda con €. 
 Etiquete la columna como "Sueldo"."
 
+SELECT apellido, LPAD(sueldo, 15, '€') AS "Sueldo"
+FROM empleados;
+
 ==============================================================================================================================
 EJERCICIO 207
 
@@ -439,12 +459,19 @@ EJERCICIO 207
 <Apellido> gana <salario>€ pero le gustaría ganar <salario*3>€. Llame a la columna Salario soñado. 
 (Ej: "Foster gana 3300€ pero le gustaría ganar 9900€.")"
 
+SELECT apellido || ' gana ' || sueldo || '€ pero le gustaría ganar ' || sueldo * 3 || '€.' AS "Salario soñado"
+FROM empleados;
+
 ==============================================================================================================================
 EJERCICIO 208
 
 "Muestre el apellido, la fecha de contratación y el día de la semana en el que comenzó el empleado a trabajar 
 (LUNES, MARTES,...)(Mayúsculas). Etiquete la columna como "Día". 
 Ordene los resultados por dia de la semana, comenzando por el lunes"
+
+SELECT apellido, fecha_contrato, TO_CHAR(fecha_contrato, 'DAY') AS "Día"
+FROM empleados
+ORDER BY TO_CHAR(fecha_contrato, 'fmD');
 
 ==============================================================================================================================
 EJERCICIO 209
@@ -454,11 +481,17 @@ que es el primer lunes después de cada seis meses empezando a contar desde la f
 Etiquete la columna "Revisión". Formatea las fecha para que aparezca en un formato similar a 
 “Lunes 10 de Octubre de 2016”."
 
+SELECT apellido, TO_CHAR(NEXT_DAY(ADD_MONTHS(fecha_contrato, 6), 1), 'fmDay DD "de" Month "de" YYYY') AS "Revisión"
+FROM empleados;
+
 ==============================================================================================================================
 EJERCICIO 210
 
 "Cree una consulta que muestre el identificador del pedido, el estado y identificador del vendedor. 
 Si un pedido no tiene vendedor, ponga "No vendedor". Etiquete la columna como "Vendedor"."
+
+SELECT pedido_id, estado, NVL(TO_CHAR(vendedor_id), 'No vendedor') AS "Vendedor"
+FROM pedidos;
 
 ==============================================================================================================================
 EJERCICIO 211
@@ -469,6 +502,16 @@ Etiqueta la columna como "sueldos". Es decir, Si Simmons cobra 2100, se pondrán
 Mills ****
 Alexander **
 Simmons **"
+
+/*Mi primera forma de hacerlo*/
+SELECT apellido, REPLACE(RPAD(TO_CHAR(sueldo), sueldo / 1000 + LENGTH(sueldo), '*'), TO_CHAR(sueldo)) AS "sueldos"
+FROM empleados
+ORDER BY sueldo DESC; 
+
+/*La que considero más óptima*/
+SELECT apellido, RPAD('*', TRUNC(sueldo / 1000), '*') AS "sueldos"
+FROM empleados
+ORDER BY sueldo DESC;
 
 ==============================================================================================================================
 EJERCICIO 212
