@@ -1,0 +1,40 @@
+/*Un translate*/
+.translate1 {
+    transform: translate(300px, 100px);
+    width: 400px;
+    height: 200px;
+    background-color: cadetblue;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+/*Un rotate*/
+.translate2 {
+    transform: rotate(45deg) translate(500px, 10px);
+    width: 400px;
+    height: 200px;
+    background-color: rgb(33, 159, 14);
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+/*Un escalado*/
+.translate3 {
+    transform: scale(0.5, 3) translate(50px, 50px);
+    width: 400px;
+    height: 200px;
+    background-color: rgb(14, 65, 159);
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+/*Una torcida de caja con el Skew*/
+.translate4 {
+    transform: skew(5deg, -40deg) translate(550px, 500px);
+    width: 400px;
+    height: 200px;
+    background-color: rgb(111, 14, 159);
+    border: 1px solid black;
+    border-radius: 10px;
+}
+

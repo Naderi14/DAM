@@ -1,0 +1,70 @@
+.transition1 {
+    width: 300px;
+    height: 200px;
+    background-color: brown;
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: width 2s, height 2s;
+}
+
+.transition1:hover {
+    width: 500px;
+    height: 400px;
+}
+
+.transition2 {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(42, 165, 67);
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: width 2s, height 2s;
+}
+
+.transition2:hover {
+    width: 500px;
+    height: 400px;
+}
+
+.transition3 {
+    width: 200px;
+    height: 100px;
+    background-color: rgb(42, 116, 165);
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: all 2s;
+    transition-timing-function: cubic-bezier(.03,.86,1,.14);
+}
+
+.transition3:hover {
+    width: 300px;
+    height: 200px;
+}
+
+.transition4 {
+    width: 200px;
+    height: 100px;
+    background-color: rgb(71, 42, 165);
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: width 2s, height 2s, transform 3s;
+    transition-timing-function: cubic-bezier(.03,.86,1,.14);
+}
+
+.transition4:hover {
+    transform: rotate(360deg);
+}
+
+.transition5 {
+    width: 200px;
+    height: 100px;
+    background-color: rgb(165, 42, 149);
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: transform 3s;
+    transition-timing-function: cubic-bezier(.03,.86,1,.14);
+}
+
+.transition5:hover {
+    transform:translate(500px, -500px);
+}
