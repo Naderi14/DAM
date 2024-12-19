@@ -11,6 +11,7 @@ public class Level {
     public Level(char[][] mapa, IEffect curse)
     {
         this.mapa = mapa;
+        this.curse = curse;
     }
 
     public char[][] getMapa()
@@ -23,7 +24,9 @@ public class Level {
         Random random = new Random();
 
         if (random.nextInt(101) > curse.getProbabilidad())
+        {
             curse.aplicarEfecto(dungeon);
+        }
     }
 
     public static char[][] mapGenerate(int width, int height, int cantMonsters, int cantTreasures, int cantRooms)

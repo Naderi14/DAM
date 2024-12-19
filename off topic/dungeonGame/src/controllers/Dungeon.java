@@ -156,7 +156,6 @@ public class Dungeon {
         treasureList.clear();
         mapa = level.getMapa();
         isMapLoaded = false;
-        level.aplicarEfecto(this);
     }
 
     private void moverEnemigos()
@@ -183,6 +182,7 @@ public class Dungeon {
             imprimirMapaConMarco();
         } else {
             imprimirMapaConMarco();
+            levelList.get(numNivelActual).aplicarEfecto(this);
             isMapLoaded = true;
         }
     }
@@ -346,5 +346,10 @@ public class Dungeon {
     public static char[][] getMapa()
     {
         return mapa;
+    }
+
+    public Player getPlayer()
+    {
+        return player;
     }
 }

@@ -1,5 +1,8 @@
 package controllers;
 
+import effects.IEffect;
+import effects.SlowEffectCurse;
+
 import java.util.Scanner;
 
 public class Player {
@@ -8,6 +11,7 @@ public class Player {
     private int posX, posY;
     public static int scoreTotal = 0;
     private static int escudos = 0;
+    public IEffect levelDebuff = null;
 
     public Player(int posX, int posY)
     {
@@ -30,61 +34,71 @@ public class Player {
         char[][] mapa = Dungeon.getMapa();
         boolean isAvailableMove = false;
         char letra;
-        System.out.println("S - Jugador / T - Tesoro / M - Monstruo / E - Escape\n(W) arriba | (A) izquierda | (S) abajo | (D) derecha            " +
-                "Score: " + scoreTotal + " | Escudos: " + escudos);
-        while (!isAvailableMove)
-        {
-            letra = scanner.next().toUpperCase().charAt(0);
 
-            switch (letra)
+        if (levelDebuff instanceof SlowEffectCurse && !((SlowEffectCurse) levelDebuff).tryWalk())
+        {
+            System.out.println("A causa de la artritis, reniegas por la piedra que te jodió, menudo dolor, no puedo moverme\nEnter to continue...");
+            scanner.nextLine();
+        }
+
+        else
+        {
+            System.out.println("S - Jugador / T - Tesoro / M - Monstruo / E - Escape\n(W) arriba | (A) izquierda | (S) abajo | (D) derecha            " +
+                    "Score: " + scoreTotal + " | Escudos: " + escudos);
+            while (!isAvailableMove)
             {
-                case 'W':
-                    if (posY - 1 < 0)
-                        isAvailableMove = true;
-                    else if (mapa[posY - 1][posX] == '#')
-                        isAvailableMove = true;
-                    else
-                    {
-                        updatePlayerPos('y', -1, mapa);
-                        isAvailableMove = true;
-                    }
-                    break;
-                case 'A':
-                    if (posX - 1 < 0)
-                        isAvailableMove = true;
-                    else if (mapa[posY][posX - 1] == '#')
-                        isAvailableMove = true;
-                    else
-                    {
-                        updatePlayerPos('x', -1, mapa);
-                        isAvailableMove = true;
-                    }
-                    break;
-                case 'S':
-                    if (posY + 1 >= mapa.length)
-                        isAvailableMove = true;
-                    else if (mapa[posY + 1][posX] == '#')
-                        isAvailableMove = true;
-                    else
-                    {
-                        updatePlayerPos('y', 1, mapa);
-                        isAvailableMove = true;
-                    }
-                    break;
-                case 'D':
-                    if (posX + 1 >= mapa[0].length)
-                        isAvailableMove = true;
-                    else if (mapa[posY][posX + 1] == '#')
-                        isAvailableMove = true;
-                    else
-                    {
-                        updatePlayerPos('x', 1, mapa);
-                        isAvailableMove = true;
-                    }
-                    break;
-                default:
-                    System.out.println("<- No se corresponde con ningún movimiento ->");
-                    break;
+                letra = scanner.nextLine().toUpperCase().charAt(0);
+
+                switch (letra)
+                {
+                    case 'W':
+                        if (posY - 1 < 0)
+                            isAvailableMove = true;
+                        else if (mapa[posY - 1][posX] == '#')
+                            isAvailableMove = true;
+                        else
+                        {
+                            updatePlayerPos('y', -1, mapa);
+                            isAvailableMove = true;
+                        }
+                        break;
+                    case 'A':
+                        if (posX - 1 < 0)
+                            isAvailableMove = true;
+                        else if (mapa[posY][posX - 1] == '#')
+                            isAvailableMove = true;
+                        else
+                        {
+                            updatePlayerPos('x', -1, mapa);
+                            isAvailableMove = true;
+                        }
+                        break;
+                    case 'S':
+                        if (posY + 1 >= mapa.length)
+                            isAvailableMove = true;
+                        else if (mapa[posY + 1][posX] == '#')
+                            isAvailableMove = true;
+                        else
+                        {
+                            updatePlayerPos('y', 1, mapa);
+                            isAvailableMove = true;
+                        }
+                        break;
+                    case 'D':
+                        if (posX + 1 >= mapa[0].length)
+                            isAvailableMove = true;
+                        else if (mapa[posY][posX + 1] == '#')
+                            isAvailableMove = true;
+                        else
+                        {
+                            updatePlayerPos('x', 1, mapa);
+                            isAvailableMove = true;
+                        }
+                        break;
+                    default:
+                        System.out.println("<- No se corresponde con ningún movimiento ->");
+                        break;
+                }
             }
         }
     }
