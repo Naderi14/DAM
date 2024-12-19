@@ -19,7 +19,7 @@ import java.util.Scanner;
 *       y por tanto hay un objeto que evita que no decaigan los puntos temporalmente
 *
 * Hacer lógica de maldiciones aleatorias al cargar el nivel:
-*   - Maldición de lentitud: el usuario en vez de dar 1 paso por frame, es 1 paso cada 2 frames
+*
 * */
 
 public class Dungeon {
