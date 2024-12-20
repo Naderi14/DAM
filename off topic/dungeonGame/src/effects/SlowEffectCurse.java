@@ -13,7 +13,7 @@ public class SlowEffectCurse implements IEffect{
 
     public void aplicarEfecto(Dungeon dungeon)
     {
-            dungeon.getPlayer().levelDebuff = this;
+        dungeon.getPlayer().levelDebuff = this;
 
         System.out.println("<- Al subir las escaleras, una piedra te ha contagiado artritis, vaya, irás mas lento ->\n");
         canWalk = false;
