@@ -277,9 +277,12 @@ public class Dungeon {
         int randomEffect = random.nextInt(2);
         switch (randomEffect)
         {
-            case 0: return new DisappearMonsterEffect();
-            case 1: return new AddShieldEffect();
-            default: return null;
+            case 0:
+                return new DisappearMonsterEffect();
+            case 1:
+                return new AddShieldEffect();
+            default:
+                return null;
         }
     }
 

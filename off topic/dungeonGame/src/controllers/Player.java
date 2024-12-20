@@ -1,5 +1,6 @@
 package controllers;
 
+import effects.AcrossWallEffect;
 import effects.IEffect;
 import effects.SlowEffectCurse;
 
@@ -12,6 +13,7 @@ public class Player {
     public static int scoreTotal = 0;
     private static int escudos = 0;
     public IEffect levelDebuff = null;
+    public IEffect treasureEffect = null;
 
     public Player(int posX, int posY)
     {
@@ -47,13 +49,26 @@ public class Player {
                     "Score: " + scoreTotal + " | Escudos: " + escudos);
             while (!isAvailableMove)
             {
-                letra = scanner.nextLine().toUpperCase().charAt(0);
+                try
+                {
+                    letra = scanner.nextLine().toUpperCase().charAt(0);
+                }
+                catch (StringIndexOutOfBoundsException e)
+                {
+                    letra = ' ';
+                }
 
                 switch (letra)
                 {
                     case 'W':
                         if (posY - 1 < 0)
                             isAvailableMove = true;
+                        else if (mapa[posY - 1][posX] == '#' && treasureEffect instanceof AcrossWallEffect)
+                        {
+                            treasureEffect = null;
+                            updatePlayerPos('y', -1, mapa);
+                            isAvailableMove = true;
+                        }
                         else if (mapa[posY - 1][posX] == '#')
                             isAvailableMove = true;
                         else
@@ -65,6 +80,12 @@ public class Player {
                     case 'A':
                         if (posX - 1 < 0)
                             isAvailableMove = true;
+                        else if (mapa[posY][posX - 1] == '#' && treasureEffect instanceof AcrossWallEffect)
+                        {
+                            treasureEffect = null;
+                            updatePlayerPos('x', -1, mapa);
+                            isAvailableMove = true;
+                        }
                         else if (mapa[posY][posX - 1] == '#')
                             isAvailableMove = true;
                         else
@@ -76,6 +97,12 @@ public class Player {
                     case 'S':
                         if (posY + 1 >= mapa.length)
                             isAvailableMove = true;
+                        else if (mapa[posY + 1][posX] == '#' && treasureEffect instanceof AcrossWallEffect)
+                        {
+                            treasureEffect = null;
+                            updatePlayerPos('y', 1, mapa);
+                            isAvailableMove = true;
+                        }
                         else if (mapa[posY + 1][posX] == '#')
                             isAvailableMove = true;
                         else
@@ -87,6 +114,12 @@ public class Player {
                     case 'D':
                         if (posX + 1 >= mapa[0].length)
                             isAvailableMove = true;
+                        else if (mapa[posY][posX + 1] == '#' && treasureEffect instanceof AcrossWallEffect)
+                        {
+                            treasureEffect = null;
+                            updatePlayerPos('x', 1, mapa);
+                            isAvailableMove = true;
+                        }
                         else if (mapa[posY][posX + 1] == '#')
                             isAvailableMove = true;
                         else

@@ -1,10 +1,6 @@
 package controllers;
 
-import effects.AddShieldEffect;
-import effects.DisappearMonsterEffect;
-import effects.IEffect;
-import effects.SlowEffectCurse;
-
+import effects.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -129,7 +125,7 @@ public class Dungeon {
         }, getRandomCurse()));
 
         levelList.add(new Level (new char[][] {     // LVL 8
-                {'S', ' ', 'T', ' ', ' ', ' ', ' ', '#', ' ', ' ', ' ', ' ', ' ', ' ', 'M', ' ', ' ', ' '},
+                {'S', 'T', 'T', 'T', 'T', ' ', ' ', '#', ' ', ' ', ' ', ' ', ' ', ' ', 'M', ' ', ' ', ' '},
                 {'#', '#', '#', '#', '#', '#', ' ', '#', ' ', 'M', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'T'},
                 {' ', ' ', ' ', ' ', 'M', '#', ' ', '#', 'M', '#', '#', '#', '#', ' ', '#', '#', '#', '#'},
                 {' ', '#', '#', '#', ' ', '#', ' ', '#', 'T', '#', ' ', ' ', ' ', 'M', ' ', ' ', ' ', ' '},
@@ -319,11 +315,12 @@ public class Dungeon {
 
     private IEffect getRandomEffect()
     {
-        int randomEffect = random.nextInt(2);
+        int randomEffect = random.nextInt(3);
         switch (randomEffect)
         {
             case 0: return new DisappearMonsterEffect(66);
             case 1: return new AddShieldEffect(66);
+            case 2: return new AcrossWallEffect(66);
             default: return null;
         }
     }
