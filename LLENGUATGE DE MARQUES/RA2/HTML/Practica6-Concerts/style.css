@@ -7,16 +7,15 @@
     font-size: 18px;
 }
 
+/*Estilo del header menu*/
+
 h1 {
     color: rgb(0, 63, 42);
+    text-align: center;
     font-size: 2rem;
 }
 
-.menu-header {
-    text-align: center;
-}
-
-#menu ul {
+ul {
     list-style-type: none;
     margin: 0px;
     padding: 0px;
@@ -26,48 +25,127 @@ h1 {
     font-size: 1rem;
 }
 
-#menu a {
-    text-decoration: none;
-    color: rgb(0, 67, 109);
-}
-
-#menu li {
+li {
     padding: 0px;
     margin: 0px 50px 0px 50px;
 }
 
-#menu a:hover {
+a {
+    text-decoration: none;
+    color: rgb(0, 67, 109);
+}
+
+a:hover {
     color: rgb(134, 134, 49);
     text-decoration: underline;
 }
 
+/*Comenzaré los estilos de las imagenes ya aquí*/
+
 .imagenes {
     display: grid;
-    place-items: center;
-    padding: 10px;
-    gap: 10px 10px;
-    grid-template: 300px / 450px 450px 450px;
-    text-align: center;
-}
-
-.imagen {
     margin-top: 50px;
-    display: inline;
+    padding: 10px;
+    gap: 10px;
+    grid-template: 200px / auto auto auto;
+    text-align: center;
+    justify-items: center;
 }
 
-.imagen::before {
-    content: ''; 
+/* Style de la imatge */
+.imagen {
+    position: relative;
+    overflow: hidden; /* Para que no sobresalga el zoom, usaré esto para esconder ese zoom al salir de su padding */
+    width: 350px;
+    height: 200px;
+}
+
+/* Aquí pondremos la transición del zoom */
+.imagen img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+/* Style inicial del texto, de primeras estará invisible por la opacity a 0 */
+.titulo, .texto {
+    position: absolute;
+    color: white;
+    text-shadow: 2px 0px 4px rgba(0, 0, 0, 0.7);
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+.titulo {
+    top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(2, 208, 167);
+    text-shadow: 0px 0px 2px rgb(255, 255, 255);
+    background-color: black;
+    padding: 5px 0px 5px 0px;
+    z-index: 10;
+}
+
+.texto {
+    bottom: 100px;
+    font-size: 1rem;
+    z-index: 10;
+}
+
+.read-more {
+    position: absolute;
+    bottom: 20px;
+    width: auto;
+    padding: 10px 20px;
+    background-color: #be0000; 
+    color: black; 
+    text-decoration: none; 
+    text-align: center;
+    border-radius: 5px; 
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 1.5s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin: 0px 0px 0px 105px;
+    z-index: 100;
+}
+
+/* Fondo azul para cuando hagamos el hover, lo pondremos en un after para que no venga por defecto */
+.imagen::after {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 350px;
-    height: 200px;
-    background-color: rgba(0, 0, 255, 0.4);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 255, 0.258);
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 1.5s ease;
 }
 
-@media only screen and (max-width: 600px) {
+/* ///// Efectos al pasar el ratón ///// */
+.imagen:hover img {
+    transform: scale(1.3); /* Transicion para el zoom de la imágen, multiplicamos su scale por 1.1 */
+}
+
+.imagen:hover::after {
+    opacity: 1; /* Setear la opacidad a 1 para el fondo azul */
+}
+
+.imagen:hover .titulo,
+.imagen:hover .texto,
+.imagen:hover .read-more {
+    opacity: 1; /* El texto se hace visible */
+}
+
+/* Cosas responsive */
+@media only screen and (max-width: 1300px) {
     .imagenes {
         display: grid;
         place-items: strecht;
@@ -76,7 +154,7 @@ h1 {
 
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 700px) {
     .imagenes {
         display: grid;
         place-items: strecht;
