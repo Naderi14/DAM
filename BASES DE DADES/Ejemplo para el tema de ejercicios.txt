@@ -397,7 +397,11 @@ EJERCICIO 201
 
 "Escriba una consulta para mostrar la fecha actual. Etiquete la columna Date"
 
+-- ORACLE
 SELECT SYSDATE AS "Date" FROM dual;
+
+-- MYSQL
+SELECT NOW() AS "Date";
 
 ==============================================================================================================================
 EJERCICIO 202
