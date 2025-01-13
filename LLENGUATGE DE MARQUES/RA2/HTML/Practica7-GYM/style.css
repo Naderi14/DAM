@@ -10,6 +10,23 @@
     font-style: normal;
 }
 
+body {
+    margin: 0;
+}
+
 :root {
     background-color: antiquewhite;
+}
+
+.menu-header {
+    background-color: white;
+    display:flex;
+}
+
+div.menu-buttons {
+    justify-content: right;
+}
+
+ul.menu-buttons {
+    display: flex;
 }
