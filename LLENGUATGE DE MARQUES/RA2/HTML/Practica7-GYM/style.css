@@ -19,14 +19,52 @@ body {
 }
 
 .menu-header {
+    z-index: 10;
     background-color: white;
     display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
 }
 
-div.menu-buttons {
-    justify-content: right;
+.menu-logo {
+    z-index: 10;
+    height: 50px;
 }
 
-ul.menu-buttons {
+.menu-buttons img {
+    z-index: 10;
+    height: 30px;
+}
+
+.menu-buttons ul {
+    z-index: 10;
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.main-image {
+    z-index: -10;
+    margin: -9.5% 0% 0% 0%;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.main-image img{
+    width: 100%;
+    height: 100%;
+}
+
+.main-image p {
+    z-index: 10;
+    font-size: 3rem;
+    color: white;
+    width: 100%;
+    position: absolute;
+    background-color: blue;
 }
