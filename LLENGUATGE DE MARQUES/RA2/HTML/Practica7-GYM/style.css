@@ -6,7 +6,6 @@
     font-size: 16px;
     font-family: "Lato", serif;
     font-optical-sizing: auto;
-    font-weight: 400;
     font-style: normal;
 }
 
@@ -42,6 +41,12 @@ body {
     display: flex;
     gap: 15px;
     align-items: center;
+}
+
+.menu-buttons li {
+    color: rgb(197, 26, 140);
+    text-decoration: none;
+    font-weight: 800;
 }
 
 .main-image {
