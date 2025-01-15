@@ -14,8 +14,12 @@ body {
 }
 
 :root {
-    background-color: antiquewhite;
+    --purple-color: rgb(249, 33, 177);
+    --contrast-purple-color:rgb(249, 236, 245);
+    background-color: rgb(255, 255, 255);
 }
+
+/*---------------- ESTO ES EL HEADER ----------------*/
 
 .menu-header {
     z-index: 100;
@@ -44,10 +48,12 @@ body {
 }
 
 .menu-buttons li {
-    color: rgb(197, 26, 140);
+    color: var(--purple-color);
     text-decoration: none;
     font-weight: 800;
 }
+
+/*----------------------- ESTO ES LA PORTADA PRINCIPAL DE LA WEB -----------------------*/
 
 .main-image {
     background-image: url(img/main6.jpg);
@@ -73,22 +79,26 @@ body {
     font-weight:600;
     color: white;
     width: auto;
-    background-color: rgb(197, 26, 140);
+    background-color: var(--purple-color);
 }
+
+/* ----------------- ESTO ES EL TEXTO CORPORATIVO Y FORMULARIO AL NEWSLETTER -------------*/
 
 .container-form-main {
     margin: 0% 5% 0% 5%;
     z-index: 0;
     background-color: white;
     display: flex;
-    flex-direction: column;
-    align-items:center;
     text-align:justify;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
 }
 
 .container-form-main h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    padding-left: 12.5%;
+    color:var(--purple-color);
 }
 
 .container-form {
@@ -96,7 +106,6 @@ body {
     background-color: white;
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 50px;
 }
 
@@ -107,12 +116,77 @@ body {
 
 .div-form-section {
     margin-right: 50px;
+    padding-bottom: 15px;
     width: 40%;
     display: flex;
     flex-direction: column;
     position: relative;
 }
 
-.little-lyrics {
+.div-form-section p {
+    margin-bottom: 0;
+}
+
+.div-form-section ul {
+    list-style: none;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    padding: 0;
+}
+
+.div-form-section input {
+    margin: 5px 0px 5px 0px;
+    width: 100%;
+    border-radius: 5px;
+    border: solid 2px;
+    padding: 5px 1px 5px 1px;
+    border-color: var(--purple-color);
+}
+
+.horizontal-list {
+    display: flex;
+    gap:10px;
+}
+
+.little-lyrics a, .little-lyrics {
     font-size: 0.75rem;
 }
+
+.little-lyrics a {
+    color: var(--purple-color);
+}
+
+.button-submit {
+    background-color: var(--purple-color);
+    color: white;
+}
+
+/* ------------------ ESTO ES LA PARTE DE LOS SERVICIOS QUE SE OFRECEN -------------------*/
+
+.services {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    background-color: var(--contrast-purple-color);
+    padding-top: 50px;
+    gap: 80px;
+}
+
+.services h4 {
+    font-size: 1.5rem;
+    color: var(--purple-color);
+}
+
+.services div {
+    margin-bottom: 50px;
+    background-color: white;
+    text-align: center;
+    width: 20%;
+    border-bottom: solid 4px var(--purple-color);
+}
+
+.services p {
+    padding: 10px 30px 30px 30px;
+}
+
+/* ------------------- ESTO YA SON LAS IMAGENES PARA IR AL BLOG ---------------------*/
