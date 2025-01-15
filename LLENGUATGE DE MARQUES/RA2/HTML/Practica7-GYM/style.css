@@ -18,13 +18,18 @@ body {
     --contrast-purple-color:rgb(249, 236, 245);
     --grey-articles-color:rgb(199, 199, 199) ;
     --black-grey-button:rgb(52, 52, 52);
+    --black-grey-footer: rgb(80, 80, 80);
     background-color: rgb(255, 255, 255);
 }
 
 /*---------------- ESTO ES EL HEADER ----------------*/
+header {
+    position:fixed;
+    z-index: 100;
+    width: 100%;
+}
 
 .menu-header {
-    z-index: 100;
     background-color: white;
     display:flex;
     justify-content: space-between;
@@ -254,7 +259,7 @@ body {
     background-color: var(--purple-color);
     border-radius: 5px;
     width: 12rem;
-    height: 2rem;
+    height: 2.5rem;
     color: white;
     border-color: var(--purple-color);
     font-size: 1.2rem;
@@ -267,4 +272,23 @@ body {
 .imagen-articulo:hover {
     transform: rotate(5deg);
     opacity: 50%;
+}
+
+/* --------------------- ESTO VA A SER EL FOOTER ----------------------*/
+
+.foot-container {
+    background-color: var(--black-grey-footer);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px 0px 50px;
+}
+
+.foot-container img {
+    max-width: 8rem;
+}
+
+.social-icons {
+    text-align: right;
 }
