@@ -5,65 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d660cd2-2a66-49d1-bafa-09153c4e6826" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../temporal/DAM_PROG_ExamenRA6_SanchezCastelblanqueJuanFrancisco.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/JuanFranciscoSanchez_m03_25_exception_ac01_mean.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejercicio_3_entornos/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejercicio_3_entornos/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejercicio_3_entornos/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejercicio_3_entornos/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejercicio_3_entornos/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejercicio_3_entornos/ejercicio_3_entornos.eml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejercicio_3_entornos/ejercicio_3_entornos.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejercicio_3_entornos/ejercicio_3_entornos.userlibraries" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejercicio_3_entornos/src/IdealBodyWeight.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosArrays/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosArrays/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosArrays/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosArrays/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosArrays/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosArrays/ejerciciosArrays.eml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosArrays/ejerciciosArrays.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosArrays/src/AlturaMediaPersonas.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosArrays/src/Array20Pares.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosArrays/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosArrays/src/Matriz3P3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosArrays/src/MatrizMayorMenor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosArrays/src/MatrizRandomValues.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosArrays/src/MediaNotasAlumnos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosArrays/src/MediaNumeros.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosArrays/src/MediaNumerosPosPares.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosArrays/src/MediaPositivosNegativos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosArrays/src/NumerosPositivosNegativos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosArrays/src/SueldoAndEmpleados.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosArrays/src/SumaDeMatrices.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosCadenas/bin/ejerciciosCadenas/BuscadorPalabraLarga.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosCadenas/bin/ejerciciosCadenas/CompareStrings.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosCadenas/bin/ejerciciosCadenas/ContadorPalabras.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosCadenas/bin/ejerciciosCadenas/ContarLetras.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosCadenas/bin/ejerciciosCadenas/DesmenuzarString.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosCadenas/bin/ejerciciosCadenas/DividirCadenaTexto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosCadenas/bin/ejerciciosCadenas/EliminarEspacios.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosCadenas/bin/ejerciciosCadenas/InvertirTexto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosCadenas/bin/ejerciciosCadenas/LongitudTexto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosCadenas/bin/ejerciciosCadenas/MainCadenas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosCadenas/bin/ejerciciosCadenas/MezclarCadenas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosCadenas/bin/ejerciciosCadenas/MinusMayusMinus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosCadenas/bin/ejerciciosCadenas/NumeroTelefono.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosCadenas/bin/ejerciciosCadenas/PalabrasDe5Chars.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosCadenas/bin/ejerciciosCadenas/PalabrasPalindromas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosCadenas/bin/ejerciciosCadenas/ReemplazarLetra.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosCadenas/bin/ejerciciosCadenas/String2ASCII.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/ejerciciosCadenas/bin/module-info.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/examenRA3/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/examenRA3/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/examenRA3/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/examenRA3/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/examenRA3/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/examenRA3/src/examenRA3/Programa.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/examenRA3/src/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/juanFranciscoSanchezCastelblanque_DAMPROG2/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/juanFranciscoSanchezCastelblanque_DAMPROG2/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../temporal/m03_25_exception_ac01_mean/.idea/workspace.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/src/zombicide/Humanoide.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/src/zombicide/Juego.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/src/zombicide/Jugador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/src/zombicide/Zombie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/src/zombicide/armas/Arco.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/src/zombicide/armas/Arma.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/src/zombicide/armas/Espada.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/src/zombicide/armas/Hacha.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/src/zombicide/armas/Hechizo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/src/zombicide/armas/IArma.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/zombicide.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../temporal/m03_17_modular_ac01_ticket/m03_17_modular_ac01_ticket.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/Actividades/Java/RA2/Entregable 3 - Means And Exceptions/m03_25_exception_ac01_mean/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/Actividades/Java/RA2/Entregable 3 - Means And Exceptions/m03_25_exception_ac01_mean/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/Actividades/Java/RA2/Entregable 3 - Means And Exceptions/m03_25_exception_ac01_mean/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/Actividades/Java/RA2/Entregable 3 - Means And Exceptions/m03_25_exception_ac01_mean/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temporal/.metadata/.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../temporal/.metadata/.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temporal/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" beforeDir="false" afterPath="$PROJECT_DIR$/../../temporal/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temporal/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" afterPath="$PROJECT_DIR$/../../temporal/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temporal/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../temporal/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temporal/.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../temporal/.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temporal/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/../../temporal/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temporal/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" beforeDir="false" afterPath="$PROJECT_DIR$/../../temporal/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temporal/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" beforeDir="false" afterPath="$PROJECT_DIR$/../../temporal/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temporal/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../temporal/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temporal/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../../temporal/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temporal/.metadata/.plugins/org.eclipse.m2e.logback/0.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../temporal/.metadata/.plugins/org.eclipse.m2e.logback/0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temporal/.metadata/version.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../../temporal/.metadata/version.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temporal/m03_17_modular_ac01_ticket/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../temporal/m03_17_modular_ac01_ticket/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +53,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -95,7 +70,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Usuario/Desktop/DAM 1/PROGRAMACIÓN_M03_M05/JAVA_DAM_INTELLIJ",
+    "last_opened_file_path": "C:/Users/Usuario/Desktop/DAM 1/off topic/dungeonGame",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0"

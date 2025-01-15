@@ -16,15 +16,15 @@ public class Main {
         //array null
         double[] arrayNull = null;
 
-        callMeans(array1a, "array1a");
-        callMeans(array1b, "array1b");
-        callMeans(array2a, "array2a");
-        callMeans(array2b, "array2b");
-        callMeans(arrayNull, "arrayNull");
+        callMeansAndShow(array1a, "array1a");
+        callMeansAndShow(array1b, "array1b");
+        callMeansAndShow(array2a, "array2a");
+        callMeansAndShow(array2b, "array2b");
+        callMeansAndShow(arrayNull, "arrayNull");
 
     }
 
-    public static void callMeans(double[] x, String nombreArray)
+    public static void callMeansAndShow(double[] x, String nombreArray)
     {
         System.out.println(nombreArray + ":");
         try
