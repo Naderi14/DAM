@@ -5,38 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b129598-1b61-4ae2-b15f-cd0662d00858" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/src/zombicide/Humanoide.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/src/zombicide/Juego.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/src/zombicide/Jugador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/src/zombicide/Zombie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/src/zombicide/armas/Arco.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/src/zombicide/armas/Arma.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/src/zombicide/armas/Espada.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/src/zombicide/armas/Hacha.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/src/zombicide/armas/Hechizo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/src/zombicide/armas/IArma.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/EXAMENES/zombicide/zombicide.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/m03_17_modular_ac01_ticket.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/Actividades/Java/RA2/Entregable 3 - Means And Exceptions/m03_25_exception_ac01_mean/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/Actividades/Java/RA2/Entregable 3 - Means And Exceptions/m03_25_exception_ac01_mean/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/Actividades/Java/RA2/Entregable 3 - Means And Exceptions/m03_25_exception_ac01_mean/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/Actividades/Java/RA2/Entregable 3 - Means And Exceptions/m03_25_exception_ac01_mean/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.log" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.m2e.logback/0.log" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.m2e.logback/0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/version.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/version.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ticket/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ticket/Ticket.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
