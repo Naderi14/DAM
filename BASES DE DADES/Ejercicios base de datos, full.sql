@@ -409,6 +409,11 @@ EJERCICIO 202
 "Para cada empleado, muestre el número de empleado, el apellido, el salario y el sueldo con un aumento del 15% y expresado 
 como número entero redondeado, etiquétela como "Nuevo sueldo"."
 
+-- ORACLE
+SELECT empleado_id, apellido, sueldo, ROUND(sueldo + sueldo * 0.15) AS "Nuevo Sueldo"
+FROM empleados;
+
+-- MYSQL
 SELECT empleado_id, apellido, sueldo, ROUND(sueldo + sueldo * 0.15) AS "Nuevo Sueldo"
 FROM empleados;
 
@@ -418,6 +423,13 @@ EJERCICIO 203
 "Modifique la consulta anterior para agregar una columna que reste el salario nuevo al antiguo . 
 Etiquete la columna como "Incremento". "
 
+-- ORACLE
+SELECT empleado_id, apellido, sueldo, 
+	ROUND(sueldo + sueldo * 0.15) AS "Nuevo Sueldo", 
+	ROUND(sueldo + sueldo * 0.15) - sueldo AS "Incremento"
+FROM empleados;
+
+--MYSQL
 SELECT empleado_id, apellido, sueldo, 
 	ROUND(sueldo + sueldo * 0.15) AS "Nuevo Sueldo", 
 	ROUND(sueldo + sueldo * 0.15) - sueldo AS "Incremento"
@@ -430,7 +442,14 @@ EJERCICIO 204
 demás en minúsculas así como la longitud del apellido de todos los empleados cuyos apellidos comiencen por J, A o M. 
 Ordene los resultados por apellidos de empleado. Etiquete la columna como "Apellido" y "Longitud". "
 
+-- ORACLE
 SELECT INITCAP(apellido) AS "Apellido", LENGTH(apellido) AS "Longitud"
+FROM empleados
+WHERE SUBSTR(UPPER(apellido),1,1) IN ('J', 'A', 'M')
+ORDER BY apellido;
+
+-- MYSQL
+SELECT apellido AS "Apellido", LENGTH(apellido) AS "Longitud"
 FROM empleados
 WHERE SUBSTR(UPPER(apellido),1,1) IN ('J', 'A', 'M')
 ORDER BY apellido;
@@ -442,7 +461,13 @@ EJERCICIO 205
 Etiquete la columna como "Meses trabajados", ordene los resultados según el número de meses trabajados (de menos a más). 
 Redondee el número de meses al número entero más próximo."
 
+-- ORACLE
 SELECT apellido, ROUND(MONTHS_BETWEEN(SYSDATE, fecha_contrato)) AS "Meses trabajados" 
+FROM empleados
+ORDER BY "Meses trabajados";
+
+-- MYSQL
+SELECT apellido, ROUND(TIMESTAMPDIFF(MONTH, fecha_contrato, NOW())) AS "Meses trabajados" 
 FROM empleados
 ORDER BY "Meses trabajados";
 
@@ -453,6 +478,11 @@ EJERCICIO 206
 Formatee el sueldo para que tenga 15 caracteres de longitud, rellenado a la izquierda con €. 
 Etiquete la columna como "Sueldo"."
 
+-- ORACLE
+SELECT apellido, LPAD(sueldo, 15, '€') AS "Sueldo"
+FROM empleados;
+
+-- MYSQL
 SELECT apellido, LPAD(sueldo, 15, '€') AS "Sueldo"
 FROM empleados;
 
@@ -463,7 +493,12 @@ EJERCICIO 207
 <Apellido> gana <salario>€ pero le gustaría ganar <salario*3>€. Llame a la columna Salario soñado. 
 (Ej: "Foster gana 3300€ pero le gustaría ganar 9900€.")"
 
+-- ORACLE
 SELECT apellido || ' gana ' || sueldo || '€ pero le gustaría ganar ' || sueldo * 3 || '€.' AS "Salario soñado"
+FROM empleados;
+
+-- MYSQL
+SELECT CONCAT(apellido, ' gana ', sueldo, '€ pero le gustaría ganar ', sueldo * 3, '€.') AS `Salario soñado`
 FROM empleados;
 
 ==============================================================================================================================
@@ -473,9 +508,15 @@ EJERCICIO 208
 (LUNES, MARTES,...)(Mayúsculas). Etiquete la columna como "Día". 
 Ordene los resultados por dia de la semana, comenzando por el lunes"
 
+-- ORACLE
 SELECT apellido, fecha_contrato, TO_CHAR(fecha_contrato, 'DAY') AS "Día"
 FROM empleados
 ORDER BY TO_CHAR(fecha_contrato, 'fmD');
+
+-- MYSQL
+SELECT apellido, fecha_contrato, DAYNAME(fecha_contrato) AS 'Día'
+FROM empleados
+ORDER BY DAYOFWEEK(fecha_contrato); 
 
 ==============================================================================================================================
 EJERCICIO 209
@@ -485,7 +526,17 @@ que es el primer lunes después de cada seis meses empezando a contar desde la f
 Etiquete la columna "Revisión". Formatea las fecha para que aparezca en un formato similar a 
 “Lunes 10 de Octubre de 2016”."
 
+-- ORACLE
 SELECT apellido, TO_CHAR(NEXT_DAY(ADD_MONTHS(fecha_contrato, 6), 1), 'fmDay DD "de" Month "de" YYYY') AS "Revisión"
+FROM empleados;
+
+-- MYSQL
+SELECT apellido, DATE_FORMAT(DATE_ADD(DATE_ADD(fecha_contrato, INTERVAL 6 MONTH), 
+				 INTERVAL (9 - DAYOFWEEK(DATE_ADD(fecha_contrato, INTERVAL 6 MONTH))) % 7 DAY), '%W %d de %M de %Y') AS `Revisión`
+FROM empleados;
+-- OR
+SELECT apellido, DATE_FORMAT(DATE_ADD(fecha_contrato, 
+				 INTERVAL ((TIMESTAMPDIFF(MONTH, fecha_contrato, NOW()) DIV 6) + 1) * 6 MONTH), '%W %d de %M de %Y') AS Revisión
 FROM empleados;
 
 ==============================================================================================================================
@@ -494,7 +545,12 @@ EJERCICIO 210
 "Cree una consulta que muestre el identificador del pedido, el estado y identificador del vendedor. 
 Si un pedido no tiene vendedor, ponga "No vendedor". Etiquete la columna como "Vendedor"."
 
+-- ORACLE
 SELECT pedido_id, estado, NVL(TO_CHAR(vendedor_id), 'No vendedor') AS "Vendedor"
+FROM pedidos;
+
+-- MYSQL
+SELECT pedido_id, estado, IFNULL(CAST(vendedor_id AS CHAR), 'No vendedor') AS "Vendedor"
 FROM pedidos;
 
 ==============================================================================================================================
@@ -507,7 +563,13 @@ Mills ****
 Alexander **
 Simmons **"
 
+-- ORACLE
 SELECT apellido || ' ' || RPAD('*', TRUNC(sueldo / 1000), '*') AS "sueldos"
+FROM empleados
+ORDER BY sueldo DESC;
+
+-- MYSQL
+SELECT CONCAT(apellido, ' ', REPEAT('*', FLOOR(sueldo / 1000))) AS `sueldos`
 FROM empleados
 ORDER BY sueldo DESC;
 
@@ -524,6 +586,20 @@ Sales Representative D
 Shipping Clerk E
 Otros 0"
 
+-- ORACLE
+SELECT apellido, puesto_trabajo, 
+    CASE puesto_trabajo
+        WHEN 'President' THEN 'A'
+        WHEN 'Administration Vice President' THEN 'B'
+        WHEN 'Stock Manager' THEN 'C'
+        WHEN 'Sales Representative' THEN 'D'
+        WHEN 'Shipping Clerk' THEN 'E'
+        ELSE '0'
+    END
+    AS "Grado"
+FROM empleados;
+
+-- MYSQL
 SELECT apellido, puesto_trabajo, 
     CASE puesto_trabajo
         WHEN 'President' THEN 'A'
@@ -541,6 +617,7 @@ EJERCICIO 213
 
 "Vuelva a escribir la sentencia de la pregunta anterior utilizando el DECODE."
 
+-- ORACLE
 SELECT apellido, puesto_trabajo,
 	DECODE(
 		puesto_trabajo, 
@@ -553,6 +630,19 @@ SELECT apellido, puesto_trabajo,
         AS "Grado"
 FROM empleados;
 
+-- MYSQL
+SELECT apellido, puesto_trabajo, 
+    CASE puesto_trabajo
+        WHEN 'President' THEN 'A'
+        WHEN 'Administration Vice President' THEN 'B'
+        WHEN 'Stock Manager' THEN 'C'
+        WHEN 'Sales Representative' THEN 'D'
+        WHEN 'Shipping Clerk' THEN 'E'
+        ELSE '0'
+    END
+    AS "Grado"
+FROM empleados;
+
 ==============================================================================================================================
 EJERCICIO 214
 
@@ -560,6 +650,16 @@ EJERCICIO 214
 el segundo conjunto de números del teléfono sea 49 o bien estar entre el 70 y 90. 
 Ordenar el resultado en orden ascendente por el identificador del contacto (Dedicado a Alejandro y Nacho)."
 
+
+-- ORACLE
+SELECT contacto_id, apellido, telefono
+FROM contactos
+WHERE LENGTH(RTRIM(SUBSTR(telefono, 5, 3))) = 2 AND 
+    SUBSTR(telefono, 5, 2) BETWEEN 70 AND 90 OR 
+    SUBSTR(telefono, 5, 2) = 49
+ORDER BY contacto_id;
+
+-- MYSQL
 SELECT contacto_id, apellido, telefono
 FROM contactos
 WHERE LENGTH(RTRIM(SUBSTR(telefono, 5, 3))) = 2 AND 

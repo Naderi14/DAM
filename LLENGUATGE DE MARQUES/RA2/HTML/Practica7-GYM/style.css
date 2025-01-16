@@ -104,10 +104,7 @@ header {
     margin: 0% 5% 0% 5%;
     z-index: 0;
     background-color: white;
-    display: flex;
     text-align:justify;
-    justify-content: center;
-    align-items: center;
     gap: 10px;
 }
 
@@ -291,4 +288,89 @@ header {
 
 .social-icons {
     text-align: right;
+}
+
+@media only screen and (max-width: 1024px) {
+    header {
+        position: relative;
+    }
+    
+    .container-form-main h2 {
+        padding: 0;
+    }
+
+    .container-form {
+        margin: 0;
+        flex-direction: column;
+    }
+    
+    .div-info-section {
+        margin: 0px;
+        width: 100%;
+    }
+    
+    .div-form-section {
+        width: 100%;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .services div {
+        width: 90%;
+    }
+
+    .articulos-interes {
+        padding: auto 1rem auto 1rem;
+    }
+
+    .articulo {
+        gap: 0rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header {
+        position: relative;
+    }
+    
+    .container-form-main h2 {
+        padding: 0;
+    }
+
+    .container-form {
+        margin: 0;
+        flex-direction: column;
+    }
+    
+    .div-info-section {
+        margin: 0px;
+        width: 100%;
+    }
+    
+    .div-form-section {
+        width: 100%;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .services div {
+        width: 90%;
+    }
+
+    .articulos-interes {
+        padding: 5% 3% 5% 0%;
+    }
+
+    .articulo {
+        gap: 0rem;
+        flex-direction: column;
+    }
 }
