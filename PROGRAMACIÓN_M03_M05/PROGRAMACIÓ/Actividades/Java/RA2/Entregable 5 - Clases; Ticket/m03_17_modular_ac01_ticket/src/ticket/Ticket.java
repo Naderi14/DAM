@@ -18,7 +18,7 @@ public class Ticket {
 
     private float totalUnit(float[] item)
     {
-        return Calculations.round(item[1] * item[2], (byte) 2);
+        return Calculations.round(item[1] * item[2], DECIMALS);
     }
 
     public String generateTicket(float[][] items)
