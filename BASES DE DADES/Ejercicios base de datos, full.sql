@@ -673,12 +673,23 @@ EJERCICIO 301
 "Enumere los apellidos de los empleados para aquellos empleados que no tienen el puesto de trabajo 
 'Sales Representative', utilizando operadores de conjuntos."
 
+-- MYSQL
+SELECT apellido, puesto_trabajo FROM empleados
+INTERSECT
+SELECT apellido, puesto_trabajo FROM empleados 
+WHERE puesto_trabajo != 'Sales Representative';
+
 ==============================================================================================================================
 EJERCICIO 302
 
 "Muestre el identificador de país donde no haya almacenes UBICADOS en ellos, 
 utilizando operadores de conjuntos. Se da por hecho que todas las ubicaciones tienen un almacén, 
 aunque no exista en tu tabla ALMACEN."
+
+-- MYSQL
+SELECT u.PAIS_ID 
+FROM ubicaciones u, almacenes a 
+WHERE u.UBICACION_ID = a.UBICACION_ID;
 
 ==============================================================================================================================
 EJERCICIO 303
@@ -688,11 +699,37 @@ Muestre el apellido y el puesto de trabajo, operadores de conjuntos. Además, cr
 con los valores 'x' para 'Programmer','y' para los 'Accountant' y 'z' para los 'Stock Manager' y 
 ordena el resultado por esta última columna."
 
+SELECT apellido, puesto_trabajo, 
+	CASE 
+		WHEN puesto_trabajo = 'Programmer' THEN 'X'
+		WHEN puesto_trabajo = 'Accountant' THEN 'Y'
+		WHEN puesto_trabajo = 'Stock Manager' THEN 'Z'
+	END AS "Letra"
+FROM empleados
+UNION
+SELECT APELLIDO, PUESTO_TRABAJO, 
+	CASE 
+		WHEN puesto_trabajo = 'Programmer' THEN 'X'
+		WHEN puesto_trabajo = 'Accountant' THEN 'Y'
+		WHEN puesto_trabajo = 'Stock Manager' THEN 'Z'
+	END AS "Letra"
+FROM empleados;
+
+
 ==============================================================================================================================
 EJERCICIO 304
 
 "Enumere los identificadores de empleado y el puesto de trabajo de los empleados que 
 trabajan como 'Sales Representative' y su apellido empiece por 'B', operadores de conjuntos."
+
+-- MYSQL
+SELECT EMPLEADO_ID, PUESTO_TRABAJO 
+FROM empleados 
+WHERE PUESTO_TRABAJO = 'Sales Representative'
+INTERSECT 
+SELECT EMPLEADO_ID, PUESTO_TRABAJO
+FROM empleados
+WHERE APELLIDO LIKE 'B%';
 
 ==============================================================================================================================
 EJERCICIO 305
@@ -701,6 +738,20 @@ EJERCICIO 305
 - Nombre y pagina web de los clientes cuyo nombre empiece por 'B'.
 - El nombre y el teléfono de los contactos donde el teléfono acabe en 0.
 El resultado contendrá las siguientes tres columnas; nombre, web y teléfono, en el caso de no tener datos poner NULL."
+
+SELECT cl.NOMBRE, cl.WEB, c.TELEFONO
+FROM clientes cl, contactos c 
+WHERE cl.CLIENTE_ID = c.CLIENTE_ID AND c.TELEFONO LIKE '%0' AND cl.NOMBRE LIKE 'B%';
+
+SELECT	NOMBRE, WEB, NULL
+FROM clientes
+WHERE NOMBRE LIKE 'B%'
+
+INTERSECT
+
+SELECT NOMBRE, NULL, TELEFONO
+FROM contactos
+WHERE TELEFONO LIKE '%0';
 
 ==============================================================================================================================
 EJERCICIO 306
