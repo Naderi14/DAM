@@ -739,18 +739,12 @@ EJERCICIO 305
 - El nombre y el teléfono de los contactos donde el teléfono acabe en 0.
 El resultado contendrá las siguientes tres columnas; nombre, web y teléfono, en el caso de no tener datos poner NULL."
 
-SELECT cl.NOMBRE, cl.WEB, c.TELEFONO
-FROM clientes cl, contactos c 
-WHERE cl.CLIENTE_ID = c.CLIENTE_ID AND c.TELEFONO LIKE '%0' AND cl.NOMBRE LIKE 'B%';
-
-SELECT	NOMBRE, WEB, NULL
-FROM clientes
+SELECT	c.NOMBRE, c.WEB, NULL AS TELEFONO
+FROM clientes c
 WHERE NOMBRE LIKE 'B%'
-
-INTERSECT
-
-SELECT NOMBRE, NULL, TELEFONO
-FROM contactos
+UNION
+SELECT co.NOMBRE, NULL AS WEB, co.TELEFONO
+FROM contactos co
 WHERE TELEFONO LIKE '%0';
 
 ==============================================================================================================================
@@ -758,6 +752,14 @@ EJERCICIO 306
 
 "Encuentre los puestos de trabajo que se han contratado durante el período '01-01-2016'-'29-02-2016' y 
 también se hayan contratado durante el período '01-03-2016'-'25-08-2016', operadores de conjuntos."
+
+SELECT puesto_trabajo AS "Puesto", fecha_contrato AS "Fecha Contrato"
+FROM empleados
+WHERE fecha_contrato BETWEEN '2016-01-01' AND '2016-02-29'
+UNION
+SELECT puesto_trabajo AS "Puesto", fecha_contrato AS "Fecha Contrato"
+FROM empleados
+WHERE fecha_contrato BETWEEN '2016-03-01' AND '2016-08-25';
 
 ==============================================================================================================================
 EJERCICIO 307
@@ -775,3 +777,34 @@ Ejemplos de salida:
 5%  26  3200    160
 10% 8   4200    420
 15% 2   17000   2550"
+
+-- OPCION 1
+SELECT 
+	CASE
+		WHEN PUESTO_TRABAJO IN ('Sales Representative', 'Shipping Clerk', 'Stock Clerk') THEN "5%"
+		WHEN PUESTO_TRABAJO = 'Programmer' THEN "10%"
+		WHEN PUESTO_TRABAJO IN ('Administration Vice President', 'Sales Manager') THEN "15%"
+		ELSE "0%"
+	END AS "Porcentaje", EMPLEADO_ID, SUELDO, SUELDO *
+	CASE
+		WHEN PUESTO_TRABAJO IN ('Sales Representative', 'Shipping Clerk', 'Stock Clerk') THEN 0.05
+		WHEN PUESTO_TRABAJO = 'Programmer' THEN 0.10
+		WHEN PUESTO_TRABAJO IN ('Administration Vice President', 'Sales Manager') THEN 0.15
+		ELSE 0
+	END AS "Aumento Sueldo"
+	FROM empleados
+	ORDER BY CAST(REPLACE(Porcentaje, '%', '') AS DECIMAL);
+
+-- OPCION 2
+SELECT CONCAT(INCREMENT * 100, '%'), EMPLEADO_ID, SUELDO * INCREMENT
+FROM (
+    SELECT EMPLEADO_ID, SUELDO,
+        CASE
+            WHEN PUESTO_TRABAJO IN ('Sales Representative', 'Shipping Clerk', 'Stock Clerk') THEN 0.05
+            WHEN PUESTO_TRABAJO = 'Programmer' THEN 0.1
+            WHEN PUESTO_TRABAJO IN ('Administration Vice President', 'Sales Manager') THEN 0.15
+            ELSE 0
+        END INCREMENT
+    FROM empleados
+) INCREMENTS
+ORDER BY increment;
