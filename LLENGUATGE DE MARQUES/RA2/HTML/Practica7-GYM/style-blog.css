@@ -22,3 +22,20 @@ body {
     --black-grey-footer: rgb(80, 80, 80);
     background-color: rgb(255, 255, 255);
 }
+
+main {
+    background-color: var(--grey-articles-color);
+    padding: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main h2 {
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: var(--purple-color);
+}
+
+/*--------------- AQUI VA LA PRIMERA SECCION ------------------*/
+
