@@ -4,6 +4,8 @@ import ExceptionClasses.NoRealRootsException;
 public class Ecuaciones2oGrado
 {
     public double[] roots(double cofA, double cofB, double cofC) throws NoRealRootsException, FirstCoefficientZeroException {
+        // No he pedido los valores aqui
+
         if (cofA == 0)
             throw new FirstCoefficientZeroException("We can't divide by zero!");
 
