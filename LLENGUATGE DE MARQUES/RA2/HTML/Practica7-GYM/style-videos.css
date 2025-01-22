@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('style-index.css');
+/*font-family: "Lato", serif;    fonr-family: "Noto Serif", serif;*/
+
+* {
+    font-size: 16px;
+    font-family: "Lato", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+}
+
+:root {
+    --purple-color: #e50084;
+    --contrast-purple-color:rgb(249, 236, 245);
+    --grey-articles-color:rgb(199, 199, 199) ;
+    --black-grey-button:rgb(52, 52, 52);
+    --black-grey-footer: rgb(80, 80, 80);
+    background-color: rgb(255, 255, 255);
+}
