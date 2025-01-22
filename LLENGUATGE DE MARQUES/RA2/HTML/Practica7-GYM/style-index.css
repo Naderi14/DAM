@@ -58,21 +58,25 @@ header {
     color: var(--purple-color);
     text-decoration: none;
     font-weight: 800;
-    transition: all 0.5s;
+}
+
+.li-menu img {
+    transition: 0.5s;
 }
 
 .li-menu a {
     color: var(--purple-color);
     text-decoration: none;
-    transition: all 0.5s;
+    transition: 0.5s;
 }
 
-.li-menu:hover a {
+.li-menu a:hover {
     color:var(--black-grey-button);
 }
 
-.li-menu:hover img {
-    content: url(img/client-hover.png);
+.li-menu img:hover {
+    filter: brightness(0);
+
 }
 
 /*----------------------- ESTO ES LA PORTADA PRINCIPAL DE LA WEB -----------------------*/

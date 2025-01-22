@@ -20,22 +20,153 @@ body {
     --grey-articles-color:rgb(199, 199, 199) ;
     --black-grey-button:rgb(52, 52, 52);
     --black-grey-footer: rgb(80, 80, 80);
+    --grey-smooth: rgb(241, 241, 241);
     background-color: rgb(255, 255, 255);
 }
 
 main {
-    background-color: var(--grey-articles-color);
+    background-color: var(--grey-smooth);
     padding: 3.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 main h2 {
-    margin-top: 2rem;
+    margin-top: 4rem;
     font-size: 2rem;
     color: var(--purple-color);
 }
 
 /*--------------- AQUI VA LA PRIMERA SECCION ------------------*/
 
+.blogs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.blog-principal {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    padding-bottom: 1rem;
+}
+
+.blog-normal {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    padding-bottom: 1rem;
+}
+
+.blogs img {
+    width: 100%;
+    height: auto;
+}
+
+.blog-image {
+    position: relative;
+}
+
+.grey-lyrics {
+    color: gray;
+    font-size: 0.8rem;
+}
+
+h3 {
+    padding: 0% 3% 0% 3%;
+    font-size: 1.5rem;
+    color: var(--purple-color);
+    margin: 0;
+}
+
+p {
+    padding: 0% 3% 0% 3%;
+    margin: 0;
+    font-size: 14px;
+}
+
+.blogs a {
+    color: var(--purple-color);
+    text-decoration: none;
+    font-weight: 600;
+    text-decoration: underline;
+    padding-bottom: 20px;
+}
+
+.blogs a:hover {
+    text-decoration: underline;
+}
+
+.top-label-principal {
+    position: absolute;
+    background-color: var(--purple-color);
+    font-size: 0.8rem;
+    margin: 15px;
+    padding: 5px;
+    z-index: 50;
+}
+
+.bottom-copyright-principal {
+    position: absolute;
+    background-color: var(--grey-articles-color);
+    font-size: 0.8rem;
+    opacity: 70%;
+    z-index: 50;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 3px;   
+}
+
+.top-label {
+    position: absolute;
+    background-color: var(--purple-color);
+    font-size: 0.8rem;
+    margin: 15px;
+    padding: 5px;
+    z-index: 50;
+}
+
+.bottom-copyright {
+    position: absolute;
+    background-color: var(--grey-articles-color);
+    opacity: 70%;
+    font-size: 0.8rem;
+    padding: 2px;
+    z-index: 50;
+    bottom: 0;
+    right: 0; 
+    margin-bottom: 3px;
+}
+
+/*---------------- AQUI VAN LAS PAGINAS ----------------*/
+
+.nav-pages {
+    background-color: var(--grey-smooth);
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding-bottom: 50px;
+    gap: 20px;
+}
+
+.nav-pages a {
+    text-decoration: none;
+}
+
+.pagina {
+    background-color: white;
+    border: solid black 2px;
+    padding: 15px;
+}
+
+.pag1 {
+    background-color: var(--purple-color);
+    border-color: var(--purple-color);
+    color: white;
+}
+
+.pagina:hover {
+    border-color: var(--purple-color);
+}
