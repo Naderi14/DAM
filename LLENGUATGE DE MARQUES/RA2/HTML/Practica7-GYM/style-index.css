@@ -19,6 +19,7 @@ body {
     --grey-articles-color:rgb(199, 199, 199) ;
     --black-grey-button:rgb(52, 52, 52);
     --black-grey-footer: rgb(80, 80, 80);
+    --grey-smooth: rgb(241, 241, 241);
     background-color: rgb(255, 255, 255);
 }
 
