@@ -301,6 +301,8 @@ header {
     text-align: right;
 }
 
+/* --------------------- RESPONSIVE -----------------------*/
+
 @media only screen and (max-width: 1024px) {
     header {
         position: relative;

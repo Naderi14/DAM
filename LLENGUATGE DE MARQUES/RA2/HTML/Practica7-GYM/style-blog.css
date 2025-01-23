@@ -152,3 +152,18 @@ p {
 .pagina:hover {
     border-color: var(--purple-color);
 }
+
+/*---------------------- RESPONSIVE ----------------------*/
+
+@media only screen and (max-width: 1024px) {
+    .blogs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .blogs {
+        display: flex;
+        flex-direction: column;
+    }
+}
