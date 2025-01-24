@@ -78,9 +78,9 @@ public class PlayerTest {
         //20. getTeam
         System.out.println(player4.getTeam());
         //21. getTeam -> getName
-        System.out.println(player4.getTeam());
+        System.out.println(player4.getTeam().getName());
         //22. getTeam -> getCountry
-        System.out.println(player4.getTeam());
+        System.out.println(player4.getTeam().getCountry());
         //23. getPosition
         System.out.println(player4.getPosition());
         //24. getPoints
