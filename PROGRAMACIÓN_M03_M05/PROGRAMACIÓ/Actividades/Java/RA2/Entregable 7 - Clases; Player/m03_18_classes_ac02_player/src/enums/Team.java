@@ -8,8 +8,8 @@ public enum Team {
     BNF("Benfica", "Portugal"),
     JUV("Juventus", "Italy");
 
-    private final String name;
-    private final String country;
+    private String name;
+    private String country;
 
     private Team(String name, String country)
     {
@@ -17,13 +17,4 @@ public enum Team {
         this.country = country;
     }
 
-    public String getName()
-    {
-        return this.name;
-    }
-
-    public String getCountry()
-    {
-        return this.country;
-    }
 }
