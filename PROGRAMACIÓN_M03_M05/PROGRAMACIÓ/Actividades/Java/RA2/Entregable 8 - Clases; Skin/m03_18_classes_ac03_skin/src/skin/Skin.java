@@ -5,19 +5,44 @@ import enums.*;
 public class Skin {
     private String name;
     private Sex sex;
-    private boolean available;
+    private boolean available = true;
     private int price;
-    private byte numberOfLives;
-    private int points;
-    private Status status;
-    private boolean[] accessories;
+    private byte numberOfLives = 3;
+    private int points = 0;
+    private Status status = Status.RESTING;
+    private boolean[] accessories = {false, false, false};  //[1] = sword , [2] = gun , [3] = rope
     private int id;
-    public static int idNext;
+    public static int idNext = 0;
 
-    public Skin(String name, Sex sex)
+    public Skin(String name, Sex sex, int price)
     {
         this.name = name;
         this.sex = sex;
+        this.price = price;
+        id = idNext;
+        idNext++;
+    }
+
+    public boolean loseLife()
+    {
+        if (this.numberOfLives > 1)
+        {
+            this.numberOfLives--;
+            return true;
+        }
+        else if (this.numberOfLives == 1)
+        {
+            this.numberOfLives--;
+            setAvailable(false);
+            return true;
+        }
+        else
+            return false;
+    }
+
+    public boolean increaseLife()
+    {
+        return false;
     }
 
     public String getName()
@@ -63,11 +88,6 @@ public class Skin {
     public byte getNumberOfLives()
     {
         return numberOfLives;
-    }
-
-    public void setNumberOfLives(byte numberOfLives)
-    {
-        this.numberOfLives = numberOfLives;
     }
 
     public int getPoints()
