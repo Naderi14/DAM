@@ -12,6 +12,11 @@ public class Mode {
         this.modeName = modeName;
         this.skins = skins;
         this.zombis = new Zombi[zombis];
+
+        for (int i = 0; i < zombis; i++)
+        {
+            this.zombis[i] = new Zombi(i);
+        }
     }
 
     public Modes getModeName()
