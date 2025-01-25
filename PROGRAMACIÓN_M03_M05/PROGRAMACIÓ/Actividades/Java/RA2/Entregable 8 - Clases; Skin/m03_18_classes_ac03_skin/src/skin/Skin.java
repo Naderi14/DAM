@@ -42,6 +42,102 @@ public class Skin {
 
     public boolean increaseLife()
     {
+        if (isAvailable())
+        {
+            if (this.numberOfLives < 5)
+            {
+                this.numberOfLives++;
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public boolean resting()
+    {
+        if (isAvailable())
+        {
+            setStatus(Status.RESTING);
+            return true;
+        }
+
+        return false;
+    }
+
+    public boolean battling()
+    {
+        boolean anyAccessorie = false;
+
+        if (isAvailable())
+        {
+            for (boolean accessory : this.accessories)
+                if (accessory)
+                    anyAccessorie = true;
+
+            if (anyAccessorie)
+            {
+                setStatus(Status.BATTLING);
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public boolean increasePoints(int points)
+    {
+        if (isAvailable())
+        {
+            this.points += points;
+            return true;
+        }
+
+        return false;
+    }
+
+    public boolean decreasePoints(int points)
+    {
+        if (isAvailable())
+        {
+            if (points > this.points)
+                setPoints(0);
+            else
+                this.points -= points;
+
+            return true;
+        }
+
+        return false;
+    }
+
+    public boolean getSword()
+    {
+        if (isAvailable() && !accessories[0])
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    public boolean getGun()
+    {
+        if (isAvailable() && !accessories[1])
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    public boolean getRope()
+    {
+        if (isAvailable() && !accessories[2])
+        {
+            return true;
+        }
+
         return false;
     }
 
@@ -110,23 +206,10 @@ public class Skin {
         this.status = status;
     }
 
-    public boolean[] getAccessories()
+    @Override
+    public String toString()
     {
-        return accessories;
-    }
-
-    public void setAccessories(boolean[] accessories)
-    {
-        this.accessories = accessories;
-    }
-
-    public int getId()
-    {
-        return id;
-    }
-
-    public void setId(int id)
-    {
-        this.id = id;
+        return String.format("Skin [name=%s, sex=%s, availability=%b, price=%d, numberOfLives=%d, points=%d, status=%s, accessoris=[%b, %b, %b]]",
+                this.name, this.sex, this.available, this.price, this.numberOfLives, this.points, this.status, this.accessories[0], this.accessories[1], this.accessories[2]);
     }
 }

@@ -1,5 +1,7 @@
 package enums;
 
 public enum Sex {
-    MAN, WOMAN, NOTDEFINED
+    MAN,
+    WOMAN,
+    NOTDEFINED
 }
