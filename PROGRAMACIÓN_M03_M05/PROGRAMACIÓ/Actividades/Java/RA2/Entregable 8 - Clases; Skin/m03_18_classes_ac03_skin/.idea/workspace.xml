@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4700fde0-df82-48e5-bf60-d1efdc18a86e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/Actividades/Java/RA2/Entregable 8 - Clases; Skin/m03_18_classes_ac03_skin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/Actividades/Java/RA2/Entregable 8 - Clases; Skin/m03_18_classes_ac03_skin/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Entregable 8 - Clases; Skin/m03_18_classes_ac03_skin/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Entregable 8 - Clases; Skin/m03_18_classes_ac03_skin/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Entregable 8 - Clases; Skin/m03_18_classes_ac03_skin/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Entregable 8 - Clases; Skin/m03_18_classes_ac03_skin/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Entregable 8 - Clases; Skin/m03_18_classes_ac03_skin/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Entregable 8 - Clases; Skin/m03_18_classes_ac03_skin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Entregable 8 - Clases; Skin/m03_18_classes_ac03_skin/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Entregable 8 - Clases; Skin/m03_18_classes_ac03_skin/m03_18_classes_ac03_skin.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Entregable 8 - Clases; Skin/m03_18_classes_ac03_skin/src/SkinTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Entregable 8 - Clases; Skin/m03_18_classes_ac03_skin/src/enums/Modes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Entregable 8 - Clases; Skin/m03_18_classes_ac03_skin/src/enums/Sex.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Entregable 8 - Clases; Skin/m03_18_classes_ac03_skin/src/enums/Status.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Entregable 8 - Clases; Skin/m03_18_classes_ac03_skin/src/skin/Mode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Entregable 8 - Clases; Skin/m03_18_classes_ac03_skin/src/skin/Skin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Entregable 8 - Clases; Skin/m03_18_classes_ac03_skin/src/skin/Zombi.java" beforeDir="false" />
-    </list>
+    <list default="true" id="4700fde0-df82-48e5-bf60-d1efdc18a86e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +37,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Fran/Desktop/DAM 1/temporal/m03_18_classes_ac03_skin",
+    "last_opened_file_path": "E:/DESENVOLUPAMENT APLICACIONS MULTIPLATAFORMA/temporal/m03_18_classes_ac04_competition",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
