@@ -85,6 +85,17 @@ public class Skin {
         return false;
     }
 
+    public boolean eating()
+    {
+        if (isAvailable())
+        {
+            setStatus(Status.EATING);
+            return true;
+        }
+
+        return false;
+    }
+
     public boolean increasePoints(int points)
     {
         if (isAvailable())
@@ -115,6 +126,7 @@ public class Skin {
     {
         if (isAvailable() && !accessories[0])
         {
+            accessories[0] = true;
             return true;
         }
 
@@ -125,6 +137,7 @@ public class Skin {
     {
         if (isAvailable() && !accessories[1])
         {
+            accessories[1] = true;
             return true;
         }
 
@@ -135,6 +148,7 @@ public class Skin {
     {
         if (isAvailable() && !accessories[2])
         {
+            accessories[2] = true;
             return true;
         }
 

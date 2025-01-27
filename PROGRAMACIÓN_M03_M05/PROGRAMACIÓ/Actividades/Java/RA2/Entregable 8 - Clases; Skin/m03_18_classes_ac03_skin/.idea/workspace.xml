@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4700fde0-df82-48e5-bf60-d1efdc18a86e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/skin/Mode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/skin/Mode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SkinTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/skin/Skin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/skin/Skin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,10 +37,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.SkinTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/DESENVOLUPAMENT APLICACIONS MULTIPLATAFORMA/PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/Actividades/Java/RA2/Entregable 8 - Clases; Skin/m03_18_classes_ac03_skin"
+    "last_opened_file_path": "C:/Users/Fran/Desktop/DAM 1/PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/Actividades/Java/RA2/Entregable 8 - Clases; Skin/m03_18_classes_ac03_skin"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
