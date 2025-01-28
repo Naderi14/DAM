@@ -22,7 +22,7 @@ public class PlayerTest {
         //Check points of player are the same before and after calling the method
         System.out.println("Player 2: " + player2.getPoints() + " points");
         System.out.println(player2.decreasePoints(-20));
-        System.out.println(player2.getPoints());
+        System.out.println("Player 2: " + player2.getPoints() + " points");
 
         //7. Test decreasePoints (5 points) for a player with enough points (100)
         //Check points of player are 95 after calling the method;

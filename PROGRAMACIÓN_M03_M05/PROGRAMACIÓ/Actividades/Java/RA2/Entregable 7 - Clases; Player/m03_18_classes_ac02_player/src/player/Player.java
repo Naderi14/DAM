@@ -1,4 +1,5 @@
 package player;
+
 import enums.*;
 
 public class Player {
@@ -10,12 +11,12 @@ public class Player {
     private String surname;
     private float height;
     private float weight;
-    private byte age = 18;
-    private int points = 100;
-    private boolean active = true;
-    private byte cards = 0;
+    private byte age;
+    private int points;
+    private boolean active;
+    private byte cards;
 
-    private Sex sex = Sex.NOTDEFINED;
+    private Sex sex;
     private Team team;
     private Position position;
 
@@ -41,6 +42,11 @@ public class Player {
         this.weight = weight;
         this.team = team;
         this.position = position;
+        this.age = 18;
+        this.points = 100;
+        this.active = true;
+        this.cards = 0;
+        this.sex = Sex.NOTDEFINED;
     }
 
     public Player(String name, String surname, Sex sex, Team team, Position position) {
@@ -49,6 +55,10 @@ public class Player {
         this.sex = sex;
         this.team = team;
         this.position = position;
+        this.age = 18;
+        this.points = 100;
+        this.active = true;
+        this.cards = 0;
     }
 
     public Player(String name, String surname, byte age, Sex sex, Team team, Position position) {
@@ -58,6 +68,9 @@ public class Player {
         this.sex = sex;
         this.team = team;
         this.position = position;
+        this.points = 100;
+        this.active = true;
+        this.cards = 0;
     }
 
     @Override
@@ -84,7 +97,11 @@ public class Player {
     {
         if (isActive() && points > 0 && this.cards < 2)
         {
-            this.points -= points;
+            if (points > this.points)
+                this.points = 0;
+            else
+                this.points -= points;
+
             return true;
         }
 
