@@ -7,10 +7,10 @@ public class Car {
     private short year = 0;
     private Fuels fuel = Fuels.PETROL;
     private short cc;
-    private byte doors = 3;
-    private byte wheels = 5;
-    private byte seats = 4;
-    private int points = 0;
+    private byte doors;
+    private byte wheels;
+    private byte seats;
+    private int points;
     private String id;
     private static int idNext = 0;
 
@@ -36,6 +36,10 @@ public class Car {
         this.year = year;
         this.fuel = fuel;
         this.cc = cc;
+        this.doors = 3;
+        this.wheels = 5;
+        this.seats = 4;
+        this.points = 0;
         this.id = generateId();
     }
 
@@ -48,7 +52,8 @@ public class Car {
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         // Cabecera de la tabla
         String header = String.format(
                 "%-10s %-13s %-12s %-8s %-8s %-5s %-4s %-4s %-4s %-5s %-20s %-12s%n",
@@ -73,6 +78,25 @@ public class Car {
         );
 
         return header + row;
+    }
+
+    public String carData()
+    {
+        return String.format(
+                "%-10s %-13s %-12s %-8d %-8s %-5s %-4d %-4d %-4d %-5d %-20s %-12s",
+                this.id,
+                this.brand,
+                this.model,
+                this.year,
+                this.fuel,
+                this.cc,
+                this.doors,
+                this.wheels,
+                this.seats,
+                this.points,
+                this.driver.getName(),
+                this.driver.getId()
+        );
     }
 
     public static String getIdNext()
@@ -178,6 +202,15 @@ public class Car {
     public void setPoints(int points)
     {
         this.points = points;
+    }
+
+    public boolean increasePoints(int points)
+    {
+        if (points < 0)
+            return false;
+
+        this.points += points;
+        return true;
     }
 
     public String getId()

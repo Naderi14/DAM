@@ -43,6 +43,6 @@ public class Driver {
     @Override
     public String toString()
     {
-        return String.format("%s\t\t%s\n012345678901234567890123456789", this.name, this.id);
+        return String.format("Driver: %s\t|\t%s", this.name, this.id);
     }
 }
