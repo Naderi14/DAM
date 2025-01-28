@@ -3,9 +3,9 @@ package player;
 import enums.*;
 
 public class Player {
-    public static final int INITIAL_POINTS = 0;
-    public static final byte INITIAL_AGE = 0;
-    public static final byte MAX_CARDS = 0;
+    public static final int INITIAL_POINTS = 100;
+    public static final byte INITIAL_AGE = 18;
+    public static final byte MAX_CARDS = 2;
 
     private String name;
     private String surname;
@@ -14,7 +14,7 @@ public class Player {
     private byte age;
     private int points;
     private boolean active;
-    private byte cards;
+    private byte cards = 0;
 
     private Sex sex;
     private Team team;
@@ -25,9 +25,9 @@ public class Player {
         this.surname = surname;
         this.height = height;
         this.weight = weight;
-        if (age > 18)
+        if (age > INITIAL_AGE)
             this.age = age;
-        if (points > 100)
+        if (points > INITIAL_POINTS)
             this.points = points;
         this.active = active;
         this.sex = sex;
@@ -42,10 +42,9 @@ public class Player {
         this.weight = weight;
         this.team = team;
         this.position = position;
-        this.age = 18;
-        this.points = 100;
+        this.age = INITIAL_AGE;
+        this.points = INITIAL_POINTS;
         this.active = true;
-        this.cards = 0;
         this.sex = Sex.NOTDEFINED;
     }
 
@@ -55,10 +54,9 @@ public class Player {
         this.sex = sex;
         this.team = team;
         this.position = position;
-        this.age = 18;
-        this.points = 100;
+        this.age = INITIAL_AGE;
+        this.points = INITIAL_POINTS;
         this.active = true;
-        this.cards = 0;
     }
 
     public Player(String name, String surname, byte age, Sex sex, Team team, Position position) {
@@ -68,9 +66,8 @@ public class Player {
         this.sex = sex;
         this.team = team;
         this.position = position;
-        this.points = 100;
+        this.points = INITIAL_POINTS;
         this.active = true;
-        this.cards = 0;
     }
 
     @Override
@@ -84,7 +81,7 @@ public class Player {
 
     public boolean increasePoints(int points)
     {
-        if (isActive() && points >= 0 && this.cards < 2)
+        if (isActive() && points >= 0 && this.cards < MAX_CARDS)
         {
             this.points += points;
             return true;
@@ -95,7 +92,7 @@ public class Player {
 
     public boolean decreasePoints(int points)
     {
-        if (isActive() && points > 0 && this.cards < 2)
+        if (isActive() && points > 0 && this.cards < MAX_CARDS)
         {
             if (points > this.points)
                 this.points = 0;
@@ -110,9 +107,9 @@ public class Player {
 
     public boolean giveCard()
     {
-        if (isActive() && this.cards < 2)
+        if (isActive() && this.cards < MAX_CARDS)
         {
-            if (++this.cards == 2)
+            if (++this.cards == MAX_CARDS)
                 setActive(false);
 
             return true;
