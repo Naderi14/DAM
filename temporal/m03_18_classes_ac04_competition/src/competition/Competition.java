@@ -40,9 +40,28 @@ public class Competition {
         String header = "Order Classification\nFinal Classification:\n";
 
         String body = "";
+        int[] indexSorteds = new int[cars.length];
+        boolean[] usedIndexes = new boolean[cars.length];
 
-        cars[0].carData();
+        for (int i = 0; i < cars.length; i++)
+        {
+            int majorIndex = -1;
+            for (int j = 0; j < cars.length; j++)
+            {
+                if (!usedIndexes[j])
+                    if (majorIndex == -1 || cars[j].getPoints() > cars[majorIndex].getPoints())
+                        majorIndex = j;
+            }
 
-        return "";
+            indexSorteds[i] = majorIndex;
+            usedIndexes[majorIndex] = true;
+        }
+
+        for (int i = 0; i < cars.length; i++)
+        {
+            body += cars[indexSorteds[i]].carData() + "\n";
+        }
+
+        return header + body;
     }
 }

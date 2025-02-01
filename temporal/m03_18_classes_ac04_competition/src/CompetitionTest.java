@@ -33,6 +33,7 @@ public class CompetitionTest {
         Competition competition = new Competition(cars, 3);
 
         System.out.println(competition.startCompetition());
+        System.out.println(competition.orderClassification());
     }
 
 }
