@@ -17,5 +17,8 @@ public class DriverTest {
         System.out.println(driver3.toString());
         driver3.setName("J");
         System.out.println(driver3.toString());
+
+        System.out.println(driver5.getName());
+        System.out.println(driver5.getId());
     }
 }

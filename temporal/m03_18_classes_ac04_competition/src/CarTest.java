@@ -17,5 +17,8 @@ public class CarTest {
 
         car1.setModel("F40");
         System.out.println(car1.toString());
+
+        System.out.println(car1.getModel());
+        System.out.println(car1.getDriver().getName());
     }
 }
