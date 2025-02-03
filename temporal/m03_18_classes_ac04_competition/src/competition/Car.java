@@ -1,6 +1,7 @@
 package competition;
 
 public class Car {
+    private static final String ID_BASE = "CAR000";
     private Driver driver;
     private String brand;
     private String model;
@@ -48,7 +49,7 @@ public class Car {
         String iniciales = "" + this.brand.charAt(0) + this.model.charAt(0);
         idNext++;
 
-        return "CAR000" + idNext + iniciales.toUpperCase();
+        return ID_BASE + idNext + iniciales.toUpperCase();
     }
 
     @Override
@@ -101,7 +102,7 @@ public class Car {
 
     public static String getIdNext()
     {
-        return "CAR000" + idNext;
+        return ID_BASE + idNext;
     }
 
     public Driver getDriver()
@@ -122,6 +123,7 @@ public class Car {
     public void setBrand(String brand)
     {
         this.brand = brand;
+        this.id = id.substring(0, id.length() - 2) + brand.charAt(0) + this.model.charAt(0);
     }
 
     public String getModel()
@@ -132,6 +134,7 @@ public class Car {
     public void setModel(String model)
     {
         this.model = model;
+        this.id = id.substring(0, id.length() - 1) + this.model.charAt(0);
     }
 
     public short getYear()

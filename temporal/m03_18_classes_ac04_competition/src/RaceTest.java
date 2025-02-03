@@ -33,5 +33,9 @@ public class RaceTest {
         System.out.println("\n ACABÓ LA CARRERA, NUEVA PUNTUACION DE LOS CORREDORES \n");
         race.startRace();
         System.out.println(race.toString());
+        Car[] cars2 = {car1, car2, car3};
+
+        race.setCars(cars2);
+        System.out.println(race.toString());
     }
 }

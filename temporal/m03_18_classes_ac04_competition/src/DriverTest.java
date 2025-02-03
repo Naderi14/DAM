@@ -5,13 +5,17 @@ import competition.Fuels;
 public class DriverTest {
     public static void main(String[] args)
     {
-        Driver driver1 = new Driver("Juan Francisco");
-
-        System.out.println(driver1.toString());
-        System.out.println(Driver.getIdNext());
-
-        Car car = new Car(driver1, "Finolis", "Lamborgini", (short) 1992, Fuels.PETROL, (short) 2000);
-
-        System.out.println(car.toString());
+        Driver driver1 = new Driver("Lewis Hamilton");
+        Driver driver2 = new Driver("Fernando Alonso");
+        Driver driver3 = new Driver("Mik Schumacher");
+        Driver driver4 = new Driver("Max Verstappen");
+        Driver driver5 = new Driver("Sebastian Vettel");
+        Driver driver6 = new Driver("Carlos Sainz");
+        Driver driver7 = new Driver("Pierre Gasly");
+        Driver driver8 = new Driver("Valtteri Bottas");
+        Driver driver9 = new Driver("Alexander Albon");
+        System.out.println(driver3.toString());
+        driver3.setName("J");
+        System.out.println(driver3.toString());
     }
 }
