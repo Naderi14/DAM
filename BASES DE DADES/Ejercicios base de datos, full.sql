@@ -941,7 +941,71 @@ Sales Representative        30            5           22
 Stock Clerk                 20            5           0
 Programmer                  5             2           1"
 
-SELECT PUESTO_TRABAJO, count(*) AS "Cantidad empleados", count(DISTINCT JEFE_ID) AS "Jefes",
+SELECT PUESTO_TRABAJO, 
+	count(*) AS "Cantidad empleados", 
+	count(DISTINCT JEFE_ID) AS "Jefes",
 	count(CASE WHEN SUELDO > 7000 THEN 1 END) AS "Cantidad empleados mas de 7000€"
 FROM empleados
 GROUP BY PUESTO_TRABAJO;
+
+SELECT PUESTO_TRABAJO, 
+	count(*) AS "Cantidad empleados", 
+	count(DISTINCT JEFE_ID) AS "Jefes",
+	count(CASE WHEN avg(SUELDO) > 7000 THEN 1 END) AS "Cantidad empleados mas de 7000€"
+FROM empleados
+GROUP BY PUESTO_TRABAJO;
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/																														  /
+/													Ejercicios de repaso												  /
+/														  biblioteca													  /
+/																														  /
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+==============================================================================================================================
+Para repasar ejercicios, tenéis la base de datos adjunta sobre los préstamos de una biblioteca. Os propongo:
+	Escribe dos consultas que muestren datos de una tabla ordenando los datos por una o varias columnas
+	==============================================================================================================================
+
+	Escribe dos consultas que filtren los datos por una o más condiciones, combina AND y OR y recuerda usar paréntesis
+	==============================================================================================================================
+
+	Escribe dos consultas que tengan funciones de fila
+	==============================================================================================================================
+
+	Escribe dos consultas que utilicen operadores de conjuntos
+	==============================================================================================================================
+
+Haz el siguiente listado de ejercicios sencillos. Puedes complicarlos todo cuanto quieras:
+	Muestra los títulos y autores de los libros ordenados alfabéticamente por título.
+	==============================================================================================================================
+
+	Muestra los nombres de los usuarios junto con la fecha de registro, ordenados primero por año de registro (descendente) y después por nombre (ascendente).
+	==============================================================================================================================
+
+	Muestra los libros que son del género "Novela" y tienen más de 3 ejemplares disponibles, o aquellos con menos de 2 ejemplares sin importar el género.
+	==============================================================================================================================
+
+	Muestra los nombres y correos electrónicos de los usuarios concatenados en una sola columna, separados por un guion.
+	==============================================================================================================================
+
+	Muestra una lista combinada de los nombres de los usuarios y los autores de los libros (sin duplicados).
+	==============================================================================================================================
+
+	Muestra los títulos de los libros y el número de ejemplares disponibles, ordenados de mayor a menor número de ejemplares.
+	==============================================================================================================================
+
+	Muestra los nombres y fechas de registro de los usuarios, ordenados primero por la fecha de registro más antigua y luego alfabéticamente por nombre.
+	==============================================================================================================================
+
+	Muestra los préstamos realizados después del 1 de enero de 2023 y que todavía no se han devuelto.
+	==============================================================================================================================
+
+	Muestra los libros que sean del género "Historia" y tengan más de 1 ejemplar, o que no tengan género definido.  
+	==============================================================================================================================
+
+	Muestra el nombre de los usuarios junto con la longitud de cada nombre.
+	==============================================================================================================================
+
+	Muestra una lista combinada de los títulos de los libros y los nombres de los usuarios, sin duplicados.
+	==============================================================================================================================
