@@ -76,6 +76,14 @@ header {
 
 }
 
+/* --------------------- ESTO ES EL CONTENIDO PRINCIPAL --------------------- */
+
+.main-container {
+    background-color: var(--grey-smooth);
+}
+
+
+
 /* --------------------- ESTO VA A SER EL FOOTER ----------------------*/
 
 .foot-container {

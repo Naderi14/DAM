@@ -3,3 +3,72 @@
 @import url('style-general.css');
 /*font-family: "Lato", serif;    fonr-family: "Noto Serif", serif;*/
 
+/* --------------------- ESTO ES EL CONTENIDO PRINCIPAL --------------------- */
+
+.text-bold {
+    font-weight: 600;
+}
+
+.main-container {
+    padding-top: 6%;
+    background-color: var(--grey-smooth);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.text-path {
+    text-align: left;
+}
+
+.box-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 80%;
+    gap: 40px;
+}
+
+/* --------------------- ARTÍCULO PRINCIPAL --------------------- */
+.actual-article-box {
+    width: 65%;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.actual-article-box img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.actual-article-box h3 {
+    font-size: 24px;
+    color: var(--purple-color);
+    margin-top: 15px;
+}
+
+/* --------------------- BARRA LATERAL (OTROS ARTÍCULOS) --------------------- */
+.other-article-boxes {
+    width: 30%;
+}
+
+.other-article-boxes h4 {
+    font-size: 20px;
+    color: var(--purple-color);
+    margin-bottom: 15px;
+}
+
+/* --------------------- RESPONSIVE --------------------- */
+@media (max-width: 1024px) {
+    .box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .actual-article-box, 
+    .other-article-boxes {
+        width: 100%;
+    }
+}
