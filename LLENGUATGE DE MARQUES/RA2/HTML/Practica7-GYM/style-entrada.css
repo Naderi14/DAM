@@ -79,7 +79,7 @@ h4 {
 
 .actual-article-box img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 2px;
 }
 
 .actual-article-box h3 {
@@ -97,6 +97,7 @@ h4 {
 
 .article-image h3 {
     margin-left: 15px;
+    margin-right: 15px;
     font-size: 2.5rem;
     text-align: justify;
 }
@@ -162,5 +163,9 @@ h4 {
     .actual-article-box, 
     .other-article-boxes {
         width: 100%;
+    }
+
+    .flex-categories {
+        margin-bottom: 30px;
     }
 }
