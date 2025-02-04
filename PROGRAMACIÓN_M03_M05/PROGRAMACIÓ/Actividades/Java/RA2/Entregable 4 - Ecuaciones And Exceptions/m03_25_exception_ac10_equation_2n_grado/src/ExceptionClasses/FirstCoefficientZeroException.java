@@ -2,7 +2,7 @@ package ExceptionClasses;
 
 public class FirstCoefficientZeroException extends Exception
 {
-    String message;
+    private final String message;
 
     public FirstCoefficientZeroException(String message)
     {

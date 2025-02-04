@@ -1,84 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('style-general.css');
 /*font-family: "Lato", serif;    fonr-family: "Noto Serif", serif;*/
 
-* {
-    font-size: 16px;
-    font-family: "Lato", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
 
-body {
-    margin: 0;
-}
-
-:root {
-    --purple-color: #e50084;
-    --contrast-purple-color:rgb(249, 236, 245);
-    --grey-articles-color:rgb(199, 199, 199) ;
-    --black-grey-button:rgb(52, 52, 52);
-    --black-grey-footer: rgb(80, 80, 80);
-    --grey-smooth: rgb(241, 241, 241);
-    background-color: rgb(255, 255, 255);
-}
-
-/*---------------- ESTO ES EL HEADER ----------------*/
-header {
-    position:fixed;
-    z-index: 100;
-    width: 100%;
-}
-
-.menu-header {
-    background-color: white;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
-
-.menu-logo {
-    height: 50px;
-}
-
-.menu-buttons img {
-    height: 30px;
-}
-
-.menu-buttons ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-.li-menu {
-    color: var(--purple-color);
-    text-decoration: none;
-    font-weight: 800;
-}
-
-.li-menu img {
-    transition: 0.5s;
-}
-
-.li-menu a {
-    color: var(--purple-color);
-    text-decoration: none;
-    transition: 0.5s;
-}
-
-.li-menu a:hover {
-    color:var(--black-grey-button);
-}
-
-.li-menu img:hover {
-    filter: brightness(0);
-
-}
 
 /*----------------------- ESTO ES LA PORTADA PRINCIPAL DE LA WEB -----------------------*/
 
@@ -282,32 +207,9 @@ header {
     opacity: 50%;
 }
 
-/* --------------------- ESTO VA A SER EL FOOTER ----------------------*/
-
-.foot-container {
-    background-color: var(--black-grey-footer);
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px 0px 50px;
-}
-
-.foot-container img {
-    max-width: 8rem;
-}
-
-.social-icons {
-    text-align: right;
-}
-
 /* --------------------- RESPONSIVE -----------------------*/
 
-@media only screen and (max-width: 1024px) {
-    header {
-        position: relative;
-    }
-    
+@media only screen and (max-width: 1024px) {    
     .container-form-main h2 {
         padding: 0;
     }
@@ -346,10 +248,6 @@ header {
 }
 
 @media only screen and (max-width: 500px) {
-    header {
-        position: relative;
-    }
-
     .main-image p {
         margin-left: 5%;
         width: 90%;
@@ -392,14 +290,5 @@ header {
     .articulo {
         gap: 0rem;
         flex-direction: column;
-    }
-
-    .foot-container {
-        flex-direction: column;
-    }
-    
-    .social-icons {
-        text-align: left;
-        padding-left: 10%;
     }
 }
