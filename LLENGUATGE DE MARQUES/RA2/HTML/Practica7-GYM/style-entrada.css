@@ -4,9 +4,48 @@
 /*font-family: "Lato", serif;    fonr-family: "Noto Serif", serif;*/
 
 /* --------------------- ESTO ES EL CONTENIDO PRINCIPAL --------------------- */
+a:visited {
+    color:var(--purple-color);
+}
 
 .text-bold {
     font-weight: 600;
+}
+
+.text-size-t {
+    font-size: 0.8rem;
+}
+
+.text-size-m {
+    font-size: 1.2rem;
+}
+
+.text-size-l {
+    font-size: 1.6rem;
+}
+
+.text-link {
+    color: var(--purple-color);
+    text-decoration: none;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.cita-lyrics {
+    font-style: italic;
+}
+
+.credit-lyrics {
+    font-size: 0.8rem;
+    color: var(--grey-normal);
+    margin-left: 15px;
+    padding-bottom: 15px;
+}
+
+h4 {
+    color:var(--purple-color);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
 }
 
 .main-container {
@@ -49,15 +88,68 @@
     margin-top: 15px;
 }
 
+.article-image {
+    background-color: var(--contrast-purple-color);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.article-image h3 {
+    margin-left: 15px;
+    font-size: 2.5rem;
+    text-align: justify;
+}
+
+.div-border-left {
+    margin-left: 3rem;
+    padding-left: 3rem;
+    border-left: solid var(--purple-color) 2px;
+}
+
 /* --------------------- BARRA LATERAL (OTROS ARTÍCULOS) --------------------- */
 .other-article-boxes {
     width: 30%;
 }
 
 .other-article-boxes h4 {
-    font-size: 20px;
     color: var(--purple-color);
     margin-bottom: 15px;
+}
+
+.article {
+    background-color: white;
+    margin-bottom: 3rem;
+}
+
+.article img {
+    width: 100%;
+}
+
+.h4-articles {
+    margin-left: 15px;
+}
+
+.top-label {
+    position: absolute;
+    color: white;
+    background-color: var(--purple-color);
+    font-size: 0.8rem;
+    margin: 15px;
+    padding: 5px;
+    z-index: 50;
+}
+
+.flex-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.text-box {
+    border: solid 1.7px black;
+    padding:7.5px;
+    background-color: white;
 }
 
 /* --------------------- RESPONSIVE --------------------- */

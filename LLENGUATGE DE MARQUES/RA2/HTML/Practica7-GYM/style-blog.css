@@ -87,6 +87,7 @@ p {
     margin: 15px;
     padding: 5px;
     z-index: 50;
+    color: white;
 }
 
 .bottom-copyright-principal {
@@ -102,6 +103,7 @@ p {
 
 .top-label {
     position: absolute;
+    color: white;
     background-color: var(--purple-color);
     font-size: 0.8rem;
     margin: 15px;
