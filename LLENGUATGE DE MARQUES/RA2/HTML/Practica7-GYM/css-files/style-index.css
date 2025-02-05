@@ -8,7 +8,7 @@
 /*----------------------- ESTO ES LA PORTADA PRINCIPAL DE LA WEB -----------------------*/
 
 .main-image {
-    background-image: url(img/main6.jpg);
+    background-image: url(../img/main6.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
