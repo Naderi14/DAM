@@ -68,14 +68,6 @@ p {
     font-size: 14px;
 }
 
-.blogs a {
-    color: var(--purple-color);
-    text-decoration: none;
-    font-weight: 600;
-    text-decoration: underline;
-    padding-bottom: 20px;
-}
-
 .blogs a:hover {
     text-decoration: underline;
 }

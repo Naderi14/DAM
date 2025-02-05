@@ -97,14 +97,6 @@
     gap:10px;
 }
 
-.little-lyrics a, .little-lyrics {
-    font-size: 0.75rem;
-}
-
-.little-lyrics a {
-    color: var(--purple-color);
-}
-
 .button-submit {
     background-color: var(--purple-color);
     color: white;

@@ -4,43 +4,6 @@
 /*font-family: "Lato", serif;    fonr-family: "Noto Serif", serif;*/
 
 /* --------------------- ESTO ES EL CONTENIDO PRINCIPAL --------------------- */
-a:visited {
-    color:var(--purple-color);
-}
-
-.text-bold {
-    font-weight: 600;
-}
-
-.text-size-t {
-    font-size: 0.8rem;
-}
-
-.text-size-m {
-    font-size: 1.2rem;
-}
-
-.text-size-l {
-    font-size: 1.6rem;
-}
-
-.text-link {
-    color: var(--purple-color);
-    text-decoration: none;
-    font-weight: 600;
-    text-decoration: underline;
-}
-
-.cita-lyrics {
-    font-style: italic;
-}
-
-.credit-lyrics {
-    font-size: 0.8rem;
-    color: var(--grey-normal);
-    margin-left: 15px;
-    padding-bottom: 15px;
-}
 
 h4 {
     color:var(--purple-color);

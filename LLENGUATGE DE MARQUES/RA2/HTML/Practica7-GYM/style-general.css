@@ -124,3 +124,39 @@ header {
         padding-left: 10%;
     }
 }
+
+/* --------------------------- UTILIDADES GENERALES --------------------------- */
+
+.text-link, .text-link:visited {
+    color: var(--purple-color);
+    text-decoration: none;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.text-bold {
+    font-weight: 600;
+}
+
+.text-size-t {
+    font-size: 0.8rem;
+}
+
+.text-size-m {
+    font-size: 1.2rem;
+}
+
+.text-size-l {
+    font-size: 1.6rem;
+}
+
+.cita-lyrics {
+    font-style: italic;
+}
+
+.credit-lyrics {
+    font-size: 0.8rem;
+    color: var(--grey-normal);
+    margin-left: 15px;
+    padding-bottom: 15px;
+}
