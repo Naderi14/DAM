@@ -86,9 +86,9 @@ h3 {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    padding: 3% 12% 4% 12%;
+    padding: 3% 6% 4% 6%;
     box-shadow: 10px 10px 22px -12px rgba(0,0,0,0.75);
-    width: 400px; /* Aumentar el ancho del formulario */
+    width: 600px;
 }
 
 .form-container img {
@@ -133,7 +133,7 @@ h3 {
     padding: 12px;
     border-radius: 5px;
     cursor: pointer;
-    width: 40px; /* Ajuste del botón */
+    width: 400px; /* Ajuste del botón */
     text-align: center;
     margin-top: 10px;
 }
@@ -141,14 +141,15 @@ h3 {
 /* ------------------- RESPONSIVE ------------------- */
 
 @media only screen and (max-width: 1024px) {
-    .blogs {
-        grid-template-columns: repeat(2, 1fr);
+    .form-container {
+        padding: 3%;
+        width: 400px;
     }
 }
 
 @media only screen and (max-width: 550px) {
-    .blogs {
-        display: flex;
-        flex-direction: column;
+    .form-container {
+        padding: 3%;
+        width: auto;
     }
 }
