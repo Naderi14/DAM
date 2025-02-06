@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d660cd2-2a66-49d1-bafa-09153c4e6826" name="Changes" comment="" />
+    <list default="true" id="1d660cd2-2a66-49d1-bafa-09153c4e6826" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../LLENGUATGE DE MARQUES/RA2/HTML/Practica7-GYM/entrada.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../LLENGUATGE DE MARQUES/RA2/HTML/Practica7-GYM/entrada.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temporal/m03_18_classes_ac04_competition/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../temporal/m03_18_classes_ac04_competition/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temporal/m03_18_classes_ac04_competition/src/CarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../temporal/m03_18_classes_ac04_competition/src/CarTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../temporal/m03_18_classes_ac04_competition/src/competition/Race.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../temporal/m03_18_classes_ac04_competition/src/competition/Race.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +40,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/DESENVOLUPAMENT APLICACIONS MULTIPLATAFORMA/PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/Actividades/Java/RA2/Entregable 5 - Clases; Ticket/m03_17_modular_ac01_ticket",
+    "last_opened_file_path": "E:/DESENVOLUPAMENT APLICACIONS MULTIPLATAFORMA/off topic/dungeonGame",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0"
