@@ -26,11 +26,11 @@
             <form class="form-items">
                 <ul>
                     <li><label class="text-bold" for="user">Usuari</label></li>
-                    <li><input type="text" name="user" placeholder="Escriu el teu usuari" required></li>
+                    <li><input type="text" name="user" id="user" placeholder="Escriu el teu usuari" required></li>
                 </ul>
                 <ul>
                     <li><label class="text-bold" for="password">Password</label></li>
-                    <li><input type="pwd" name="password" placeholder="Escriu el teu password" required></li>
+                    <li><input type="pwd" name="password" id="user" placeholder="Escriu el teu password" required></li>
                 </ul>
                 <p class="text-size-t">
                     <span class="text-size-t text-link">Crea usuari</span> i <span class="text-size-t text-link">Recupera la contrasenya</span>
@@ -41,11 +41,13 @@
     </section>
     <footer>
         <div class="foot-container">
-            <div>
+            <div class="copyright-image-container">
                 <a href="index.html"><img src="img/logo.png"></a>
-                <p>
-                    2024-2025  |  Juan Francisco Sanchez Castelblanque
-                </p>
+                <div class="copyright-container">
+                    <p>2024-2025</p>
+                    <span class="to-disappear">|</span>
+                    <p>Juan Francisco Sanchez Castelblanque</p>
+                </div>
             </div>
             <div>
                 <div class="social-icons">
@@ -53,11 +55,13 @@
                     <a href="https://www.instagram.com/" target="_blank"><img src="img/instagram.svg"></a>
                     <a href="https://www.youtube.com" target="_blank"><img src="img/youtube.svg"></a>
                 </div>
-                <p>
-                    <pre>
-                        Política de privadesa    |    Política de cookies    |    Avís legal
-                    </pre>
-                </p>
+                <div class="terms-container">
+                    <p>Política de privadesa</p>    
+                    <span class="to-disappear">|</span>    
+                    <p>Política de cookies</p>    
+                    <span class="to-disappear">|</span>    
+                    <p>Avís legal</p>
+                </div>
             </div>
         </div>
     </footer>

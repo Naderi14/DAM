@@ -62,7 +62,7 @@ h3 {
     margin: 0;
 }
 
-p {
+.blog-normal p, .blog-principal p {
     padding: 0% 3% 0% 3%;
     margin: 0;
     font-size: 14px;
