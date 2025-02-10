@@ -963,49 +963,163 @@ GROUP BY PUESTO_TRABAJO;
 /																														  /
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ==============================================================================================================================
-Para repasar ejercicios, tenéis la base de datos adjunta sobre los préstamos de una biblioteca. Os propongo:
-	Escribe dos consultas que muestren datos de una tabla ordenando los datos por una o varias columnas
-	==============================================================================================================================
+"Para repasar ejercicios, tenéis la base de datos adjunta sobre los préstamos de una biblioteca. Os propongo:
+Escribe dos consultas que muestren datos de una tabla ordenando los datos por una o varias columnas"
+==============================================================================================================================
 
-	Escribe dos consultas que filtren los datos por una o más condiciones, combina AND y OR y recuerda usar paréntesis
-	==============================================================================================================================
+"Escribe dos consultas que filtren los datos por una o más condiciones, combina AND y OR y recuerda usar paréntesis"
+==============================================================================================================================
 
-	Escribe dos consultas que tengan funciones de fila
-	==============================================================================================================================
+"Escribe dos consultas que tengan funciones de fila"
+==============================================================================================================================
 
-	Escribe dos consultas que utilicen operadores de conjuntos
-	==============================================================================================================================
+"Escribe dos consultas que utilicen operadores de conjuntos"
+==============================================================================================================================
 
-Haz el siguiente listado de ejercicios sencillos. Puedes complicarlos todo cuanto quieras:
-	Muestra los títulos y autores de los libros ordenados alfabéticamente por título.
-	==============================================================================================================================
+"Haz el siguiente listado de ejercicios sencillos. Puedes complicarlos todo cuanto quieras:
+Muestra los títulos y autores de los libros ordenados alfabéticamente por título."
+==============================================================================================================================
 
-	Muestra los nombres de los usuarios junto con la fecha de registro, ordenados primero por año de registro (descendente) y después por nombre (ascendente).
-	==============================================================================================================================
+"Muestra los nombres de los usuarios junto con la fecha de registro, ordenados primero por año de registro (descendente) y después por nombre (ascendente)."
+==============================================================================================================================
 
-	Muestra los libros que son del género "Novela" y tienen más de 3 ejemplares disponibles, o aquellos con menos de 2 ejemplares sin importar el género.
-	==============================================================================================================================
+"Muestra los libros que son del género "Novela" y tienen más de 3 ejemplares disponibles, o aquellos con menos de 2 ejemplares sin importar el género."
+==============================================================================================================================
 
-	Muestra los nombres y correos electrónicos de los usuarios concatenados en una sola columna, separados por un guion.
-	==============================================================================================================================
+"Muestra los nombres y correos electrónicos de los usuarios concatenados en una sola columna, separados por un guion."
+==============================================================================================================================
 
-	Muestra una lista combinada de los nombres de los usuarios y los autores de los libros (sin duplicados).
-	==============================================================================================================================
+"Muestra una lista combinada de los nombres de los usuarios y los autores de los libros (sin duplicados)."
+==============================================================================================================================
 
-	Muestra los títulos de los libros y el número de ejemplares disponibles, ordenados de mayor a menor número de ejemplares.
-	==============================================================================================================================
+"Muestra los títulos de los libros y el número de ejemplares disponibles, ordenados de mayor a menor número de ejemplares."
+==============================================================================================================================
 
-	Muestra los nombres y fechas de registro de los usuarios, ordenados primero por la fecha de registro más antigua y luego alfabéticamente por nombre.
-	==============================================================================================================================
+"Muestra los nombres y fechas de registro de los usuarios, ordenados primero por la fecha de registro más antigua y luego alfabéticamente por nombre."
+==============================================================================================================================
 
-	Muestra los préstamos realizados después del 1 de enero de 2023 y que todavía no se han devuelto.
-	==============================================================================================================================
+"Muestra los préstamos realizados después del 1 de enero de 2023 y que todavía no se han devuelto."
+==============================================================================================================================
 
-	Muestra los libros que sean del género "Historia" y tengan más de 1 ejemplar, o que no tengan género definido.  
-	==============================================================================================================================
+"Muestra los libros que sean del género "Historia" y tengan más de 1 ejemplar, o que no tengan género definido."
+==============================================================================================================================
 
-	Muestra el nombre de los usuarios junto con la longitud de cada nombre.
-	==============================================================================================================================
+"Muestra el nombre de los usuarios junto con la longitud de cada nombre."
+==============================================================================================================================
 
-	Muestra una lista combinada de los títulos de los libros y los nombres de los usuarios, sin duplicados.
-	==============================================================================================================================
+"Muestra una lista combinada de los títulos de los libros y los nombres de los usuarios, sin duplicados."
+==============================================================================================================================
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/																														  /
+/													Ejercicios de repaso												  /
+/														   tienda   													  /
+/																														  /
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+==============================================================================================================================
+"Muestra cuántas compras ha realizado cada cliente."
+==============================================================================================================================
+SELECT cliente, count(*) 
+FROM ventas
+GROUP BY cliente;
+
+"Enunciado: Calcula el total gastado (SUM()) por cada cliente y muestra solo aquellos que han gastado más de 5000.Ordenados de manera descendente"
+==============================================================================================================================
+SELECT cliente, sum(monto) AS "suma_total"
+FROM ventas
+GROUP BY cliente 
+HAVING sum(monto) > 5000
+ORDER BY sum(monto) DESC;
+
+"Obtén el precio promedio de los productos en cada categoría y muestra solo categorías con un precio promedio mayor a 100."
+==============================================================================================================================
+SELECT categoria, avg(precio) AS "promedio"
+FROM productos
+GROUP BY categoria
+HAVING avg(precio) > 100;
+
+"Cuenta cuántos empleados hay en cada departamento y muestra solo aquellos con más de 2 empleados"
+==============================================================================================================================
+SELECT departamento, count(*) AS "numero_empleados" 
+FROM empleados
+GROUP BY departamento
+HAVING count(*) > 2;
+
+"Encuentra el precio máximo de los productos dentro de cada categoría"
+==============================================================================================================================
+SELECT categoria, max(precio) AS "precio_máximo" 
+FROM productos
+GROUP BY categoria;
+
+"Encuentra el precio mínimo (MIN()) de los productos dentro de cada categoría."
+==============================================================================================================================
+SELECT categoria, min(precio) AS "precio_mínimo" 
+FROM productos
+GROUP BY categoria;
+
+"Calcula el monto promedio (AVG()) de las compras realizadas por cada cliente."
+==============================================================================================================================
+SELECT cliente, avg(monto) AS "media_compras"
+FROM ventas
+GROUP BY cliente;
+
+"Calcula el promedio de empleados por departamento y redondea el resultado."
+==============================================================================================================================
+SELECT round(avg(numero_empleados), 2) AS "promedio_empleados" 
+FROM (
+	SELECT count(*) AS numero_empleados
+	FROM empleados
+	GROUP BY departamento
+) subconsulta
+
+"Identifica el departamento con más empleados."
+==============================================================================================================================
+SELECT departamento AS "departamento_con_mas_empleados", count(*) AS "cantidad_empleados"
+FROM empleados
+GROUP BY departamento
+ORDER BY cantidad_empleados DESC
+LIMIT 1;
+
+"Encuentra el cliente que ha realizado la mayor cantidad de compras y muestra su nombre junto con el número de compras realizadas."
+==============================================================================================================================
+SELECT cliente, count(*) AS "compras_realizadas" 
+FROM ventas
+GROUP BY cliente
+ORDER BY compras_realizadas DESC
+LIMIT 1;
+
+"Muestra el producto más caro y el más barato de cada categoría."
+==============================================================================================================================
+SELECT categoria, max(precio) AS "mas_caro", min(precio) AS "mas_barato" 
+FROM productos
+GROUP BY categoria;
+
+"Lista los clientes cuyo gasto total es superior al promedio de todas las ventas realizadas"
+==============================================================================================================================
+SELECT cliente, sum(monto) AS "total_monto"
+FROM ventas
+GROUP BY cliente
+HAVING total_monto > (SELECT avg(monto) FROM ventas);
+
+"Calcula el porcentaje de empleados que tiene cada departamento sobre el total de empleados, y muestra el departamento con mayor porcentaje."
+==============================================================================================================================
+SELECT departamento, concat(round(count(*) * 100 / (SELECT COUNT(*) FROM empleados)), '%') AS "porcentaje"
+FROM empleados
+GROUP BY departamento
+ORDER BY porcentaje DESC
+LIMIT 1;
+
+"Encuentra la categoría con más productos cuyo precio es mayor al precio promedio de todos los productos."
+==============================================================================================================================
+SELECT categoria AS "categoria_mas_productos", count(*) AS "cantidad_productos"
+FROM productos
+WHERE precio > (SELECT avg(precio) FROM productos)
+GROUP BY categoria;
+
+"Encuentra el cliente que ha realizado la compra individual más alta y muestra su nombre junto con el monto de esa compra."
+==============================================================================================================================
+SELECT cliente, monto
+FROM ventas
+ORDER BY monto DESC
+LIMIT 1;
