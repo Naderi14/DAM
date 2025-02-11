@@ -1,0 +1,37 @@
+FLEX BOX
+.container {
+    display: flex;
+    justify-content: space-between; /* Alineación horizontal */
+    align-items: center; /* Alineación vertical */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten */
+}
+.item {
+    flex: 1; /* Hace que todos ocupen el mismo espacio */
+}
+
+GRID BOX
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 10px; /* Espaciado entre celdas */
+}
+.grid-item {
+    background: lightblue;
+    padding: 20px;
+    text-align: center;
+}
+
+VARIABLES CSS
+:root {
+    --primary-color: #3498db;
+}
+
+RESPONSIVE
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambia de fila a columna */
+    }
+    .grid-container {
+        grid-template-columns: 1fr; /* Una sola columna */
+    }
+}
