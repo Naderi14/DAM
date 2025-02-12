@@ -30,7 +30,7 @@ public class Main {
                 System.out.println();
             }
 
-            caracteres = new char[500];
+            caracteres = new char[20];
             fr.read(caracteres);
             for (char ch : caracteres)
             {
@@ -40,14 +40,15 @@ public class Main {
             System.out.println("\n\nValor ASCII de la letra a la que esta apuntando el reader ahora: " + fr.read() + " = " + (char)fr.read());
 
             // Cogeremos toda la longitud del archivo para luego imprimirla mediante la instancia de File que nos da las propiedades
-            caracteres = new char[(int) file.length()];
+            caracteres = new char[(int) file.length() - 1];
+            fr = new FileReader("resources/Documento1.txt");
             // Leemos los caracteres que quepan en este array, por eso le pasamos el array como parametro de la funcion read
             fr.read(caracteres);
             // Función para cerrar la lectura del archivo actual del FileReader
             fr.close();
-            for (char ch : caracteres)
+            for (char caracter : caracteres)
             {
-                System.out.print(ch);
+                System.out.print(caracter);
             }
 
             // Otra forma de leer el archivo
@@ -70,12 +71,12 @@ public class Main {
             fw.write("Esto será ya todo el nuevo texto");
             fw.close();
             fr = new FileReader("resources/Documento1.txt");
-            caracteres = new char[(int) file.length()];
+            caracteres = new char[(int) file.length() - 1];
             fr.read(caracteres);
-
+            System.out.println();
             for (char caracter : caracteres)
             {
-                System.out.print(ch);
+                System.out.print(caracter);
             }
         }
         catch (IOException e)
