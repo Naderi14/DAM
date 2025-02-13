@@ -1123,3 +1123,65 @@ SELECT cliente, monto
 FROM ventas
 ORDER BY monto DESC
 LIMIT 1;
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/																														  /
+/													Ejercicios 501 - 512												  /
+/																														  /
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+==============================================================================================================================
+EJERCICIO 501 
+"Escriba una consulta para mostrar el apellido y la fecha de contratación de cualquier empleado del mismo puestos 
+de trabajo que Wood (apellido). Excluya a Wood."
+
+==============================================================================================================================
+EJERCICIO 502 
+"Escriba una consulta que muestre el sueldo, el apellidos y el identificador de todos los empleados que 
+ganen más del salario medio. Ordene los resultados por salario en orden ascendente."
+
+==============================================================================================================================
+EJERCICIO 503 
+"Escriba una consulta que muestre el identificador y el nombre de todos los empleados que trabajen en un 
+puestos de trabajo con cualquier empleado cuyo apellido contenga la letra p."
+
+==============================================================================================================================
+EJERCICIO 504 
+"Muestre el apellido, el puesto de trabajo y el jefe_id de todos los empleados que hayan 
+realizado un pedido después del 01/12/16."
+
+==============================================================================================================================
+EJERCICIO 505 
+"Muestre el apellido y el salario de todos los empleados cuyo jefe se llame 'Jaxon'."
+
+==============================================================================================================================
+EJERCICIO 506 
+"Muestre el número de pedido y el estado de los pedidos cuyo cliente se llame 'Supervalu'."
+
+==============================================================================================================================
+EJERCICIO 507 
+"Modifique la consulta anterior para que muestre el número de pedido y el estado de los pedidos 
+cuyo cliente se llame 'Supervalu' y además solo aparezcan los pedidos que tengan más de 5 líneas."
+
+==============================================================================================================================
+EJERCICIO 508 
+"Escriba una consulta para encontrar a los empleados que reciben el segundo salario más alto.
+Devuelve el identificador, el apellido y el sueldo de esos empleados."
+
+==============================================================================================================================
+EJERCICIO 509 
+"Selecciona el identificador, el CP y la ciudad de las ubicaciones cuya región se llame 'Asia'."
+
+==============================================================================================================================
+EJERCICIO 510 
+"Selecciona el identificador y el nombre de los productos de aquellos productos que están 
+ubicados en el almacén que se llama 'Southlake, Texas'."
+
+==============================================================================================================================
+EJERCICIO 511 
+"Selecciona el identificador y el apellido de los empleados cuyo puesto de trabajo sea el 
+mismo que el empleado que haya facturado más en un mismo pedido (la suma del total en euros del pedido)."
+
+==============================================================================================================================
+EJERCICIO 512 
+"Modifica el ejercicio anterior para que sea el segundo empleado que más ha facturado en un mismo pedido."
