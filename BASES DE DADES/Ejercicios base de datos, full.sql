@@ -1019,53 +1019,60 @@ Muestra los títulos y autores de los libros ordenados alfabéticamente por tít
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ==============================================================================================================================
 "Muestra cuántas compras ha realizado cada cliente."
-==============================================================================================================================
+
 SELECT cliente, count(*) 
 FROM ventas
 GROUP BY cliente;
 
-"Enunciado: Calcula el total gastado (SUM()) por cada cliente y muestra solo aquellos que han gastado más de 5000.Ordenados de manera descendente"
 ==============================================================================================================================
+"Enunciado: Calcula el total gastado (SUM()) por cada cliente y muestra solo aquellos que han gastado más de 5000.Ordenados de manera descendente"
+
 SELECT cliente, sum(monto) AS "suma_total"
 FROM ventas
 GROUP BY cliente 
 HAVING sum(monto) > 5000
 ORDER BY sum(monto) DESC;
 
-"Obtén el precio promedio de los productos en cada categoría y muestra solo categorías con un precio promedio mayor a 100."
 ==============================================================================================================================
+"Obtén el precio promedio de los productos en cada categoría y muestra solo categorías con un precio promedio mayor a 100."
+
 SELECT categoria, avg(precio) AS "promedio"
 FROM productos
 GROUP BY categoria
 HAVING avg(precio) > 100;
 
-"Cuenta cuántos empleados hay en cada departamento y muestra solo aquellos con más de 2 empleados"
 ==============================================================================================================================
+"Cuenta cuántos empleados hay en cada departamento y muestra solo aquellos con más de 2 empleados"
+
 SELECT departamento, count(*) AS "numero_empleados" 
 FROM empleados
 GROUP BY departamento
 HAVING count(*) > 2;
 
-"Encuentra el precio máximo de los productos dentro de cada categoría"
 ==============================================================================================================================
+"Encuentra el precio máximo de los productos dentro de cada categoría"
+
 SELECT categoria, max(precio) AS "precio_máximo" 
 FROM productos
 GROUP BY categoria;
 
-"Encuentra el precio mínimo (MIN()) de los productos dentro de cada categoría."
 ==============================================================================================================================
+"Encuentra el precio mínimo (MIN()) de los productos dentro de cada categoría."
+
 SELECT categoria, min(precio) AS "precio_mínimo" 
 FROM productos
 GROUP BY categoria;
 
-"Calcula el monto promedio (AVG()) de las compras realizadas por cada cliente."
 ==============================================================================================================================
+"Calcula el monto promedio (AVG()) de las compras realizadas por cada cliente."
+
 SELECT cliente, avg(monto) AS "media_compras"
 FROM ventas
 GROUP BY cliente;
 
-"Calcula el promedio de empleados por departamento y redondea el resultado."
 ==============================================================================================================================
+"Calcula el promedio de empleados por departamento y redondea el resultado."
+
 SELECT round(avg(numero_empleados), 2) AS "promedio_empleados" 
 FROM (
 	SELECT count(*) AS numero_empleados
@@ -1073,52 +1080,59 @@ FROM (
 	GROUP BY departamento
 ) subconsulta
 
-"Identifica el departamento con más empleados."
 ==============================================================================================================================
+"Identifica el departamento con más empleados."
+
 SELECT departamento AS "departamento_con_mas_empleados", count(*) AS "cantidad_empleados"
 FROM empleados
 GROUP BY departamento
 ORDER BY cantidad_empleados DESC
 LIMIT 1;
 
-"Encuentra el cliente que ha realizado la mayor cantidad de compras y muestra su nombre junto con el número de compras realizadas."
 ==============================================================================================================================
+"Encuentra el cliente que ha realizado la mayor cantidad de compras y muestra su nombre junto con el número de compras realizadas."
+
 SELECT cliente, count(*) AS "compras_realizadas" 
 FROM ventas
 GROUP BY cliente
 ORDER BY compras_realizadas DESC
 LIMIT 1;
 
-"Muestra el producto más caro y el más barato de cada categoría."
 ==============================================================================================================================
+"Muestra el producto más caro y el más barato de cada categoría."
+
 SELECT categoria, max(precio) AS "mas_caro", min(precio) AS "mas_barato" 
 FROM productos
 GROUP BY categoria;
 
-"Lista los clientes cuyo gasto total es superior al promedio de todas las ventas realizadas"
 ==============================================================================================================================
+"Lista los clientes cuyo gasto total es superior al promedio de todas las ventas realizadas"
+
 SELECT cliente, sum(monto) AS "total_monto"
 FROM ventas
 GROUP BY cliente
 HAVING total_monto > (SELECT avg(monto) FROM ventas);
 
-"Calcula el porcentaje de empleados que tiene cada departamento sobre el total de empleados, y muestra el departamento con mayor porcentaje."
 ==============================================================================================================================
+"Calcula el porcentaje de empleados que tiene cada departamento sobre el total de empleados, y muestra el departamento con mayor porcentaje."
+
 SELECT departamento, concat(round(count(*) * 100 / (SELECT COUNT(*) FROM empleados)), '%') AS "porcentaje"
 FROM empleados
 GROUP BY departamento
 ORDER BY porcentaje DESC
 LIMIT 1;
 
-"Encuentra la categoría con más productos cuyo precio es mayor al precio promedio de todos los productos."
 ==============================================================================================================================
+"Encuentra la categoría con más productos cuyo precio es mayor al precio promedio de todos los productos."
+
 SELECT categoria AS "categoria_mas_productos", count(*) AS "cantidad_productos"
 FROM productos
 WHERE precio > (SELECT avg(precio) FROM productos)
 GROUP BY categoria;
 
-"Encuentra el cliente que ha realizado la compra individual más alta y muestra su nombre junto con el monto de esa compra."
 ==============================================================================================================================
+"Encuentra el cliente que ha realizado la compra individual más alta y muestra su nombre junto con el monto de esa compra."
+
 SELECT cliente, monto
 FROM ventas
 ORDER BY monto DESC
@@ -1135,20 +1149,37 @@ EJERCICIO 501
 "Escriba una consulta para mostrar el apellido y la fecha de contratación de cualquier empleado del mismo puestos 
 de trabajo que Wood (apellido). Excluya a Wood."
 
+SELECT APELLIDO, FECHA_CONTRATO
+FROM empleados 
+WHERE PUESTO_TRABAJO = (SELECT PUESTO_TRABAJO FROM empleados e WHERE APELLIDO LIKE 'Wood') AND APELLIDO NOT LIKE 'Wood';
+
 ==============================================================================================================================
 EJERCICIO 502 
 "Escriba una consulta que muestre el sueldo, el apellidos y el identificador de todos los empleados que 
 ganen más del salario medio. Ordene los resultados por salario en orden ascendente."
+
+SELECT SUELDO, APELLIDO, EMPLEADO_ID
+FROM empleados
+WHERE SUELDO > (SELECT avg(SUELDO) FROM empleados)
+ORDER BY SUELDO ASC;
 
 ==============================================================================================================================
 EJERCICIO 503 
 "Escriba una consulta que muestre el identificador y el nombre de todos los empleados que trabajen en un 
 puestos de trabajo con cualquier empleado cuyo apellido contenga la letra p."
 
+SELECT EMPLEADO_ID, NOMBRE
+FROM empleados
+WHERE PUESTO_TRABAJO IN (SELECT PUESTO_TRABAJO FROM empleados WHERE APELLIDO LIKE 'P%');
+
 ==============================================================================================================================
 EJERCICIO 504 
 "Muestre el apellido, el puesto de trabajo y el jefe_id de todos los empleados que hayan 
 realizado un pedido después del 01/12/16."
+
+SELECT APELLIDO, PUESTO_TRABAJO, JEFE_ID
+FROM empleados
+WHERE EMPLEADO_ID IN (SELECT VENDEDOR_ID FROM pedidos WHERE FECHA_PEDIDO > '01/12/16');
 
 ==============================================================================================================================
 EJERCICIO 505 
