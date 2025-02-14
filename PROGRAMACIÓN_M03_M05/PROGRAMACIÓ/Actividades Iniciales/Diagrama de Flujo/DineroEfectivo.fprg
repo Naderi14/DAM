@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Fran"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-08 11:19:24 "/>
+        <attribute name="created" value="RnJhbjtERVNLVE9QLTg5SlVBVVE7MjAyNC0xMC0wODsiMTA6NDY6MzkgIjsyNjcy"/>
+        <attribute name="edited" value="RnJhbjtERVNLVE9QLTg5SlVBVVE7MjAyNC0xMC0wODsiMTE6MTk6MjQgIjsxOzI3NzU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="cantDinero" type="Real" array="False" size=""/>
+            <declare name="cantEfectivoDivisa" type="Integer" array="False" size=""/>
+            <input variable="cantDinero"/>
+            <assign variable="cantEfectivoDivisa" expression="cantDinero / 5"/>
+            <output expression="&quot;Billetes de 5&#8364;: &quot; &amp; cantEfectivoDivisa" newline="True"/>
+            <assign variable="cantDinero" expression="cantDinero % 5"/>
+            <assign variable="cantEfectivoDivisa" expression="cantDinero / 2"/>
+            <output expression="&quot;Monedas de 2&#8364;: &quot; &amp; cantEfectivoDivisa" newline="True"/>
+            <assign variable="cantDinero" expression="cantDinero % 2"/>
+            <assign variable="cantEfectivoDivisa" expression="cantDinero / 1"/>
+            <output expression="&quot;Monedas de 1&#8364;: &quot; &amp; cantEfectivoDivisa" newline="True"/>
+            <assign variable="cantDinero" expression="cantDinero % 1"/>
+            <assign variable="cantEfectivoDivisa" expression="cantDinero / 0.5"/>
+            <output expression="&quot;Monedas de 0.5&#8364;: &quot; &amp; cantEfectivoDivisa" newline="True"/>
+            <assign variable="cantDinero" expression="cantDinero % 0.5"/>
+            <assign variable="cantEfectivoDivisa" expression="cantDinero / 0.2"/>
+            <output expression="&quot;Monedas de 0.2&#8364;: &quot; &amp; cantEfectivoDivisa" newline="True"/>
+            <assign variable="cantDinero" expression="cantDinero % 0.2"/>
+            <assign variable="cantEfectivoDivisa" expression="cantDinero / 0.1"/>
+            <output expression="&quot;Monedas de 0.1&#8364;: &quot; &amp; cantEfectivoDivisa" newline="True"/>
+            <assign variable="cantDinero" expression="cantDinero % 0.1"/>
+            <assign variable="cantEfectivoDivisa" expression="cantDinero / 0.05"/>
+            <output expression="&quot;Monedas de 0.05&#8364;: &quot; &amp; cantEfectivoDivisa" newline="True"/>
+            <assign variable="cantDinero" expression="cantDinero % 0.05"/>
+            <assign variable="cantEfectivoDivisa" expression="cantDinero / 0.02"/>
+            <output expression="&quot;Monedas de 0.02&#8364;: &quot; &amp; cantEfectivoDivisa" newline="True"/>
+            <assign variable="cantDinero" expression="cantDinero % 0.02"/>
+            <assign variable="cantEfectivoDivisa" expression="cantDinero / 0.01"/>
+            <output expression="&quot;Monedas de 0.01&#8364;: &quot; &amp; cantEfectivoDivisa" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

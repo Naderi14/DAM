@@ -1,0 +1,4 @@
+Para poder ejecutar todos los ejercicios que quieras bien puedes ir a MainCadenas.java
+y ver la lista de ejercicios o bien ir a cada ejercicio y ejecutarlo de forma independiente
+
+De todas maneras la clase principal es "MainCadenas.java"

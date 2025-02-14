@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inherit-compiler-output="true" inheritJdk="true">
+	<output-test url="file://$MODULE_DIR$/out/test/m03_25_exception_ac10_equation_2n_grado"/>
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+</component>

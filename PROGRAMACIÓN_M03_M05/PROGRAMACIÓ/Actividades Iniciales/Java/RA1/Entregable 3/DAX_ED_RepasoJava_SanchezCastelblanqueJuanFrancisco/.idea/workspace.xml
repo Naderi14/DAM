@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8c3e4a78-a618-45c1-9e96-4c8814335cca" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ejerciciosJava2/CalcularAreaPerimetro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ejerciciosJava2/Imprenta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ejerciciosJava2/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ejerciciosJava2/MenuFormasGeometricas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ejerciciosJava2/PreciosDescuentos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../temporal/ejerciciosRepasoProgramacion/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../temporal/ejerciciosRepasoProgramacion/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../temporal/ejerciciosRepasoProgramacion/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../temporal/programacionModular/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../temporal/programacionModular/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../temporal/programacionModular/.idea/programacionModular.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../temporal/programacionModular/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../JAVA_DAM_INTELLIJ/src/programacion/RA1/ejerciciosJava2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../JAVA_DAM_INTELLIJ/src/programacion/RA1/ejerciciosJava2/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2npzQor8d3ZHw8qeKfBl4I9ga3X" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application..executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/DESENVOLUPAMENT APLICACIONS MULTIPLATAFORMA/PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/Actividades/Java/Entregable 3/ejerciciosRepasoProgramacion"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="programacion.RA1.ejerciciosJava2.CalcularAreaPerimetro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="programacion.RA1.ejerciciosJava2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="ejerciciosRepasoProgramacion" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="ejerciciosRepasoProgramacion" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8c3e4a78-a618-45c1-9e96-4c8814335cca" name="Changes" comment="" />
+      <created>1729684791668</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729684791668</updated>
+    </task>
+    <servers />
+  </component>
+</project>
