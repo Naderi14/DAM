@@ -1253,6 +1253,76 @@ GROUP BY departamento
 HAVING avg(salario) > (SELECT avg(e2.salario) FROM empleados e2);
 
 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/																														  /
+/													Examen agregación   												  /
+/																														  /
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+==============================================================================================================================
+EJERCICIO 1
+"Queremos obtener una lista combinada de canciones y artistas. La consulta debe mostrar todos los nombres de 
+las canciones y todos los nombres de los artistas en un solo conjunto de resultados.
+ Resuelve el ejercicio usando operadores de conjuntos."
+
+SELECT c.nombre_cancion AS "Lista nombres canciones y artistas"
+FROM canciones c
+UNION
+SELECT a.nombre_artista
+FROM artistas a;
+
+==============================================================================================================================
+EJERCICIO 2
+"Queremos obtener una lista combinada de álbumes y canciones. La consulta debe mostrar 
+todos los nombres de los álbumes y todas las canciones en un solo conjunto de resultados, 
+pero sin eliminar duplicados. Resuelve el ejercicio usando operadores de conjuntos."
+
+SELECT a.nombre_album AS "Lista canciones y albumes"
+FROM albumes a
+UNION ALL
+SELECT c.nombre_cancion 
+FROM canciones c;
+
+==============================================================================================================================
+EJERCICIO 3
+"Queremos saber cuántas canciones tiene cada álbum. Resuelve el ejercicio usando funciones de agregación."
+
+SELECT id_album, count(*) AS "Canciones"
+FROM canciones c
+GROUP BY id_album;
+
+==============================================================================================================================
+EJERCICIO 4
+"Muestra las id de los artistas que tienen más de un álbum. Resuelve el ejercicio usando funciones de agregación."
+
+-- LA BUENA
+SELECT id_artista
+FROM albumes 
+GROUP BY id_artista 
+HAVING count(id_album) > 1;
+
+-- LA QUE ME SALIO DEL ALMA
+SELECT a.id_artista
+FROM artistas a, albumes a2
+WHERE a.id_artista = a2.id_artista
+GROUP BY a.nombre_artista
+HAVING count(a2.id_album) > 1;
+
+==============================================================================================================================
+EJERCICIO 5
+"Queremos clasificar las canciones en "Primer Álbum" o "Otro Álbum", dependiendo del id_album de la canción.
+ Si el id_album es 1 es el "Primer Álbum" sino "Otro Álbum". Devuelve el nombre de la canción y su clasificación. 
+ Resuelve el ejercicio usando funciones de agregación."
+
+SELECT id_cancion,
+	CASE 
+		WHEN id_album = 1 THEN "Primer Álbum"
+		ELSE "Otro Álbum"
+	END AS "Número Álbum"
+FROM canciones c;
+
+
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /																														  /
 /													Ejercicios 501 - 512												  /
