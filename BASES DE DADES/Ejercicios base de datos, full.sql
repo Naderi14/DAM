@@ -1185,9 +1185,17 @@ WHERE EMPLEADO_ID IN (SELECT VENDEDOR_ID FROM pedidos WHERE FECHA_PEDIDO > '01/1
 EJERCICIO 505 
 "Muestre el apellido y el salario de todos los empleados cuyo jefe se llame 'Jaxon'."
 
+SELECT APELLIDO, SUELDO
+FROM empleados
+WHERE JEFE_ID = (SELECT EMPLEADO_ID FROM empleados WHERE NOMBRE = 'Jaxon');
+
 ==============================================================================================================================
 EJERCICIO 506 
 "Muestre el número de pedido y el estado de los pedidos cuyo cliente se llame 'Supervalu'."
+
+SELECT PEDIDO_ID, ESTADO
+FROM pedidos
+WHERE CLIENTE_ID = (SELECT CLIENTE_ID FROM clientes WHERE NOMBRE = 'Supervalu');
 
 ==============================================================================================================================
 EJERCICIO 507 

@@ -6,6 +6,8 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
+    private static final Scanner SC = new Scanner(System.in);
+
     private static BufferedReader buffer;
     private static File file;
     private static FileWriter fw;
@@ -55,7 +57,6 @@ public class Main {
 
     private static void showMenu() throws IOException
     {
-        Scanner sc = new Scanner(System.in);
         while (true)
         {
             try
@@ -67,7 +68,7 @@ public class Main {
             catch (InputMismatchException e)
             {
                 System.out.println("<- Forbidden characters, must be a number ->\n" + e);
-                sc.nextLine();
+                SC.nextLine();
             }
         }
 
@@ -76,8 +77,7 @@ public class Main {
 
     private static boolean pedirOpcion() throws InputMismatchException, IOException
     {
-        Scanner sc = new Scanner(System.in);
-        int opcion = sc.nextInt();
+        int opcion = SC.nextInt();
 
         switch (opcion)
         {
@@ -87,12 +87,14 @@ public class Main {
                 findTotals();
                 break;
             case 2:
+                SC.nextLine();
                 searchArtist();
                 break;
             case 3:
                 headLiners();
                 break;
             case 4:
+                priceTickets();
                 break;
             default:
                 System.out.println("<- Incorrect Option ->");
@@ -131,9 +133,8 @@ public class Main {
 
     private static void searchArtist() throws IOException
     {
-        Scanner sc = new Scanner(System.in);
         System.out.println("<- Insert name of artist ->");
-        String artistName = sc.nextLine().toLowerCase();
+        String artistName = SC.nextLine().toLowerCase();
         String headerFields = "EDITION;YEAR;HEADLINERS\n";
         String dataFields = "";
 
@@ -170,9 +171,8 @@ public class Main {
 
     private static void headLiners() throws InputMismatchException, IOException
     {
-        Scanner sc = new Scanner(System.in);
         System.out.println("<- Insert year ->");
-        int year = sc.nextInt();
+        int year = SC.nextInt();
         boolean founded = false;
 
         String fieldArtists = "";
@@ -198,6 +198,39 @@ public class Main {
             String pathName = "src/headlines" + year + ".txt";
             fw = new FileWriter(pathName);
             fw.write("HEADLINERS\n" + fieldArtists);
+            fw.flush();
+            fw.close();
+            System.out.println("<- " + pathName + " has been created correctly ->");
+        }
+        else
+        {
+            System.out.println("<- Year not found ->");
+        }
+    }
+
+    private static void priceTickets() throws InputMismatchException, IOException
+    {
+        System.out.println("<- Insert year ->");
+        int year = SC.nextInt();
+
+        boolean founded = false;
+        String headerFields = "EDITION;YEAR;PRICEDAY;PRICEFULLFEST;PRICEVIP\n";
+        String priceFields = "";
+
+        for (PS ps : listFestivals)
+        {
+            if (ps.getYear() == year)
+            {
+                founded = true;
+                priceFields += ps.getEdition() + ";" + ps.getYear() + ";" + ps.getPriceDay() + ";" + ps.getPriceFullFest() + ";" + ps.getPriceVip();
+            }
+        }
+
+        if (founded)
+        {
+            String pathName = "src/tickets" + year + ".txt";
+            fw = new FileWriter(pathName);
+            fw.write(headerFields + priceFields);
             fw.flush();
             fw.close();
             System.out.println("<- " + pathName + " has been created correctly ->");
