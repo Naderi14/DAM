@@ -1141,6 +1141,83 @@ LIMIT 1;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /																														  /
+/													Ejercicios de repaso												  /
+/														 PRE-Examen   													  /
+/																														  /
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+==============================================================================================================================
+EJERCICIO 1
+"Escribe una consulta SQL que obtenga el nombre y salario del empleado con el salario más alto.
+ Soluciona el ejercicio haciendo uso de subconsultas."
+
+SELECT nombre, salario 
+FROM empleados
+WHERE salario = (SELECT max(salario) FROM empleados);
+
+==============================================================================================================================
+EJERCICIO 2
+"Escribe una consulta SQL que devuelva el nombre y el presupuesto de los proyectos cuyo presupuesto sea superior
+ al presupuesto medio de todos los proyectos. Soluciona el ejercicio haciendo uso de subconsultas."
+
+SELECT nombre, presupuesto
+FROM proyectos
+WHERE presupuesto > (SELECT avg(presupuesto) FROM proyectos);
+
+==============================================================================================================================
+EJERCICIO 3
+"Empleados que no son responsables de ningún proyecto. Soluciona el ejercicio haciendo uso de subconsultas."
+
+SELECT id, nombre
+FROM empleados
+WHERE id NOT IN (SELECT responsable_id FROM proyectos);
+
+==============================================================================================================================
+EJERCICIO 4
+"Escribe una consulta SQL que obtenga los proyectos cuyo responsable tenga un salario mayor a 3000€. 
+Soluciona el ejercicio haciendo uso de subconsultas."
+
+SELECT nombre
+FROM proyectos
+WHERE responsable_id IN (SELECT id FROM empleados WHERE salario > 3000);
+
+==============================================================================================================================
+EJERCICIO 5
+"Escribe una consulta SQL que devuelva los proyectos gestionados por empleados del departamento de IT. 
+Soluciona el ejercicio haciendo uso de subconsultas."
+
+SELECT nombre
+FROM proyectos
+WHERE responsable_id IN (SELECT id FROM empleados WHERE departamento = 'IT');
+
+==============================================================================================================================
+EJERCICIO 6
+"Escribe una consulta SQL que calcule el gasto total de los clientes y muestra diferentes textos según el gasto total. 
+Mostrará "Alto gasto" si han gastado más de 5000, "Gasto medio" si han gastado entre 2000 y 5000 o "Bajo gasto" 
+si han gastado menos de 2000. Soluciona el ejercicio haciendo uso de una función de fila."
+
+-- CONSULTA TEMPORAL
+SELECT 
+	CASE
+		WHEN presupuesto > 5000 THEN 'Alto gasto'
+		WHEN presupuesto BETWEEN 2000 AND 5000 THEN 'Gasto medio'
+		WHEN presupuesto < 2000 THEN 'Bajo gasto'
+	END AS 'Gasto presupuesto'
+FROM proyectos;
+
+==============================================================================================================================
+EJERCICIO 7
+"Escribe una consulta SQL para obtener una lista de clientes que han comprado productos de la categoría
+ 'Electrónica' o 'Muebles'. Soluciona el ejercicio haciendo uso de operadores de conjuntos."
+
+==============================================================================================================================
+EJERCICIO 8
+"Escribe una consulta SQL para obtener el total de compras realizadas por cada cliente. 
+Mostramos el nombre del cliente y el gasto total de sus compras, ordenados de mayor a menor."
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/																														  /
 /													Ejercicios 501 - 512												  /
 /																														  /
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1201,6 +1278,20 @@ WHERE CLIENTE_ID = (SELECT CLIENTE_ID FROM clientes WHERE NOMBRE = 'Supervalu');
 EJERCICIO 507 
 "Modifique la consulta anterior para que muestre el número de pedido y el estado de los pedidos 
 cuyo cliente se llame 'Supervalu' y además solo aparezcan los pedidos que tengan más de 5 líneas."
+
+-- PARA SABER LOS PEDIDOS Y LA CANTIDAD DE ARTICULOS QUE HIZO LA PERSONA
+SELECT count(pe.ARTICULO_ID), (pe.PEDIDO_ID) 
+FROM pedido_articulos pe
+WHERE pe.PEDIDO_ID IN (
+	SELECT p.PEDIDO_ID FROM pedidos p WHERE p.CLIENTE_ID = (
+		SELECT c.CLIENTE_ID FROM clientes c WHERE c.NOMBRE = 'Supervalu'))
+GROUP BY PEDIDO_ID;
+
+-- SOLUCION DE LA CONSULTA
+SELECT PEDIDO_ID, ESTADO
+FROM pedidos
+WHERE CLIENTE_ID = (SELECT CLIENTE_ID FROM clientes WHERE NOMBRE = 'Supervalu') 
+	AND PEDIDO_ID IN (SELECT pa.PEDIDO_ID FROM pedido_articulos pa GROUP BY pa.PEDIDO_ID HAVING count(pa.ARTICULO_ID) > 5);
 
 ==============================================================================================================================
 EJERCICIO 508 
