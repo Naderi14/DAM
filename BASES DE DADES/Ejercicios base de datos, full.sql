@@ -1191,29 +1191,66 @@ WHERE responsable_id IN (SELECT id FROM empleados WHERE departamento = 'IT');
 
 ==============================================================================================================================
 EJERCICIO 6
-"Escribe una consulta SQL que calcule el gasto total de los clientes y muestra diferentes textos según el gasto total. 
-Mostrará "Alto gasto" si han gastado más de 5000, "Gasto medio" si han gastado entre 2000 y 5000 o "Bajo gasto" 
-si han gastado menos de 2000. Soluciona el ejercicio haciendo uso de una función de fila."
+"Escribe una consulta SQL que muestre el nombre de cada empleado, su salario y una
+clasificación según su nivel salarial: "Salario Alto" si el salario es mayor o igual a 3000€,
+"Salario Medio" si el salario está entre 2500 y 2999€ o "Salario Bajo" si el salario es
+menor a 2500€.Soluciona el ejercicio haciendo uso de funciones de fila."
 
--- CONSULTA TEMPORAL
-SELECT 
+SELECT nombre, salario,
 	CASE
-		WHEN presupuesto > 5000 THEN 'Alto gasto'
-		WHEN presupuesto BETWEEN 2000 AND 5000 THEN 'Gasto medio'
-		WHEN presupuesto < 2000 THEN 'Bajo gasto'
-	END AS 'Gasto presupuesto'
-FROM proyectos;
+		WHEN salario >= 3000 THEN 'Salario alto'
+		WHEN salario BETWEEN 2500 AND 2999 THEN 'Salario medio'
+		WHEN salario < 2500 THEN 'Salario bajo'
+	END AS 'clasificacion'
+FROM empleados;
 
 ==============================================================================================================================
 EJERCICIO 7
-"Escribe una consulta SQL para obtener una lista de clientes que han comprado productos de la categoría
- 'Electrónica' o 'Muebles'. Soluciona el ejercicio haciendo uso de operadores de conjuntos."
+"Escribe una consulta SQL que devuelva una lista de:Los nombres de los empleados
+del departamento "IT" y los nombres de los proyectos cuyo presupuesto sea superior a
+60,000. Utiliza operadores de conjuntos."
+
+SELECT e.nombre
+FROM empleados e
+WHERE e.departamento = 'IT'
+UNION
+SELECT p.nombre 
+FROM proyectos p
+WHERE p.presupuesto > 60000;
 
 ==============================================================================================================================
 EJERCICIO 8
-"Escribe una consulta SQL para obtener el total de compras realizadas por cada cliente. 
-Mostramos el nombre del cliente y el gasto total de sus compras, ordenados de mayor a menor."
+"Escribe una consulta SQL que calcule el salario medio de los empleados para cada
+departamento. La consulta debe devolver el nombre del departamento y el salario medio
+ordenados alfabéticamente. Soluciona el ejercicio haciendo uso de funciones de
+agregación."
 
+SELECT departamento, avg(salario) AS "Salario medio" 
+FROM empleados e 
+GROUP BY departamento
+ORDER BY departamento;
+
+==============================================================================================================================
+EJERCICIO 9
+"Contar el número de proyectos con un presupuesto superior a 60,000€. Soluciona el
+ejercicio haciendo uso de funciones de agregación."
+
+SELECT count(*) AS "Proyectos con presupuesto mayor de 60,000€" 
+FROM proyectos p
+WHERE presupuesto > 60000;
+
+==============================================================================================================================
+EJERCICIO 10
+"Escribe una consulta SQL que devuelva el nombre de los departamentos y el salario
+promedio de los empleados de cada departamento.La consulta debe mostrar solo los
+departamentos cuyo salario promedio de empleados sea superior al salario promedio de
+todos los empleados. Soluciona el ejercicio haciendo uso de funciones de agregación y
+subconsultas."
+
+SELECT departamento, avg(salario) AS "Promedio salario"
+FROM empleados e
+GROUP BY departamento
+HAVING avg(salario) > (SELECT avg(e2.salario) FROM empleados e2);
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1298,9 +1335,26 @@ EJERCICIO 508
 "Escriba una consulta para encontrar a los empleados que reciben el segundo salario más alto.
 Devuelve el identificador, el apellido y el sueldo de esos empleados."
 
+SELECT EMPLEADO_ID, APELLIDO, SUELDO
+FROM empleados e
+WHERE SUELDO = (
+		SELECT DISTINCT SUELDO 
+		FROM empleados 
+		ORDER BY SUELDO DESC 
+		LIMIT 1 OFFSET 1
+	);
+
 ==============================================================================================================================
 EJERCICIO 509 
 "Selecciona el identificador, el CP y la ciudad de las ubicaciones cuya región se llame 'Asia'."
+
+SELECT UBICACION_ID , CP , CIUDAD
+FROM ubicaciones u
+WHERE PAIS_ID IN (
+		SELECT PAIS_ID FROM paises p WHERE REGION_ID = (
+				SELECT REGION_ID FROM regiones r WHERE NOMBRE_REGION = 'Asia'
+			)
+	);
 
 ==============================================================================================================================
 EJERCICIO 510 
