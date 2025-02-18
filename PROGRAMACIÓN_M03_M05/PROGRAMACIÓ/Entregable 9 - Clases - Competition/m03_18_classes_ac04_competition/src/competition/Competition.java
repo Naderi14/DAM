@@ -1,5 +1,8 @@
 package competition;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 public class Competition {
     private Car[] cars;
     private Race[] races;
@@ -35,7 +38,7 @@ public class Competition {
         return header + bodyRaces + footer;
     }
 
-    public String orderClassification()
+    /*public String orderClassification()
     {
         String header = "Order Classification\nFinal Classification:\n";
 
@@ -60,6 +63,20 @@ public class Competition {
         for (int i = 0; i < cars.length; i++)
         {
             body += cars[indexSorteds[i]].carData() + "\n";
+        }
+
+        return header + body;
+    }*/
+
+    public String orderClassification() {
+        String header = "Order Classification\nFinal Classification:\n";
+
+        // Ordenar el array usando Arrays.sort y un Comparator
+        Arrays.sort(cars, Comparator.comparingInt(Car::getPoints).reversed());
+
+        String body = "";
+        for (Car car : cars) {
+            body += car.carData() + "\n";
         }
 
         return header + body;
