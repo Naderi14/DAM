@@ -1,6 +1,8 @@
 package competition;
 
 public class Driver {
+    private static final String ID_BASE = "DRI000";
+
     private String name;
     private String id;
     private static int idNext = 0;
@@ -8,7 +10,12 @@ public class Driver {
     public Driver(String name)
     {
         this.name = name;
+        this.id = getIdNext() + getInitialsId();
+        idNext++;
+    }
 
+    private String getInitialsId()
+    {
         String iniciales = "";
         for (int i = 0; i < this.name.length(); i++)
         {
@@ -16,13 +23,12 @@ public class Driver {
                 iniciales += name.charAt(i);
         }
 
-        this.id = "DRI000" + idNext + iniciales.toUpperCase();
-        idNext++;
+        return iniciales.toUpperCase();
     }
 
     public static String getIdNext()
     {
-        return "DRI000" + idNext;
+        return ID_BASE + idNext;
     }
 
     public String getName()
@@ -33,6 +39,7 @@ public class Driver {
     public void setName(String name)
     {
         this.name = name;
+        this.id = id.substring(0,id.length() - 3) + getInitialsId();
     }
 
     public String getId()
@@ -43,6 +50,6 @@ public class Driver {
     @Override
     public String toString()
     {
-        return String.format("%s\t\t%s\n012345678901234567890123456789", this.name, this.id);
+        return String.format("Driver: %s\t|\t%s", this.name, this.id);
     }
 }

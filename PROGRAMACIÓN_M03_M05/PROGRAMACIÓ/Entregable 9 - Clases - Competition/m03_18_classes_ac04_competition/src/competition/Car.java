@@ -1,16 +1,17 @@
 package competition;
 
 public class Car {
+    private static final String ID_BASE = "CAR000";
     private Driver driver;
     private String brand;
     private String model;
-    private short year = 0;
-    private Fuels fuel = Fuels.PETROL;
+    private short year;
+    private Fuels fuel;
     private short cc;
-    private byte doors = 3;
-    private byte wheels = 5;
-    private byte seats = 4;
-    private int points = 0;
+    private byte doors;
+    private byte wheels;
+    private byte seats;
+    private int points;
     private String id;
     private static int idNext = 0;
 
@@ -37,6 +38,10 @@ public class Car {
         this.fuel = fuel;
         this.cc = cc;
         this.id = generateId();
+        this.doors = 3;
+        this.wheels = 5;
+        this.seats = 4;
+        this.points = 0;
     }
 
     private String generateId()
@@ -44,7 +49,7 @@ public class Car {
         String iniciales = "" + this.brand.charAt(0) + this.model.charAt(0);
         idNext++;
 
-        return "CAR000" + idNext + iniciales.toUpperCase();
+        return ID_BASE + idNext + iniciales.toUpperCase();
     }
 
     @Override
@@ -77,7 +82,7 @@ public class Car {
 
     public static String getIdNext()
     {
-        return "CAR000" + idNext;
+        return ID_BASE + idNext;
     }
 
     public Driver getDriver()
@@ -98,6 +103,7 @@ public class Car {
     public void setBrand(String brand)
     {
         this.brand = brand;
+        this.id = id.substring(0, id.length() - 2) + brand.charAt(0) + this.model.charAt(0);
     }
 
     public String getModel()
@@ -108,6 +114,7 @@ public class Car {
     public void setModel(String model)
     {
         this.model = model;
+        this.id = id.substring(0, id.length() - 1) + this.model.charAt(0);
     }
 
     public short getYear()
@@ -183,5 +190,33 @@ public class Car {
     public String getId()
     {
         return id;
+    }
+
+    public String carData()
+    {
+        return String.format(
+                "%-10s %-13s %-12s %-8d %-8s %-5s %-4d %-4d %-4d %-5d %-20s %-12s",
+                this.id,
+                this.brand,
+                this.model,
+                this.year,
+                this.fuel,
+                this.cc,
+                this.doors,
+                this.wheels,
+                this.seats,
+                this.points,
+                this.driver.getName(),
+                this.driver.getId()
+        );
+    }
+
+    public boolean increasePoints(int points)
+    {
+        if (points < 0)
+            return false;
+
+        this.points += points;
+        return true;
     }
 }
