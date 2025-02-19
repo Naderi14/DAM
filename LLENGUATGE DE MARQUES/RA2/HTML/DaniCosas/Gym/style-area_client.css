@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900 display=swap');
+
+:root {
+    --font-body: "Lato", sans-serif;
+    --font-headers: "Noto Serif", sans-serif;
+    --font-size-base: 16px;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-headers);
+    color: #e50084;
+    ;
+}
+
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: #e50084;
+}
+
+.cabecera1 {
+    width: 5%;
+    height: 5%;
+}
+
+.cabecera_rosa {
+    position: absolute;
+    right: 10px;
+    width: 4%;
+    height: 4%;
+    object-fit: contain;
+
+}
+
+.cabecera_negra {
+    position: absolute;
+    right: 10px;
+    width: 4%;
+    height: 4%;
+    object-fit: contain;
+    opacity: 0;
+}
+
+.cabecera_rosa:hover {
+    opacity: 0;
+}
+
+.cabecera_negra:hover {
+    opacity: 1;
+}
+
+.blog {
+    padding-right: 30px;
+}
+
+.videos {
+    padding-right: 100px;
+}
+
+.blog:hover,
+.videos:hover {
+    color: black;
+}
+
+h2{
+    text-align: center;
+}
+
+.cliente {
+    display: flex;
+    justify-content:center;
+    text-align:start;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 90px;
+}
+
+fieldset tbody {
+    text-align: center;
+}
+
+.formulario img {
+    margin: auto;
+    width: 10%;
+    justify-content:center;
+    text-align: center;
+}
+
+.login{
+    background-color: #e50084;
+    width: 8%;
+    border: 1px solid black;
+    
+}
+
+.pie {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #1d0a15;
+    color: white;
+}
+
+.pie1 {
+    display: flex;
+    flex-direction: column; /* Apila la imagen y el texto verticalmente */
+    align-items: center; /* Centra horizontalmente imagen y texto */
+    width: 50%;
+    height: auto;
+}
+
+.texto_pie1 {
+    font-size: 0.6rem;
+}
+
+.redes_sociales {
+    display: flex;
+    gap: 10px; 
+    margin-left: auto; 
+}
+
+.red_social {
+    display: flex;
+    flex-direction: column; /* Apila la imagen y el texto verticalmente */
+    align-items: center; /* Centra horizontalmente imagen y texto */
+    gap: 5px; /* Espacio entre la imagen y el texto */
+}
+
+
+.imagen_pie {
+    width: 24px;
+    height: 24px;
+    font: white;
+}
