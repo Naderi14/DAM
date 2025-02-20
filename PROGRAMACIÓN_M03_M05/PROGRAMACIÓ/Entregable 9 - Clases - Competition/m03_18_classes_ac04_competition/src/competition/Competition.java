@@ -38,7 +38,7 @@ public class Competition {
         return header + bodyRaces + footer;
     }
 
-    /*public String orderClassification()
+    public String orderClassification()
     {
         String header = "Order Classification\nFinal Classification:\n";
 
@@ -66,9 +66,9 @@ public class Competition {
         }
 
         return header + body;
-    }*/
+    }
 
-    public String orderClassification() {
+    public String orderClassification2() {
         String header = "Order Classification\nFinal Classification:\n";
 
         // Ordenar el array usando Arrays.sort y un Comparator
