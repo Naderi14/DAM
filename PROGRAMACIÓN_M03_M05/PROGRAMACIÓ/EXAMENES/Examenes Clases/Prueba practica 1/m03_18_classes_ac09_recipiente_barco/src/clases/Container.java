@@ -17,7 +17,7 @@ public class Container {
         else if (idNext < 100)
             this.id = "CONT00" + idNext;
 
-        transportCost = 1000;
+        transportCost = BASE_COST;
         this.type = type;
         this.weight = weight;
         this.location = -1;

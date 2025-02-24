@@ -1354,7 +1354,7 @@ puestos de trabajo con cualquier empleado cuyo apellido contenga la letra p."
 
 SELECT EMPLEADO_ID, NOMBRE
 FROM empleados
-WHERE PUESTO_TRABAJO IN (SELECT PUESTO_TRABAJO FROM empleados WHERE APELLIDO LIKE 'P%');
+WHERE PUESTO_TRABAJO IN (SELECT PUESTO_TRABAJO FROM empleados WHERE APELLIDO LIKE '%p%');
 
 ==============================================================================================================================
 EJERCICIO 504 
@@ -1431,11 +1431,47 @@ EJERCICIO 510
 "Selecciona el identificador y el nombre de los productos de aquellos productos que están 
 ubicados en el almacén que se llama 'Southlake, Texas'."
 
+SELECT PRODUCTO_ID , NOMBRE_PRODUCTO 
+FROM productos p 
+WHERE p.PRODUCTO_ID IN (
+	SELECT i.PRODUCTO_ID FROM inventarios i WHERE i.ALMACEN_ID = (
+		SELECT ALMACEN_ID FROM almacenes a WHERE a.ALMACEN_NOMBRE = 'Southlake, Texas'
+		)
+	);
+
 ==============================================================================================================================
 EJERCICIO 511 
 "Selecciona el identificador y el apellido de los empleados cuyo puesto de trabajo sea el 
 mismo que el empleado que haya facturado más en un mismo pedido (la suma del total en euros del pedido)."
 
+SELECT e.EMPLEADO_ID , e.APELLIDO
+FROM empleados e 
+WHERE PUESTO_TRABAJO IN (
+	SELECT e2.PUESTO_TRABAJO FROM empleados e2 WHERE e2.EMPLEADO_ID IN (
+		SELECT p.VENDEDOR_ID FROM pedidos p WHERE p.PEDIDO_ID = (
+			SELECT pa.PEDIDO_ID 
+			FROM pedido_articulos pa 
+			GROUP BY pa.PEDIDO_ID
+			ORDER BY sum(pa.CANTIDAD * pa.PRECIO_UNIDAD) DESC
+			LIMIT 1
+			)
+		)
+	);
+
 ==============================================================================================================================
 EJERCICIO 512 
 "Modifica el ejercicio anterior para que sea el segundo empleado que más ha facturado en un mismo pedido."
+
+SELECT e.EMPLEADO_ID , e.APELLIDO
+FROM empleados e 
+WHERE PUESTO_TRABAJO IN (
+	SELECT e2.PUESTO_TRABAJO FROM empleados e2 WHERE e2.EMPLEADO_ID IN (
+		SELECT p.VENDEDOR_ID FROM pedidos p WHERE p.PEDIDO_ID = (
+			SELECT pa.PEDIDO_ID 
+			FROM pedido_articulos pa 
+			GROUP BY pa.PEDIDO_ID
+			ORDER BY sum(pa.CANTIDAD * pa.PRECIO_UNIDAD) DESC
+			LIMIT 1 OFFSET 1
+			)
+		)
+	);
