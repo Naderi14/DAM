@@ -1,6 +1,98 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Shop {
-    public static void main(String[] args)
+    private String name;
+    private List<Product> products = new ArrayList<>();
+
+    public Shop(String name)
     {
-        System.out.println("Hello world!");
+        this.name = name;
+    }
+
+    public boolean addProduct(Product product)
+    {
+        if (product != null)
+        {
+            products.add(product);
+            return true;
+        }
+
+        return false;
+    }
+
+    public boolean removeProduct(Product product)
+    {
+        if (product != null)
+        {
+            products.remove(product);
+            return true;
+        }
+
+        return false;
+    }
+
+    public boolean removeProductById(String id)
+    {
+        for (Product product : products)
+        {
+            if (product.getId().equals(id))
+            {
+                products.remove(product);
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public int numProducts()
+    {
+        return products.size();
+    }
+
+    public float total()
+    {
+        float total = 0;
+        for (Product product : products)
+        {
+            total += product.getPrice();
+        }
+
+        return total;
+    }
+
+    public float totalBySize(Size size)
+    {
+        float total = 0;
+        for (Product product : products)
+        {
+            if (product.getSize() == size)
+            {
+                total += product.getPrice();
+            }
+        }
+
+        return total;
+    }
+
+    public List<Product> listProductsNameAndSize(String text, Size size)
+    {
+        List<Product> listProducts = new ArrayList<>();
+        for (Product product : products)
+        {
+            if (product.getName().toLowerCase() == text.toLowerCase() && product.getSize() == size)
+            {
+                listProducts.add(product);
+            }
+        }
+
+        return listProducts;
+    }
+
+    public float average()
+    {
+        return total() / products.size();
     }
 }
