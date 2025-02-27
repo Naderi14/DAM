@@ -22,6 +22,18 @@ public class Shop {
         return false;
     }
 
+    public String allProductsString()
+    {
+        String head = String.format("%15s | %18s | %5s | %8s | %s\n", "ID", "NAME", "SIZE", "PRICE", "ACTIVE");
+        String body = "";
+        for (Product product : products)
+        {
+            body += product + "\n";
+        }
+
+        return head + body;
+    }
+
     public boolean removeProduct(Product product)
     {
         if (product != null)
@@ -82,7 +94,7 @@ public class Shop {
         List<Product> listProducts = new ArrayList<>();
         for (Product product : products)
         {
-            if (product.getName().toLowerCase() == text.toLowerCase() && product.getSize() == size)
+            if (product.getName().equalsIgnoreCase(text) && product.getSize() == size)
             {
                 listProducts.add(product);
             }
@@ -93,6 +105,17 @@ public class Shop {
 
     public float average()
     {
-        return total() / products.size();
+        float avg = 0;
+        int count = 0;
+        for (Product product : products)
+        {
+            if (product.isActive())
+            {
+                avg += product.getPrice();
+                count++;
+            }
+        }
+
+        return avg / count;
     }
 }

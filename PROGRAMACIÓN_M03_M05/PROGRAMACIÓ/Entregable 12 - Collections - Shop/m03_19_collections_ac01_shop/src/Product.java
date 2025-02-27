@@ -3,18 +3,17 @@ public class Product {
     private String name;
     private float price;
     private Size size;
-    private boolean active = true;
+    private boolean active;
 
     private static int idNext = 0;
  
     public Product(String name, float price, Size size, boolean active)
     {
-        this.id = generateNextId();
         this.name = name;
         this.price = price;
         this.size = size;
         this.active = active;
-
+        this.id = generateNextId();
         idNext++;
     }
 
@@ -56,5 +55,12 @@ public class Product {
 
     public boolean isActive() {
         return active;
+    }
+
+    @Override
+    public String toString()
+    {
+        return String.format("%15s | %18s | %5s | %8s | %s",
+                this.id, this.name, this.size, this.price, this.active);
     }
 }
