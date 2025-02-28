@@ -3,14 +3,7 @@ package library;
 import java.util.HashSet;
 import java.util.Set;
 
-/*«Java Class»
-
-Library
-
--String name
-
--Set<Book> books
-
+/*
 +Library(String name)
 
 +addBook(Book book) : boolean

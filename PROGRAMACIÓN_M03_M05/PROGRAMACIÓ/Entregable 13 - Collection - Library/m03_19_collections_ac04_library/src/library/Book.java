@@ -4,46 +4,7 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-/*-String code
-
--String isbn
-
--String title
-
--Set<Writer> writers
-
--short year
-
--static int idNext
-
-+Book(String isbn, String title, Set<Writer> writers, short year)
-
-+Book(String isbn, String title, short year)
-
-+getCode() : String
-
-+setCode(String code) : void
-
-+getIsbn() : String
-
-+setIsbn(String isbn) : void
-
-+getTitle() : String
-
-+setTitle(String title) : void
-
-+getWriters() : Set<Writer>
-
-+setWriters(Set<Writer> writers) : void
-
-+getYear() : short
-
-+setYear(short year) : void
-
-+hashCode() : int
-
-+equals(Object obj) : boolean
-
+/*
 +toString() : String
 
 +addWriter(Writer writer) : boolean*/

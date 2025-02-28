@@ -1,25 +1,8 @@
 package library;
 
 /*
-+Writer(String name, String dateBirth, String countryOfBirth)
-
-+getName() : String
-
-+setName(String name) : void
-
-+getDateBirth() : String
-
-+setDateBirth(String dateBirth) : void
-
-+getCountryOfBirth() : String
-
-+setCountryOfBirth(String countryOfBirth) : void
-
 +toString() : String
-
-+hashCode() : int
-
-+equals(Object obj) : boolean*/
+*/
 
 import java.util.Objects;
 
