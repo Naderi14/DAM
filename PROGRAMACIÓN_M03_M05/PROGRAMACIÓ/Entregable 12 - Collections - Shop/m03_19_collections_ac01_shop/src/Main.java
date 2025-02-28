@@ -55,18 +55,12 @@ public class Main {
         //8. List products with name "SHIRT" and size "XS"
         System.out.println("\n8. List products with name \"SHIRT\" and size \"XS\":");
         List<Product> listaFiltrada = shop.listProductsNameAndSize("SHIRT", Size.XS);
-        for (Product product : listaFiltrada)
-        {
-            System.out.println(product);
-        }
+        listaFiltrada.forEach(System.out::println);
 
         //9. List products with name "t" and size "XL"
         System.out.println("\n9. List products with name \"t\" and size \"XL\":");
         listaFiltrada = shop.listProductsNameAndSize("t", Size.XL);
-        for (Product product : listaFiltrada)
-        {
-            System.out.println(product);
-        }
+        listaFiltrada.forEach(System.out::println);
 
         //10. Remove a product by id
         System.out.println("\n10. Remove product by id");
