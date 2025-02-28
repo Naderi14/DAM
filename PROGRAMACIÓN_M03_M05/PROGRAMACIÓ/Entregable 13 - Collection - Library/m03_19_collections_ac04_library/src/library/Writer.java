@@ -54,4 +54,11 @@ public class Writer {
     public int hashCode() {
         return Objects.hash(name, dateOfBirth, countryOfBirth);
     }
+
+    @Override
+    public String toString()
+    {
+        return String.format("%20s %15s %16s",
+                this.name, this.dateOfBirth, this.countryOfBirth);
+    }
 }
