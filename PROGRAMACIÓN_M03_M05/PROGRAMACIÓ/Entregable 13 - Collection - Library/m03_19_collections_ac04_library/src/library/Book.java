@@ -15,11 +15,47 @@ public class Book {
     private Set<Writer> writers = new HashSet<>();
     private short year;
 
+    private static int idNext = 1;
+
+    public Book(String isbn, String title, Set<Writer> writers, short year)
+    {
+        this.isbn = isbn;
+        this.title = title;
+        this.writers = writers;
+        this.year = year;
+        this.code = generateCode();
+        idNext++;
+    }
+
     public Book(String isbn, String title, short year)
     {
         this.isbn = isbn;
         this.title = title;
         this.year = year;
+        this.code = generateCode();
+        idNext++;
+    }
+
+    public boolean addWriter(Writer writer)
+    {
+        if (writer != null)
+        {
+            writers.add(writer);
+            return true;
+        }
+        return false;
+    }
+
+    private String generateCode()
+    {
+        if (idNext < 10)
+            return "000" + idNext;
+        else if (idNext < 100)
+            return "00" + idNext;
+        else if (idNext < 1000)
+            return "0" + idNext;
+        else
+            return "" + idNext;
     }
 
     public String getCode() {
@@ -73,5 +109,19 @@ public class Book {
     @Override
     public int hashCode() {
         return Objects.hashCode(code);
+    }
+
+    @Override
+    public String toString()
+    {
+        String writers = "";
+        for (Writer writer : this.writers)
+        {
+            writers += writer.getName() + ", ";
+        }
+        writers = writers.substring(0, writers.length() - 3); // Quitar la ultima coma
+
+        return String.format("%6s %20s %45s %40s %6s",
+                this.code, this.isbn, this.title, writers, this.year);
     }
 }
