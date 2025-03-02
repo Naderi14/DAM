@@ -5,8 +5,15 @@ import library.Writer;
 import java.util.*;
 
 public class Main {
+    private static final Scanner SC = new Scanner(System.in);
     private static Library library;
     public static void main(String[] args)
+    {
+        initializeLibrary();
+        mainLibraryMenu();
+    }
+
+    private static void initializeLibrary()
     {
         Writer[] writerList = {
                 new Writer("J.R.R. Tolkien", "03/02/1892", "South-Africa"),
@@ -57,30 +64,18 @@ public class Main {
         library = new Library("La Biblioteca Virtual");
         for (Book book : bookList)
             System.out.println(library.addBook(book));
-
-        mainLibraryMenu();
     }
 
     private static void mainLibraryMenu()
     {
-        Scanner sc = new Scanner(System.in);
         while (true)
         {
-            System.out.print("\nMENU\n" +
-                    "1. LIST ALL BOOKS\n" +
-                    "2. ADD BOOK\n" +
-                    "3. REMOVE BOOK\n" +
-                    "4. SEARCH BOOK\n" +
-                    "5. NUMBER OF BOOKS\n" +
-                    "6. GET BOOK FROM LIBRARY\n" +
-                    "7. GET BOOKS BY TITLE\n" +
-                    "8. GET BOOKS BY WRITER\n" +
-                    "0. QUIT\n" +
-                    "CHOOSE MENU OPTION:");
+            printMenu();
 
             try
             {
-                int option = sc.nextInt();
+                int option = SC.nextInt();
+                SC.nextLine();
                 switch (option)
                 {
                     case 1:
@@ -117,41 +112,55 @@ public class Main {
             catch (InputMismatchException e)
             {
                 System.out.println("ERROR: INVALID OPTION VALUE");;
+                SC.nextLine();
             }
         }
 
     }
 
+    private static void printMenu()
+    {
+        System.out.print("\nMENU\n" +
+                "1. LIST ALL BOOKS\n" +
+                "2. ADD BOOK\n" +
+                "3. REMOVE BOOK\n" +
+                "4. SEARCH BOOK\n" +
+                "5. NUMBER OF BOOKS\n" +
+                "6. GET BOOK FROM LIBRARY\n" +
+                "7. GET BOOKS BY TITLE\n" +
+                "8. GET BOOKS BY WRITER\n" +
+                "0. QUIT\n" +
+                "CHOOSE MENU OPTION:");
+    }
+
     private static void addBook() throws InputMismatchException
     {
-        Scanner sc = new Scanner(System.in);
         System.out.print("\nENTER ISBN OF BOOK: ");
-        String isbn = sc.nextLine();
+        String isbn = SC.nextLine();
         System.out.print("\nENTER TITLE OF BOOK: ");
-        String title = sc.nextLine();
+        String title = SC.nextLine();
         System.out.print("\nENTER YEAR OF BOOK: ");
-        short year = sc.nextShort();
+        short year = SC.nextShort();
         System.out.println("BOOK ADDED: " + library.addBook(new Book(isbn, title, year)));
         System.out.print("\n\nENTER NUMBER OF WRITERS: ");
-        int numberWriters = sc.nextInt();
-        sc.nextLine();
+        int numberWriters = SC.nextInt();
+        SC.nextLine();
         for (int i = 0; i < numberWriters; i++)
         {
             System.out.print("\nENTER NAME OF WRITER: ");
-            String name = sc.nextLine();
+            String name = SC.nextLine();
             System.out.print("\nENTER BIRTH DATE OF WRITER: ");
-            String birthDate = sc.nextLine();
+            String birthDate = SC.nextLine();
             System.out.print("\nENTER COUNTRY OF WRITER: ");
-            String country = sc.nextLine();
+            String country = SC.nextLine();
             System.out.println("WRITER ADDED: " + library.getBookFromLibrary(isbn, false).addWriter(new Writer(name, birthDate, country)));
         }
     }
 
     private static void removeBook()
     {
-        Scanner sc = new Scanner(System.in);
         System.out.print("\nENTER CODE: ");
-        String code = sc.nextLine();
+        String code = SC.nextLine();
         if (library.removeBook(code))
             System.out.println("BOOK HAS BEEN REMOVED");
         else
@@ -160,9 +169,8 @@ public class Main {
 
     private static void searchBook()
     {
-        Scanner sc = new Scanner(System.in);
         System.out.print("ENTER CODE BOOK: ");
-        String code = sc.nextLine();
+        String code = SC.nextLine();
         System.out.println(library.getBookFromLibrary(code, true));
     }
 
@@ -173,20 +181,19 @@ public class Main {
 
     private static void searchBookBy() throws InputMismatchException
     {
-        Scanner sc = new Scanner(System.in);
         System.out.print("\n1: SEARCH BY CODE, 2: SEARCH BY ISBN ? ");
-        int option = sc.nextInt();
-        sc.nextLine();
+        int option = SC.nextInt();
+        SC.nextLine();
         if (option == 1)
         {
             System.out.print("\nENTER CODE: ");
-            String code = sc.nextLine();
+            String code = SC.nextLine();
             System.out.println(library.getBookFromLibrary(code, true));
         }
         else if (option == 2)
         {
             System.out.print("\nENTER ISBN: ");
-            String isbn = sc.nextLine();
+            String isbn = SC.nextLine();
             System.out.println(library.getBookFromLibrary(isbn, false));
         }
         else
@@ -197,9 +204,8 @@ public class Main {
 
     private static void booksByTitle()
     {
-        Scanner sc = new Scanner(System.in);
         System.out.print("\nENTER TITLE: ");
-        String title = sc.nextLine();
+        String title = SC.nextLine();
         Set<Book> books = library.getBooksByTitle(title);
         for (Book book : books)
         {
@@ -209,9 +215,8 @@ public class Main {
 
     private static void booksByWriter()
     {
-        Scanner sc = new Scanner(System.in);
         System.out.print("\nENTER NAME OF WRITER: ");
-        String writer = sc.nextLine();
+        String writer = SC.nextLine();
         Set<Book> books = library.getBooksByWriter(writer);
         books.forEach(System.out::println);
     }
