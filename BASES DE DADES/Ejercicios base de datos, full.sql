@@ -1475,3 +1475,81 @@ WHERE PUESTO_TRABAJO IN (
 			)
 		)
 	);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/																														  /
+/													Ejercicios 601 - 614												  /
+/																														  /
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+==============================================================================================================================
+EJERCICIO 601 
+"Escriba una consulta para mostrar el identificador de las ubicaciones, el CP, el estado y 
+el nombre del país (utilizar join)."
+
+==============================================================================================================================
+EJERCICIO 602 
+"Escriba una consulta para mostrar el identificador de las ubicaciones, el CP, 
+el estado y el nombre del país (sin utilizar join)."
+
+==============================================================================================================================
+EJERCICIO 603 
+"Cree un listado que muestre el nombre del producto, la descripción y 
+el nombre de la categoría de todos los productos (utilizar join). "
+
+==============================================================================================================================
+EJERCICIO 604 
+"Cree un listado que muestre el nombre del producto, la descripción y 
+el nombre de la categoría de todos los productos (sin utilizar join). "
+
+==============================================================================================================================
+EJERCICIO 605 
+"Lista el identificador del pedido, el estado y el nombre del cliente (utilizar join). "
+
+==============================================================================================================================
+EJERCICIO 606 
+"Lista el identificador del pedido, el estado y el nombre del cliente (sin utilizar join)."
+
+==============================================================================================================================
+EJERCICIO 607 
+"Muestra el nombre del producto, la cantidad de productos y el nombre del almacén del almacen cuyo 
+identificador es el 9, ordena el resultado por el nombre del producto (utilizar join). "
+
+==============================================================================================================================
+EJERCICIO 608 
+"Muestra el nombre del producto, la cantidad de productos y el nombre del almacén del almacen cuyo identificador es el 9, 
+ordena el resultado por el nombre del producto (sin utilizar join)."
+
+==============================================================================================================================
+EJERCICIO 609 
+"Muestra el nombre del cliente y el nombre de su contacto de aquellos clientes que empiezan por la letra 'a', 
+Etiquete las columnas como 'nombre_cliente y nombre_contacto' (utilizar join). "
+
+==============================================================================================================================
+EJERCICIO 610 
+"Muestra el nombre del cliente y el nombre de su contacto de aquellos clientes que empiezan por la letra 'a', 
+Etiquete las columnas como 'nombre_cliente y nombre_contacto' (sin utilizar join)."
+
+==============================================================================================================================
+EJERCICIO 611 
+"Muestra el identificador del pedido y el nombre del empleado que lo ha realizado, 
+en el caso de que el pedido no tenga empleado aparecerá null en el campo nombre. "
+
+==============================================================================================================================
+EJERCICIO 612 
+"Crea una lista con los diferentes nombres de los productos ordenados alfabéticamente (sin duplicar) 
+que ha comprado el cliente con nombre 'AbbVie' (vigilar con los pedidos cancelados)."
+
+==============================================================================================================================
+EJERCICIO 613 
+"Lista el nombre de los almacenes cuya región es 'Asia'."
+
+==============================================================================================================================
+EJERCICIO 614
+"Muestra el nombre y apellido del empleado junto al nombre y apellido de su jefe, 
+etiquete las columnas como nombre_empleado, apellido_empleado, nombre_jefe y apellido_jefe respectivamente. 
+(Si no tiene jefe no ha de aparecer en el resultado) "
+
+==============================================================================================================================
+EJERCICIO 615
+"Muestra el nombre del empleado que vende el pedido y el identificador del pedido de todos los empleados. 
+Si el empleado no tiene ningún pedido, deberá mostrar el texto 'No dispone de pedidos'."
