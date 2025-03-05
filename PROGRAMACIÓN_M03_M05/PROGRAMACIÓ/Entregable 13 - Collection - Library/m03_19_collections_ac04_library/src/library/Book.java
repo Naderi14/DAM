@@ -4,10 +4,6 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-/*
-+toString() : String
-
-+addWriter(Writer writer) : boolean*/
 public class Book {
     private String code;
     private String isbn;

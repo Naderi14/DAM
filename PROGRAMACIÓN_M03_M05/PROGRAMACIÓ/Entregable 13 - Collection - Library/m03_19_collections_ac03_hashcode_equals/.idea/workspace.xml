@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c66c7c1d-c408-461b-b5e2-6d13746ec224" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../../LLENGUATGE DE MARQUES/RA2/HTML/Teoria Clase/JavaScrip-Basics/page1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../LLENGUATGE DE MARQUES/RA2/HTML/Teoria Clase/JavaScrip-Basics/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../m03_19_collections_ac04_library/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../m03_19_collections_ac04_library/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../m03_19_collections_ac04_library/m03_19_collections_ac04_library.userlibraries" beforeDir="false" afterPath="$PROJECT_DIR$/../m03_19_collections_ac04_library/m03_19_collections_ac04_library.userlibraries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../m03_19_collections_ac04_library/src/library/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/../m03_19_collections_ac04_library/src/library/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../m03_19_collections_ac04_library/src/library/Writer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../m03_19_collections_ac04_library/src/library/Writer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Entregable 6 - Clases - Client/m03_17_modular_ac02_client/src/client/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Entregable 6 - Clases - Client/m03_17_modular_ac02_client/src/client/ClientMain.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2ttYiA3PeQVRfUF3G3548JMldcb" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Fran/Desktop/DAM 1/PROGRAMACIÓN_M03_M05/PROGRAMACIÓ/Entregable 14 - Collection - HasCode & Equals/m03_19_collections_ac03_hashcode_equals"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Fran\Desktop\DAM 1\PROGRAMACIÓN_M03_M05\PROGRAMACIÓ\Entregable 13 - Collection - Library\m03_19_collections_ac03_hashcode_equals\src\skin" />
+      <recent name="C:\Users\Fran\Desktop\DAM 1\PROGRAMACIÓN_M03_M05\PROGRAMACIÓ\Entregable 13 - Collection - Library\m03_19_collections_ac03_hashcode_equals\src\player" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Fran\Desktop\DAM 1\PROGRAMACIÓN_M03_M05\PROGRAMACIÓ\Entregable 13 - Collection - Library\m03_19_collections_ac03_hashcode_equals\src\player" />
+      <recent name="C:\Users\Fran\Desktop\DAM 1\PROGRAMACIÓN_M03_M05\PROGRAMACIÓ\Entregable 13 - Collection - Library\m03_19_collections_ac03_hashcode_equals\src" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c66c7c1d-c408-461b-b5e2-6d13746ec224" name="Changes" comment="" />
+      <created>1741172965786</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1741172965786</updated>
+    </task>
+    <servers />
+  </component>
+</project>

@@ -1,9 +1,5 @@
 package library;
 
-/*
-+toString() : String
-*/
-
 import java.util.Objects;
 
 public class Writer {

@@ -1,5 +1,7 @@
 package client;
 
+import java.util.Objects;
+
 public class Client {
     private String accountNum;
     private String name;
@@ -184,5 +186,17 @@ public class Client {
     public boolean increaseDebts2(float debts)
     {
         return false;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Client client)) return false;
+        return Objects.equals(accountNum, client.accountNum) && Objects.equals(getDni(), client.getDni());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(accountNum, getDni());
     }
 }
