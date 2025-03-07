@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="TimeJump">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/TimeJump.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/libs/TimeJump.jar!/" />
+    </SOURCES>
+  </library>
+</component>

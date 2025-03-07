@@ -1497,8 +1497,8 @@ EJERCICIO 502
 "Muestra el nombre y email de los clientes que han comprado al menos una propiedad"
 
 SELECT DISTINCT c.nombre , c.email
-FROM clientes c, transacciones t  
-WHERE c.id = t.cliente_id AND t.tipo = 'Compra';
+FROM clientes c 
+WHERE c.id = (SELECT t.cliente_id FROM transacciones WHERE t.tipo = 'Compra');
 
 ==============================================================================================================================
 EJERCICIO 503 
@@ -1506,32 +1506,35 @@ EJERCICIO 503
 una transacción"
 
 SELECT a.nombre , a.email 
-FROM agentes a, transacciones t 
-WHERE a.id = t.agente_id 
-GROUP BY a.id
-HAVING count(t.id) > 1;
+FROM agentes a
+WHERE a.id = (SELECT t.agente_id FROM transacciones t GROUP BY t.agente_id HAVING count(t.id) > 1);
 
 ==============================================================================================================================
 EJERCICIO 504 
 "Muestra el id todas las propiedades que aún no han sido vendidas ni alquiladas"
 
-SELECT c.nombre 
-FROM clientes c , transacciones t
-WHERE c.id = t.cliente_id AND t.tipo = 'Alquiler'
-GROUP BY c.id
-ORDER BY count(t.id) DESC 
-LIMIT 1;
+SELECT p.id 
+FROM propiedades p
+WHERE p.estado != 'Venta' AND p.estado != 'Alquiler';
 
 ==============================================================================================================================
 EJERCICIO 505 
 "Muestra el nombre del cliente que ha realizado más alquileres"
 
+-- SOLUCION 1
 SELECT c.nombre 
 FROM clientes c , transacciones t
 WHERE c.id = t.cliente_id AND t.tipo = 'Alquiler'
 GROUP BY c.id
 ORDER BY count(t.id) DESC 
 LIMIT 1;
+
+-- SOLUCION 2
+SELECT c.nombre
+FROM clientes c
+WHERE c.id = (SELECT t.cliente_id FROM transacciones t WHERE t.tipo = 'Alquiler'
+		GROUP BY t.cliente_id ORDER BY count(t.id) DESC LIMIT 1
+	);
 
 ==============================================================================================================================
 EJERCICIO 506 
