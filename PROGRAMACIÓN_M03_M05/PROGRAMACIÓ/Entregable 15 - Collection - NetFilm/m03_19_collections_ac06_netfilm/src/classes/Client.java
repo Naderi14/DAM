@@ -3,6 +3,9 @@ package classes;
 import com.joanseculi.timejump.TimeJump;
 import enums.Subscription;
 
+import java.util.Comparator;
+import java.util.Objects;
+
 public class Client {
     private String code;
     private String name;
@@ -23,6 +26,7 @@ public class Client {
         this.endDate = endDate;
         this.iban = iban;
         this.bank = bank;
+        code = generateCode();
     }
 
     public Client(String name, String dni, Subscription subscription, String initialDate, String iban, Bank bank)
@@ -34,6 +38,7 @@ public class Client {
         this.iban = iban;
         this.bank = bank;
         endDate = TimeJump.END_DATE;
+        code = generateCode();
     }
 
     public Client(String name, String dni, Subscription subscription, String iban, Bank bank)
@@ -45,18 +50,91 @@ public class Client {
         this.bank = bank;
         initialDate = TimeJump.todayDate();
         endDate = TimeJump.END_DATE;
+        code = generateCode();
     }
 
     private String generateCode()
     {
-        String dniLastNumbers = "";
+        return String.format("%05d-%S", idNext, dni.length() < 5 ? dni : dni.substring(dni.length() - 5));
+    }
 
-        if (dni.length() < 5)
-            dniLastNumbers = dni;
-        else
-            dniLastNumbers = dni.substring(dni.length() - 5, dni.length() - 1);
+    @Override
+    public String toString()
+    {
+        return String.format("%15s%15s%15s%15s%15s%15s%15s%15s",
+                code, name, dni, subscription, initialDate, endDate, iban, bank);
+    }
 
-        if (idNext < 10)
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
+    public Subscription getSubscription() {
+        return subscription;
+    }
+
+    public void setSubscription(Subscription subscription) {
+        this.subscription = subscription;
+    }
+
+    public String getInitialDate() {
+        return initialDate;
+    }
+
+    public void setInitialDate(String initialDate) {
+        this.initialDate = initialDate;
+    }
+
+    public String getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
+    }
+
+    public String getIban() {
+        return iban;
+    }
+
+    public void setIban(String iban) {
+        this.iban = iban;
+    }
+
+    public Bank getBank() {
+        return bank;
+    }
+
+    public void setBank(Bank bank) {
+        this.bank = bank;
+    }
+    public String getCode()
+    {
+        return code;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Client client = (Client) o;
+        return Objects.equals(dni, client.dni);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(dni);
     }
 }
