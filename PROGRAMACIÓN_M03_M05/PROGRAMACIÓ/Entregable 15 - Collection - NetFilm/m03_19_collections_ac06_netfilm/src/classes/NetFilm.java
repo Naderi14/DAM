@@ -20,7 +20,7 @@ public class NetFilm {
 
     public boolean signSubscription(Client client)
     {
-        if (clients.contains(client))
+        if (!clients.contains(client))
             return clients.add(client);
 
         return false;
@@ -133,8 +133,8 @@ public class NetFilm {
     @Override
     public String toString()
     {
-        String line = "------------------------------------------------------------------------------------------------------------------------\n";
-        String header = String.format("%15s%15s%15s%15s%15s%15s%15s%15s\n",
+        String line = "-----------------------------------------------------------------------------------------------------------------------------\n";
+        String header = String.format("%-15s%-20s%-15s%-15s%-15s%-15s%-15s%-15s\n",
                 "CODE", "NAME", "DNI", "SUBSCR.", "INIT", "END", "IBAN", "BANK");
         String body = "";
         for (Client client : clients)

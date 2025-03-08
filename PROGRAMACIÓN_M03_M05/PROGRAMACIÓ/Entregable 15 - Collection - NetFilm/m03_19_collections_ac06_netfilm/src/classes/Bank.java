@@ -4,7 +4,7 @@ public class Bank {
     private String name;
     private String swiftCode;
 
-    public Bank(String swiftCode, String name)
+    public Bank(String name, String swiftCode)
     {
         this.swiftCode = swiftCode;
         this.name = name;

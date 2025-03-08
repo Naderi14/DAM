@@ -55,14 +55,14 @@ public class Client {
 
     private String generateCode()
     {
-        return String.format("%05d-%S", idNext, dni.length() < 5 ? dni : dni.substring(dni.length() - 5));
+        return String.format("%05d-%S", idNext++, dni.length() < 5 ? dni : dni.substring(dni.length() - 5));
     }
 
     @Override
     public String toString()
     {
-        return String.format("%15s%15s%15s%15s%15s%15s%15s%15s",
-                code, name, dni, subscription, initialDate, endDate, iban, bank);
+        return String.format("%-15S%-20s%-15S%-15s%-15s%-15s%-15S%-15S\n",
+                code, name, dni, subscription, initialDate, endDate, iban, bank.getName());
     }
 
     public String getName() {
