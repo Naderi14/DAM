@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+     <!-- Latest compiled and minified CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+     <!-- Latest compiled JavaScript -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <h2>Alumne: Juan Francisco Sanchez Castelblanque</h2>
+    <!-- EXERCICI 1 -->
+    <div class="container">
+        <h1>Exercise 1</h1>
+
+        <form>
+            <label for="text1">Enter your name:</label>
+            <input type="text" name="text1" id="text1" class="form-control" placeholder="Enter your name"/><br />
+            <button class="btn btn-primary" type="button" onclick="salute(text1.value)">Salute</button>
+        </form>
+
+        <div id="result1"></div>
+    </div>
+    <!-- EXERCICI 2 -->
+    <div class="container">
+        <h1>Exercise 2</h1>
+
+        <form>
+            <label for="number">Enter your number:</label>
+            <input type="number" name="number" id="number" class="form-control" placeholder="Enter your number"/><br />
+            <button class="btn btn-primary" type="button" onclick="document.getElementById('result2').innerHTML = 
+                                    'The number ' + number.value + ' is ' + calculate(number.value)">Calculate</button>
+        </form>
+
+        <div id="result2"></div>
+        <br />
+    </div>
+    <!-- EXERCICI 3 -->
+    <div class="container">
+        <h1>Exercise 3</h1>
+
+        <form>
+            <label for="text2">Enter Text:</label>
+            <input type="text" name="text2" id="text2" class="form-control" placeholder="Enter text"/><br />
+            <button class="btn btn-primary" type="button" onclick="document.getElementById('result3').innerHTML = 
+                                    check(text2.value)">Check</button>
+        </form>
+
+        <div id="result3"></div>
+        <br />
+    </div>
+    <!-- EXERCICI 4 -->
+    <div class="container">
+        <h1>Exercise 4</h1>
+
+        <form>
+            <label for="number1">Enter a number:</label>
+            <input type="number" name="number1" id="number1" class="form-control" placeholder="Enter a number"/>
+            <label for="number2">Enter a number:</label>
+            <input type="number" name="number2" id="number2" class="form-control" placeholder="Enter a number"/><br />
+            <button class="btn btn-primary" type="button" onclick="document.getElementById('result4').innerHTML = 
+                                    'Result: ' + multiply(number1.value, number2.value)">Multiply</button>
+        </form>
+
+        <div id="result4"></div>
+        <br />
+    </div>
+    <!-- EXERCICI 5 -->
+    <div class="container">
+        <h1>Exercise 5</h1>
+
+        <form>
+            <label for="maxNumber">Enter max number:</label>
+            <input type="number" name="maxNumber" id="maxNumber" class="form-control" placeholder="Enter max number"/>
+            <label for="minNumber">Enter min number:</label>
+            <input type="number" name="minNumber" id="minNumber" class="form-control" placeholder="Enter min number"/><br />
+            <button class="btn btn-primary" type="button" onclick="document.getElementById('result5').innerHTML = 
+                                    'Random number between ' + minNumber.value + ' and ' + maxNumber.value + ': '
+                                     + randomNumber(maxNumber.value, minNumber.value)">Randomize</button>
+        </form>
+
+        <div id="result5"></div>
+        <br />
+    </div>
+    <!-- EXERCICI 6 -->
+    <div class="container">
+        <h1>Exercise 6</h1>
+
+        <form>
+            <label for="text3">Enter text:</label>
+            <input type="text" name="text3" id="text3" class="form-control" placeholder="Enter text"/><br />
+            <button class="btn btn-primary" type="button" onclick="document.getElementById('result6').innerHTML = 
+                                    'Reversed: ' + reverseString(text3.value)">Reverse</button>
+        </form>
+
+        <div id="result6"></div>
+        <br />
+    </div>
+    <!-- EXERCICI 7 -->
+    <div class="container">
+        <h1>Exercise 7</h1>
+
+        <form>
+            <label for="number3">Enter number:</label>
+            <input type="number" name="number3" id="number3" class="form-control" placeholder="Enter number"/><br />
+            <button class="btn btn-primary" type="button" onclick="document.getElementById('result7').innerHTML = 
+                                    'Square Root: ' + squareRoot(number3.value)">Calculate</button>
+        </form>
+
+        <div id="result7"></div>
+        <br />
+    </div>
+    <!-- EXERCICI 8 -->
+    <div class="container">
+        <h1>Exercise 8</h1>
+
+        <form>
+            <label for="number4">Enter number:</label>
+            <input type="number" name="number4" id="number4" class="form-control" placeholder="Enter number"/>
+            <label for="number5">Enter number:</label>
+            <input type="number" name="number5" id="number5" class="form-control" placeholder="Enter number"/>
+            <label for="number6">Enter number:</label>
+            <input type="number" name="number6" id="number6" class="form-control" placeholder="Enter number"/><br />
+            <button class="btn btn-primary" type="button" onclick="document.getElementById('result8').innerHTML = 
+                                    'Average: ' + average(number4.value, number5.value, number6.value)">Calculate</button>
+        </form>
+
+        <div id="result8"></div>
+        <br />
+    </div>
+    <script src="script_basics3.js"></script>
+</body>
+</html>
