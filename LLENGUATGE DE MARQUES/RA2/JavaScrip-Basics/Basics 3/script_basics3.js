@@ -23,10 +23,7 @@ function reverseString(st){
 }
 
 function squareRoot(num){
-    if (num < 0)
-        return "Number can't be negative";
-    else
-        return Math.sqrt(num);
+    return num < 0 ? "Number can't be negative" : Math.sqrt(num);
 }
 
 function average(num1, num2, num3){
