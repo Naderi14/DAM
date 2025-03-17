@@ -1689,24 +1689,52 @@ EJERCICIO 609
 "Muestra el nombre del cliente y el nombre de su contacto de aquellos clientes que empiezan por la letra 'a', 
 Etiquete las columnas como 'nombre_cliente y nombre_contacto' (utilizar join). "
 
+SELECT c.NOMBRE AS "nombre_cliente" , c2.NOMBRE AS "nombre_contacto"
+FROM clientes c 
+JOIN contactos c2 ON c.CLIENTE_ID = c2.CLIENTE_ID
+WHERE c.NOMBRE LIKE 'a%';
+
 ==============================================================================================================================
 EJERCICIO 610 
 "Muestra el nombre del cliente y el nombre de su contacto de aquellos clientes que empiezan por la letra 'a', 
 Etiquete las columnas como 'nombre_cliente y nombre_contacto' (sin utilizar join)."
+
+SELECT c.NOMBRE AS "nombre_cliente" , c2.NOMBRE AS "nombre_contacto"
+FROM clientes c, contactos c2 
+WHERE c.CLIENTE_ID = c2.CLIENTE_ID AND c.NOMBRE LIKE 'a%';
 
 ==============================================================================================================================
 EJERCICIO 611 
 "Muestra el identificador del pedido y el nombre del empleado que lo ha realizado, 
 en el caso de que el pedido no tenga empleado aparecerá null en el campo nombre. "
 
+SELECT p.PEDIDO_ID , e.NOMBRE 
+FROM pedidos p
+LEFT JOIN empleados e ON p.VENDEDOR_ID = e.EMPLEADO_ID;
+
 ==============================================================================================================================
 EJERCICIO 612 
 "Crea una lista con los diferentes nombres de los productos ordenados alfabéticamente (sin duplicar) 
 que ha comprado el cliente con nombre 'AbbVie' (vigilar con los pedidos cancelados)."
 
+SELECT DISTINCT p.NOMBRE_PRODUCTO 
+FROM productos p
+JOIN pedido_articulos pa ON pa.PRODUCTO_ID = p.PRODUCTO_ID 
+JOIN pedidos p2 ON p2.PEDIDO_ID = pa.PEDIDO_ID
+JOIN clientes c ON c.CLIENTE_ID = p2.CLIENTE_ID 
+WHERE p2.ESTADO != 'Canceled' AND c.NOMBRE = 'AbbVie'
+ORDER BY p.NOMBRE_PRODUCTO;
+
 ==============================================================================================================================
 EJERCICIO 613 
 "Lista el nombre de los almacenes cuya región es 'Asia'."
+
+SELECT a.ALMACEN_NOMBRE 
+FROM almacenes a 
+JOIN ubicaciones u ON a.UBICACION_ID = u.UBICACION_ID 
+JOIN paises p ON u.PAIS_ID = p.PAIS_ID
+JOIN regiones r ON p.REGION_ID = r.REGION_ID
+WHERE r.NOMBRE_REGION = 'Asia';
 
 ==============================================================================================================================
 EJERCICIO 614
@@ -1714,7 +1742,19 @@ EJERCICIO 614
 etiquete las columnas como nombre_empleado, apellido_empleado, nombre_jefe y apellido_jefe respectivamente. 
 (Si no tiene jefe no ha de aparecer en el resultado) "
 
+SELECT e.NOMBRE AS "nombre_empleado" , e.APELLIDO AS "apellido_empleado" , e2.NOMBRE AS "nombre_jefe" , e2.APELLIDO AS "apellido_jefe"
+FROM empleados e 
+JOIN empleados e2 ON e2.EMPLEADO_ID = e.JEFE_ID;
+
 ==============================================================================================================================
 EJERCICIO 615
 "Muestra el nombre del empleado que vende el pedido y el identificador del pedido de todos los empleados. 
 Si el empleado no tiene ningún pedido, deberá mostrar el texto 'No dispone de pedidos'."
+
+SELECT e.NOMBRE ,
+	CASE 
+		WHEN p.PEDIDO_ID IS NULL THEN 'No dispone de pedidos'
+		ELSE p.PEDIDO_ID
+	END AS "pedido_id"
+FROM empleados e
+LEFT JOIN pedidos p ON p.VENDEDOR_ID = e.EMPLEADO_ID; 
