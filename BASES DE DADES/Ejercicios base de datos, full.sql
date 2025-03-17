@@ -1616,38 +1616,73 @@ EJERCICIO 601
 "Escriba una consulta para mostrar el identificador de las ubicaciones, el CP, el estado y 
 el nombre del país (utilizar join)."
 
+SELECT u.UBICACION_ID , u.CP , u.ESTADO , p.NOMBRE_PAIS 
+FROM ubicaciones u
+JOIN paises p ON u.PAIS_ID = p.PAIS_ID;
+
 ==============================================================================================================================
 EJERCICIO 602 
 "Escriba una consulta para mostrar el identificador de las ubicaciones, el CP, 
 el estado y el nombre del país (sin utilizar join)."
+
+SELECT u.UBICACION_ID , u.CP , u.ESTADO , p.NOMBRE_PAIS 
+FROM ubicaciones u, paises p
+WHERE u.PAIS_ID = p.PAIS_ID;
 
 ==============================================================================================================================
 EJERCICIO 603 
 "Cree un listado que muestre el nombre del producto, la descripción y 
 el nombre de la categoría de todos los productos (utilizar join). "
 
+SELECT p.NOMBRE_PRODUCTO , p.DESCRIPCION , c.CATEGORIA_ID 
+FROM productos p 
+JOIN categorias c ON p.CATEGORIA_ID = c.CATEGORIA_ID;
+
 ==============================================================================================================================
 EJERCICIO 604 
 "Cree un listado que muestre el nombre del producto, la descripción y 
 el nombre de la categoría de todos los productos (sin utilizar join). "
 
+SELECT p.NOMBRE_PRODUCTO , p.DESCRIPCION , c.CATEGORIA_ID 
+FROM productos p, categorias c
+WHERE p.CATEGORIA_ID = c.CATEGORIA_ID;
+
 ==============================================================================================================================
 EJERCICIO 605 
 "Lista el identificador del pedido, el estado y el nombre del cliente (utilizar join). "
 
+SELECT p.PEDIDO_ID , p.ESTADO , c.NOMBRE 
+FROM pedidos p 
+JOIN clientes c ON c.CLIENTE_ID = p.CLIENTE_ID;
+
 ==============================================================================================================================
 EJERCICIO 606 
 "Lista el identificador del pedido, el estado y el nombre del cliente (sin utilizar join)."
+
+SELECT p.PEDIDO_ID , p.ESTADO , c.NOMBRE 
+FROM pedidos p, clientes c 
+WHERE c.CLIENTE_ID = p.CLIENTE_ID;
 
 ==============================================================================================================================
 EJERCICIO 607 
 "Muestra el nombre del producto, la cantidad de productos y el nombre del almacén del almacen cuyo 
 identificador es el 9, ordena el resultado por el nombre del producto (utilizar join). "
 
+SELECT p.NOMBRE_PRODUCTO , pa.CANTIDAD , a.ALMACEN_NOMBRE
+FROM productos p 
+JOIN pedido_articulos pa ON p.PRODUCTO_ID = pa.PRODUCTO_ID
+JOIN inventarios i ON p.PRODUCTO_ID = i.PRODUCTO_ID 
+JOIN almacenes a ON i.ALMACEN_ID = a.ALMACEN_ID
+WHERE a.ALMACEN_ID = 9;
+
 ==============================================================================================================================
 EJERCICIO 608 
 "Muestra el nombre del producto, la cantidad de productos y el nombre del almacén del almacen cuyo identificador es el 9, 
 ordena el resultado por el nombre del producto (sin utilizar join)."
+
+SELECT p.NOMBRE_PRODUCTO , pa.CANTIDAD , a.ALMACEN_NOMBRE
+FROM productos p, pedido_articulos pa, inventarios i, almacenes a 
+WHERE pa.PRODUCTO_ID = p.PRODUCTO_ID AND p.PRODUCTO_ID = i.PRODUCTO_ID AND i.ALMACEN_ID = a.ALMACEN_ID AND a.ALMACEN_ID = 9;
 
 ==============================================================================================================================
 EJERCICIO 609 
