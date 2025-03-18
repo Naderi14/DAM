@@ -1,6 +1,5 @@
 package school;
 
-/*CODE;DNI;NAME;SURNAME*/
 
 public class Student {
     private String code;
