@@ -1,18 +1,84 @@
-[ Charizard ]
-Type: Fire, Flying | HP: 78  | Attack: 84  | Defense: 78 
-Sp.Attack: 109 | Sp.Defense: 85  | Speed: 100 | Gen: 1 | Legendary: false | Total Points: 534
-[ CharizardMega Charizard Y ]
-Type: Fire, Flying | HP: 78  | Attack: 104 | Defense: 78 
-Sp.Attack: 159 | Sp.Defense: 115 | Speed: 100 | Gen: 1 | Legendary: false | Total Points: 634
-[ Moltres ]
-Type: Fire, Flying | HP: 90  | Attack: 100 | Defense: 90 
-Sp.Attack: 125 | Sp.Defense: 85  | Speed: 90  | Gen: 1 | Legendary: true | Total Points: 580
-[ Ho-oh ]
-Type: Fire, Flying | HP: 106 | Attack: 130 | Defense: 90 
-Sp.Attack: 110 | Sp.Defense: 154 | Speed: 90  | Gen: 2 | Legendary: true | Total Points: 680
-[ Fletchinder ]
-Type: Fire, Flying | HP: 62  | Attack: 73  | Defense: 55 
-Sp.Attack: 56  | Sp.Defense: 52  | Speed: 84  | Gen: 6 | Legendary: false | Total Points: 382
-[ Talonflame ]
-Type: Fire, Flying | HP: 78  | Attack: 81  | Defense: 71 
-Sp.Attack: 74  | Sp.Defense: 69  | Speed: 126 | Gen: 6 | Legendary: false | Total Points: 499
+[ Charmander ]
+Type: Fire | HP: 39  | Attack: 52  | Defense: 43 
+Sp.Attack: 60  | Sp.Defense: 50  | Speed: 65  | Gen: 1 | Legendary: false | Total Points: 309
+[ Charmeleon ]
+Type: Fire | HP: 58  | Attack: 64  | Defense: 58 
+Sp.Attack: 80  | Sp.Defense: 65  | Speed: 80  | Gen: 1 | Legendary: false | Total Points: 405
+[ Vulpix ]
+Type: Fire | HP: 38  | Attack: 41  | Defense: 40 
+Sp.Attack: 50  | Sp.Defense: 65  | Speed: 65  | Gen: 1 | Legendary: false | Total Points: 299
+[ Ninetales ]
+Type: Fire | HP: 73  | Attack: 76  | Defense: 75 
+Sp.Attack: 81  | Sp.Defense: 100 | Speed: 100 | Gen: 1 | Legendary: false | Total Points: 505
+[ Growlithe ]
+Type: Fire | HP: 55  | Attack: 70  | Defense: 45 
+Sp.Attack: 70  | Sp.Defense: 50  | Speed: 60  | Gen: 1 | Legendary: false | Total Points: 350
+[ Arcanine ]
+Type: Fire | HP: 90  | Attack: 110 | Defense: 80 
+Sp.Attack: 100 | Sp.Defense: 80  | Speed: 95  | Gen: 1 | Legendary: false | Total Points: 555
+[ Ponyta ]
+Type: Fire | HP: 50  | Attack: 85  | Defense: 55 
+Sp.Attack: 65  | Sp.Defense: 65  | Speed: 90  | Gen: 1 | Legendary: false | Total Points: 410
+[ Rapidash ]
+Type: Fire | HP: 65  | Attack: 100 | Defense: 70 
+Sp.Attack: 80  | Sp.Defense: 80  | Speed: 105 | Gen: 1 | Legendary: false | Total Points: 500
+[ Magmar ]
+Type: Fire | HP: 65  | Attack: 95  | Defense: 57 
+Sp.Attack: 100 | Sp.Defense: 85  | Speed: 93  | Gen: 1 | Legendary: false | Total Points: 495
+[ Flareon ]
+Type: Fire | HP: 65  | Attack: 130 | Defense: 60 
+Sp.Attack: 95  | Sp.Defense: 110 | Speed: 65  | Gen: 1 | Legendary: false | Total Points: 525
+[ Cyndaquil ]
+Type: Fire | HP: 39  | Attack: 52  | Defense: 43 
+Sp.Attack: 60  | Sp.Defense: 50  | Speed: 65  | Gen: 2 | Legendary: false | Total Points: 309
+[ Quilava ]
+Type: Fire | HP: 58  | Attack: 64  | Defense: 58 
+Sp.Attack: 80  | Sp.Defense: 65  | Speed: 80  | Gen: 2 | Legendary: false | Total Points: 405
+[ Typhlosion ]
+Type: Fire | HP: 78  | Attack: 84  | Defense: 78 
+Sp.Attack: 109 | Sp.Defense: 85  | Speed: 100 | Gen: 2 | Legendary: false | Total Points: 534
+[ Slugma ]
+Type: Fire | HP: 40  | Attack: 40  | Defense: 40 
+Sp.Attack: 70  | Sp.Defense: 40  | Speed: 20  | Gen: 2 | Legendary: false | Total Points: 250
+[ Magby ]
+Type: Fire | HP: 45  | Attack: 75  | Defense: 37 
+Sp.Attack: 70  | Sp.Defense: 55  | Speed: 83  | Gen: 2 | Legendary: false | Total Points: 365
+[ Entei ]
+Type: Fire | HP: 115 | Attack: 115 | Defense: 85 
+Sp.Attack: 90  | Sp.Defense: 75  | Speed: 100 | Gen: 2 | Legendary: true | Total Points: 580
+[ Torchic ]
+Type: Fire | HP: 45  | Attack: 60  | Defense: 40 
+Sp.Attack: 70  | Sp.Defense: 50  | Speed: 45  | Gen: 3 | Legendary: false | Total Points: 310
+[ Torkoal ]
+Type: Fire | HP: 70  | Attack: 85  | Defense: 140
+Sp.Attack: 85  | Sp.Defense: 70  | Speed: 20  | Gen: 3 | Legendary: false | Total Points: 470
+[ Chimchar ]
+Type: Fire | HP: 44  | Attack: 58  | Defense: 44 
+Sp.Attack: 58  | Sp.Defense: 44  | Speed: 61  | Gen: 4 | Legendary: false | Total Points: 309
+[ Magmortar ]
+Type: Fire | HP: 75  | Attack: 95  | Defense: 67 
+Sp.Attack: 125 | Sp.Defense: 95  | Speed: 83  | Gen: 4 | Legendary: false | Total Points: 540
+[ Tepig ]
+Type: Fire | HP: 65  | Attack: 63  | Defense: 45 
+Sp.Attack: 45  | Sp.Defense: 45  | Speed: 45  | Gen: 5 | Legendary: false | Total Points: 308
+[ Pansear ]
+Type: Fire | HP: 50  | Attack: 53  | Defense: 48 
+Sp.Attack: 53  | Sp.Defense: 48  | Speed: 64  | Gen: 5 | Legendary: false | Total Points: 316
+[ Simisear ]
+Type: Fire | HP: 75  | Attack: 98  | Defense: 63 
+Sp.Attack: 98  | Sp.Defense: 63  | Speed: 101 | Gen: 5 | Legendary: false | Total Points: 498
+[ Darumaka ]
+Type: Fire | HP: 70  | Attack: 90  | Defense: 45 
+Sp.Attack: 15  | Sp.Defense: 45  | Speed: 50  | Gen: 5 | Legendary: false | Total Points: 315
+[ DarmanitanStandard Mode ]
+Type: Fire | HP: 105 | Attack: 140 | Defense: 55 
+Sp.Attack: 30  | Sp.Defense: 55  | Speed: 95  | Gen: 5 | Legendary: false | Total Points: 480
+[ Heatmor ]
+Type: Fire | HP: 85  | Attack: 97  | Defense: 66 
+Sp.Attack: 105 | Sp.Defense: 66  | Speed: 65  | Gen: 5 | Legendary: false | Total Points: 484
+[ Fennekin ]
+Type: Fire | HP: 40  | Attack: 45  | Defense: 40 
+Sp.Attack: 62  | Sp.Defense: 60  | Speed: 60  | Gen: 6 | Legendary: false | Total Points: 307
+[ Braixen ]
+Type: Fire | HP: 59  | Attack: 59  | Defense: 58 
+Sp.Attack: 90  | Sp.Defense: 70  | Speed: 73  | Gen: 6 | Legendary: false | Total Points: 409

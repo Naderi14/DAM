@@ -64,12 +64,29 @@ public class FileManager {
         return result;
     }
 
+    public List<Pokemon> searchPokemons(String fileInput, String pokemonName)
+    {
+        List<Pokemon> pokemonList = new ArrayList<>();
+
+        for (Pokemon pokemon : getPokemonListByFile(fileInput))
+        {
+
+        }
+    }
+
     public void write(String text, String fileOutput) throws IOException
     {
-        FileWriter writer = new FileWriter(fileOutput);
-        writer.write(text);
-        writer.flush();
-        writer.close();
-        System.out.println(String.format("<- %s has been created correctly", fileOutput));
+        if (text.isEmpty())
+        {
+            System.out.println("<!- Pokemons type not found -!>");
+        }
+        else
+        {
+            FileWriter writer = new FileWriter(fileOutput);
+            writer.write(text);
+            writer.flush();
+            writer.close();
+            System.out.println(String.format("<- %s has been created correctly", fileOutput));
+        }
     }
 }

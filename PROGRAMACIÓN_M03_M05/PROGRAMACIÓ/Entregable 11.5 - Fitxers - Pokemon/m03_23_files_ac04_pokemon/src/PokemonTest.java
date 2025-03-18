@@ -64,7 +64,7 @@ public class PokemonTest {
 
     private static void totals() throws IOException
     {
-        fileManager.write(fileManager.readTotals(PATH, "Fire", "Flying"), "src/pokemonsFiltered.csv");
+        fileManager.write(fileManager.readTotals(PATH, "Loco", "Tuneao"), "src/pokemonsFiltered.csv");
     }
 
     private static void showMenu()
