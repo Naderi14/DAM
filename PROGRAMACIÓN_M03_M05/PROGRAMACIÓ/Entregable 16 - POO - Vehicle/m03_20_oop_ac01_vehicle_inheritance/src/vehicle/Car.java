@@ -1,11 +1,9 @@
 package vehicle;
 
-import java.awt.*;
-
 public class Car extends Vehicle{
-    byte numSeats;
-    byte numDoors;
-    String fuelType;
+    protected byte numSeats;
+    protected byte numDoors;
+    protected String fuelType;
 
     public Car(String registration, String model, String make, byte numSeats, byte numDoors, String fuelType) {
         super(registration, model, make);

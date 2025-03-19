@@ -1,7 +1,7 @@
 package vehicle;
 
 public class Moto extends Vehicle{
-    int cc;
+    protected int cc;
 
     public Moto(String registration, String model, String make, int cc) {
         super(registration, model, make);

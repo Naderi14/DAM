@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+     <!-- Latest compiled and minified CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+     <!-- Latest compiled JavaScript -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Exercise 1</h1>
+        <div id="list"></div>
+
+        <script>
+            let text = "<ul>";
+            
+            for (let i = 1; i <= 10; i++) {
+                text += `<li>Lista ${i}</li>`;
+            }
+            text += "</ul>";
+
+            //document.getElementById("list").innerHTML = text;
+            document.write(text);
+        </script>
+
+        <h1>Exercise 2</h1>
+        <form>
+            <label for="filas" class="form-label">Numero de filas:</label>
+            <input class="form-control" type="number" name="filas" id="filas" placeholder="Numero de filas">
+            <label for="columnas" class="form-label">Numero de columnas:</label>
+            <input class="form-control" type="number" name="columnas" id="columnas" placeholder="Numero de columnas">
+            <button class="btn btn-primary m-2" type="button" onclick="document.getElementById('table').innerHTML = createTable(filas.value, columnas.value)">Generar</button>
+        </form>
+        <div id="table"></div>
+
+        <script>
+            function createTable(filas, columnas)
+            {
+                let table = '<table class="table table-bordered table-hover table-danger table-striped">';
+            
+                table += "<thead>";
+                for (let i = 1; i <= columnas; i++) {
+                    table += `<th>Header ${i}</th>`
+                }
+                table += "</thead>";
+                table += "<tbody>";
+                for (let i = 1; i <= filas; i++) {
+                    table += "<tr>";
+                    for (let j = 1; j <= columnas; j++) {
+                        table += `<td>Data ${i} ${j}</td>`;
+                    }
+                    table += "</tr>";
+                }
+                table += "</tbody>";
+                table += "</table>";
+                
+                return table;
+            }
+            
+        </script>
+
+        <h1>Exercise 3</h1>
+        <form>
+            <label for="rows" class="form-label">Numero de filas:</label>
+            <input class="form-control" type="number" name="rows" id="rows" placeholder="Numero de filas">
+            <label for="columns" class="form-label">Numero de columnas:</label>
+            <input class="form-control" type="number" name="columns" id="columns" placeholder="Numero de columnas">
+            <button class="btn btn-primary m-2" type="button" onclick="document.getElementById('grid').innerHTML = createGrid(rows.value, columns.value)">Generar</button>
+        </form>
+        <div id="grid"></div>
+        <script>
+            function createGrid(rows, columns)
+            {
+                let grid = "";
+                for (let i = 1; i <= rows; i++) {
+                    grid += '<div class="row g-3 mb-3">';
+                    for (let j = 1; j <= columns; j++) {
+                        grid += `<div class="col text-center justify-content-center bg-info mx-2 p-4">Row ${i} - Column ${j}</div>`;
+                    }
+                    grid += "</div>";
+                }
+
+                return grid;
+            }            
+        </script>
+
+        <h1>Exercise 4</h1>
+        <form>
+            <label for="numCards" class="form-label">Numero de cartas:</label>
+            <input class="form-control" type="number" name="numCards" id="numCards" placeholder="Numero de cartas">
+            <button class="btn btn-primary m-2" type="button" onclick="document.getElementById('cards').innerHTML = createCards(numCards.value)">Generar</button>
+        </form>
+        <div id="cards"></div>
+        <script>
+            function createCards(numCards){
+                let cards = '<div class="row">';
+                for (let i = 1; i <= numCards; i++){
+                    cards += `<div class="col-4"><div class="card my-3"><img class="card-img-top img-fluid" src="img/img${i}.jpg">`;
+                    cards += `<div class="card-body"><h4 class="card-title">Card ${i}</h4>`;
+                    cards += `<p class="card-text">This is a text for card ${i}</p>`;
+                    cards += `</div></div></div>`;
+                }
+                cards += '</div>';
+                return cards;
+            }            
+        </script>
+    </div>
+</body>
+</html>

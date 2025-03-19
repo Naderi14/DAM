@@ -1,8 +1,8 @@
 package vehicle;
 
 public class Truck extends Car{
-    int maxLoad;
-    boolean hasFridge;
+    protected int maxLoad;
+    protected boolean hasFridge;
 
     public Truck(String registration, String model, String make, byte numSeats, byte numDoors, String fuelType, int maxLoad, boolean hasFridge) {
         super(registration, model, make, numSeats, numDoors, fuelType);

@@ -1,9 +1,9 @@
 package vehicle;
 
 public class Vehicle {
-    String registration;
-    String make;
-    String model;
+    protected String registration;
+    protected String make;
+    protected String model;
 
     public Vehicle(String registration, String make, String model)
     {
