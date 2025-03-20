@@ -1,4 +1,4 @@
-package onlineShop;
+package onlineShop.products;
 
 import onlineShop.enums.Color;
 import onlineShop.enums.Fabric;
@@ -23,5 +23,11 @@ public class VNeckT extends TShirt{
     @Override
     public float price() {
         return hasPocket ? 13f : 11f;
+    }
+
+    @Override
+    public String toString()
+    {
+        return String.format(super.toString() + "%-10S\n", hasPocket);
     }
 }

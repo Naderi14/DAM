@@ -1,4 +1,4 @@
-package onlineShop;
+package onlineShop.products;
 
 import onlineShop.enums.Color;
 import onlineShop.enums.Fabric;
@@ -12,5 +12,11 @@ public class TankT extends TShirt{
     @Override
     public float price() {
         return 12f;
+    }
+
+    @Override
+    public String toString()
+    {
+        return String.format(super.toString() + "\n");
     }
 }

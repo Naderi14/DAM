@@ -1,4 +1,4 @@
-package onlineShop;
+package onlineShop.products;
 
 import onlineShop.enums.Color;
 import onlineShop.enums.Fabric;
@@ -15,5 +15,11 @@ public class LongT extends TShirt{
     @Override
     public float price() {
         return hasPocket ? 14f : 12f;
+    }
+
+    @Override
+    public String toString()
+    {
+        return String.format(super.toString() + "%-10S\n", hasPocket);
     }
 }

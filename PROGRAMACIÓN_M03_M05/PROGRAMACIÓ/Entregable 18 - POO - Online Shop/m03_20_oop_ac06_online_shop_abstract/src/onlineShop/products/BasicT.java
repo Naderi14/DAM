@@ -1,4 +1,4 @@
-package onlineShop;
+package onlineShop.products;
 
 import onlineShop.enums.Color;
 import onlineShop.enums.Fabric;
@@ -40,5 +40,11 @@ public class BasicT extends TShirt{
             price += 3f;
 
         return price;
+    }
+
+    @Override
+    public String toString()
+    {
+        return String.format(super.toString() + "%-10S %-10S\n", hasPocket, hasButtons);
     }
 }

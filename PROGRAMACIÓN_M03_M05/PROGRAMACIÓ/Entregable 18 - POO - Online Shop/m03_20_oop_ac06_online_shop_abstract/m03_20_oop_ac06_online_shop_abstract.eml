@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inherit-compiler-output="true" inheritJdk="true">
+	<output-test url="file://$MODULE_DIR$/out/test/m03_20_oop_ac06_online_shop_abstract"/>
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+</component>

@@ -1,4 +1,4 @@
-package onlineShop;
+package onlineShop.products;
 
 import onlineShop.enums.Color;
 import onlineShop.enums.Visor;
@@ -23,5 +23,11 @@ public class Cap extends Product{
     @Override
     public float price() {
         return visor == Visor.FLAT ? 20f : visor == Visor.CURVED ? 30f : 0f;
+    }
+
+    @Override
+    public String toString()
+    {
+        return String.format(super.toString() + "%-10S %-10S %-10S %-10S\n","","","", visor);
     }
 }

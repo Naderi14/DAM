@@ -1,4 +1,4 @@
-package onlineShop;
+package onlineShop.products;
 
 import onlineShop.enums.Color;
 import onlineShop.enums.PrintImage;
@@ -15,6 +15,13 @@ public abstract class Product {
         this.barCode = barCode;
         this.desc = desc;
         this.color = color;
+    }
+
+    @Override
+    public String toString()
+    {
+        return String.format("%-10S %-10S %-10S %-10S %-10S %-10S",
+                barCode, desc, price, printImage, color, onSell);
     }
 
     public abstract float price();
