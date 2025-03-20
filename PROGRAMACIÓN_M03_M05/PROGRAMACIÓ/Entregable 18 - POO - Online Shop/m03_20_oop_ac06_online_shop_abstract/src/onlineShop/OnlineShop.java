@@ -48,9 +48,9 @@ public class OnlineShop {
 
     public String listStock()
     {
-        String header = String.format("%-10S %-10S %-10S %-10S %-10S %-10S %-10S %-10S %-10S\n" +
-                "----------------------------------------------------------------------------------------------------\n",
-                "BARCODE", "DESC", "PRICE", "PRINT", "COLOR", "ON-SELL", "FABRIC", "POCKET?", "BUTTONS?", "CAP TYPE");
+        String header = String.format("%-10S %-10S %-10S %-10S %-10S %-10S%-10S%-10S %-10S %-10S\n" +
+                "---------------------------------------------------------------------------------------------------------\n",
+                "BARCODE", "DESC", "PRICE", "PRINT", "COLOR", "ON-SELL", "FABRIC", "POCKET?", "BUTTONS?", "CAP-TYPE");
 
         String allStockString = "";
 

@@ -28,6 +28,6 @@ public class Cap extends Product{
     @Override
     public String toString()
     {
-        return String.format(super.toString() + "%-10S %-10S %-10S %-10S\n","","","", visor);
+        return String.format(super.toString() + "%-10S %-10S %-10S %-15S\n","","","", visor);
     }
 }
