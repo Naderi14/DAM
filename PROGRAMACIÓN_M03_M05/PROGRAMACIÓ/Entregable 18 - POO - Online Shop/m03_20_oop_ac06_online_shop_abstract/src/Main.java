@@ -20,5 +20,7 @@ public class Main {
 
         Cap cap1 = new Cap("5001", "CAP1", Color.RED, Visor.FLAT);
         Cap cap2 = new Cap("5002", "CAP2", Color.YELLOW, Visor.CURVED);
+
+        System.out.println("JAJA SALUDOS");
     }
 }
