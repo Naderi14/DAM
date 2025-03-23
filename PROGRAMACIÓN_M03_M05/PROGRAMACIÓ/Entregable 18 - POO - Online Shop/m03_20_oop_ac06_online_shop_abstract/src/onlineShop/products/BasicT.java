@@ -32,7 +32,7 @@ public class BasicT extends TShirt{
 
     @Override
     public float price() {
-        float price = 10f;
+        float price = 10f + fabric.getPrice();
 
         if (hasPocket)
             price += 2f;

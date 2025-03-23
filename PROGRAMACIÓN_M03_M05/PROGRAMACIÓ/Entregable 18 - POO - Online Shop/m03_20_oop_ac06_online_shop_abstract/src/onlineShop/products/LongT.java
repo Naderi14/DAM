@@ -14,7 +14,7 @@ public class LongT extends TShirt{
 
     @Override
     public float price() {
-        return hasPocket ? 14f : 12f;
+        return hasPocket ? 14f + fabric.getPrice() : 12f + fabric.getPrice();
     }
 
     @Override

@@ -12,26 +12,29 @@
 </head>
 <body>
     <div class="container">
-        <form>
+        <form method="post">
             <label for="nombre" class="form-label">Nombre usuario:</label>
             <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre de usuario">
+
             <label for="edad" class="form-label">Edad usuario:</label>
             <input class="form-control" type="number" name="edad" id="edad" placeholder="Edad usuario">
-            <button class="btn btn-primary m-2" type="button" name="enviar" id="enviar" value="Enviar">Generar</button>
+
+            <button class="btn btn-primary m-2" type="submit" name="enviar">Generar</button>
         </form>
-    </div>
-    <?php
-        if (isset($_POST["enviar"])){
+
+        <?php
+        if (isset($_POST["enviar"])) {
             $usuario = $_POST["nombre"];
             $edad = $_POST["edad"];
-        
-            if ($usuario == 'Fran'){
-                echo "Puedes entrar";
+
+            if ($usuario === "Fran") {
+                echo "<div class='container'><div class='alert alert-success mt-3'>Puedes entrar</div></div>";
             } else {
-                echo "No puedes entrar";
+                echo "<div class='container'><div class='alert alert-danger mt-3'>No puedes entrar</div></div>";
             }
         }
-    ?>
+        ?>
+    </div>
 </body>
 </html>
 
