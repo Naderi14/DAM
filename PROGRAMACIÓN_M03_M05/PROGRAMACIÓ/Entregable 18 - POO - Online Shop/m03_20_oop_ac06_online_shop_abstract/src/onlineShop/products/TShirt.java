@@ -26,7 +26,7 @@ public abstract class TShirt extends Product {
         float price = fabric.getPrice();
 
         if (printImage != null)
-            price += 10f;
+            price += PRICE_IMAGE;
 
         return price;
     }

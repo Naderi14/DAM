@@ -4,6 +4,16 @@ import onlineShop.enums.Color;
 import onlineShop.enums.PrintImage;
 
 public abstract class Product {
+    public static final float PRICE_IMAGE = 10;
+    public static final float PRICE_BASIC = 10;
+    public static final float PRICE_POCKET = 2;
+    public static final float PRICE_BUTTONS = 3;
+    public static final float PRICE_LONGT = 12;
+    public static final float PRICE_TANKT = 12;
+    public static final float PRICE_VNECKT = 11;
+    public static final float PRICE_FLAT = 20;
+    public static final float PRICE_CURVED = 30;
+
     protected String barCode;
     protected String desc;
     protected float price = 0;

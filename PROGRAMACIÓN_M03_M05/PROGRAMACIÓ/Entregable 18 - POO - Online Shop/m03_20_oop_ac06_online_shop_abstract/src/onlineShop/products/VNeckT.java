@@ -22,7 +22,7 @@ public class VNeckT extends TShirt{
 
     @Override
     public float price() {
-        return hasPocket ? 13f + fabric.getPrice() : 11f + fabric.getPrice();
+        return hasPocket ? PRICE_VNECKT + PRICE_POCKET + super.price() : PRICE_VNECKT + super.price();
     }
 
     @Override

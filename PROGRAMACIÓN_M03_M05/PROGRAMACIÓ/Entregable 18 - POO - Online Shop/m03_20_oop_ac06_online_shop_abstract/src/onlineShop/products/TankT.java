@@ -11,7 +11,7 @@ public class TankT extends TShirt{
 
     @Override
     public float price() {
-        return 12f + fabric.getPrice();
+        return PRICE_TANKT + super.price();
     }
 
     @Override

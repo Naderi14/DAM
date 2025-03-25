@@ -22,7 +22,7 @@ public class Cap extends Product{
 
     @Override
     public float price() {
-        return visor == Visor.FLAT ? 20f : visor == Visor.CURVED ? 30f : 0f;
+        return visor == Visor.FLAT ? PRICE_FLAT : visor == Visor.CURVED ? PRICE_CURVED : 0f;
     }
 
     @Override
