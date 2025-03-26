@@ -1,5 +1,6 @@
 function calculate(temp, tempfrom, tempto) {
     //TODO
+    document.getElementById('result').value = "Hola mundo";
     //Check values of tempfrom and tempto and call the corresponding function
     if (tempfrom == 'celsius' && tempto == 'fahrenheit') {
         let t = c2f(temp);
