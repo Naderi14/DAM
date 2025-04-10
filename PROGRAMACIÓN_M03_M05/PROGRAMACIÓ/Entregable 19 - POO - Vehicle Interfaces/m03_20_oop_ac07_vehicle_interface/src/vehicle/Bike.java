@@ -1,7 +1,6 @@
 package vehicle;
 
 import vehicle.interfaces.Movable;
-import vehicle.interfaces.Refillable;
 import vehicle.interfaces.Repairable;
 
 public class Bike extends Vehicle implements Repairable {
