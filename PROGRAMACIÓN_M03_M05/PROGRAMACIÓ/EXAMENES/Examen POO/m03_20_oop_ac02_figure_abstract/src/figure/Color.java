@@ -13,5 +13,4 @@ public enum Color {
     MAGENTA,
     YELLOW,
     BLACK
-
 }
