@@ -1,0 +1,11 @@
+dni;name;surname;email;phone;username;password
+12345678A;Juan;Pérez;juan@example.com;600111222;juanp;1234
+23456789B;María;Gómez;maria@example.com;600222333;mariag;1234
+34567890C;Carlos;Sánchez;carlos@example.com;600333444;carloss;1234
+45678901D;Laura;Ruiz;laura@example.com;600444555;laurar;1234
+56789012E;Pedro;López;pedro@example.com;600555666;pedrol;1234
+67890123F;Lucía;Martínez;lucia@example.com;600666777;luciam;1234
+78901234G;David;Torres;david@example.com;600777888;davidt;1234
+89012345H;Ana;Ramírez;ana@example.com;600888999;anar;1234
+90123456I;Pablo;Navarro;pablo@example.com;600999000;pablon;1234
+01234567J;Elena;Moreno;elena@example.com;600000111;elenam;1234

@@ -1,0 +1,9 @@
+id_category;titlename;city;location_address;description;price;active;num_guests;num_baths;num_beds;num_bedrooms
+1;Apartamento Centro;Madrid, España;Calle Gran Vía 1;En pleno centro de Madrid;85.0;True;2;1;1;1
+2;Casa Rural;Teruel, España;Camino del Bosque 12;Ideal para desconectar;120.0;True;5;2;4;3
+3;Villa Lujo;Lugo, España;Avenida de Lujo 99;Con piscina privada;250.0;True;8;3;6;4
+1;Piso Moderno;Castilloviejo, España;Calle Nueva 22;Recién reformado;90.0;True;3;1;2;2
+4;Ático con Terraza;Barcelona, España;Calle Alta 10;Vistas espectaculares;110.0;True;2;1;1;1
+2;Casa Familiar;Mataró, España;Calle Tranquila 33;Perfecta para niños;100.0;True;4;2;3;3
+3;Villa Mediterránea;Benidorm, España;Costa Azul 88;Cerca de la playa;180.0;True;6;2;4;3
+1;Estudio Económico;Vic, España;Calle Pequeña 5;Ideal para una persona;50.0;True;1;1;1;1
