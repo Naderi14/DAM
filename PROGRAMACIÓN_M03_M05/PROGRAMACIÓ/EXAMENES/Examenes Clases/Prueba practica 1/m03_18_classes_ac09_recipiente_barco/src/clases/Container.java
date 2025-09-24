@@ -7,7 +7,7 @@ public class Container {
     private ContainerType type; // Type of container
     private double transportCost; // transport price
 
-    private static int idNext = 0;
+    private static int idNext = 1;
     private static final double BASE_COST = 0;
 
     public Container(ContainerType type, int weight)
